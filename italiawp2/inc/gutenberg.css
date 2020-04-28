@@ -1,0 +1,43 @@
+/*
+ * CSS per Gutenberg
+ */
+
+.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+    max-width: 1000%;
+}
+
+.alignwide {
+    margin-left: calc(25% - 25vw);
+    margin-right: calc(25% - 25vw);
+    width: auto;
+    max-width: 1000%;
+}
+
+.alignwide img, .alignfull img {
+    display: block;
+    margin: 0 auto;
+}
+
+p.has-small-font-size, .has-small-font-size {
+    font-size: 80% !important;
+}
+
+p.has-medium-font-size, .has-medium-font-size {
+    font-size: 125% !important;
+}
+
+p.has-large-font-size, .has-large-font-size {
+    font-size: 150% !important;
+}
+
+p.has-huge-font-size, .has-huge-font-size {
+    font-size: 200% !important;
+}
+
+.wp-block-cover {
+    margin-bottom: 1em;
+    height: auto !important;
+}

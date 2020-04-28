@@ -1,0 +1,523 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    .navbar .navbar-collapsable .navbar-nav li.nav-item {
+        display: list-item;
+    }
+}
+
+.scheda-news .scheda-testo {
+    margin-top: 32px;
+}
+    
+@media screen and (max-width:767px){
+    .scheda-news .scheda-testo {
+        margin-top: 16px;
+    }
+    .card .card-calendar {
+        right: 16px;
+    }
+}
+
+.external-link:after {
+    content: " \1f59d";
+    font-family: ita!important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 70%;
+    speak: none;
+    text-transform: none;
+    white-space: pre;
+}
+
+.icon-external-link {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    vertical-align: sub;
+    margin-left: 5px;
+}
+
+.scheda-news .flag-icon {
+    position: absolute;
+    margin-top: -40px;
+    height: 32px;
+}
+
+.scheda.card:after {
+    content: none;
+}
+
+.wp-caption-text, .wp-block-image > figcaption {
+    display: none !important;
+}
+
+p.logged-in-as, p.comment-notes {
+    padding-bottom: 2.4rem !important;
+}
+
+.form-submit > input {
+    float: right;
+}
+
+nav.u-layout-prose {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden;
+}
+
+table#wp-calendar * {
+    text-align: center !important;
+}
+
+table#wp-calendar td, table#wp-calendar th {
+    padding: 0.3em !important;
+}
+
+.Footer-block .calendar_wrap {
+    border-top: .1rem solid currentColor!important;
+    border-top-width: 0.1rem !important;
+    border-top-style: solid !important;
+    border-top-color: rgb(90, 103, 114) !important;
+    padding-top: 18px;
+}
+
+table#wp-calendar #wp-calendar > caption {
+    padding-bottom: 10px;
+}
+
+table#wp-calendar tfoot td {
+    padding-top: 14px !important;
+}
+
+#wp-calendar a {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.map-full-content {
+    padding: 0 !important;
+    margin: 0 auto -7px !important;
+}
+
+.map-full-content > iframe {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+}
+
+.map-wrap {
+    background: transparent;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+@media screen and (max-width:767px){
+    .map-wrap {
+        display: none;
+    }
+    h5.h5-map {
+        display: none !important;
+    }
+}
+
+.image-content {
+    display: inline-block !important;
+}
+
+.image-content > a {
+    text-decoration: none !important;
+}
+
+.Header-logo img {
+    width: auto !important;
+}
+
+button.mfp-close {
+    font-size: 60px !important;
+    top: -10px !important;
+}
+
+.mfp-title {
+    font-size: 26px !important;
+    line-height: 52px !important;
+}
+
+.mfp-counter {
+    font-size: 16px !important;
+    line-height: 32px !important;
+}
+
+.mfp-arrow-left:before, .mfp-arrow-right:before {
+    border: none !important;
+}
+
+.Forward {
+    cursor: pointer;
+}
+
+.italiawp2-sidebar .italiawp2-search .Linklist-link.Linklist-link--lev2 {
+    border: none !important;
+}
+
+.italiawp2-sidebar .italiawp2-search .Linklist-link.Linklist-link--lev2:hover {
+    text-decoration: none !important;
+}
+
+.header-cerca {
+    z-index: 1;
+}
+
+#menu-sinistro label {
+    margin: 1rem .5rem .5rem 0;
+}
+
+select {
+    width: 100%;
+}
+
+/* Allineamenti immagini se ci sono gli stili AGID */
+
+.a-alignnone, .a-aligncenter, .a-alignleft, .a-alignright {
+    display: block;
+}
+.a-alignnone {
+    text-align: left;
+}
+.a-alignleft {
+    float: left;
+}
+.a-aligncenter {
+    text-align: center;
+}
+.a-alignright {
+    float: right;
+}
+
+img.alignnone, img.alignleft {
+    margin: 10px 15px 15px 0 !important;
+}
+img.aligncenter {
+    margin: 15px 0 20px 0 !important;
+}
+img.alignright {
+    margin: 10px 0 15px 15px !important;
+}
+
+section.alignnone {
+    margin: 10px 0 15px 0 !important;
+}
+
+section.aligncenter {
+    display: block !important;
+    text-align: center !important;
+    margin: 15px 0 20px 0 !important;
+}
+
+section.aligncenter > a {
+    display: inline-block !important;
+}
+
+section > a > figure {
+    border-radius: 4px !important;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(50,50,50,.35) !important;
+    box-shadow: 0 1px 2px 0 rgba(50,50,50,.35) !important;
+}
+
+section.alignright {
+    float: right !important;
+    margin: 10px 0 15px 15px !important;
+}
+
+section.alignleft {
+    float: left !important;
+    margin: 10px 15px 15px 0 !important;
+}
+
+figure figcaption > p {
+    margin-bottom: 0 !important;
+    text-transform: capitalize;
+}
+
+img.size-full,
+img.size-large,
+img.size-medium,
+img.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.owl-prev,.owl-next {
+    cursor: pointer !important;
+}
+
+.owl-next {
+    margin-left: 40px !important;
+}
+
+.owl-dots {
+    margin-top: 5px !important;
+}
+
+.galleriahome .owl-dots {
+    margin-top: 40px !important;
+}
+
+.Header-banner .Header-languages {
+    min-height: 38px;
+}
+
+.Header-language {
+    padding-right: 0 !important;
+}
+
+/* Menu Utilità con immagine */
+
+.section.Utilities img {
+    max-width: calc(100% - 20px) !important;
+    height: auto !important;
+    border-radius: 4px !important;
+    vertical-align: bottom;
+}
+
+/* Box Servizi con immagine */
+
+.box-servizi img {
+    height: auto !important;
+    width: calc(100% + 32px) !important;
+    margin: -16px -16px 14px !important;
+    border-radius: 4px 4px 0 0 !important;
+}
+
+.box-servizi .no-padding {
+    line-height: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.box-servizi .no-padding img {
+    width: calc(100% + 32px) !important;
+    margin: -16px -16px 0 !important;
+    border-radius: 4px !important;
+}
+
+.box-servizi img.icona {
+    max-width: calc(100% - 20px) !important;
+    height: auto !important;
+    border-radius: 4px !important;
+    width: 32px !important;
+    margin: -5px 0 0 !important;
+    vertical-align: middle;
+}
+
+.Form-input:not(.is-disabled), .Form-input:not(:disabled) {
+    color: #000;
+}
+
+#footer .Form-input:not(.is-disabled), #footer .Form-input:not(:disabled) {
+    color: #fff;
+}
+
+#articolo-dettaglio-testo {
+    padding-bottom: 60px;
+}
+
+/* NUOVI */
+
+#mappa {
+    padding-bottom: 0 !important;
+}
+
+.box-servizi {
+    font-weight: 700;
+}
+
+.list_link-utili li:last-child a {
+    font-weight: 300;
+}
+
+.scheda.scheda-round img {
+    width: 100%;
+    border-radius: 4px 4px 0 0 !important;
+}
+
+#briciole .breadcrumb .breadcrumb-item.active {
+    color: #555;
+    font-weight: bold !important;
+}
+
+/* Gallerie */
+
+#articolo-dettaglio-testo .paragrafo a,
+.galleriahome .paragrafo a {
+    position: static !important; 
+    top: 0 !important;
+}
+
+#articolo-dettaglio-testo .galleriasfondo {
+    height: 380px !important;
+}
+
+.galleriahome {
+    padding-top: 70px;
+}
+
+.galleriahome h3 {
+    color: #fff !important;
+}
+
+#sezione-notizie, #sezione-servizi, #home-novita {
+    background-image: url(../static/img/ombra.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.cerca-risultato-item .argomenti {
+    display: inline-block;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+@media screen and (max-width:767px){
+    .cerca-risultato-item .argomenti {
+        margin-top: 16px !important;
+        margin-bottom: 16px !important;
+    }
+    #sezione-servizi {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #menu-principale {
+        padding: 0;
+    }
+
+    #menu-principale > li:first-child > a {
+        padding-left: 0;
+    }
+
+    #menu-principale > li:last-child > a {
+        padding-right: 0;
+    }
+
+    #sub_nav .navbar,
+    .navbar .navbar-collapsable .menu-wrapper {
+        background: transparent !important;
+    }
+    
+    .navbar .dropdown-menu {
+        -webkit-box-shadow: 0 20px 30px 5px rgba(0,0,0,.2);
+        box-shadow: 0 20px 30px 5px rgba(0,0,0,.2);
+    }
+    
+    .navbar .dropdown-menu.show {
+        display: flex;
+    }
+    
+    .navbar .dropdown-menu .menu-item h5 a {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    .navbar .dropdown-menu .menu-item ul {
+        padding: 0;
+    }
+    
+    .navbar .dropdown-menu .menu-item ul li {
+        list-style: none;
+    }
+    
+    .box-servizi {
+        margin-bottom: 16px;
+    }
+}
+
+#wp-calendar, table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+#wp-calendar > caption {
+    position: relative;
+    text-align: center;
+    caption-side: top;
+}
+
+#wp-calendar a {
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.u-sizeFull {
+    width: 100% !important;
+}
+
+#mainheader .p_cercaMobile .btn-cerca:hover {
+    background: transparent !important;
+}
+
+/* Tabelle */
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+    margin: 12px 0;
+}
+
+table tr {
+    border-bottom: 1px solid #d6dce3;
+}
+
+table thead tr:first-child td, table thead tr:first-child th {
+    border-top: 0;
+}
+
+table td, table th {
+    text-align: left;
+    padding: 1em 0 1em 1em !important;
+}
+
+table td:last-child, table th:last-child {
+    padding-right: 1em !important;
+}
+
+@media (max-width: 991px) {
+    .chip.chip-simple {
+        padding-top: 4px;
+    }
+}
+
+.form-group input.btn-primary {
+    color: #fff !important;
+}
