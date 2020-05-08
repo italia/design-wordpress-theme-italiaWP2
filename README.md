@@ -3,7 +3,7 @@
 
 ---
 
-#### [**Guarda la demo**](http://italiawp.borisamico.it/demo2) | [**Scarica il tema**](https://raw.githubusercontent.com/italia/design-comuni-wordpress-theme/master/italiawp2.zip) | [**Pagina del tema**](http://italiawp.borisamico.it)
+#### [**Guarda la demo**](http://italiawp.borisamico.it/demo2) | [**Scarica il tema**](https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2.zip) | [**Pagina del tema**](http://italiawp.borisamico.it)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## Installare _ItaliaWP2_:
 
-1. Scaricare il file [.zip](https://raw.githubusercontent.com/italia/design-comuni-wordpress-theme/master/italiawp2.zip) in locale
+1. Scaricare il file [.zip](https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2.zip) in locale
 2. Aggingere un nuovo tema nella sezione _"Aspetto" > "Temi"_
 3. Selezionare _"Aggiungi nuovo"_ e successivamente _"Carica tema"_
 4. Scegliere il file .zip scaricato in precedenza, senza decomprimerlo e cliccare _"Installa ora"_
@@ -34,7 +34,7 @@ _[ Testato su **WordPress 5.4** (**COMPATIBILE** con il nuovo editor **Gutenberg
 
 ## In caso di utilizzo del _Tema Child_:
 
-Ripetere la procedura precedente ma con il file [.zip](https://raw.githubusercontent.com/italia/design-comuni-wordpress-theme/master/italiawp2-child.zip)
+Ripetere la procedura precedente ma con il file [.zip](https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2-child.zip)
 del _Tema Child_, successivamente configurare il _Tema Child_ lasciando _ItaliaWP2_ con la configurazione iniziale.
 
 ---

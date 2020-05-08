@@ -225,7 +225,7 @@ add_filter('get_the_excerpt', 'my_excerpt');
 require 'inc/theme-update-checker.php';
 $update_checker = new ThemeUpdateChecker(
     'italiawp2',
-    'https://raw.githubusercontent.com/italia/design-comuni-wordpress-theme/master/italiawp2.json'
+    'https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2.json'
 );
 
 /* Per la ricerca manuale degli aggiornamenti, altrimenti avviene automaticamente ogni 12 ore */
