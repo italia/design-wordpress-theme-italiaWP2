@@ -572,7 +572,7 @@ section .pagination .page-item .page-numbers svg.icon {
     
     if (get_brightness($main_color) <= 130){
             $custom_css = "
-#menu-sinistro #lista-paragrafi .list-group-item, #menu-sinistro .lista-paragrafi .list-group-item {
+#menu-sinistro #lista-paragrafi .list-group-item, #menu-sinistro .lista-paragrafi .list-group-item.Linklist-link {
     color: #fff !important;
 }
 
