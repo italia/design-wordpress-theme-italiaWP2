@@ -71,10 +71,10 @@ if (have_posts()) : while (have_posts()) : the_post();
                 <div class="row">
                     <div class="col-lg-3 col-md-4 lineright">
                         <aside id="menu-sinistro">
-                            <?php get_template_part('template-parts/sidebar-single'); ?>
-            
                             <?php if (!get_theme_mod('active_allegati_contenuto'))
-                                    get_template_part('template-parts/attachments'); ?>
+                                    get_template_part('template-parts/attachments-sidebar'); ?>
+                            
+                            <?php get_template_part('template-parts/sidebar-single'); ?>
                         </aside>
                     </div>
                     <div class="col-lg-9 col-md-8 linetop pt8">

@@ -38,7 +38,7 @@ if (is_plugin_active('attachments/index.php')) { ?>
                                 ></use>
                             </svg>
                             <h4>
-                                <a href="<?php echo $attachments->url(); ?>" title="<?php echo $attachments->field('title'); ?>">
+                                <a target="_blank" href="<?php echo $attachments->url(); ?>" title="<?php echo $attachments->field('title'); ?>">
                                     <?php echo $attachments->field('title'); ?> [<?php echo $attachments->filesize(); ?>]
                                 </a><br>
                                 <span></span>

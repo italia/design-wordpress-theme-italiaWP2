@@ -81,6 +81,15 @@ function italiawp2_customize_register($wp_customize) {
         'section' => 'pages_settings',
         'settings' => 'immagine_evidenza_default'
     )));
+    
+/* Lista Allegati in Contenuto o Sidebar */
+    $wp_customize->add_setting('active_allegati_contenuto', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('active_allegati_contenuto', array(
+        'label' => 'Lista allegati in Contenuto (in Sidebar se disattivato)',
+        'type' => 'checkbox', 'section' => 'pages_settings', 'settings' => 'active_allegati_contenuto'
+    ));
 
 /* Cornici per le Immagini singole in pagine e articoli */
     $wp_customize->add_setting('disactive_cornici_immagini', array(

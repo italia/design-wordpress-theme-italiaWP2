@@ -47,8 +47,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                                 </div>
                             </div>
                             
-                            <?php if (get_theme_mod('active_allegati_contenuto'))
-                                    get_template_part('template-parts/attachments'); ?>
+                            <?php get_template_part('template-parts/attachments'); ?>
                             
                         </div>
                         
