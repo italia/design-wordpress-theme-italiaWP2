@@ -81,6 +81,7 @@ function italiawp2_dymanic_styles() {
     $color_95 = hsl2hex(array($main_color_HSL[0], $main_color_HSL[1], $main_color_HSL[2]-25/100 ));
     
     $color_98 = hsl2hex(array($main_color_HSL[0], $main_color_HSL[1], $main_color_HSL[2]-40/100 ));
+    $color_99 = hsl2hex(array($main_color_HSL[0], $main_color_HSL[1], $main_color_HSL[2]-60/100 ));
 
     $color_compl = colorCompl($main_color);
     $color_compl_HSL = hex2hsl($color_compl);
@@ -600,6 +601,9 @@ section .pagination .page-item .page-numbers svg.icon {
     }
     echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';
     
+    if( getContrastRatio($color_98) <= 3.00 ) $scuro = $color_99;
+    else $scuro = $color_98;
+    
     /* - Main - */
     if( getContrastRatio($main_color) >= 0.90 && getContrastRatio($main_color) < 2.70 ) {
         $custom_css = "
@@ -608,24 +612,24 @@ section .pagination .page-item .page-numbers svg.icon {
 #mainheader .cerca input,
 #mainheader .preheader .entesup a,
 .scheda-sito.u-background-50 {
-    color: {$color_98} !important;
+    color: {$scuro} !important;
 }
 #mainheader .social a svg.icon,
 #mainheader .preheader .accedi .btn-accedi svg.icon {
-    fill: {$color_98} !important;
+    fill: {$scuro} !important;
 }
 #mainheader .btn-cerca svg.icon {
     fill: #fff !important;
 }
 #mainheader .btn-cerca {
-    background: {$color_98} !important;
+    background: {$scuro} !important;
 }
 #mainheader .cerca input {
-    border-color: {$color_98} !important;
+    border-color: {$scuro} !important;
 }
 @media (min-width: 992px) {
     .navbar .navbar-collapsable .navbar-nav li a.nav-link {
-        color: {$color_98} !important;
+        color: {$scuro} !important;
     }
 }";
     }
@@ -637,11 +641,25 @@ section .pagination .page-item .page-numbers svg.icon {
 #footer .footer-list li a,
 #footer h4,
 .galleriahome h3,
-#articolo-dettaglio-testo .galleriaslide figcaption {
-    color: {$color_98} !important;
+#articolo-dettaglio-testo .galleriaslide figcaption,
+#footer .postFooter a {
+    color: {$scuro} !important;
 }
 #footer .social a svg.icon {
-    fill: {$color_98} !important;
+    fill: {$scuro} !important;
+}";
+    }
+    echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';
+    
+    if( getContrastRatio($color_80) >= 0.90 && getContrastRatio($color_80) < 2.50 && getContrastRatio($color_98) <= 4.00 ) {
+        $custom_css = "
+#footer, #footer .postFooter, #footer label, #footer caption,
+#footer a,
+.scheda-sito.u-background-80 {
+    color: {$scuro} !important;
+}
+.icon-external-link {
+    fill: {$scuro} !important;
 }";
     }
     echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';

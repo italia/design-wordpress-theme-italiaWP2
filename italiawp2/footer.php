@@ -48,7 +48,7 @@
                         <ul class="footer-list clearfix">
                             <li>
                                 Indirizzo<br>
-                                <span class="u-color-white"><?php echo get_option('dettagli-indirizzo'); ?><br>
+                                <span><?php echo get_option('dettagli-indirizzo'); ?><br>
                                 <?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>
                             </li>
                             <li>
@@ -73,18 +73,18 @@
                         <ul class="footer-list clearfix">
                             <li>
                                 C.F. / P.IVA<br>
-                                <span class="u-color-white"><?php echo get_option('dettagli-cfpiva'); ?></span>
+                                <span><?php echo get_option('dettagli-cfpiva'); ?></span>
                             </li>
                             <?php if(get_option('dettagli-codunivoco')!=""): ?>
                             <li>
                                 Cod. Univoco<br>
-                                <span class="u-color-white"><?php echo get_option('dettagli-codunivoco'); ?></span>
+                                <span><?php echo get_option('dettagli-codunivoco'); ?></span>
                             </li>
                             <?php endif; ?>
                             <?php if(get_option('dettagli-iban')!=""): ?>
                             <li>
                                 IBAN<br>
-                                <span class="u-color-white"><?php echo get_option('dettagli-iban'); ?></span>
+                                <span><?php echo get_option('dettagli-iban'); ?></span>
                             </li>
                             <?php endif; ?>
                         </ul>
