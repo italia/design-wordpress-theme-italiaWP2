@@ -76,6 +76,11 @@ $(document).ready(function () {
         if ( $(this).size() && $("img", this).size() ) {
             if( $(this).html().replace(/<img[^>]*>/g,"")==0 ) $(this).addClass("no-padding");
         }
+        
+        if( $(this).parent().find('.icon-external-link').length ) {
+            var link = $(this).parent().find('.icon-external-link');
+        $(this).append(link);
+        }
     });
    
     /* Slide Gallerie Home */
