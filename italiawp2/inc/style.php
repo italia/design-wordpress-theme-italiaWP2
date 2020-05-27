@@ -647,6 +647,25 @@ section .pagination .page-item .page-numbers svg.icon {
 }
 #footer .social a svg.icon {
     fill: {$scuro} !important;
+}
+#footer .footer-list li a:hover, #footer .social a:hover,
+#footer .postFooter a:hover {
+    color: {$color_compl_80} !important;
+}
+
+
+.chip.chip-primary, .chip.chip-primary:hover {
+    border-color: {$color_compl_80} !important;
+}
+.chip.chip-primary, .chip.chip-primary>.chip-label,
+figure figcaption > p:first-of-type {
+    color: {$color_compl_80} !important;
+}
+.chip.chip-primary:hover {
+    background-color: {$color_compl_80} !important;
+}
+.chip.chip-primary:hover>.chip-label {
+    color: #fff !important;
 }";
     }
     echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';

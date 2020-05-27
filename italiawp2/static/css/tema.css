@@ -306,6 +306,7 @@ body.ridotto {
 
 #mainheader .comune .logoimg {
     margin-top: 40px;
+    width: 50px;
 }
 
 #mainheader .comune .logoimg img {
@@ -321,8 +322,9 @@ body.ridotto {
     vertical-align: middle;
     height: 48px;
     text-align: left;
-    margin-left:15px;
-    display:inline-block;
+    margin-left: 15px;
+    display: inline-block;
+    width: calc(100% - 80px);
 }
 
 #mainheader .comune .logotxt h1 {

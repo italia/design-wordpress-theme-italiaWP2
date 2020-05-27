@@ -153,7 +153,7 @@
 <!-- Inizio Intestazione -->
 <div class="container header">
     <div class="row clearfix">
-        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-7 col-7 comune">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-7 comune">
             <div class="logoprint">
                 <h1>
                     <?php
