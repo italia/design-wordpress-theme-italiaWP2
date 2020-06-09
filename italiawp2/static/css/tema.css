@@ -310,8 +310,9 @@ body.ridotto {
 }
 
 #mainheader .comune .logoimg img {
-    height: 48px;
-    max-height: 48px;
+    height: auto;
+    max-height: 50px;
+    max-width: 50px;
 }
 
 #mainheader .comune .logoimg a:focus {
