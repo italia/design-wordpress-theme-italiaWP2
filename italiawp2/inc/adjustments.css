@@ -16,9 +16,12 @@ a:hover {
     margin-top: 32px;
 }
     
-@media screen and (max-width:767px){
+@media screen and (max-width:767px) {
     .scheda-news .scheda-testo {
         margin-top: 16px;
+    }
+    .scheda-news .scheda-testo.scheda-testo-nofoto {
+        margin-right: 0 !important;
     }
     .card .card-calendar {
         right: 16px;

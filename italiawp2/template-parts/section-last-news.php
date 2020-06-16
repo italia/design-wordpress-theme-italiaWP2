@@ -64,7 +64,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </div>
                         <?php } ?>
 
-                        <div class="scheda-testo">
+                        <div class="scheda-testo <?php if($img_url=="") echo 'scheda-testo-nofoto'; ?>">
                         <?php if(is_sticky( $post->ID )) { ?>
                             <div class="flag-icon"></div>
                         <?php } ?>
