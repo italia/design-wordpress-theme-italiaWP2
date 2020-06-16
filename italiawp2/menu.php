@@ -152,7 +152,7 @@
 
 <!-- Inizio Intestazione -->
 <div class="container header">
-    <div class="row clearfix">
+    <div class="row clearfix header-tablet">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-7 comune">
             <div class="logoprint">
                 <h1>

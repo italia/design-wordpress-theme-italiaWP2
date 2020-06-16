@@ -524,3 +524,10 @@ table td:last-child, table th:last-child {
 .form-group input.btn-primary {
     color: #fff !important;
 }
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .header-tablet {
+        margin: 0;
+        width: calc(100% -50px);
+    }
+}
