@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="titolo-sezione">
-                    <h2>Risultati per: "<?php echo get_search_query(); ?>"
+                    <h2><?php echo __('Results for','italiawp2'); ?>: "<?php echo get_search_query(); ?>"
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small>Pagina <?php echo $paged; ?> di <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h2>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="articolo-paragrafi">
                     <div class="row">
                         <div class="col-md-12 cerca-risultati d-md-block d-none">
-                            Trovati <?php echo $wp_query->found_posts; ?> risultati
+                            <?php echo $wp_query->found_posts; ?> <?php echo __('results found','italiawp2'); ?>
                         </div>
                     </div>
                     <div class="row">
@@ -66,7 +66,7 @@
                                 <p><?php echo get_the_excerpt(); ?></p>
                                 <a aria-label="Leggi di più - Vai alla pagina: <?php the_title(); ?>"
                                    href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="tutte">
-                                    Leggi di più
+                                    <?php echo __('Read more','italiawp2'); ?>
                                     <svg class="icon">
                                         <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                     </svg>

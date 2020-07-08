@@ -19,7 +19,7 @@
                 <div class="titolosezione">
                     <h3><?php echo the_archive_title('',''); ?>
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small>Pagina <?php echo $paged; ?> di <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h3>
                 </div>

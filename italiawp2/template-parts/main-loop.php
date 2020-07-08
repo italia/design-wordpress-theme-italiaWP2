@@ -17,9 +17,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titolosezione">
-                    <h3>Ultime notizie
+                    <h3><?php echo __('Last news','italiawp2'); ?>
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small>Pagina <?php echo $paged; ?> di <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h3>
                 </div>
@@ -45,6 +45,7 @@ $i = 0; if (have_posts()) :
     }
     
     $category = get_the_category(); $first_category = $category[0];
+    $posttags = get_the_tags();
     $datapost = get_the_date('j F Y', '', ''); ?>
                     
             <div class="col-md-4 mb32">
@@ -83,15 +84,31 @@ $i = 0; if (have_posts()) :
                         <small><p><?php echo $datapost; ?></p></small>
                         <p><?php echo get_the_excerpt(); ?></p>
                     </div>
+                    
+                    <?php if (!empty($category)) { ?>
                     <div class="scheda-argomenti">
+                        <h4><?php echo __('Categories','italiawp2'); ?></h4>
                         <?php
-                            if (!empty($category)) {
-                                foreach ($category as $cat) {
-                                    echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
-                                }
+                            foreach ($category as $cat) {
+                                echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
                             }
-                            ?>
+                         ?>
                     </div>
+                    <?php } ?>
+                    
+                    <?php if (!empty($posttags)) { ?>
+                    <div class="scheda-argomenti">
+                        <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                        <div class="argomenti-sezione-elenco">
+                        <?php
+                            foreach ($posttags as $tag) {
+                                echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                            }
+                         ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    
                 </article>
             </div>
 

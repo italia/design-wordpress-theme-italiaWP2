@@ -39,6 +39,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         }
 
         $category = get_the_category(); $first_category = $category[0];
+        $posttags = get_the_tags();
         $datapost = get_the_date('j F Y', '', ''); ?>
                 
                 <div class="col-md-4">
@@ -77,18 +78,34 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <small><p><?php echo $datapost; ?></p></small>
                             <p><?php echo get_the_excerpt(); ?></p>
                         </div>
+                        
+                        <?php if (!empty($category)) { ?>
                         <div class="scheda-argomenti">
+                            <h4><?php echo __('Categories','italiawp2'); ?></h4>
                             <?php
-                                if (!empty($category)) {
-                                    foreach ($category as $cat) {
-                                        echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
-                                    }
+                                foreach ($category as $cat) {
+                                    echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
                                 }
-                                ?>
+                             ?>
                         </div>
+                        <?php } ?>
+
+                        <?php if (!empty($posttags)) { ?>
+                        <div class="scheda-argomenti">
+                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <div class="argomenti-sezione-elenco">
+                            <?php
+                                foreach ($posttags as $tag) {
+                                    echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                                }
+                             ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        
                         <div class="scheda-footer">
                             <a href="<?php the_permalink(); ?>" title="Vai alla pagina: <?php the_title(); ?>" class="tutte">
-                                Leggi tutto
+                                <?php echo __('Read more','italiawp2'); ?>
                                 <svg class="icon">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
@@ -109,7 +126,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="row">
                         <div class="col-lg-3">
-                            <h6 class="text-uppercase text-center">Altri argomenti</h6>
+                            <h6 class="text-uppercase text-center"><?php echo __('Other categories','italiawp2'); ?></h6>
                         </div>
                         <div class="col-lg-9 text-center text-lg-left">
                             
@@ -124,10 +141,29 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                 </div>
             </div>
             
+            <div class="row mt-4">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h6 class="text-uppercase text-center"><?php echo __('Other topics','italiawp2'); ?></h6>
+                        </div>
+                        <div class="col-lg-9 text-center text-lg-left">
+                            
+                            <?php foreach (get_tags() as $tag){ ?>
+                            <div class="chip chip-simple chip-primary">
+                                <a href="<?php echo esc_url(get_tag_link($tag)); ?>" class="chip-label"><?php echo $tag->name; ?></a>
+                            </div>
+                            <?php } ?>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="row mt32">
                 <div class="col-md-12 veditutti">
                     <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="Vai alla pagina: Notizie" class="btn btn-default btn-verde">
-                        Vedi tutte
+                        <?php echo __('See all','italiawp2'); ?>
                     </a>
                 </div>
             </div>

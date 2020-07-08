@@ -16,13 +16,27 @@ if (have_posts()) : while (have_posts()) : the_post();
 
         <section id="intro">
             <div class="container">
-                <div class="row">
-                    <div class="offset-lg-1 col-lg-6 col-md-8">
-                        <div class="titolo-sezione">
-                            <h2><?php the_title(); ?></h2>
-                            <p><?php echo get_the_excerpt(); ?></p>
-                        </div>
+                <div class="offset-lg-1 col-lg-6 col-md-8">
+                    <div class="titolo-sezione">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php echo get_the_excerpt(); ?></p>
                     </div>
+                </div>
+                <div class="offset-lg-1 col-lg-3 col-md-4">
+                    <aside id="argomenti-sezione">
+                        <?php if (!empty($posttags)) { ?>
+                        <div class="argomenti">
+                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <div class="argomenti-sezione-elenco">
+                                <?php
+                                    foreach ($posttags as $tag) {
+                                        echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                                    }
+                                 ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                    </aside>
                 </div>
             </div>
         </section>

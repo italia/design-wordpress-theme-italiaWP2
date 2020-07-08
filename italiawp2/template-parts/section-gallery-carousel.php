@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="titolosezione">
-                    <h3>Gallerie fotografiche <small>(scorri)</small></h3>
+                    <h3><?php echo __('Photo galleries','italiawp2'); ?> <small>(<?php echo __('scroll','italiawp2'); ?>)</small></h3>
                 </div>
             </div>
         </div>

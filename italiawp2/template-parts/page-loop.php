@@ -12,7 +12,9 @@ if (have_posts()) : while (have_posts()) : the_post();
     $img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'news-image' );
     if($img_url!="") {
         $img_url = $img_url[0];
-    } ?>
+    }
+    
+    $posttags = get_the_tags(); ?>
 
         <section id="intro">
             <div class="container">
@@ -22,6 +24,22 @@ if (have_posts()) : while (have_posts()) : the_post();
                             <h2><?php the_title(); ?></h2>
                             <p><?php echo get_the_excerpt(); ?></p>
                         </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3 col-md-4">
+                        <aside id="argomenti-sezione">
+                            <?php if (!empty($posttags)) { ?>
+                            <div class="argomenti">
+                                <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                                <div class="argomenti-sezione-elenco">
+                                    <?php
+                                        foreach ($posttags as $tag) {
+                                            echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                                        }
+                                     ?>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </aside>
                     </div>
                 </div>
             </div>
@@ -65,7 +83,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                             <div class="offset-md-1 col-md-11">
                                 <div class="row">
                                     <div class="col-md-12 mt16">
-                                        <p>Ultimo aggiornamento</p>
+                                        <p><?php echo __('Last update','italiawp2'); ?></p>
                                     <?php
                                         $updated_date = get_the_modified_time('j F Y');
                                         $updated_time = get_the_modified_time('H:i'); 

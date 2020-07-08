@@ -7,7 +7,7 @@
 
 <div class="row mt64">
     <div class="col-12">
-        <h4>Commenti</h4>
+        <h4><?php echo __('Comments','italiawp2'); ?></h4>
 
         <?php
         $args = array(
@@ -34,7 +34,7 @@
         } else { ?>
         
                 <div class="callout callout-highlight pt16 pb16">
-                    <p>Nessun commento</p>
+                    <p><?php echo __('No comment','italiawp2'); ?></p>
                 </div>
         
     <?php } ?>
@@ -53,7 +53,7 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" ' . $aria_req . ($req ? ' size="30" required' : '') . '>' .
-                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="author">Nome' . ($req ? '*' : '') . '</label>' .
+                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="author">' . __('Name','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 
@@ -61,7 +61,7 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<input class="form-control" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" ' . $aria_req . ($req ? ' size="30" required' : '') . '>' .
-                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="email">Email' . ($req ? '*' : '') . '</label>' .
+                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="email">' . __('Email','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 
@@ -69,18 +69,18 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<input class="form-control" id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" ' . $aria_req . ' size="30">' .
-                        '<label for="url">Sito</label>' .
+                        '<label for="url">'.__('Site','italiawp2').'</label>' .
                     '</div>' .
                 '</div>',
                 
                 'cookies' =>
                 '<div class="form-row">' .
-                    '<p class="is-required">Salvataggio di un cookie con i miei dati (nome, email, sito web) per il prossimo commento</p>' .
+                    '<p class="is-required">'.__('Saving a cookie with my data (name, email, website) for the next comment','italiawp2').'</p>' .
                 '</div>' .
                 '<div class="form-row">' .
                     '<div class="form-check">' .
                         '<input class="form-check-input" type="checkbox" value="yes" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" ' . $aria_req . $consent . ' required>' .
-                        '<label class="form-check-label" for="wp-comment-cookies-consent">' . ($req ? '*' : '') . 'Do il mio consenso' .'</label>' .
+                        '<label class="form-check-label" for="wp-comment-cookies-consent">' . ($req ? '*' : '') . __('I give my consent','italiawp2') .'</label>' .
                     '</div>' .
                 '</div>'
             );
@@ -92,13 +92,13 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<textarea id="comment" name="comment" maxlength="65525" ' . $aria_req . ($req ? ' required' : '') . ' rows="3"></textarea>' .
-                        '<label for="comment">Commento' . ($req ? '*' : '') . '</label>' .
+                        '<label for="comment">' . __('Comment','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 
                 'title_reply' =>
                 '<div class="form-row">' .
-                    '<p>Lascia un commento</p>' .
+                    '<p>'.__('Leave a comment','italiawp2').'</p>' .
                 '</div>',
                 
                 'submit_button' =>

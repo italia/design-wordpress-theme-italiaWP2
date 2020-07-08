@@ -12,7 +12,9 @@
     margin-top: 40px;
 }
 
-#argomenti-sezione h4 {
+#argomenti-sezione h4,
+.scheda-argomenti h4,
+.argomenti h4 {
     font-size: 0.778em;
     font-weight: normal;
 }

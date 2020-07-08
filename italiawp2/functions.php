@@ -184,13 +184,13 @@ function italiawp2_create_breadcrumbs() {
             $userdata = get_userdata($author);
             echo $before . $userdata->display_name . $after;
         } elseif (is_404()) {
-            echo $before . 'Errore 404' . $after;
+            echo $before . __('Error 404','italiawp2') . $after;
         }
 
         if (get_query_var('paged')) {
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '<li class="breadcrumb-item">&nbsp;(';
-            echo ' Pagina ' . get_query_var('paged');
+            echo ' '.__('Page','italiawp2').' ' . get_query_var('paged');
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '&nbsp;) </li>';
         }
@@ -255,47 +255,29 @@ function italiawp2_register_required_plugins() {
         'is_automatic' => false,
         'message' => '',
         'strings' => array(
-            'page_title' => __('Plugin richiesti dal tema "ItaliaWP"', 'italiawp2'),
-            'menu_title' => __('Plugin richiesti', 'italiawp2'),
-            'installing' => __('Installazione del Plugin: %s', 'italiawp2'),
-            'updating' => __('Aggiornamento del Plugin: %s', 'italiawp2'),
-            'oops' => __('Qualcosa è andato male con le API del Plugin.', 'italiawp2'),
-            'notice_can_install_required' => _n_noop(
-                    'Il tema "ItaliaWP" richiede il plugin: %1$s.', 'Il tema "ItaliaWP" richiede i plugin: %1$s.', 'italiawp2'
-            ),
-            'notice_can_install_recommended' => _n_noop(
-                    'Il tema "ItaliaWP" raccomanda il plugin: %1$s.', 'Il tema "ItaliaWP" raccomanda i plugin: %1$s.', 'italiawp2'
-            ),
-            'notice_ask_to_update' => _n_noop(
-                    'Il seguente plugin deve essere aggiornato all\'ultima versione per avere massima compatibilità con questo tema: %1$s.', 'I seguenti plugin devono essere aggiornati all\'ultima versione per avere massima compatibilità con questo tema: %1$s.', 'italiawp2'
-            ),
-            'notice_ask_to_update_maybe' => _n_noop(
-                    'C\'è un aggiornamento disponibile per: %1$s.', 'Ci sono aggiornamenti disponibili per: %1$s.', 'italiawp2'
-            ),
-            'notice_can_activate_required' => _n_noop(
-                    'Il plugin richiesto non è attivo: %1$s.', 'I plugin richiesti non sono attivi: %1$s.', 'italiawp2'
-            ),
-            'notice_can_activate_recommended' => _n_noop(
-                    'Il plugin raccomandato non è attivo: %1$s.', 'I plugin raccomandati non sono attivi: %1$s.', 'italiawp2'
-            ),
-            'install_link' => _n_noop(
-                    'Installa il plugin', 'Installa i plugin', 'italiawp2'
-            ),
-            'update_link' => _n_noop(
-                    'Aggiorna il plugin', 'Aggiorna i plugin', 'italiawp2'
-            ),
-            'activate_link' => _n_noop(
-                    'Attiva il plugin', 'Attiva i plugin', 'italiawp2'
-            ),
-            'return' => __('Ritorna all\'installazione dei Plugin Richiesti', 'italiawp2'),
-            'plugin_activated' => __('Plugin attivati con successo.', 'italiawp2'),
-            'activated_successfully' => __('I seguenti plugin sono stati attivati con successo:', 'italiawp2'),
-            'plugin_already_active' => __('Nessuna azione richiesta. Il Plugin %1$s è già attivo.', 'italiawp2'),
-            'plugin_needs_higher_version' => __('Plugin non attivato. Il tema ha bisogno di na versione più recente di %s. Per favore aggiorna il plugin.', 'italiawp2'),
-            'complete' => __('Tutti i plugin sono stati installati e attivati con successo. %1$s', 'italiawp2'),
-            'dismiss' => __('Nascondi la notifica', 'italiawp2'),
-            'notice_cannot_install_activate' => __('Ci sono dei plugin raccomandati o richiesti da installare, aggiornare  o attivare.', 'italiawp2'),
-            'contact_admin' => __('Per favore, contatta l\'amministratore del sito per assistenza.', 'italiawp2'),
+            'page_title' => __('Plugins required by the theme "ItaliaWP"', 'italiawp2'),
+            'menu_title' => __('Plugins required', 'italiawp2'),
+            'installing' => __('Installing Plugin: %s', 'italiawp2'),
+            'updating' => __('Updating Plugin: %s', 'italiawp2'),
+            'oops' => __('Something went wrong with the plugin API.', 'italiawp2'),
+            'notice_can_install_required' => __('"ItaliaWP" theme requires plugins %1$s.','italiawp2'),
+            'notice_can_install_recommended' => __('"ItaliaWP" recommends plugins: %1$s.','italiawp2'),
+            'notice_ask_to_update' => __('The following plugins must be updated to the latest version to have maximum compatibility with this theme: %1$s.','italiawp2'),
+            'notice_ask_to_update_maybe' => __('There are updates available for: %1$s.','italiawp2'),
+            'notice_can_activate_required' => __('Required plugins are not active: %1$s.','italiawp2'),
+            'notice_can_activate_recommended' => __('Recommended plugins are not active: %1$s.','italiawp2'),
+            'install_link' => __('Install Plugins', 'italiawp2'),
+            'update_link' => __('Update Plugins', 'italiawp2'),
+            'activate_link' => __('Activate plugins','italiawp2'),
+            'return' => __('Return to Required Plugins Installer', 'italiawp2'),
+            'plugin_activated' => __('Plugin activated successfully.', 'italiawp2'),
+            'activated_successfully' => __('The following plugin was activated successfully:', 'italiawp2'),
+            'plugin_already_active' => __('No action taken. Plugin %1$s was already active.', 'italiawp2'),
+            'plugin_needs_higher_version' => __('Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'italiawp2'),
+            'complete' => __('All plugins installed and activated successfully. %1$s', 'italiawp2'),
+            'dismiss' => __('Dismiss this notice', 'italiawp2'),
+            'notice_cannot_install_activate' => __('There are one or more required or recommended plugins to install, update or activate.', 'italiawp2'),
+            'contact_admin' => __('Please contact the administrator of this site for help.', 'italiawp2'),
             'nag_type' => '',
         ),
     );
@@ -372,7 +354,7 @@ function italiawp2_metabox_menu_pt_archive() {
 
         echo '<p class="button-controls">';
         echo '<span class="add-to-menu">';
-        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . 'Aggiungi al menu' . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
+        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . __('Add to Menu','italiawp2') . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
         echo '<span class="spinner"></span>';
         echo '</span>';
         echo '</p>';
@@ -385,7 +367,7 @@ function my_date_search() {
     if (is_search()) {
         $original_query = get_search_query();
         
-        $months = array(1 => "Gennaio", 2 => "Febbraio", 3 => "Marzo", 4 => "Aprile", 5 => "Maggio", 6 => "Giugno", 7 => "Luglio", 8 => "Agosto", 9 => "Settembre", 10 => "Ottobre", 11 => "Novembre", 12 => "Dicembre");
+        $months = array(1 => __('January','italiawp2'), 2 => __('February','italiawp2'), 3 => __('March','italiawp2'), 4 => __('April','italiawp2'), 5 => __('May','italiawp2'), 6 => __('June','italiawp2'), 7 => __('July','italiawp2'), 8 => __('August','italiawp2'), 9 => __('September','italiawp2'), 10 => __('October','italiawp2'), 11 => __('November','italiawp2'), 12 => __('December','italiawp2'));
 
         foreach ($months as $month => $month_name) {
             if (stristr($original_query, $month_name)) {
@@ -407,3 +389,33 @@ function my_date_search() {
         }
     }
 }
+
+/* Multilingua */
+
+function italiawp2_localisation() {
+    function italiawp2_localised( $locale ) {
+        if ( isset( $_GET['l'] ) ) {
+            return sanitize_key( $_GET['l'] );
+        }
+        return $locale;
+    }
+    add_filter('locale','italiawp2_localised');
+    load_theme_textdomain('italiawp2',get_template_directory().'/languages');
+}
+add_action('after_setup_theme','italiawp2_localisation');
+
+/* Attivo tags per Articoli e Pagine */
+
+// Supporto ai tags per le pagine
+function tags_support_all() {
+    register_taxonomy_for_object_type('post_tag', 'page');
+}
+add_action('init', 'tags_support_all');
+
+// Inserimento dei tags nelle queries
+function tags_support_query($wp_query) {
+    if ($wp_query->get('tag')) {
+        $wp_query->set('post_type', 'any');
+    }
+}
+add_action('pre_get_posts', 'tags_support_query');

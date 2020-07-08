@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3>Mappa Interattiva</h3>
-                <h5>Clicca su per attivare</h5>
+                <h3><?php echo __('Interactive Map','italiawp2'); ?></h3>
+                <h5><?php echo __('Click on to activate','italiawp2'); ?></h5>
             </div>
         </div>
     </div>

@@ -16,13 +16,13 @@
             <a class="list-group-item list-group-item-action Linklist-link Linklist-link--lev3" href="<?php echo get_permalink($parent); ?>">
                 <svg class="icon">
                     <use xlink:href="<?php echo get_bloginfo('template_url'); ?>/static/img/bootstrap-italia.svg#it-chevron-left"></use>
-                </svg> Indietro
+                </svg> <?php echo __('Back','italiawp2'); ?>
             </a>
         </div>
         <?php } ?>
 
         <h4 class="dropdown">
-            Pagine collegate
+            <?php echo __('Linked pages','italiawp2'); ?>
         </h4>
         <div class="menu-separatore"><div class="bg-oro"></div></div>
 
@@ -110,4 +110,3 @@
             } ?>
         <?php } ?>
     </div>
-        

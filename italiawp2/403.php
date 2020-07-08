@@ -6,7 +6,7 @@
             <div class="offset-lg-1 col-lg-6 col-md-8">
                 <div class="titolo-sezione">
                     <h1 class="ErrorPage-title">403</h1>
-                    <h2 class="ErrorPage-subtitle">Accesso negato</h2>
+                    <h2 class="ErrorPage-subtitle"><?php echo __('Forbidden','italiawp2'); ?></h2>
                 </div>
             </div>
         </div>
@@ -20,13 +20,13 @@
                 <div class="articolo-paragrafi">
                     <div class="row">
                         <div class="col-12 testolungo">
-                            <p>Non disponi delle autorizzazioni per accedere a questa pagina, <a href="javascript:history.back();" title="Torna alla pagina precedente">torna indietro</a> o utilizza il menu per continuare la navigazione.</p>
+                            <p><?php echo __('You don\'t have permission to access this page','italiawp2'); ?>, <a href="javascript:history.back();" title="<?php echo __('come back'); ?>"><?php echo __('come back'); ?></a> <?php echo __('or use the menu to continue browsing'); ?>.</p>
                         </div>
                     </div>
                     
                     <div class="row mt32">
                         <div class="col-md-12 veditutti">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-default btn-verde">Torna alla Home</a>
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-default btn-verde"><?php echo __('Back to Home','italiawp2'); ?></a>
                         </div>
                     </div>
                 </div>

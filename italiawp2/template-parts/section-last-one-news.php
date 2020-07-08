@@ -28,6 +28,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         }
 
         $category = get_the_category(); $first_category = $category[0];
+        $posttags = get_the_tags();
         $datapost = get_the_date('j F Y', '', ''); ?>
 
 <section id="novita_evidenza">
@@ -49,18 +50,36 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </h2>
                         <p><?php echo get_the_excerpt(); ?></p>
                         <p class="Grid-cell u-textSecondary"><?php echo $datapost; ?></p>
+                        
+                        <?php if (!empty($category)) { ?>
                         <div class="argomenti">
-                            <?php
-                            if (!empty($category)) {
-                                foreach ($category as $cat) {
-                                    echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
-                                }
-                            }
-                            ?>
+                            <h4><?php echo __('Categories','italiawp2'); ?></h4>
+                            <div class="argomenti-sezione-elenco">
+                                <?php
+                                    foreach ($category as $cat) {
+                                        echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
+                                    }
+                                 ?>
+                            </div>
                         </div>
+                        <?php } ?>
+                        
+                        <?php if (!empty($posttags)) { ?>
+                        <div class="argomenti">
+                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <div class="argomenti-sezione-elenco">
+                                <?php
+                                    foreach ($posttags as $tag) {
+                                        echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                                    }
+                                 ?>
+                            </div>
+                        </div>
+                        <?php } ?>
+                        
                         <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"
-                           title="Vai alla pagina: Tutte le novità" class="tutte">
-                            Tutte le novità
+                           title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('All the news','italiawp2'); ?>" class="tutte">
+                            <?php echo __('All the news','italiawp2'); ?>
                             <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                             </svg>

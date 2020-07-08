@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-12">
 
-            <nav class="pagination-wrapper justify-content-center" aria-label="Navigazione tra le notizie">
+            <nav class="pagination-wrapper justify-content-center" aria-label="<?php echo __('Browsing the news','italiawp2'); ?>">
                 <ul class="pagination">
                     <li class="page-item">
                         <?php
@@ -17,14 +17,14 @@
                             previous_post_link('%link', '<svg class="icon">
                                                                 <use xlink:href="' . get_bloginfo('template_url') . '/static/img/bootstrap-italia.svg#it-chevron-left"></use>
                                                             </svg>
-                                                            <span class="sr-only">Pagina precedente</span>');
+                                                            <span class="sr-only">'.__('Previous page','italiawp2').'</span>');
                         } else {
                             $first = new WP_Query('posts_per_page=1&order=DESC');
                             $first->the_post();
                             echo '<a href="' . get_permalink() . '"><svg class="icon">
                                                                 <use xlink:href="' . get_bloginfo('template_url') . '/static/img/bootstrap-italia.svg#it-chevron-left"></use>
                                                             </svg>
-                                                            <span class="sr-only">Pagina precedente</span></a>';
+                                                            <span class="sr-only">'.__('Previous page','italiawp2').'</span></a>';
                             wp_reset_query();
                         };
                         ?>
@@ -35,14 +35,14 @@
                             next_post_link('%link', '<svg class="icon">
                                                             <use xlink:href="' . get_bloginfo('template_url') . '/static/img/bootstrap-italia.svg#it-chevron-right"></use>
                                                         </svg>
-                                                        <span class="sr-only">Pagina successiva</span>');
+                                                        <span class="sr-only">'.__('Next page','italiawp2').'</span>');
                         } else {
                             $last = new WP_Query('posts_per_page=1&order=ASC');
                             $last->the_post();
                             echo '<a href="' . get_permalink() . '"><svg class="icon">
                                                             <use xlink:href="' . get_bloginfo('template_url') . '/static/img/bootstrap-italia.svg#it-chevron-right"></use>
                                                         </svg>
-                                                        <span class="sr-only">Pagina successiva</span></a>';
+                                                        <span class="sr-only">'.__('Next page','italiawp2').'</span></a>';
                             wp_reset_query();
                         };
                         ?>

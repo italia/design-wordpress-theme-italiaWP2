@@ -20,7 +20,7 @@ if (is_plugin_active('attachments/index.php')) { ?>
     <div class="row">
         <div class="offset-md-1 col-md-11 paragrafo">
             <a id="articolo-par-allegati"> </a>
-            <h4>Allegati (<?php echo $attachments->total(); ?>)</h4>
+            <h4><?php echo __('Attachments','italiawp2'); ?> (<?php echo $attachments->total(); ?>)</h4>
         </div>
     </div>
     <div class="row schede profilo-dettaglio-testo">

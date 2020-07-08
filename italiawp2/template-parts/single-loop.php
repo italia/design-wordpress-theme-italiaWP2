@@ -20,6 +20,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     }
     
     $category = get_the_category(); $first_category = $category[0];
+    $posttags = get_the_tags();
     $datapost = get_the_date('j F Y', '', ''); ?>
 
         <section id="intro">
@@ -33,25 +34,40 @@ if (have_posts()) : while (have_posts()) : the_post();
                     </div>
                     <div class="offset-lg-1 col-lg-3 col-md-4">
                         <aside id="argomenti-sezione">
+                            
+                            <?php if (!empty($category)) { ?>
                             <div class="argomenti">
-                                <h4>Categorie</h4>
+                                <h4><?php echo __('Categories','italiawp2'); ?></h4>
                                 <div class="argomenti-sezione-elenco">
                                     <?php
-                                    if (!empty($category)) {
                                         foreach ($category as $cat) {
                                             echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
                                         }
-                                    }
-                                    ?>
+                                     ?>
                                 </div>
                             </div>
+                            <?php } ?>
+                            
+                            <?php if (!empty($posttags)) { ?>
+                            <div class="argomenti">
+                                <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                                <div class="argomenti-sezione-elenco">
+                                    <?php
+                                        foreach ($posttags as $tag) {
+                                            echo '<a href="' . esc_url(get_tag_link($tag)) . '" title="' . esc_html($tag->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($tag->name) . '</a>';
+                                        }
+                                     ?>
+                                </div>
+                            </div>
+                            <?php } ?>
+                            
                         </aside>
                     </div>
                 </div>
                 <div class="row mt40">
                     <div class="offset-xl-1 col-xl-2 offset-lg-1 col-lg-3 col-md-3">
                         <p class="data-articolo">
-                            <span>Data:</span><br /><strong><?php echo $datapost; ?></strong>
+                            <span><?php echo __('Date','italiawp2'); ?>:</span><br /><strong><?php echo $datapost; ?></strong>
                         </p>
                     </div>
                 </div>
@@ -94,7 +110,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                             <div class="offset-md-1 col-md-11">
                                 <div class="row mt16">
                                     <div class="col-md-12">
-                                        <p>Ultimo aggiornamento</p>
+                                        <p><?php echo __('Last update','italiawp2'); ?></p>
                                     <?php
                                         $updated_date = get_the_modified_time('j F Y');
                                         $updated_time = get_the_modified_time('H:i'); 

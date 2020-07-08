@@ -47,20 +47,21 @@
                         <h4>Recapiti</h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                Indirizzo<br>
+                                <?php echo __('Address','italiawp2'); ?>
+                                <br>
                                 <span><?php echo get_option('dettagli-indirizzo'); ?><br>
                                 <?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>
                             </li>
                             <li>
-                                Telefono<br>
-                                <a href="tel:+39<?php echo get_option('dettagli-telefono'); ?>" title="Telefono">
+                                <?php echo __('Phone','italiawp2'); ?><br>
+                                <a href="tel:+39<?php echo get_option('dettagli-telefono'); ?>" title="<?php echo __('Phone','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-telefono'); ?>
                                 </a>
                             </li>
                             <?php if(get_option('dettagli-fax')!=""): ?>
                             <li>
-                                Fax<br>
-                                <a href="tel:+39<?php echo get_option('dettagli-fax'); ?>" title="Fax">
+                                <?php echo __('Fax','italiawp2'); ?><br>
+                                <a href="tel:+39<?php echo get_option('dettagli-fax'); ?>" title="<?php echo __('Fax','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-fax'); ?>
                                 </a>
                             </li>
@@ -69,21 +70,21 @@
                     </div>
                     
                     <div class="col-12 col-md-6 col-lg-3">
-                        <h4>Informazioni</h4>
+                        <h4><?php echo __('Information','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                C.F. / P.IVA<br>
+                                <?php echo __('Tax code / VAT number','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-cfpiva'); ?></span>
                             </li>
                             <?php if(get_option('dettagli-codunivoco')!=""): ?>
                             <li>
-                                Cod. Univoco<br>
+                                <?php echo __('Unique Code','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-codunivoco'); ?></span>
                             </li>
                             <?php endif; ?>
                             <?php if(get_option('dettagli-iban')!=""): ?>
                             <li>
-                                IBAN<br>
+                                <?php echo __('IBAN','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-iban'); ?></span>
                             </li>
                             <?php endif; ?>
@@ -91,26 +92,26 @@
                     </div>
                     
                     <div class="col-12 col-md-6 col-lg-3">
-                        <h4>Posta Elettronica</h4>
+                        <h4><?php echo __('Email contacts','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                PEC<br>
-                                <a href="mailto:<?php echo get_option('dettagli-pec'); ?>" title="Posta Elettronica Certificata">
+                                <?php echo __('PEC','italiawp2'); ?><br>
+                                <a href="mailto:<?php echo get_option('dettagli-pec'); ?>" title="<?php echo __('Certified mail','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-pec'); ?>
                                 </a>
                             </li>
                             <?php if(get_option('dettagli-email')!=""): ?>
                             <li>
-                                Email<br>
-                                <a href="mailto:<?php echo get_option('dettagli-email'); ?>" title="Email">
+                                <?php echo __('Email','italiawp2'); ?><br>
+                                <a href="mailto:<?php echo get_option('dettagli-email'); ?>" title="<?php echo __('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email'); ?>
                                 </a>
                             </li>
                             <?php endif; ?>
                             <?php if(get_option('dettagli-email2')!=""): ?>
                             <li>
-                                Email<br>
-                                <a href="mailto:<?php echo get_option('dettagli-email2'); ?>" title="Email">
+                                <?php echo __('Email','italiawp2'); ?><br>
+                                <a href="mailto:<?php echo get_option('dettagli-email2'); ?>" title="<?php echo __('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email2'); ?>
                                 </a>
                             </li>
@@ -119,79 +120,79 @@
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-3">
-                        <h4>Seguici su</h4>
+                        <h4><?php echo __('Follow us on','italiawp2'); ?></h4>
                         
                     <?php if( !( get_option('dettagli-facebook')=="" && get_option('dettagli-twitter')=="" && get_option('dettagli-youtube')=="" && get_option('dettagli-instagram')=="" ) ): ?>
                         <ul class="list-inline text-left social">
                         <?php if (get_option('dettagli-facebook') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - Facebook"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Facebook"
                                     href="<?php echo get_option('dettagli-facebook'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su Facebook</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Facebook</span>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if (get_option('dettagli-twitter') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - Twitter"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Twitter"
                                     href="<?php echo get_option('dettagli-twitter'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su Twitter</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Twitter</span>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if (get_option('dettagli-youtube') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - YouTube"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - YouTube"
                                     href="<?php echo get_option('dettagli-youtube'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su YouTube</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> YouTube</span>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if (get_option('dettagli-instagram') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - Instagram"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Instagram"
                                     href="<?php echo get_option('dettagli-instagram'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su Instagram</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Instagram</span>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if (get_option('dettagli-telegram') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - Telegram"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Telegram"
                                     href="https://telegram.me/<?php echo get_option('dettagli-telegram'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su Telegram</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Telegram</span>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if (get_option('dettagli-whatsapp') != ""): ?>
                             <li class="list-inline-item">
                                 <a  target="_blank" class="social-icon"
-                                    aria-label="Collegamento a sito esterno - Whatsapp"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Whatsapp"
                                     href="tel:+39<?php echo get_option('dettagli-whatsapp'); ?>">
                                     <svg class="icon">
                                         <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                                     </svg>
-                                    <span class="hidden">Seguici su Whatsapp</span>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Whatsapp</span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -202,19 +203,19 @@
             </section>
 
             <section class="postFooter clearfix">
-                <h3 class="sr-only">Sezione Link Utili</h3>                
+                <h3 class="sr-only"><?php echo __('Useful Links Section','italiawp2'); ?></h3>                
                 
                 <?php if(get_option('dettagli-id-privacy')!=""): ?>
-                    <a href="<?php echo get_permalink(get_option('dettagli-id-privacy')); ?>" title="Privacy policy">Privacy</a> |
+                    <a href="<?php echo get_permalink(get_option('dettagli-id-privacy')); ?>" title="<?php echo __('Privacy policy','italiawp2'); ?>"><?php echo __('Privacy','italiawp2'); ?></a> |
                 <?php endif; ?>
                 <?php if(get_option('dettagli-id-notelegali')!=""): ?>
-                    <a href="<?php echo get_permalink(get_option('dettagli-id-notelegali')); ?>" title="Note legali">Note legali</a> |
+                    <a href="<?php echo get_permalink(get_option('dettagli-id-notelegali')); ?>" title="<?php echo __('Legal notices','italiawp2'); ?>"><?php echo __('Legal notices','italiawp2'); ?></a> |
                 <?php endif; ?>
                 <?php if(get_option('dettagli-id-contatti')!=""): ?>
-                    <a href="<?php echo get_permalink(get_option('dettagli-id-contatti')); ?>" title="Contatti">Contatti</a> |
+                    <a href="<?php echo get_permalink(get_option('dettagli-id-contatti')); ?>" title="<?php echo __('Contacts','italiawp2'); ?>"><?php echo __('Contacts','italiawp2'); ?></a> |
                 <?php endif; ?>
                     
-                Realizzato con <a target="_blank" href="https://it.wordpress.org">WordPress</a> |
+                <?php echo __('Made with','italiawp2'); ?> <a target="_blank" href="https://it.wordpress.org">WordPress</a> |
                 
                 <!-- Per favore, non rimuoverlo! -->
                 <?php 
@@ -222,8 +223,8 @@
                 $main_theme_name = $main_theme->get('Name');
                 $main_theme_uri = $main_theme->get('ThemeURI');
                  ?>
-                Tema grafico <a target="_blank" href="<?php echo $main_theme_uri; ?>"><?php echo $main_theme_name; ?></a> |
-                Basato sul <a target="_blank" href="https://italia.github.io/design-comuni-prototipi/">Prototipo per siti PA di AgID</a>
+                <?php echo __('Graphic theme','italiawp2'); ?> <a target="_blank" href="<?php echo $main_theme_uri; ?>"><?php echo $main_theme_name; ?></a> |
+                <?php echo __('Based on the','italiawp2'); ?> <a target="_blank" href="https://italia.github.io/design-comuni-prototipi/"><?php echo __('AgID Prototype for PA sites','italiawp2'); ?></a>
                 <!-- Grazie :) -->
 
             </section>
@@ -232,7 +233,7 @@
     
 </div>
 
-<div id="topcontrol" class="topcontrol u-background-80" title="Torna su">
+<div id="topcontrol" class="topcontrol u-background-80" title="<?php echo __('Go up','italiawp2'); ?>">
   <svg class="icon">
     <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/bootstrap-italia.svg#it-collapse"></use>
   </svg>

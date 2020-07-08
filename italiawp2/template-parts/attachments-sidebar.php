@@ -17,7 +17,7 @@ if (is_plugin_active('attachments/index.php')) { ?>
 <?php $attachments = new Attachments('attachments'); ?>
 <?php if ($attachments->exist()) : ?>
 
-    <h4 class="dropdown">Allegati (<?php echo $attachments->total(); ?>)</h4>
+    <h4 class="dropdown"><?php echo __('Attachments','italiawp2'); ?> (<?php echo $attachments->total(); ?>)</h4>
     <div class="menu-separatore"><div class="bg-oro"></div></div>
 
     <div class="list-group lista-paragrafi">
