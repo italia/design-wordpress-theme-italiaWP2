@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-07-08 15:53+0200\n"
-"PO-Revision-Date: 2020-07-08 15:53+0200\n"
+"POT-Creation-Date: 2020-07-20 10:54+0200\n"
+"PO-Revision-Date: 2020-07-20 10:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -182,8 +182,8 @@ msgid "Error 404"
 msgstr "Errore 404"
 
 #: functions.php:193 template-parts/archive-gallerie-loop.php:22
-#: template-parts/archive-loop.php:22 template-parts/main-loop.php:22
-#: template-parts/search-loop.php:18
+#: template-parts/archive-loop.php:22 template-parts/archive-loop.php:86
+#: template-parts/main-loop.php:22 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
 
@@ -679,17 +679,17 @@ msgstr "Mostra / Nascondi"
 msgid "of"
 msgstr "di"
 
-#: template-parts/archive-loop.php:91 template-parts/main-loop.php:90
-#: template-parts/section-last-news.php:84
-#: template-parts/section-last-one-news.php:56
+#: template-parts/archive-loop.php:102 template-parts/main-loop.php:90
+#: template-parts/section-last-news.php:91
+#: template-parts/section-last-one-news.php:61
 #: template-parts/single-loop.php:40
 msgid "Categories"
 msgstr "Categorie"
 
-#: template-parts/archive-loop.php:102 template-parts/main-loop.php:101
+#: template-parts/archive-loop.php:113 template-parts/main-loop.php:101
 #: template-parts/page-loop-nosidebar.php:29 template-parts/page-loop.php:32
-#: template-parts/section-last-news.php:95
-#: template-parts/section-last-one-news.php:69
+#: template-parts/section-last-news.php:102
+#: template-parts/section-last-one-news.php:74
 #: template-parts/single-loop.php:53
 msgid "Topics"
 msgstr "Argomenti"
@@ -746,7 +746,7 @@ msgstr "Risultati per"
 msgid "results found"
 msgstr "risultati trovati"
 
-#: template-parts/search-loop.php:69 template-parts/section-last-news.php:108
+#: template-parts/search-loop.php:69 template-parts/section-last-news.php:115
 msgid "Read more"
 msgstr "Leggi di più"
 
@@ -758,24 +758,24 @@ msgstr "Gallerie fotografiche"
 msgid "scroll"
 msgstr "scorri"
 
-#: template-parts/section-last-news.php:129
+#: template-parts/section-last-news.php:137
 msgid "Other categories"
 msgstr "Altre categorie"
 
-#: template-parts/section-last-news.php:148
+#: template-parts/section-last-news.php:158
 msgid "Other topics"
 msgstr "Altri argomenti"
 
-#: template-parts/section-last-news.php:166
+#: template-parts/section-last-news.php:177
 msgid "See all"
 msgstr "Vedi tutte"
 
-#: template-parts/section-last-one-news.php:81
+#: template-parts/section-last-one-news.php:86
 msgid "Go to the page"
 msgstr "Go to the page"
 
-#: template-parts/section-last-one-news.php:81
-#: template-parts/section-last-one-news.php:82
+#: template-parts/section-last-one-news.php:86
+#: template-parts/section-last-one-news.php:87
 msgid "All the news"
 msgstr "Tutte le novità"
 

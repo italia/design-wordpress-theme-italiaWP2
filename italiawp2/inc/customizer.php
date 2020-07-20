@@ -28,6 +28,24 @@ function italiawp2_customize_register($wp_customize) {
         'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_section_last_news'
     ));
     
+/* Lista Altre Categorie (home) */
+    $wp_customize->add_setting('active_altre_categorie_home', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('active_altre_categorie_home', array(
+        'label' => 'Lista Altre Categorie (home)',
+        'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_altre_categorie_home'
+    ));
+    
+/* Lista Altri Argomenti (home) */
+    $wp_customize->add_setting('active_altri_argomenti_home', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('active_altri_argomenti_home', array(
+        'label' => 'Lista Altri Argomenti (home)',
+        'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_altri_argomenti_home'
+    ));
+
 /* Servizi */    
     $wp_customize->add_setting('active_section_services', array(
         'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'

@@ -71,18 +71,29 @@ $i = 0; if (have_posts()) :
                     </div>
                     <?php } ?>
                     
-                    <div class="scheda-testo">
-                        
+                <?php if ( 'post' == get_post_type($post->ID) ) { ?>
+                    <div class="scheda-icona-small">
                     <?php if(is_sticky( $post->ID )) { ?>
                         <div class="flag-icon"></div>
                     <?php } ?>
+
+                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                        <?php echo $datapost; ?>
+                    </div>
+                <?php }else{ ?>
+                    <div class="scheda-icona-small">
+                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_balance"></use></svg>
+                        <?php echo __('Page','italiawp2'); ?>
+                    </div>
+                <?php } ?>
+                    
+                    <div class="scheda-testo">
                         
                         <h4>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <?php the_title(); ?>
                             </a>
                         </h4>
-                        <small><p><?php echo $datapost; ?></p></small>
                         <p><?php echo get_the_excerpt(); ?></p>
                     </div>
                     

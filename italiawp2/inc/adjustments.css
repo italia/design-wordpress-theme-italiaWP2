@@ -10,16 +10,13 @@ a:hover {
     .navbar .navbar-collapsable .navbar-nav li.nav-item {
         display: list-item;
     }
-}
-
-.scheda-news .scheda-testo {
-    margin-top: 32px;
+    .navbar .navbar-collapsable .navbar-nav > li.nav-item > ul > li.nav-item > ul > li.nav-item > ul {
+        padding-left: 20px;
+        font-size: .85rem;
+    }
 }
     
 @media screen and (max-width:767px) {
-    .scheda-news .scheda-testo {
-        margin-top: 16px;
-    }
     .scheda-news .scheda-testo.scheda-testo-nofoto {
         margin-right: 0 !important;
     }
@@ -53,8 +50,28 @@ a:hover {
 
 .scheda-news .flag-icon {
     position: absolute;
-    margin-top: -40px;
+    margin-top: -24px;
     height: 32px;
+    right: 24px;
+}
+
+@media screen and (max-width: 576px) {
+    .scheda-news .flag-icon {
+        right: 130px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .scheda-news .flag-icon {
+        right: 160px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .scheda-news .flag-icon {
+        height: 24px;
+        right: 12px;
+    }
 }
 
 .scheda.card:after {

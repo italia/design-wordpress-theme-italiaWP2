@@ -804,8 +804,8 @@ body.ridotto {
 }
 
 @media (min-width: 768px) {
-    .scheda-news .scheda-testo {
-        margin-top: 32px;
+    .scheda-news .scheda-testo h4 {
+        margin-bottom: 24px;
     }
 }
 
@@ -1620,7 +1620,6 @@ img.spidback {
     list-style-type:none;
     margin: 15px 0;
     padding: 0;
-    /*font-size: 0.889em;*/
 }
 
 #footer .footer-list li {
@@ -1812,13 +1811,8 @@ img.spidback {
 /* PARTI COMUNI HOME E PAGINE INTERNE */
 
 section .titolosezione h3 {
-    /*color: #796C31;*/
     font-size: 1.778em;
     margin: 0 0 36px 0;
-}
-
-section .titolosezione h3 a {
-    /*color: #796C31;*/
 }
 
 section .titolosezione.filtrisezione {
@@ -2596,7 +2590,6 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     }
 
     #footer .logotxt {
-        /*width: 150px;*/
         vertical-align: sub;
     }
 
@@ -2615,7 +2608,6 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
     #footer h4 {
         font-size: 0.875em;
-        /*border: 0;*/
         padding: 24px 0 0 0;
     }
 

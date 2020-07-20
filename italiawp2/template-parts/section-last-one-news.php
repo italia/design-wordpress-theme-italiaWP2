@@ -48,8 +48,13 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                                 <?php the_title(); ?>
                             </a>
                         </h2>
+                        
+                        <div class="scheda-icona-small">
+                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <?php echo $datapost; ?>
+                        </div>
+                        
                         <p><?php echo get_the_excerpt(); ?></p>
-                        <p class="Grid-cell u-textSecondary"><?php echo $datapost; ?></p>
                         
                         <?php if (!empty($category)) { ?>
                         <div class="argomenti">

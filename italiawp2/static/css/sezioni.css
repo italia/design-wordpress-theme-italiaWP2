@@ -506,7 +506,7 @@ section#briciole {
 .scheda .scheda-testo-small, 
 .scheda .scheda-footer,
 .scheda-brick .scheda-testo {
-    padding: 10px 24px 16px 24px;
+    padding: 12px 24px;
 }
 
 .scheda .scheda-testo-small {
@@ -1411,35 +1411,11 @@ section#briciole {
         margin-top: 16px;
     }
 
-    /*.veditutti {
-        text-align: left;
-        margin: 8px 0 8px 8px;
-    }*/
-
     .veditutti .btn-verde {
-        /*background: none;
-        padding: 4px 8px;*/
         font-size: 0.875em;
-        /*color: #4E7E5B !important;*/
         text-transform: uppercase;
         letter-spacing: 1px;
     }
-
-    /*.veditutti .btn-verde:hover {
-        color: #fff !important;
-    }
-
-    .veditutti button svg.icon {
-        display: inline-block;
-        vertical-align: bottom;
-        width: 18px;
-        height: 18px;
-        fill: #4E7E5B;
-    }
-
-    .veditutti button:hover svg.icon {
-        fill: #fff;
-    }*/
 
     #sezioni-servizi {
         padding: 32px 0;

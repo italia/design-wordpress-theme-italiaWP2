@@ -49,6 +49,23 @@
     margin-right: 24px;
 }
 
+.novita-testo .scheda-icona-small {
+    color: #555;
+    letter-spacing: 1px;
+    font-size: 0.778em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 12px 12px 0;
+}
+
+.novita-testo .scheda-icona-small svg.icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+    vertical-align: bottom;
+    fill: #555;
+}
+
 .tutte {
     color: #4E7E5B;
     font-size: 0.778em;

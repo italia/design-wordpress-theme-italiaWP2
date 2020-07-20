@@ -43,6 +43,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         $datapost = get_the_date('j F Y', '', ''); ?>
                 
                 <div class="col-md-4">
+                    
                     <article class="scheda scheda-round scheda-news card">
 
                         <?php if($img_url!="") { ?>
@@ -64,18 +65,24 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             
                         </div>
                         <?php } ?>
-
-                        <div class="scheda-testo <?php if($img_url=="") echo 'scheda-testo-nofoto'; ?>">
+                        
+                        <div class="scheda-icona-small">
                         <?php if(is_sticky( $post->ID )) { ?>
                             <div class="flag-icon"></div>
                         <?php } ?>
+                            
+                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <?php echo $datapost; ?>
+                        </div>
+
+                        <div class="scheda-testo <?php if($img_url=="") echo 'scheda-testo-nofoto'; ?>">
                         
                             <h4>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                     <?php the_title(); ?>
                                 </a>
                             </h4>
-                            <small><p><?php echo $datapost; ?></p></small>
+
                             <p><?php echo get_the_excerpt(); ?></p>
                         </div>
                         
@@ -122,6 +129,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
     ?>
             </div>
             
+    <?php if (get_theme_mod('active_altre_categorie_home')): ?>
             <div class="row">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="row">
@@ -140,7 +148,9 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                     </div>
                 </div>
             </div>
+    <?php endif; ?>
             
+    <?php if (get_theme_mod('active_altri_argomenti_home')): ?>
             <div class="row mt-4">
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="row">
@@ -159,6 +169,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                     </div>
                 </div>
             </div>
+    <?php endif; ?>
             
             <div class="row mt32">
                 <div class="col-md-12 veditutti">

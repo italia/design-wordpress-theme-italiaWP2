@@ -304,7 +304,7 @@
                             wp_nav_menu(array(
                                 'theme_location' => 'menu-principale',
                                 'menu_id' => 'menu-principale',
-                                'depth' => 3,
+                                'depth' => 4,
                                 'container' => '',
                                 'container_class' => '',
                                 'menu_class' => 'nav navbar-nav',
