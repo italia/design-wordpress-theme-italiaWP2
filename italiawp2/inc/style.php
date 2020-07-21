@@ -325,7 +325,8 @@ label {
 }
 
 .chip.chip-primary,
-.chip.chip-primary>.chip-label {
+.chip.chip-primary>.chip-label,
+.scheda-argomento-lista-testo a {
     color: {$color_50};
 }
 

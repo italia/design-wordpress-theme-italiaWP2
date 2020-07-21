@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-07-20 10:54+0200\n"
-"PO-Revision-Date: 2020-07-20 10:54+0200\n"
+"POT-Creation-Date: 2020-07-21 11:46+0200\n"
+"PO-Revision-Date: 2020-07-21 11:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -673,6 +673,10 @@ msgstr "nascondi"
 msgid "toggle"
 msgstr "Mostra / Nascondi"
 
+#: tag.php:16 template-parts/section-last-news.php:158
+msgid "Other topics"
+msgstr "Altri argomenti"
+
 #: template-parts/archive-gallerie-loop.php:22
 #: template-parts/archive-loop.php:22 template-parts/main-loop.php:22
 #: template-parts/search-loop.php:18
@@ -761,10 +765,6 @@ msgstr "scorri"
 #: template-parts/section-last-news.php:137
 msgid "Other categories"
 msgstr "Altre categorie"
-
-#: template-parts/section-last-news.php:158
-msgid "Other topics"
-msgstr "Altri argomenti"
 
 #: template-parts/section-last-news.php:177
 msgid "See all"

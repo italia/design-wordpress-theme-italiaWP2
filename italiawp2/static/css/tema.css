@@ -1256,14 +1256,6 @@ ul.navmenu {
     border-left: 4px solid transparent;
 }
 
-.navmenu li:first-child {
-    display: none;
-}
-
-.navmenu li ul li:first-child {
-    display: block;
-}
-
 .navmenu>li>a:hover, .navmenu>li>a:focus {
     background-color: rgba(116,166,129,0.1);
     border-left: 4px solid #4E7E5B;
