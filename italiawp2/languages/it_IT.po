@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-07-21 11:46+0200\n"
-"PO-Revision-Date: 2020-07-21 11:46+0200\n"
+"POT-Creation-Date: 2020-07-23 15:13+0200\n"
+"PO-Revision-Date: 2020-07-23 15:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop\n"
@@ -182,7 +182,7 @@ msgid "Error 404"
 msgstr "Errore 404"
 
 #: functions.php:193 template-parts/archive-gallerie-loop.php:22
-#: template-parts/archive-loop.php:22 template-parts/archive-loop.php:86
+#: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
 #: template-parts/main-loop.php:22 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
@@ -683,20 +683,25 @@ msgstr "Altri argomenti"
 msgid "of"
 msgstr "di"
 
-#: template-parts/archive-loop.php:102 template-parts/main-loop.php:90
+#: template-parts/archive-loop.php:103 template-parts/main-loop.php:96
 #: template-parts/section-last-news.php:91
 #: template-parts/section-last-one-news.php:61
 #: template-parts/single-loop.php:40
 msgid "Categories"
 msgstr "Categorie"
 
-#: template-parts/archive-loop.php:113 template-parts/main-loop.php:101
+#: template-parts/archive-loop.php:114 template-parts/main-loop.php:107
 #: template-parts/page-loop-nosidebar.php:29 template-parts/page-loop.php:32
 #: template-parts/section-last-news.php:102
 #: template-parts/section-last-one-news.php:74
 #: template-parts/single-loop.php:53
 msgid "Topics"
 msgstr "Argomenti"
+
+#: template-parts/archive-loop.php:127 template-parts/main-loop.php:120
+#: template-parts/search-loop.php:69 template-parts/section-last-news.php:115
+msgid "Read more"
+msgstr "Leggi di più"
 
 #: template-parts/attachment-loop.php:54
 #: template-parts/custom-post-type-loop.php:58 template-parts/page-loop.php:86
@@ -749,10 +754,6 @@ msgstr "Risultati per"
 #: template-parts/search-loop.php:34
 msgid "results found"
 msgstr "risultati trovati"
-
-#: template-parts/search-loop.php:69 template-parts/section-last-news.php:115
-msgid "Read more"
-msgstr "Leggi di più"
 
 #: template-parts/section-gallery-carousel.php:14
 msgid "Photo galleries"

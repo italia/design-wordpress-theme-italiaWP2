@@ -48,7 +48,8 @@ $i = 0; if (have_posts()) :
     $posttags = get_the_tags();
     $datapost = get_the_date('j F Y', '', ''); ?>
                     
-            <div class="col-md-4 mb32">
+            <div class="col-md-4 mb32-l">
+                
                 <article class="scheda scheda-round scheda-news card">
 
                     <?php if($img_url!="") { ?>
@@ -71,17 +72,22 @@ $i = 0; if (have_posts()) :
                     </div>
                     <?php } ?>
                     
-                    <div class="scheda-testo">
+                    <div class="scheda-icona-small">
                     <?php if(is_sticky( $post->ID )) { ?>
                         <div class="flag-icon"></div>
                     <?php } ?>
+
+                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                        <?php echo $datapost; ?>
+                    </div>
+                    
+                    <div class="scheda-testo <?php if($img_url=="") echo 'scheda-testo-nofoto'; ?>">
                         
                         <h4>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <?php the_title(); ?>
                             </a>
                         </h4>
-                        <small><p><?php echo $datapost; ?></p></small>
                         <p><?php echo get_the_excerpt(); ?></p>
                     </div>
                     
@@ -109,6 +115,14 @@ $i = 0; if (have_posts()) :
                     </div>
                     <?php } ?>
                     
+                    <div class="scheda-footer">
+                        <a href="<?php the_permalink(); ?>" title="Vai alla pagina: <?php the_title(); ?>" class="tutte">
+                            <?php echo __('Read more','italiawp2'); ?>
+                            <svg class="icon">
+                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </article>
             </div>
 
