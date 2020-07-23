@@ -42,7 +42,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         $posttags = get_the_tags();
         $datapost = get_the_date('j F Y', '', ''); ?>
                 
-                <div class="col-md-4 mb32-l">
+                <div class="col-md-4">
                     
                     <article class="scheda scheda-round scheda-news card">
 
