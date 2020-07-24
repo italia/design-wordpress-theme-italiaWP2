@@ -214,6 +214,17 @@ select {
     width: 100%;
 }
 
+#footer .footer-list .icon,
+.owl-carousel .owl-item .icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: sub;
+}
+
+.owl-carousel .owl-item .icon {
+    fill: #fff;
+}
+
 /* Allineamenti immagini se ci sono gli stili AGID */
 
 .a-alignnone, .a-aligncenter, .a-alignleft, .a-alignright {

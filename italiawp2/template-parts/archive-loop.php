@@ -72,7 +72,7 @@ $i = 0; if (have_posts()) :
                     </div>
                     <?php } ?>
                     
-                <?php if ( 'post' == get_post_type($post->ID) ) { ?>
+                <?php if ( 'post' == get_post_type($post->ID) ) : ?>
                     <div class="scheda-icona-small">
                     <?php if(is_sticky( $post->ID )) { ?>
                         <div class="flag-icon"></div>
@@ -81,12 +81,12 @@ $i = 0; if (have_posts()) :
                         <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                         <?php echo $datapost; ?>
                     </div>
-                <?php }else{ ?>
+                <?php else: ?>
                     <div class="scheda-icona-small">
                         <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_balance"></use></svg>
                         <?php echo __('Page','italiawp2'); ?>
                     </div>
-                <?php } ?>
+                <?php endif; ?>
                     
                     <div class="scheda-testo <?php if($img_url=="") echo 'scheda-testo-nofoto'; ?>">
                         
@@ -123,7 +123,7 @@ $i = 0; if (have_posts()) :
                     <?php } ?>
                     
                     <div class="scheda-footer">
-                        <a href="<?php the_permalink(); ?>" title="Vai alla pagina: <?php the_title(); ?>" class="tutte">
+                        <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                             <?php echo __('Read more','italiawp2'); ?>
                             <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>

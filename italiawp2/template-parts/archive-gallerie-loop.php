@@ -60,23 +60,27 @@ $i = 0; if (have_posts()) :
                     </div>
                     <?php } ?>
                     
+                    <div class="scheda-icona-small">
+                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-camera"></use></svg>
+                        <?php echo $datapost; ?>
+                    </div>
+                    
                     <div class="scheda-testo">
                         <h4>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <?php the_title(); ?>
                             </a>
                         </h4>
-                        <small><p><?php echo $datapost; ?></p></small>
                         <p><?php echo get_the_excerpt(); ?></p>
                     </div>
-                    <div class="scheda-argomenti">
-                        <?php
-                            if (!empty($category)) {
-                                foreach ($category as $cat) {
-                                    echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
-                                }
-                            }
-                            ?>
+                    
+                    <div class="scheda-footer">
+                        <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                            <?php echo __('Browse gallery','italiawp2'); ?>
+                            <svg class="icon">
+                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                            </svg>
+                        </a>
                     </div>
                 </article>
             </div>

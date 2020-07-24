@@ -60,7 +60,11 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </a>
                     </div>
                     <figcaption>
-                        <small><p><?php echo $datapost; ?></p></small>
+                        <small>
+                            <p>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-camera"></use></svg> <?php echo $datapost; ?>
+                            </p>
+                        </small>
                         <p id="desc-<?php echo $i; ?>">
                             <?php the_title(); ?>
                         </p>
@@ -81,6 +85,14 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
 </div>
                     
                 </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 veditutti">
+                <a href="<?php echo get_post_type_archive_link('gallerie'); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('Galleries','italiawp2'); ?>" class="btn btn-default btn-verde">
+                    <?php echo __('All galleries','italiawp2'); ?>
+                </a>
             </div>
         </div>
     </div>

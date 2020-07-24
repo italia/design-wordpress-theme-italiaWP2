@@ -18,7 +18,7 @@ function italiawp2_custom_gallery( $output = '', $atts, $instance ) {
                     </div>
                     <div class="offset-md-1 col-md-11 paragrafo">
                         <div class="galleriaslide">
-                            <h4 class="mb-3">Galleria fotografica <small>(scorri)</small></h4>
+                            <h4 class="mb-3">'.__('Photo gallery','italiawp2').' <small>('.__('scroll','italiawp2').')</small></h4>
                             <div id="owl-galleria"
                                  class="owl-carousel owl-center owl-theme owl-loaded owl-drag"
                                  role="tablist">';

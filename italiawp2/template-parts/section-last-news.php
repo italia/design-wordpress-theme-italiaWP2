@@ -111,7 +111,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         <?php } ?>
                         
                         <div class="scheda-footer">
-                            <a href="<?php the_permalink(); ?>" title="Vai alla pagina: <?php the_title(); ?>" class="tutte">
+                            <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                                 <?php echo __('Read more','italiawp2'); ?>
                                 <svg class="icon">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
@@ -173,7 +173,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
             
             <div class="row mt32">
                 <div class="col-md-12 veditutti">
-                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="Vai alla pagina: Notizie" class="btn btn-default btn-verde">
+                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('News','italiawp2'); ?>" class="btn btn-default btn-verde">
                         <?php echo __('See all','italiawp2'); ?>
                     </a>
                 </div>

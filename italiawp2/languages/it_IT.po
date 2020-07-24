@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-07-23 15:13+0200\n"
-"PO-Revision-Date: 2020-07-23 15:13+0200\n"
+"POT-Creation-Date: 2020-07-24 11:26+0200\n"
+"PO-Revision-Date: 2020-07-24 11:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -55,7 +55,7 @@ msgstr "Nessun commento"
 msgid "Name"
 msgstr "Nome"
 
-#: comments.php:64 footer.php:105 footer.php:106 footer.php:113 footer.php:114
+#: comments.php:64 footer.php:113 footer.php:114 footer.php:122 footer.php:123
 msgid "Email"
 msgstr "Email"
 
@@ -82,98 +82,98 @@ msgstr "Commento"
 msgid "Leave a comment"
 msgstr "Lascia un commento"
 
-#: footer.php:50
+#: footer.php:51
 msgid "Address"
 msgstr "Indirizzo"
 
-#: footer.php:56 footer.php:57
+#: footer.php:58 footer.php:59
 msgid "Phone"
 msgstr "Telefono"
 
-#: footer.php:63 footer.php:64
+#: footer.php:66 footer.php:67
 msgid "Fax"
 msgstr "Fax"
 
-#: footer.php:73
+#: footer.php:76
 msgid "Information"
 msgstr "Informazioni"
 
-#: footer.php:76
+#: footer.php:80
 msgid "Tax code / VAT number"
 msgstr "C.F. / P.IVA"
 
-#: footer.php:81
+#: footer.php:86
 msgid "Unique Code"
 msgstr "Cod. Univoco"
 
-#: footer.php:87
+#: footer.php:93
 msgid "IBAN"
 msgstr "IBAN"
 
-#: footer.php:95
+#: footer.php:101
 msgid "Email contacts"
 msgstr "Posta Elettronica"
 
-#: footer.php:98
+#: footer.php:105
 msgid "PEC"
 msgstr "PEC"
 
-#: footer.php:99
+#: footer.php:106
 msgid "Certified mail"
 msgstr "Posta Elettronica Certificata"
 
-#: footer.php:123 footer.php:135 footer.php:147 footer.php:159 footer.php:171
-#: footer.php:183 footer.php:195 menu.php:74 menu.php:83 menu.php:95
+#: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
+#: footer.php:192 footer.php:204 menu.php:74 menu.php:83 menu.php:95
 #: menu.php:107 menu.php:119 menu.php:131 menu.php:143 menu.php:197
 #: menu.php:207 menu.php:219 menu.php:231 menu.php:243 menu.php:255
 #: menu.php:267
 msgid "Follow us on"
 msgstr "Seguici su"
 
-#: footer.php:130 footer.php:142 footer.php:154 footer.php:166 footer.php:178
-#: footer.php:190 menu.php:7 menu.php:78 menu.php:90 menu.php:102 menu.php:114
+#: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
+#: footer.php:199 menu.php:7 menu.php:78 menu.php:90 menu.php:102 menu.php:114
 #: menu.php:126 menu.php:138 menu.php:202 menu.php:214 menu.php:226
 #: menu.php:238 menu.php:250 menu.php:262
 msgid "Link to external site"
 msgstr "Collegamento a sito esterno"
 
-#: footer.php:206
+#: footer.php:215
 msgid "Useful Links Section"
 msgstr "Sezione Link Utili"
 
-#: footer.php:209 header.php:75
+#: footer.php:218 header.php:75
 msgid "Privacy policy"
 msgstr "Privacy policy"
 
-#: footer.php:209
+#: footer.php:218
 msgid "Privacy"
 msgstr "Privacy"
 
-#: footer.php:212
+#: footer.php:221
 msgid "Legal notices"
 msgstr "Note legali"
 
-#: footer.php:215
+#: footer.php:224
 msgid "Contacts"
 msgstr "Contatti"
 
-#: footer.php:218
+#: footer.php:227
 msgid "Made with"
 msgstr "Realizzato con"
 
-#: footer.php:226
+#: footer.php:235
 msgid "Graphic theme"
 msgstr "Tema grafico"
 
-#: footer.php:227
+#: footer.php:236
 msgid "Based on the"
 msgstr "Basato sul"
 
-#: footer.php:227
+#: footer.php:236
 msgid "AgID Prototype for PA sites"
 msgstr "Prototipo per siti PA di AgID"
 
-#: footer.php:236
+#: footer.php:245
 msgid "Go up"
 msgstr "Torna su"
 
@@ -391,6 +391,14 @@ msgstr "Vai al menu di navigazione"
 #: header.php:88
 msgid "Go to the footer"
 msgstr "Vai al footer"
+
+#: inc/gallery.php:21
+msgid "Photo gallery"
+msgstr "Galleria fotografica"
+
+#: inc/gallery.php:21 template-parts/section-gallery-carousel.php:14
+msgid "scroll"
+msgstr "scorri"
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
@@ -683,6 +691,20 @@ msgstr "Altri argomenti"
 msgid "of"
 msgstr "di"
 
+#: template-parts/archive-gallerie-loop.php:78
+#: template-parts/archive-loop.php:126 template-parts/main-loop.php:119
+#: template-parts/search-loop.php:61 template-parts/search-loop.php:67
+#: template-parts/section-gallery-carousel.php:93
+#: template-parts/section-last-news.php:114
+#: template-parts/section-last-news.php:176
+#: template-parts/section-last-one-news.php:86
+msgid "Go to the page"
+msgstr "Vai alla pagina"
+
+#: template-parts/archive-gallerie-loop.php:79
+msgid "Browse gallery"
+msgstr "Sfoglia galleria"
+
 #: template-parts/archive-loop.php:103 template-parts/main-loop.php:96
 #: template-parts/section-last-news.php:91
 #: template-parts/section-last-one-news.php:61
@@ -699,7 +721,8 @@ msgid "Topics"
 msgstr "Argomenti"
 
 #: template-parts/archive-loop.php:127 template-parts/main-loop.php:120
-#: template-parts/search-loop.php:69 template-parts/section-last-news.php:115
+#: template-parts/search-loop.php:67 template-parts/search-loop.php:69
+#: template-parts/section-last-news.php:115
 msgid "Read more"
 msgstr "Leggi di più"
 
@@ -759,21 +782,25 @@ msgstr "risultati trovati"
 msgid "Photo galleries"
 msgstr "Gallerie fotografiche"
 
-#: template-parts/section-gallery-carousel.php:14
-msgid "scroll"
-msgstr "scorri"
+#: template-parts/section-gallery-carousel.php:93
+msgid "Galleries"
+msgstr "Gallerie"
+
+#: template-parts/section-gallery-carousel.php:94
+msgid "All galleries"
+msgstr "Tutte le gallerie"
 
 #: template-parts/section-last-news.php:137
 msgid "Other categories"
 msgstr "Altre categorie"
 
+#: template-parts/section-last-news.php:176
+msgid "News"
+msgstr "Notizie"
+
 #: template-parts/section-last-news.php:177
 msgid "See all"
 msgstr "Vedi tutte"
-
-#: template-parts/section-last-one-news.php:86
-msgid "Go to the page"
-msgstr "Go to the page"
 
 #: template-parts/section-last-one-news.php:86
 #: template-parts/section-last-one-news.php:87

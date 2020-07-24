@@ -58,13 +58,13 @@
                                 ?>
                                 </div>
                                 <h4>
-                                    <a href="<?php the_permalink(); ?>" title="Vai alla pagina: <?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>">
                                         <?php the_title(); ?>
                                     </a>
                                 </h4>
                                 <small><p><?php echo $datapost; ?></p></small>
                                 <p><?php echo get_the_excerpt(); ?></p>
-                                <a aria-label="Leggi di più - Vai alla pagina: <?php the_title(); ?>"
+                                <a aria-label="<?php echo __('Read more','italiawp2'); ?> - <?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>"
                                    href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="tutte">
                                     <?php echo __('Read more','italiawp2'); ?>
                                     <svg class="icon">

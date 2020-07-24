@@ -277,6 +277,10 @@ label {
   color: {$color_10} !important;
 }
 
+#footer .footer-list .icon {
+  fill: {$color_10};
+}
+
 .u-background-10,
 .Linklist-link.Linklist-link--lev3 {
   background-color: {$color_10} !important;

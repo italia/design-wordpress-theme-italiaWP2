@@ -47,12 +47,14 @@
                         <h4>Recapiti</h4>
                         <ul class="footer-list clearfix">
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-pa"></use></svg>
                                 <?php echo __('Address','italiawp2'); ?>
                                 <br>
                                 <span><?php echo get_option('dettagli-indirizzo'); ?><br>
                                 <?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>
                             </li>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-telephone"></use></svg>
                                 <?php echo __('Phone','italiawp2'); ?><br>
                                 <a href="tel:+39<?php echo get_option('dettagli-telefono'); ?>" title="<?php echo __('Phone','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-telefono'); ?>
@@ -60,6 +62,7 @@
                             </li>
                             <?php if(get_option('dettagli-fax')!=""): ?>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-print"></use></svg>
                                 <?php echo __('Fax','italiawp2'); ?><br>
                                 <a href="tel:+39<?php echo get_option('dettagli-fax'); ?>" title="<?php echo __('Fax','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-fax'); ?>
@@ -73,17 +76,20 @@
                         <h4><?php echo __('Information','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-check-circle"></use></svg>
                                 <?php echo __('Tax code / VAT number','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-cfpiva'); ?></span>
                             </li>
                             <?php if(get_option('dettagli-codunivoco')!=""): ?>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-exchange-circle"></use></svg>
                                 <?php echo __('Unique Code','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-codunivoco'); ?></span>
                             </li>
                             <?php endif; ?>
                             <?php if(get_option('dettagli-iban')!=""): ?>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-card"></use></svg>
                                 <?php echo __('IBAN','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-iban'); ?></span>
                             </li>
@@ -95,6 +101,7 @@
                         <h4><?php echo __('Email contacts','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php echo __('PEC','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-pec'); ?>" title="<?php echo __('Certified mail','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-pec'); ?>
@@ -102,6 +109,7 @@
                             </li>
                             <?php if(get_option('dettagli-email')!=""): ?>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php echo __('Email','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-email'); ?>" title="<?php echo __('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email'); ?>
@@ -110,6 +118,7 @@
                             <?php endif; ?>
                             <?php if(get_option('dettagli-email2')!=""): ?>
                             <li>
+                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php echo __('Email','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-email2'); ?>" title="<?php echo __('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email2'); ?>
