@@ -14,6 +14,9 @@ function italiawp2_edit_custom_settings() { ?>
             
             <h3>Altro</h3>
             
+            <p><strong>Link alla "Dichiarazione di accessibilità AGID" (URL intero con HTTP o HTTPS):</strong><br />
+                <input type="text" name="dettagli-link-accessibilita" size="100" value="<?php echo get_option('dettagli-link-accessibilita'); ?>" /></p>
+            
             <p><strong>Meta "keywords":</strong><br />
                 <input type="text" name="custom-meta-keywords" size="100" value="<?php echo get_option('custom-meta-keywords'); ?>" /></p>
             
@@ -110,6 +113,7 @@ function italiawp2_edit_custom_settings() { ?>
             <input type="hidden" name="action" value="update" />
             <input type="hidden" name="page_options" value="dettagli-num-articoli,
                                                             custom-meta-keywords,custom-meta-description,
+                                                            dettagli-link-accessibilita,
                                                             dettagli-nome-ammin-afferente,dettagli-url-ammin-afferente,
                                                             dettagli-id-privacy,dettagli-id-notelegali,dettagli-id-contatti,
                                                             dettagli-indirizzo,dettagli-cap,dettagli-citta,dettagli-telefono,dettagli-fax,

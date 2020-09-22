@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-09-21 15:30+0200\n"
-"PO-Revision-Date: 2020-09-21 15:31+0200\n"
+"POT-Creation-Date: 2020-09-22 11:57+0200\n"
+"PO-Revision-Date: 2020-09-22 11:57+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -158,22 +158,26 @@ msgid "Contacts"
 msgstr "Contatti"
 
 #: footer.php:227
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+#: footer.php:229
 msgid "Made with"
 msgstr "Realizzato con"
 
-#: footer.php:235
+#: footer.php:237
 msgid "Graphic theme"
 msgstr "Tema grafico"
 
-#: footer.php:236
+#: footer.php:238
 msgid "Based on the"
 msgstr "Basato sul"
 
-#: footer.php:236
+#: footer.php:238
 msgid "AgID Prototype for PA sites"
 msgstr "Prototipo per siti PA di AgID"
 
-#: footer.php:245
+#: footer.php:249
 msgid "Go up"
 msgstr "Torna su"
 

@@ -223,7 +223,9 @@
                 <?php if(get_option('dettagli-id-contatti')!=""): ?>
                     <a href="<?php echo get_permalink(get_option('dettagli-id-contatti')); ?>" title="<?php echo __('Contacts','italiawp2'); ?>"><?php echo __('Contacts','italiawp2'); ?></a> |
                 <?php endif; ?>
-                    
+                <?php if(get_option('dettagli-link-accessibilita')!=""): ?>
+                    <a target="_blank" href="<?php echo get_option('dettagli-link-accessibilita'); ?>" title="<?php echo __('Accessibility','italiawp2'); ?>"><?php echo __('Accessibility','italiawp2'); ?></a> |
+                <?php endif; ?>
                 <?php echo __('Made with','italiawp2'); ?> <a target="_blank" href="https://it.wordpress.org">WordPress</a> |
                 
                 <!-- Per favore, non rimuoverlo! -->
@@ -235,6 +237,8 @@
                 <?php echo __('Graphic theme','italiawp2'); ?> <a target="_blank" href="<?php echo $main_theme_uri; ?>"><?php echo $main_theme_name; ?></a> |
                 <?php echo __('Based on the','italiawp2'); ?> <a target="_blank" href="https://italia.github.io/design-comuni-prototipi/"><?php echo __('AgID Prototype for PA sites','italiawp2'); ?></a>
                 <!-- Grazie :) -->
+                
+                
 
             </section>
         </div>
