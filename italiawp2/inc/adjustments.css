@@ -414,7 +414,7 @@ img.size-thumbnail {
     color: #fff !important;
 }
 
-#sezione-notizie, #sezione-servizi, #home-novita {
+#sezione-notizie, #sezione-servizi, #home-novita, #home-contenuto {
     background-image: url(../static/img/ombra.png);
     background-repeat: no-repeat;
     background-position: top center;
