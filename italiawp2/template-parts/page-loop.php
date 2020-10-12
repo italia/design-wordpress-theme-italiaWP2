@@ -22,7 +22,9 @@ if (have_posts()) : while (have_posts()) : the_post();
                     <div class="offset-lg-1 col-lg-6 col-md-8">
                         <div class="titolo-sezione">
                             <h2><?php the_title(); ?></h2>
+                            <?php if (!get_theme_mod('disactive_sunto_pagine')) : ?>
                             <p><?php echo get_the_excerpt(); ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="offset-lg-1 col-lg-3 col-md-4">
