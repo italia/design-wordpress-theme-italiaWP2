@@ -594,6 +594,10 @@ body.ridotto {
     display: none;
 }
 
+#mainheader.ridotto .p_cercaMobile .cerca {
+    display: inline;
+}
+
 #mainheader.ridotto .navbar {
     margin-left: 60px;
 }
@@ -2354,12 +2358,6 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
 
     #mainheader .p_cercaMobile .btn-cerca:hover svg.icon {
         fill: #6FA67E;
-    } 
-
-
-    #mainheader.ridotto .p_cercaMobile {
-        height: 64px;
-        padding-top: 26px;
     }
 
     #mainheader .social {
@@ -2707,12 +2705,12 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         margin-left: 16px !important;
     }
 
-    #mainheader.ridotto .p_cercaMobile {
-        padding-top: 26px;
-    }
-
     #mainheader.ridotto .btn-cerca {
         margin-left: 0;
+    }
+    
+    #mainheader.ridotto .p_cercaMobile .btn-cerca {
+        margin-left: 10px;
     }
 
     #mainheader.ridotto .comune .logoimg {
