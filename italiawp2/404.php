@@ -20,7 +20,7 @@
                 <div class="articolo-paragrafi">
                     <div class="row">
                         <div class="col-12 testolungo">
-                            <p><?php echo __('The page you are looking for was not found','italiawp2'); ?>, <a href="javascript:history.back();" title="<?php echo __('come back'); ?>"><?php echo __('come back'); ?></a> <?php echo __('or use the menu to continue browsing'); ?>.</p>
+                            <p><?php echo __('The page you are looking for was not found','italiawp2'); ?>, <a href="javascript:history.back();" title="<?php echo __('come back','italiawp2'); ?>"><?php echo __('come back','italiawp2'); ?></a> <?php echo __('or use the menu to continue browsing','italiawp2'); ?>.</p>
                         </div>
                     </div>
                     
