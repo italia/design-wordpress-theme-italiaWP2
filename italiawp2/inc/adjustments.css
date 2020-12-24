@@ -285,7 +285,6 @@ section.alignleft {
 
 figure figcaption > p {
     margin-bottom: 0 !important;
-    text-transform: capitalize;
 }
 
 img.size-full,
