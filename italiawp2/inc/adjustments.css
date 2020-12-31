@@ -563,3 +563,16 @@ table td:last-child, table th:last-child {
         width: calc(100% -50px);
     }
 }
+
+#sezione-notifica {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+#sezione-notifica p {
+    margin: 0;
+}

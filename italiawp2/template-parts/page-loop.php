@@ -1,6 +1,6 @@
 <?php
 /*
- * ### LOOP ARTICOLO ###
+ * ### LOOP PAGINA ###
  *
  */
 ?>

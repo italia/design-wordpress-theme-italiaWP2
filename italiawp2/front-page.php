@@ -2,6 +2,8 @@
 
 get_header();
 
+get_template_part('template-parts/notification');
+
 if (get_theme_mod('active_section_last_one_news')):
     get_template_part('template-parts/section-last-one-news');
 else:

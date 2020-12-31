@@ -518,7 +518,8 @@ section .pagination .page-item .page-numbers svg.icon {
 }
 
 .u-background-compl, .has-colore-complementare-background-color,
-#mainheader .btn-cerca:hover {
+#mainheader .btn-cerca:hover,
+#sezione-notifica {
     background-color: {$color_compl} !important;
 }
 

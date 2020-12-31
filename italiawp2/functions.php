@@ -70,6 +70,16 @@ function italiawp2_widgets_init() {
         'after_title'   => '</h4><div class="menu-separatore"><div class="bg-oro"></div></div>',
         'class'         => ''
     ));
+    register_sidebar( array(
+        'name'          => 'Sezione Notifica',
+        'id'            => 'notification',
+        'description'   => 'Sezione della notifica',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+        'class'         => ''
+    ));
 }
 add_action( 'widgets_init', 'italiawp2_widgets_init' );
 
