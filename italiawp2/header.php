@@ -53,6 +53,11 @@
 </head>
 
 <body class="t-Pac">
+
+<?php
+$page_id_cookie_banner = get_option('dettagli-id-cookie');
+if (!$page_id_cookie_banner) $page_id_cookie_banner = get_option('dettagli-id-privacy');
+?>
     
 <div class="cookiebar hide u-background-80" aria-hidden="true">
     <p class="text-white">
@@ -61,7 +66,7 @@
         <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">
             <?php echo __('I accept','italiawp2'); ?>
         </button>
-        <a href="<?php echo get_permalink(get_option('dettagli-id-privacy')); ?>" class="btn btn-outline-info btn-trasp"><?php echo __('Privacy policy','italiawp2'); ?></a>
+        <a href="<?php echo get_permalink(get_option($page_id_cookie)); ?>" class="btn btn-outline-info btn-trasp"><?php echo __('Cookie policy','italiawp2'); ?></a>
     </p>
 </div>
     
