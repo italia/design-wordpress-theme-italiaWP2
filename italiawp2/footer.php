@@ -217,6 +217,9 @@
                 <?php if(get_option('dettagli-id-privacy')!=""): ?>
                     <a href="<?php echo get_permalink(get_option('dettagli-id-privacy')); ?>" title="<?php echo __('Privacy policy','italiawp2'); ?>"><?php echo __('Privacy','italiawp2'); ?></a> |
                 <?php endif; ?>
+                <?php if(get_option('dettagli-id-cookie')!=""): ?>
+                    <a href="<?php echo get_permalink(get_option('dettagli-id-cookie')); ?>" title="<?php echo __('Cookie policy','italiawp2'); ?>"><?php echo __('Cookie policy','italiawp2'); ?></a> |
+                <?php endif; ?>
                 <?php if(get_option('dettagli-id-notelegali')!=""): ?>
                     <a href="<?php echo get_permalink(get_option('dettagli-id-notelegali')); ?>" title="<?php echo __('Legal notices','italiawp2'); ?>"><?php echo __('Legal notices','italiawp2'); ?></a> |
                 <?php endif; ?>
