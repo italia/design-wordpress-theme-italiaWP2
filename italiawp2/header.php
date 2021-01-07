@@ -66,7 +66,7 @@ if (!$page_id_cookie_banner) $page_id_cookie_banner = get_option('dettagli-id-pr
         <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">
             <?php echo __('I accept','italiawp2'); ?>
         </button>
-        <a href="<?php echo get_permalink(get_option($page_id_cookie)); ?>" class="btn btn-outline-info btn-trasp"><?php echo __('Cookie policy','italiawp2'); ?></a>
+        <a href="<?php echo get_permalink($page_id_cookie_banner); ?>" class="btn btn-outline-info btn-trasp"><?php echo __('Cookie policy','italiawp2'); ?></a>
     </p>
 </div>
     
