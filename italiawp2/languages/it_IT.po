@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-10-19 16:28+0200\n"
-"PO-Revision-Date: 2020-10-19 16:28+0200\n"
+"POT-Creation-Date: 2021-01-07 14:56+0100\n"
+"PO-Revision-Date: 2021-01-07 14:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -43,6 +43,136 @@ msgstr "Pagina non trovata"
 msgid "The page you are looking for was not found"
 msgstr "La pagina che cerchi non è stata trovata"
 
+#: _footer.php:51 footer.php:51
+msgid "Address"
+msgstr "Indirizzo"
+
+#: _footer.php:58 _footer.php:59 footer.php:58 footer.php:59
+msgid "Phone"
+msgstr "Telefono"
+
+#: _footer.php:66 _footer.php:67 footer.php:66 footer.php:67
+msgid "Fax"
+msgstr "Fax"
+
+#: _footer.php:76 footer.php:76
+msgid "Information"
+msgstr "Informazioni"
+
+#: _footer.php:80 footer.php:80
+msgid "Tax code / VAT number"
+msgstr "C.F. / P.IVA"
+
+#: _footer.php:86 footer.php:86
+msgid "Unique Code"
+msgstr "Cod. Univoco"
+
+#: _footer.php:93 footer.php:93
+msgid "IBAN"
+msgstr "IBAN"
+
+#: _footer.php:101 footer.php:101
+msgid "Email contacts"
+msgstr "Posta Elettronica"
+
+#: _footer.php:105 footer.php:105
+msgid "PEC"
+msgstr "PEC"
+
+#: _footer.php:106 footer.php:106
+msgid "Certified mail"
+msgstr "Posta Elettronica Certificata"
+
+#: _footer.php:113 _footer.php:114 _footer.php:122 _footer.php:123
+#: comments.php:64 footer.php:113 footer.php:114 footer.php:122 footer.php:123
+msgid "Email"
+msgstr "Email"
+
+#: _footer.php:132 _footer.php:144 _footer.php:156 _footer.php:168
+#: _footer.php:180 _footer.php:192 _footer.php:204 footer.php:132
+#: footer.php:144 footer.php:156 footer.php:168 footer.php:180 footer.php:192
+#: footer.php:204 menu.php:74 menu.php:83 menu.php:95 menu.php:107 menu.php:119
+#: menu.php:131 menu.php:143 menu.php:197 menu.php:207 menu.php:219
+#: menu.php:231 menu.php:243 menu.php:255 menu.php:267
+msgid "Follow us on"
+msgstr "Seguici su"
+
+#: _footer.php:139 _footer.php:151 _footer.php:163 _footer.php:175
+#: _footer.php:187 _footer.php:199 footer.php:139 footer.php:151 footer.php:163
+#: footer.php:175 footer.php:187 footer.php:199 menu.php:7 menu.php:78
+#: menu.php:90 menu.php:102 menu.php:114 menu.php:126 menu.php:138 menu.php:202
+#: menu.php:214 menu.php:226 menu.php:238 menu.php:250 menu.php:262
+msgid "Link to external site"
+msgstr "Collegamento a sito esterno"
+
+#: _footer.php:215 footer.php:215
+msgid "Useful Links Section"
+msgstr "Sezione Link Utili"
+
+#: _footer.php:218 _header.php:75 footer.php:218
+msgid "Privacy policy"
+msgstr "Privacy policy"
+
+#: _footer.php:218 footer.php:218
+msgid "Privacy"
+msgstr "Privacy"
+
+#: _footer.php:221 footer.php:224
+msgid "Legal notices"
+msgstr "Note legali"
+
+#: _footer.php:224 footer.php:227
+msgid "Contacts"
+msgstr "Contatti"
+
+#: _footer.php:227 footer.php:230
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+#: _footer.php:229 footer.php:232
+msgid "Made with"
+msgstr "Realizzato con"
+
+#: _footer.php:237 footer.php:240
+msgid "Graphic theme"
+msgstr "Tema grafico"
+
+#: _footer.php:238 footer.php:241
+msgid "Based on the"
+msgstr "Basato sul"
+
+#: _footer.php:238 footer.php:241
+msgid "AgID Prototype for PA sites"
+msgstr "Prototipo per siti PA di AgID"
+
+#: _footer.php:249 footer.php:252
+msgid "Go up"
+msgstr "Torna su"
+
+#: _header.php:70 header.php:75
+msgid "This site uses technical, analytics and third-party cookies"
+msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
+
+#: _header.php:71 header.php:76
+msgid "By continuing to browse, you accept the use of cookies"
+msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
+
+#: _header.php:73 header.php:78
+msgid "I accept"
+msgstr "Accetto"
+
+#: _header.php:83 header.php:88
+msgid "Go to content"
+msgstr "Vai ai contenuti"
+
+#: _header.php:86 header.php:91
+msgid "Go to the navigation menu"
+msgstr "Vai al menu di navigazione"
+
+#: _header.php:88 header.php:93
+msgid "Go to the footer"
+msgstr "Vai al footer"
+
 #: comments.php:10
 msgid "Comments"
 msgstr "Commenti"
@@ -54,10 +184,6 @@ msgstr "Nessun commento"
 #: comments.php:56
 msgid "Name"
 msgstr "Nome"
-
-#: comments.php:64 footer.php:113 footer.php:114 footer.php:122 footer.php:123
-msgid "Email"
-msgstr "Email"
 
 #: comments.php:72
 msgid "Site"
@@ -82,151 +208,56 @@ msgstr "Commento"
 msgid "Leave a comment"
 msgstr "Lascia un commento"
 
-#: footer.php:51
-msgid "Address"
-msgstr "Indirizzo"
+#: footer.php:221 header.php:80
+msgid "Cookie policy"
+msgstr "Cookie policy"
 
-#: footer.php:58 footer.php:59
-msgid "Phone"
-msgstr "Telefono"
-
-#: footer.php:66 footer.php:67
-msgid "Fax"
-msgstr "Fax"
-
-#: footer.php:76
-msgid "Information"
-msgstr "Informazioni"
-
-#: footer.php:80
-msgid "Tax code / VAT number"
-msgstr "C.F. / P.IVA"
-
-#: footer.php:86
-msgid "Unique Code"
-msgstr "Cod. Univoco"
-
-#: footer.php:93
-msgid "IBAN"
-msgstr "IBAN"
-
-#: footer.php:101
-msgid "Email contacts"
-msgstr "Posta Elettronica"
-
-#: footer.php:105
-msgid "PEC"
-msgstr "PEC"
-
-#: footer.php:106
-msgid "Certified mail"
-msgstr "Posta Elettronica Certificata"
-
-#: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
-#: footer.php:192 footer.php:204 menu.php:74 menu.php:83 menu.php:95
-#: menu.php:107 menu.php:119 menu.php:131 menu.php:143 menu.php:197
-#: menu.php:207 menu.php:219 menu.php:231 menu.php:243 menu.php:255
-#: menu.php:267
-msgid "Follow us on"
-msgstr "Seguici su"
-
-#: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
-#: footer.php:199 menu.php:7 menu.php:78 menu.php:90 menu.php:102 menu.php:114
-#: menu.php:126 menu.php:138 menu.php:202 menu.php:214 menu.php:226
-#: menu.php:238 menu.php:250 menu.php:262
-msgid "Link to external site"
-msgstr "Collegamento a sito esterno"
-
-#: footer.php:215
-msgid "Useful Links Section"
-msgstr "Sezione Link Utili"
-
-#: footer.php:218 header.php:75
-msgid "Privacy policy"
-msgstr "Privacy policy"
-
-#: footer.php:218
-msgid "Privacy"
-msgstr "Privacy"
-
-#: footer.php:221
-msgid "Legal notices"
-msgstr "Note legali"
-
-#: footer.php:224
-msgid "Contacts"
-msgstr "Contatti"
-
-#: footer.php:227
-msgid "Accessibility"
-msgstr "Accessibilità"
-
-#: footer.php:229
-msgid "Made with"
-msgstr "Realizzato con"
-
-#: footer.php:237
-msgid "Graphic theme"
-msgstr "Tema grafico"
-
-#: footer.php:238
-msgid "Based on the"
-msgstr "Basato sul"
-
-#: footer.php:238
-msgid "AgID Prototype for PA sites"
-msgstr "Prototipo per siti PA di AgID"
-
-#: footer.php:249
-msgid "Go up"
-msgstr "Torna su"
-
-#: functions.php:187
+#: functions.php:197
 msgid "Error 404"
 msgstr "Errore 404"
 
-#: functions.php:193 template-parts/archive-gallerie-loop.php:22
+#: functions.php:203 template-parts/archive-gallerie-loop.php:22
 #: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
 #: template-parts/main-loop.php:22 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
 
-#: functions.php:258
+#: functions.php:268
 msgid "Plugins required by the theme \"ItaliaWP\""
 msgstr "Plugin richiesti dal tema “ItaliaWP”"
 
-#: functions.php:259
+#: functions.php:269
 msgid "Plugins required"
 msgstr "Plugin richiesti"
 
-#: functions.php:260
+#: functions.php:270
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:261
+#: functions.php:271
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:262
+#: functions.php:272
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:263
+#: functions.php:273
 #, php-format
 msgid "\"ItaliaWP\" theme requires plugins %1$s."
 msgstr "“ItaliaWP” richiede i plugin: %1$s."
 
-#: functions.php:264
+#: functions.php:274
 #, php-format
 msgid "\"ItaliaWP\" recommends plugins: %1$s."
 msgstr "“ItaliaWP” raccomanda i plugin: %1$s."
 
-#: functions.php:265
+#: functions.php:275
 #, php-format
 msgid ""
 "The following plugins must be updated to the latest version to have maximum "
@@ -235,57 +266,57 @@ msgstr ""
 "I seguenti plugin devono essere aggiornati all\\’ultima versione per avere "
 "massima compatibilità con questo tema: %1$s."
 
-#: functions.php:266
+#: functions.php:276
 #, php-format
 msgid "There are updates available for: %1$s."
 msgstr "Ci sono aggiornamenti disponibili per: %1$s."
 
-#: functions.php:267
+#: functions.php:277
 #, php-format
 msgid "Required plugins are not active: %1$s."
 msgstr "I plugin richiesti non sono attivi: %1$s."
 
-#: functions.php:268
+#: functions.php:278
 #, php-format
 msgid "Recommended plugins are not active: %1$s."
 msgstr "I plugin raccomandati non sono attivi: %1$s."
 
-#: functions.php:269
+#: functions.php:279
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:270
+#: functions.php:280
 msgid "Update Plugins"
 msgstr "Aggiorna plugin"
 
-#: functions.php:271
+#: functions.php:281
 msgid "Activate plugins"
 msgstr "Attiva i plugin"
 
-#: functions.php:272
+#: functions.php:282
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:273
+#: functions.php:283
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:274
+#: functions.php:284
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:275
+#: functions.php:285
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:276
+#: functions.php:286
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -295,18 +326,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:277
+#: functions.php:287
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:278
+#: functions.php:288
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:279
+#: functions.php:289
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -315,86 +346,62 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:280
+#: functions.php:290
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
 
-#: functions.php:357
+#: functions.php:367
 msgid "Add to Menu"
 msgstr "Aggiungi al menu"
 
-#: functions.php:370
+#: functions.php:380
 msgid "January"
 msgstr "Gennaio"
 
-#: functions.php:370
+#: functions.php:380
 msgid "February"
 msgstr "Febbraio"
 
-#: functions.php:370
+#: functions.php:380
 msgid "March"
 msgstr "Marzo"
 
-#: functions.php:370
+#: functions.php:380
 msgid "April"
 msgstr "Aprile"
 
-#: functions.php:370
+#: functions.php:380
 msgid "May"
 msgstr "Maggio"
 
-#: functions.php:370
+#: functions.php:380
 msgid "June"
 msgstr "Giugno"
 
-#: functions.php:370
+#: functions.php:380
 msgid "July"
 msgstr "Luglio"
 
-#: functions.php:370
+#: functions.php:380
 msgid "August"
 msgstr "Agosto"
 
-#: functions.php:370
+#: functions.php:380
 msgid "September"
 msgstr "Settembre"
 
-#: functions.php:370
+#: functions.php:380
 msgid "October"
 msgstr "Ottobre"
 
-#: functions.php:370
+#: functions.php:380
 msgid "November"
 msgstr "Novembre"
 
-#: functions.php:370
+#: functions.php:380
 msgid "December"
 msgstr "Dicembre"
-
-#: header.php:70
-msgid "This site uses technical, analytics and third-party cookies"
-msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
-
-#: header.php:71
-msgid "By continuing to browse, you accept the use of cookies"
-msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
-
-#: header.php:73
-msgid "I accept"
-msgstr "Accetto"
-
-#: header.php:83
-msgid "Go to content"
-msgstr "Vai ai contenuti"
-
-#: header.php:86
-msgid "Go to the navigation menu"
-msgstr "Vai al menu di navigazione"
-
-#: header.php:88
-msgid "Go to the footer"
-msgstr "Vai al footer"
 
 #: inc/gallery.php:21
 msgid "Photo gallery"
@@ -717,7 +724,7 @@ msgid "Categories"
 msgstr "Categorie"
 
 #: template-parts/archive-loop.php:114 template-parts/main-loop.php:107
-#: template-parts/page-loop-nosidebar.php:29 template-parts/page-loop.php:34
+#: template-parts/page-loop-nosidebar.php:33 template-parts/page-loop.php:34
 #: template-parts/section-last-news.php:102
 #: template-parts/section-last-one-news.php:74
 #: template-parts/single-loop.php:53
