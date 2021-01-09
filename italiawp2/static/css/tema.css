@@ -428,12 +428,12 @@ body.ridotto {
 #mainheader .cerca input,
 .italiawp2-sidebar .cerca input,
 #mainheader .p_cercaMobile .cerca input {
-    width: calc(100% - 59px);
+    width: calc(100% - 49px);
     float: left;
     background: transparent;
     color: #fff;
     font-size: 16px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
 
 @media (min-width: 991px) {
@@ -457,7 +457,6 @@ body.ridotto {
 
 #mainheader .cerca {
     float: right;
-    min-width: 250px;
 }
 
 .italiawp2-sidebar .cerca {
