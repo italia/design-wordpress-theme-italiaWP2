@@ -428,11 +428,27 @@ body.ridotto {
 #mainheader .cerca input,
 .italiawp2-sidebar .cerca input,
 #mainheader .p_cercaMobile .cerca input {
-    width: calc(100% - 44px);
+    width: calc(100% - 59px);
     float: left;
     background: transparent;
     color: #fff;
     font-size: 16px;
+    margin-right: 15px;
+}
+
+@media (min-width: 991px) {
+    #mainheader .cerca input:-ms-input-placeholder {
+        color: #fff;
+    }
+    #mainheader .cerca input::-moz-placeholder {
+        color: #fff;
+    }
+    #mainheader .cerca input::-webkit-input-placeholder {
+        color: #fff;
+    }
+    #mainheader .cerca input::placeholder {
+        color: #fff;
+    }
 }
 
 #mainheader .cerca input {
@@ -441,6 +457,7 @@ body.ridotto {
 
 #mainheader .cerca {
     float: right;
+    min-width: 250px;
 }
 
 .italiawp2-sidebar .cerca {
