@@ -330,7 +330,10 @@ label {
 
 .chip.chip-primary,
 .chip.chip-primary>.chip-label,
-.scheda-argomento-lista-testo a {
+.scheda-argomento-lista-testo a,
+.articolo-paragrafi a,
+#articolo-dettaglio-testo .scheda-allegato h4 a,
+#articolo-dettaglio-testo .scheda-ufficio-contatti h4 a {
     color: {$color_50};
 }
 
@@ -403,9 +406,6 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
     color: {$color_90} !important;
 }
 
-.articolo-paragrafi a,
-#articolo-dettaglio-testo .scheda-allegato h4 a,
-#articolo-dettaglio-testo .scheda-ufficio-contatti h4 a,
 .dropdown-item {
     color: {$color_90};
 }
@@ -459,6 +459,22 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
 .italiawp2-sidebar .cerca input,
 
 section .pagination .page-item .page-link, section .pagination .page-item .page-numbers {
+    color: {$color_95};
+}
+
+#mainheader .p_cercaMobile input[type=text]::placeholder,
+.italiawp2-sidebar .cerca input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: {$color_95};
+    opacity: 1; /* Firefox */
+}
+
+#mainheader .p_cercaMobile input[type=text]:-ms-input-placeholder,
+.italiawp2-sidebar .cerca input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: {$color_95};
+}
+
+#mainheader .p_cercaMobile input[type=text]::-ms-input-placeholder,
+.italiawp2-sidebar .cerca input::-ms-input-placeholder { /* Microsoft Edge */
     color: {$color_95};
 }
 

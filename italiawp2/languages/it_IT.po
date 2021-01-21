@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-07 14:56+0100\n"
-"PO-Revision-Date: 2021-01-07 14:56+0100\n"
+"POT-Creation-Date: 2021-01-21 13:11+0100\n"
+"PO-Revision-Date: 2021-01-21 13:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop\n"
@@ -673,8 +673,8 @@ msgid "close"
 msgstr "chiusi"
 
 #: searchform.php:3 searchform.php:4
-msgid "Start the search"
-msgstr "Avvia la ricerca"
+msgid "Search"
+msgstr "Cerca"
 
 #: searchform_sidebar.php:2
 msgid "Search for Topics"
@@ -703,7 +703,7 @@ msgid "of"
 msgstr "di"
 
 #: template-parts/archive-gallerie-loop.php:78
-#: template-parts/archive-loop.php:126 template-parts/main-loop.php:119
+#: template-parts/archive-loop.php:131 template-parts/main-loop.php:119
 #: template-parts/search-loop.php:61 template-parts/search-loop.php:67
 #: template-parts/section-gallery-carousel.php:93
 #: template-parts/section-last-news.php:114
@@ -716,14 +716,14 @@ msgstr "Vai alla pagina"
 msgid "Browse gallery"
 msgstr "Sfoglia galleria"
 
-#: template-parts/archive-loop.php:103 template-parts/main-loop.php:96
+#: template-parts/archive-loop.php:108 template-parts/main-loop.php:96
 #: template-parts/section-last-news.php:91
 #: template-parts/section-last-one-news.php:61
 #: template-parts/single-loop.php:40
 msgid "Categories"
 msgstr "Categorie"
 
-#: template-parts/archive-loop.php:114 template-parts/main-loop.php:107
+#: template-parts/archive-loop.php:119 template-parts/main-loop.php:107
 #: template-parts/page-loop-nosidebar.php:33 template-parts/page-loop.php:34
 #: template-parts/section-last-news.php:102
 #: template-parts/section-last-one-news.php:74
@@ -731,7 +731,7 @@ msgstr "Categorie"
 msgid "Topics"
 msgstr "Argomenti"
 
-#: template-parts/archive-loop.php:127 template-parts/main-loop.php:120
+#: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
 #: template-parts/search-loop.php:67 template-parts/search-loop.php:69
 #: template-parts/section-last-news.php:115
 msgid "Read more"
@@ -833,6 +833,9 @@ msgstr "Servizi"
 #: template-parts/single-loop.php:70
 msgid "Date"
 msgstr "Data"
+
+#~ msgid "Start the search"
+#~ msgstr "Avvia la ricerca"
 
 #, fuzzy
 #~| msgid "Install Plugins"

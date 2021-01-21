@@ -428,15 +428,36 @@ body.ridotto {
 #mainheader .cerca input,
 .italiawp2-sidebar .cerca input,
 #mainheader .p_cercaMobile .cerca input {
-    width: calc(100% - 44px);
+    width: calc(100% - 49px);
     float: left;
     background: transparent;
     color: #fff;
     font-size: 16px;
+    margin-right: 5px;
 }
 
 #mainheader .cerca input {
     border-color: #fff !important;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#mainheader .p_cercaMobile .cerca input {
+    text-align: left;
+}
+
+#mainheader .cerca input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+}
+
+#mainheader .cerca input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+#mainheader .cerca input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
 }
 
 #mainheader .cerca {
