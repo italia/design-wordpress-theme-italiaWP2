@@ -80,6 +80,16 @@ function italiawp2_widgets_init() {
         'after_title'   => '',
         'class'         => ''
     ));
+    register_sidebar( array(
+        'name'          => 'Sezione Credits',
+        'id'            => 'credits',
+        'description'   => 'Sezione dei credits',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+        'class'         => ''
+    ));
 }
 add_action( 'widgets_init', 'italiawp2_widgets_init' );
 

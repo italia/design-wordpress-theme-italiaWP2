@@ -1765,9 +1765,10 @@ img.spidback {
 }
 
 #footer .postFooter {
-    font-size: .8889em;
+    font-size: .85em;
+    line-height: 2em;
     border-top: 1px solid #9C8C3E;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 #footer .postFooter {

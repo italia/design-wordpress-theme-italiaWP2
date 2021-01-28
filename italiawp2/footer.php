@@ -239,9 +239,10 @@
                  ?>
                 <?php echo __('Graphic theme','italiawp2'); ?> <a target="_blank" href="<?php echo $main_theme_uri; ?>"><?php echo $main_theme_name; ?></a> |
                 <?php echo __('Based on the','italiawp2'); ?> <a target="_blank" href="https://italia.github.io/design-comuni-prototipi/"><?php echo __('AgID Prototype for PA sites','italiawp2'); ?></a>
-                <!-- Grazie :) -->
+                <!-- Grazie :) -->               
                 
-                
+                <br>
+                <?php if(is_active_sidebar('credits')) dynamic_sidebar('credits'); ?>
 
             </section>
         </div>
