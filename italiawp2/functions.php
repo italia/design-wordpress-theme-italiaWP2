@@ -40,6 +40,11 @@ function italiawp2_custom_login_logo() {
 }
 add_action('login_head', 'italiawp2_custom_login_logo');
 
+function italiawp2_custom_login_url() {
+    return get_site_url();
+}
+add_filter('login_headerurl', 'italiawp2_custom_login_url');
+
 function italiawp2_widgets_init() {
     register_sidebar( array(
         'name'          => 'Footer Colonne',

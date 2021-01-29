@@ -41,3 +41,33 @@ p.has-huge-font-size, .has-huge-font-size {
     margin-bottom: 1em;
     height: auto !important;
 }
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    .wp-block-image.alignfull.size-large {
+        margin-left: -53px;
+        margin-right: -50%;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width: 1199px) {
+    .wp-block-image.alignfull.size-large {
+        margin-left: -76px;
+        margin-right: -28%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .wp-block-image.alignfull.size-large {
+        margin-left: -90px;
+        margin-right: -34%;
+    }
+}
+
+.wp-block-image.alignfull img,
+.wp-block-image.alignwide img {
+    height: auto;
+}
+
+.wp-block-image.size-large img {
+    height: 100%;
+}

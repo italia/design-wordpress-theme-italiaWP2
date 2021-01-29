@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-28 17:18+0100\n"
-"PO-Revision-Date: 2021-01-28 17:18+0100\n"
+"POT-Creation-Date: 2021-01-29 16:36+0100\n"
+"PO-Revision-Date: 2021-01-29 16:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -212,52 +212,52 @@ msgstr "Lascia un commento"
 msgid "Cookie policy"
 msgstr "Cookie policy"
 
-#: functions.php:207
+#: functions.php:212
 msgid "Error 404"
 msgstr "Errore 404"
 
-#: functions.php:213 template-parts/archive-gallerie-loop.php:22
+#: functions.php:218 template-parts/archive-gallerie-loop.php:22
 #: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
 #: template-parts/main-loop.php:22 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
 
-#: functions.php:278
+#: functions.php:283
 msgid "Plugins required by the theme \"ItaliaWP\""
 msgstr "Plugin richiesti dal tema “ItaliaWP”"
 
-#: functions.php:279
+#: functions.php:284
 msgid "Plugins required"
 msgstr "Plugin richiesti"
 
-#: functions.php:280
+#: functions.php:285
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:281
+#: functions.php:286
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:282
+#: functions.php:287
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:283
+#: functions.php:288
 #, php-format
 msgid "\"ItaliaWP\" theme requires plugins %1$s."
 msgstr "“ItaliaWP” richiede i plugin: %1$s."
 
-#: functions.php:284
+#: functions.php:289
 #, php-format
 msgid "\"ItaliaWP\" recommends plugins: %1$s."
 msgstr "“ItaliaWP” raccomanda i plugin: %1$s."
 
-#: functions.php:285
+#: functions.php:290
 #, php-format
 msgid ""
 "The following plugins must be updated to the latest version to have maximum "
@@ -266,57 +266,57 @@ msgstr ""
 "I seguenti plugin devono essere aggiornati all\\’ultima versione per avere "
 "massima compatibilità con questo tema: %1$s."
 
-#: functions.php:286
+#: functions.php:291
 #, php-format
 msgid "There are updates available for: %1$s."
 msgstr "Ci sono aggiornamenti disponibili per: %1$s."
 
-#: functions.php:287
+#: functions.php:292
 #, php-format
 msgid "Required plugins are not active: %1$s."
 msgstr "I plugin richiesti non sono attivi: %1$s."
 
-#: functions.php:288
+#: functions.php:293
 #, php-format
 msgid "Recommended plugins are not active: %1$s."
 msgstr "I plugin raccomandati non sono attivi: %1$s."
 
-#: functions.php:289
+#: functions.php:294
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:290
+#: functions.php:295
 msgid "Update Plugins"
 msgstr "Aggiorna plugin"
 
-#: functions.php:291
+#: functions.php:296
 msgid "Activate plugins"
 msgstr "Attiva i plugin"
 
-#: functions.php:292
+#: functions.php:297
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:293
+#: functions.php:298
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:294
+#: functions.php:299
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:295
+#: functions.php:300
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:296
+#: functions.php:301
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -326,18 +326,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:297
+#: functions.php:302
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:298
+#: functions.php:303
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:299
+#: functions.php:304
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -346,60 +346,60 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:300
+#: functions.php:305
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
 
-#: functions.php:377
+#: functions.php:382
 msgid "Add to Menu"
 msgstr "Aggiungi al menu"
 
-#: functions.php:390
+#: functions.php:395
 msgid "January"
 msgstr "Gennaio"
 
-#: functions.php:390
+#: functions.php:395
 msgid "February"
 msgstr "Febbraio"
 
-#: functions.php:390
+#: functions.php:395
 msgid "March"
 msgstr "Marzo"
 
-#: functions.php:390
+#: functions.php:395
 msgid "April"
 msgstr "Aprile"
 
-#: functions.php:390
+#: functions.php:395
 msgid "May"
 msgstr "Maggio"
 
-#: functions.php:390
+#: functions.php:395
 msgid "June"
 msgstr "Giugno"
 
-#: functions.php:390
+#: functions.php:395
 msgid "July"
 msgstr "Luglio"
 
-#: functions.php:390
+#: functions.php:395
 msgid "August"
 msgstr "Agosto"
 
-#: functions.php:390
+#: functions.php:395
 msgid "September"
 msgstr "Settembre"
 
-#: functions.php:390
+#: functions.php:395
 msgid "October"
 msgstr "Ottobre"
 
-#: functions.php:390
+#: functions.php:395
 msgid "November"
 msgstr "Novembre"
 
-#: functions.php:390
+#: functions.php:395
 msgid "December"
 msgstr "Dicembre"
 
