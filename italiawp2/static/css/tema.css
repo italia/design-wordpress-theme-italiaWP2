@@ -189,6 +189,13 @@ body.ridotto {
 
 #mainheader .preheader .entesup a {
     color: #fff;
+    display: inline-block;
+}
+
+#mainheader .preheader .entesup a img {
+    max-height: 40px;
+    width: auto;
+    display: block;
 }
 
 #mainheader .preheader .entesup .logotxt a {

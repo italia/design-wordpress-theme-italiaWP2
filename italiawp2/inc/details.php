@@ -30,6 +30,9 @@ function italiawp2_edit_custom_settings() { ?>
             
             <p><strong>Nome amministrazione afferente:</strong><br />
                 <input type="text" name="dettagli-nome-ammin-afferente" size="100" value="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" /></p>
+
+            <p><strong>Logo amministrazione afferente:</strong><br />
+                <input type="text" name="dettagli-logo-ammin-afferente" size="100" value="<?php echo get_option('dettagli-logo-ammin-afferente'); ?>" /></p>
             
             <p><strong>URL amministrazione afferente (con HTTP o HTTPS):</strong><br />
                 <input type="text" name="dettagli-url-ammin-afferente" size="100" value="<?php echo get_option('dettagli-url-ammin-afferente'); ?>" /></p>
@@ -117,7 +120,7 @@ function italiawp2_edit_custom_settings() { ?>
             <input type="hidden" name="page_options" value="dettagli-num-articoli,
                                                             custom-meta-keywords,custom-meta-description,
                                                             dettagli-link-accessibilita,
-                                                            dettagli-nome-ammin-afferente,dettagli-url-ammin-afferente,
+                                                            dettagli-nome-ammin-afferente,dettagli-logo-ammin-afferente,dettagli-url-ammin-afferente,
                                                             dettagli-id-privacy,dettagli-id-cookie,dettagli-id-notelegali,dettagli-id-contatti,
                                                             dettagli-indirizzo,dettagli-cap,dettagli-citta,dettagli-telefono,dettagli-fax,
                                                             dettagli-email,dettagli-pec,dettagli-cfpiva,dettagli-facebook,

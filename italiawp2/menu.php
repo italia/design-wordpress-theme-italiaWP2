@@ -8,7 +8,11 @@
                 title="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>"
                 href="<?php echo get_option('dettagli-url-ammin-afferente'); ?>"
                 target="_blank">
-                <?php echo get_option('dettagli-nome-ammin-afferente'); ?>
+                <?php if(get_option('dettagli-logo-ammin-afferente')!="") { ?>
+                    <img src="<?php echo get_option('dettagli-logo-ammin-afferente'); ?>" alt="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" />
+                <?php } else { ?>
+                    <?php echo get_option('dettagli-nome-ammin-afferente'); ?>
+                <?php } ?>
             </a>
     <?php } ?>
 
