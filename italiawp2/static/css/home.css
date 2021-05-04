@@ -95,8 +95,11 @@
 /* NOTIZIE */
 
 #home-novita {
-    background-color: #ECEFF1;
     padding: 56px 0;
+}
+
+#home-novita, #sezione-circolari {
+    background-color: #ECEFF1;
     clear: both;
 }
 

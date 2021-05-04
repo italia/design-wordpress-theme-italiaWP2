@@ -97,7 +97,8 @@ a {color: #003882;}
         padding-left: 14px !important;
     }
     
-    #home-novita .row-eq-height > div {
+    #home-novita .row-eq-height > div,
+    #sezione-circolari .row-eq-height > div {
         padding-bottom: 28px !important;
     }
 
@@ -1997,7 +1998,7 @@ section .titolettosezione h3 {
     margin-bottom: 20px;
 }
 
-.argomenti a.badge-argomenti { 
+.argomenti .badge-argomenti { 
     color: #003882;
     border: 1px solid #003882;
     margin-right: 8px;

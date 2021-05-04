@@ -28,6 +28,15 @@ function italiawp2_customize_register($wp_customize) {
         'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_section_last_news'
     ));
     
+/* Ultime circolari (se è installato il plugin) */
+    $wp_customize->add_setting('active_section_circolari', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('active_section_circolari', array(
+        'label' => 'Ultime circolari (se è installato il plugin "Gestione Circolari")',
+        'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_section_circolari'
+    ));
+    
 /* Lista Altre Categorie (home) */
     $wp_customize->add_setting('active_altre_categorie_home', array(
         'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'

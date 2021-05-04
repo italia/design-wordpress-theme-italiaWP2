@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-01-29 16:36+0100\n"
-"PO-Revision-Date: 2021-01-29 16:36+0100\n"
+"POT-Creation-Date: 2021-05-04 11:22+0200\n"
+"PO-Revision-Date: 2021-05-04 11:23+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -212,52 +212,53 @@ msgstr "Lascia un commento"
 msgid "Cookie policy"
 msgstr "Cookie policy"
 
-#: functions.php:212
+#: functions.php:223
 msgid "Error 404"
 msgstr "Errore 404"
 
-#: functions.php:218 template-parts/archive-gallerie-loop.php:22
+#: functions.php:229 template-parts/archive-circolari-loop.php:22
+#: template-parts/archive-gallerie-loop.php:22
 #: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
 #: template-parts/main-loop.php:22 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
 
-#: functions.php:283
+#: functions.php:294
 msgid "Plugins required by the theme \"ItaliaWP\""
 msgstr "Plugin richiesti dal tema “ItaliaWP”"
 
-#: functions.php:284
+#: functions.php:295
 msgid "Plugins required"
 msgstr "Plugin richiesti"
 
-#: functions.php:285
+#: functions.php:296
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:286
+#: functions.php:297
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:287
+#: functions.php:298
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:288
+#: functions.php:299
 #, php-format
 msgid "\"ItaliaWP\" theme requires plugins %1$s."
 msgstr "“ItaliaWP” richiede i plugin: %1$s."
 
-#: functions.php:289
+#: functions.php:300
 #, php-format
 msgid "\"ItaliaWP\" recommends plugins: %1$s."
 msgstr "“ItaliaWP” raccomanda i plugin: %1$s."
 
-#: functions.php:290
+#: functions.php:301
 #, php-format
 msgid ""
 "The following plugins must be updated to the latest version to have maximum "
@@ -266,57 +267,57 @@ msgstr ""
 "I seguenti plugin devono essere aggiornati all\\’ultima versione per avere "
 "massima compatibilità con questo tema: %1$s."
 
-#: functions.php:291
+#: functions.php:302
 #, php-format
 msgid "There are updates available for: %1$s."
 msgstr "Ci sono aggiornamenti disponibili per: %1$s."
 
-#: functions.php:292
+#: functions.php:303
 #, php-format
 msgid "Required plugins are not active: %1$s."
 msgstr "I plugin richiesti non sono attivi: %1$s."
 
-#: functions.php:293
+#: functions.php:304
 #, php-format
 msgid "Recommended plugins are not active: %1$s."
 msgstr "I plugin raccomandati non sono attivi: %1$s."
 
-#: functions.php:294
+#: functions.php:305
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:295
+#: functions.php:306
 msgid "Update Plugins"
 msgstr "Aggiorna plugin"
 
-#: functions.php:296
+#: functions.php:307
 msgid "Activate plugins"
 msgstr "Attiva i plugin"
 
-#: functions.php:297
+#: functions.php:308
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:298
+#: functions.php:309
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:299
+#: functions.php:310
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:300
+#: functions.php:311
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:301
+#: functions.php:312
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -326,18 +327,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:302
+#: functions.php:313
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:303
+#: functions.php:314
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:304
+#: functions.php:315
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -346,60 +347,60 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:305
+#: functions.php:316
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
 
-#: functions.php:382
+#: functions.php:393
 msgid "Add to Menu"
 msgstr "Aggiungi al menu"
 
-#: functions.php:395
+#: functions.php:406
 msgid "January"
 msgstr "Gennaio"
 
-#: functions.php:395
+#: functions.php:406
 msgid "February"
 msgstr "Febbraio"
 
-#: functions.php:395
+#: functions.php:406
 msgid "March"
 msgstr "Marzo"
 
-#: functions.php:395
+#: functions.php:406
 msgid "April"
 msgstr "Aprile"
 
-#: functions.php:395
+#: functions.php:406
 msgid "May"
 msgstr "Maggio"
 
-#: functions.php:395
+#: functions.php:406
 msgid "June"
 msgstr "Giugno"
 
-#: functions.php:395
+#: functions.php:406
 msgid "July"
 msgstr "Luglio"
 
-#: functions.php:395
+#: functions.php:406
 msgid "August"
 msgstr "Agosto"
 
-#: functions.php:395
+#: functions.php:406
 msgid "September"
 msgstr "Settembre"
 
-#: functions.php:395
+#: functions.php:406
 msgid "October"
 msgstr "Ottobre"
 
-#: functions.php:395
+#: functions.php:406
 msgid "November"
 msgstr "Novembre"
 
-#: functions.php:395
+#: functions.php:406
 msgid "December"
 msgstr "Dicembre"
 
@@ -696,21 +697,56 @@ msgstr "Mostra / Nascondi"
 msgid "Other topics"
 msgstr "Altri argomenti"
 
+#: template-parts/archive-circolari-loop.php:20
+#: template-parts/section-last-circolari.php:102
+msgid "Circulars"
+msgstr "Circolari"
+
+#: template-parts/archive-circolari-loop.php:22
 #: template-parts/archive-gallerie-loop.php:22
 #: template-parts/archive-loop.php:22 template-parts/main-loop.php:22
 #: template-parts/search-loop.php:18
 msgid "of"
 msgstr "di"
 
+#: template-parts/archive-circolari-loop.php:55
+#: template-parts/circolare-loop.php:50
+#: template-parts/section-last-circolari.php:49
+msgid "No."
+msgstr "N°"
+
+#: template-parts/archive-circolari-loop.php:55
+#: template-parts/circolare-loop.php:50
+#: template-parts/section-last-circolari.php:49
+msgid " of "
+msgstr " del "
+
+#: template-parts/archive-circolari-loop.php:75
+#: template-parts/circolare-loop.php:32
+#: template-parts/section-last-circolari.php:70
+msgid "Groups"
+msgstr "Gruppi"
+
+#: template-parts/archive-circolari-loop.php:87
 #: template-parts/archive-gallerie-loop.php:78
 #: template-parts/archive-loop.php:131 template-parts/main-loop.php:119
 #: template-parts/search-loop.php:61 template-parts/search-loop.php:67
 #: template-parts/section-gallery-carousel.php:93
+#: template-parts/section-last-circolari.php:82
+#: template-parts/section-last-circolari.php:102
 #: template-parts/section-last-news.php:114
 #: template-parts/section-last-news.php:176
 #: template-parts/section-last-one-news.php:86
 msgid "Go to the page"
 msgstr "Vai alla pagina"
+
+#: template-parts/archive-circolari-loop.php:88
+#: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
+#: template-parts/search-loop.php:67 template-parts/search-loop.php:69
+#: template-parts/section-last-circolari.php:83
+#: template-parts/section-last-news.php:115
+msgid "Read more"
+msgstr "Leggi di più"
 
 #: template-parts/archive-gallerie-loop.php:79
 msgid "Browse gallery"
@@ -731,13 +767,7 @@ msgstr "Categorie"
 msgid "Topics"
 msgstr "Argomenti"
 
-#: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
-#: template-parts/search-loop.php:67 template-parts/search-loop.php:69
-#: template-parts/section-last-news.php:115
-msgid "Read more"
-msgstr "Leggi di più"
-
-#: template-parts/attachment-loop.php:54
+#: template-parts/attachment-loop.php:54 template-parts/circolare-loop.php:98
 #: template-parts/custom-post-type-loop.php:58 template-parts/page-loop.php:88
 #: template-parts/single-loop.php:113
 msgid "Last update"
@@ -754,6 +784,18 @@ msgstr "Indietro"
 #: template-parts/children-list.php:25
 msgid "Linked pages"
 msgstr "Pagine collegate"
+
+#: template-parts/circolare-loop.php:49
+msgid "Circular"
+msgstr "Circolare"
+
+#: template-parts/circolare-loop.php:56 template-parts/single-loop.php:70
+msgid "Date"
+msgstr "Data"
+
+#: template-parts/circolare-loop.php:62
+msgid "Author"
+msgstr "Autore"
 
 #: template-parts/error.php:12
 msgid "Error"
@@ -801,6 +843,15 @@ msgstr "Gallerie"
 msgid "All galleries"
 msgstr "Tutte le gallerie"
 
+#: template-parts/section-last-circolari.php:15
+msgid "Latest circulars"
+msgstr "Ultime circolari"
+
+#: template-parts/section-last-circolari.php:103
+#: template-parts/section-last-news.php:177
+msgid "See all"
+msgstr "Vedi tutte"
+
 #: template-parts/section-last-news.php:137
 msgid "Other categories"
 msgstr "Altre categorie"
@@ -808,10 +859,6 @@ msgstr "Altre categorie"
 #: template-parts/section-last-news.php:176
 msgid "News"
 msgstr "Notizie"
-
-#: template-parts/section-last-news.php:177
-msgid "See all"
-msgstr "Vedi tutte"
 
 #: template-parts/section-last-one-news.php:86
 #: template-parts/section-last-one-news.php:87
@@ -829,10 +876,6 @@ msgstr "Clicca su per attivare"
 #: template-parts/section-services.php:16
 msgid "Services"
 msgstr "Servizi"
-
-#: template-parts/single-loop.php:70
-msgid "Date"
-msgstr "Data"
 
 #~ msgid "Start the search"
 #~ msgstr "Avvia la ricerca"

@@ -697,7 +697,7 @@ section#briciole {
     padding: 10px 24px 16px 24px;
 }
 
-.scheda-news .scheda-argomenti a.badge-argomenti {
+.scheda-news .scheda-argomenti .badge-argomenti {
     color: #003882;
     border: 1px solid #003882;
     margin-right: 2px;
@@ -713,6 +713,10 @@ section#briciole {
     background-color: #003882;
     color: #fff;
     text-decoration: none;
+}
+
+.scheda-argomenti.scheda-icona-small .badge-argomenti {
+    vertical-align: text-top;
 }
 
 .scheda-news .scheda-argomenti a:focus {

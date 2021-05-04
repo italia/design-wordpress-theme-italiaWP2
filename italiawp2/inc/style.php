@@ -483,8 +483,8 @@ section .pagination .page-item .page-link, section .pagination .page-item .page-
     border-color: {$color_95} !important;
 }
 
-.argomenti a.badge-argomenti,
-.scheda-news .scheda-argomenti a.badge-argomenti {
+.argomenti .badge-argomenti,
+.scheda-news .scheda-argomenti .badge-argomenti {
     color: {$color_95};
     border-color: {$color_95};
 }

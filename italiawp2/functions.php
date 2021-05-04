@@ -20,6 +20,17 @@ add_theme_support('custom-logo',array(
     'flex-height' => true,
 ));
 
+//
+// Rimuovi link inutili dall'header
+add_action('init', 'wp_remove_standard_jQuery');
+function wp_remove_standard_jQuery() {
+    if (!is_admin()) {
+        wp_deregister_script('jquery');                                     // De-Register jQuery
+        wp_register_script('jquery', '', '', '', true);                     // Register as 'empty', because we manually insert our script in header.php
+    }
+}
+//
+
 register_nav_menus( array(
     'menu-principale' => 'Menu Principale',
     'box-servizi-1' => 'Box Servizi 1',
@@ -238,10 +249,10 @@ function my_excerpt($excerpt='') {
         $pos1 = strpos($excerpt, '.');
         if($pos1) {
             $pos2 = strpos($excerpt, '.', $pos1 + 1);
-            if($pos1 < 50) return substr($excerpt, 0, $pos2 + 1);
+            if($pos1 < 50 && $pos2) return substr($excerpt, 0, $pos2 + 1);
             else return substr($excerpt, 0, $pos1 + 1);
         }
-        return '';
+        return $excerpt;
     }
 }
 add_filter('get_the_excerpt', 'my_excerpt');
