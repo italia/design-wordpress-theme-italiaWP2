@@ -134,7 +134,6 @@ if (!get_theme_mod('active_section_last_one_news')) {
         // Inizializzo il secondo loop senza sticky
         $args = array (
             'posts_per_page'         => $allstickys,
-            'offset'                 => $sticky,
             'post__not_in'           => $do_not_duplicate
         ); 
     }
