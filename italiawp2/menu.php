@@ -9,7 +9,7 @@
                 href="<?php echo get_option('dettagli-url-ammin-afferente'); ?>"
                 target="_blank">
                 <?php if(get_option('dettagli-logo-ammin-afferente')!="") { ?>
-                    <?php if (get_option('dettagli-logo-ammin-afferente.mobile')!="" && wp_is_mobile()) : ?>
+                    <?php if (get_option('dettagli-logo-ammin-afferente-mobile')!="" && wp_is_mobile()) : ?>
                         <img src="<?php echo get_option('dettagli-logo-ammin-afferente-mobile'); ?>" alt="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" />
                     <?php else : ?>
                     <img src="<?php echo get_option('dettagli-logo-ammin-afferente'); ?>" alt="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" />
