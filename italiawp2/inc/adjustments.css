@@ -576,3 +576,30 @@ table td:last-child, table th:last-child {
 #sezione-notifica p {
     margin: 0;
 }
+
+/* Fix Menu Lingue Polylang */
+
+.cbp-spmenu .pll-parent-menu-item img + span {
+    float: none;
+    font-size: inherit;
+}
+
+.cbp-spmenu .pll-parent-menu-item img + span:after {
+    display: none;
+}
+
+#langMenuLi {
+    width: 100%
+}
+
+/* Fix Menu Principale, sottomenu sulla destra */
+
+.drodownmenu-on-right {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.drodownmenu-on-right:before {
+    left: auto;
+    right: 24px;
+}

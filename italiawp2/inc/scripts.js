@@ -91,11 +91,30 @@ $(document).ready(function () {
 
     /* NUOVI */
     $('.footer-colonne ul').addClass('footer-list clearfix');
-    
+
     $('.custom_megamenu_intestazione').each(function() {
         $(this).wrap("<h5></h5>");
     });
     
+    
+    /* Fix Menu Principale, sottomenu sulla destra */
+    let numLi = $('#menu-principale > li').length;
+    $('#menu-principale > li').each(function(i) {
+        if( i > (numLi/2) ) $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
+    });
+    
+    /* Fix Menu Lingue Polylang */
+    let langMenu = $("#menu-principale .pll-parent-menu-item > ul");
+    let langMenuLi = $('<li id="langMenuLi" class="menu-item menu-item-has-children dropdown nav-item"></li>');
+    langMenu.append(langMenuLi);
+    langMenuLi.append("<ul></ul>");
+    $("#menu-principale .pll-parent-menu-item > ul li:not(#langMenuLi)").each(function() {
+        langMenuLiElem = $(this).find("h5 > a");
+        thisElem = $('<li class="menu-item nav-item"></li>');
+        $("#langMenuLi ul").append(thisElem);
+        thisElem.append(langMenuLiElem);
+        $(this).remove();
+    });
 });
 
 $(window).resize(function() {
