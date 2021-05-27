@@ -260,13 +260,18 @@ require_once 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php';
 add_action('tgmpa_register', 'italiawp2_register_required_plugins');
 
 function italiawp2_register_required_plugins() {
-    $plugins = array(
-        array(
-            'name' => 'Attachments',
-            'slug' => 'attachments',
-            'required' => false,
-        ),
-    );
+	$plugins = array();
+
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if (is_plugin_active('attachments/index.php')) {
+		$plugins += array(
+			array(
+				'name'     => 'Attachments',
+				'slug'     => 'attachments',
+				'required' => false,
+			),
+		);
+	}
 
     $config = array(
         'id' => 'italiawp2',
