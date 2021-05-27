@@ -27,12 +27,14 @@
     <?php } ?>
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    
-    <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-          $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' ); ?>
-    
-    <link rel="icon" type="image/png" href="<?php echo esc_url($logo[0]); ?>">
-    
+
+    <?php // The template logo
+		  $custom_logo_uri = get_theme_mod( 'custom_logo' ) ?
+            esc_url(wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )) :
+              get_template_directory_uri() . '/italiawp2/images/stemma-default.png';
+
+    echo ('<link rel="icon" type="image/png" href="$custom_logo_uri">'); ?>
+
     <link href="<?php bloginfo('template_url'); ?>/static/css/bootstrap-italia.min.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_url'); ?>/static/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_url'); ?>/static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
