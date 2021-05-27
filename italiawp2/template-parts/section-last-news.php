@@ -14,6 +14,12 @@
                 
 <?php
 
+if(get_option('dettagli-num-articoli')) {
+    $num_articoli = get_option('dettagli-num-articoli');
+}else{
+    $num_articoli = 3;
+}
+
 if (!get_theme_mod('active_section_last_one_news')) {
     
     $sticky = count(get_option('sticky_posts'));
@@ -128,8 +134,8 @@ if (!get_theme_mod('active_section_last_one_news')) {
         // Fine primo loop con sticky posts
     }
     
-    if ($sticky < get_option('dettagli-num-articoli')) {
-        $allstickys = get_option('dettagli-num-articoli') - $sticky;
+    if ($sticky < $num_articoli) {
+        $allstickys = $num_articoli - $sticky;
         
         // Inizializzo il secondo loop senza sticky
         $args = array (
@@ -139,7 +145,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
     }
 }else{
     $args = array(
-        'posts_per_page' => get_option('dettagli-num-articoli'),
+        'posts_per_page' => $num_articoli,
         'post__not_in' => get_option( 'sticky_posts' )
     );
 }

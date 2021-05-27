@@ -482,6 +482,44 @@ img.size-thumbnail {
     }
 }
 
+@media (min-width: 992px) {
+    .navbar .dropdown-item {
+        padding: 12px 14px;
+    }
+    
+    .navbar .dropdown-menu .menu-item {
+        min-width: 240px;
+    }
+    
+    .navbar .dropdown-menu .menu-item h5 a,
+    .navbar .dropdown-menu .menu-item ul li a {
+        white-space: normal;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link {
+        padding: 13px 13px;
+    }
+    
+    .navbar .dropdown-item {
+        padding: 6px 10px;
+    }
+    
+    .navbar .dropdown-menu .menu-item {
+        min-width: 160px;
+    }
+    
+    .navbar .dropdown-menu h5 {
+        font-size: 1rem;
+    }
+    
+    .navbar .dropdown-menu {
+        font-size: .9rem;
+        line-height: 1.4rem;
+    }
+}
+
 #wp-calendar, table {
     border: 0;
     border-collapse: collapse;

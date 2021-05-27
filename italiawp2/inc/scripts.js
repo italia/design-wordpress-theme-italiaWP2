@@ -7,8 +7,8 @@ $(document).ready(function () {
     /* Metto la data dei post nel titolo (nella sidebar) */
     $(".italiawp2-sidebar > ul > li").each(function () {
         if( $('> span',this).length === 1 && $('> a',this).length === 1 ) {
-            var span = $(this).find('span');
-            var a = $(this).find('a');
+            let span = $(this).find('span');
+            let a = $(this).find('a');
             span.html("<br><small>"+span.html()+"</small>");
             a.append(span);
         }
@@ -66,7 +66,7 @@ $(document).ready(function () {
         }
         
         if( $(this).parent().find('.icon-external-link').length ) {
-            var link = $(this).parent().find('.icon-external-link');
+            let link = $(this).parent().find('.icon-external-link');
         $(this).append(link);
         }
     });
@@ -96,12 +96,8 @@ $(document).ready(function () {
         $(this).wrap("<h5></h5>");
     });
     
-    
     /* Fix Menu Principale, sottomenu sulla destra */
-    let numLi = $('#menu-principale > li').length;
-    $('#menu-principale > li').each(function(i) {
-        if( i > (numLi/2) ) $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
-    });
+    fixMainMenu();
     
     /* Fix Menu Lingue Polylang */
     let langMenu = $("#menu-principale .pll-parent-menu-item > ul");
@@ -119,10 +115,26 @@ $(document).ready(function () {
 
 $(window).resize(function() {
     mapWrap();
+    fixMainMenu();
 });
 
 function mapWrap() {
-    var altMap = parseInt($(".map-full-content iframe").outerHeight(), 10);
+    let altMap = parseInt($(".map-full-content iframe").outerHeight(), 10);
     $(".map-wrap").css("height",altMap+"px").css("margin-bottom",-altMap+"px");
+    return;
+}
+
+function fixMainMenu() {
+    let numLi = $('#menu-principale > li').length;
+    let largWi = (parseInt($(window).innerWidth(), 10)/2)-25;
+    
+    $('#menu-principale > li').each(function(i) {
+        $(this).find("ul.dropdown-menu").removeClass("drodownmenu-on-right");
+        let posiLi = $(this).position().left;
+        
+        if( ((i+1) > (numLi/2)) && ( posiLi > largWi ) ) {
+            $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
+        }
+    });
     return;
 }
