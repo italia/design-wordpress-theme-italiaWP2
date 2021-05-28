@@ -641,3 +641,11 @@ table td:last-child, table th:last-child {
     left: auto;
     right: 24px;
 }
+
+/* Logo Amministrazione Afferente */
+
+#mainheader .entesup a > img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+}

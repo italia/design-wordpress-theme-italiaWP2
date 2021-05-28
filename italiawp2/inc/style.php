@@ -399,7 +399,7 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
 }
 
 #mainheader .preheader .accedi {
-    border-color: {$color_80};
+    border-color: transparent;
 }
 
 .u-color-90 {

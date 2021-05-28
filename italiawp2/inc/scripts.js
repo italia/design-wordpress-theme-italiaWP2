@@ -125,6 +125,8 @@ function mapWrap() {
 }
 
 function fixMainMenu() {
+    if( $('#mainheader .entesup a').has('img') ) $('#mainheader .entesup a').addClass('image');
+    
     let numLi = $('#menu-principale > li').length;
     let largWi = (parseInt($(window).innerWidth(), 10)/2)-25;
     

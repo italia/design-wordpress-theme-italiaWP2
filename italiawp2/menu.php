@@ -3,14 +3,24 @@
     <div class="container">
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 entesup">
-    <?php if(get_option('dettagli-nome-ammin-afferente')!="") { ?>
-            <a  aria-label="<?php echo __('Link to external site','italiawp2'); ?> - <?php echo get_option('dettagli-nome-ammin-afferente'); ?> - <?php echo __('new window','italiawp2'); ?>"
-                title="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>"
-                href="<?php echo get_option('dettagli-url-ammin-afferente'); ?>"
-                target="_blank">
-                <?php echo get_option('dettagli-nome-ammin-afferente'); ?>
-            </a>
-    <?php } ?>
+                
+            <?php if ((get_option('dettagli-nome-ammin-afferente') != "") || (get_option('dettagli-logo-ammin-afferente') != "")) { ?>
+                <a  aria-label="<?php echo __('Link to external site', 'italiawp2'); ?> - <?php echo get_option('dettagli-nome-ammin-afferente'); ?> - <?php echo __('new window', 'italiawp2'); ?>"
+                    title="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>"
+                    href="<?php echo get_option('dettagli-url-ammin-afferente'); ?>"
+                    target="_blank">
+
+                    <?php if (get_option('dettagli-logo-ammin-afferente') != "") { ?>
+                        <?php if (get_option('dettagli-logo-ammin-afferente-mobile') != "" && wp_is_mobile()) : ?>
+                            <img src="<?php echo get_option('dettagli-logo-ammin-afferente-mobile'); ?>" alt="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" />
+                        <?php else : ?>
+                            <img src="<?php echo get_option('dettagli-logo-ammin-afferente'); ?>" alt="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" />
+                        <?php endif; ?>
+                    <?php } else { ?>
+                        <?php echo get_option('dettagli-nome-ammin-afferente'); ?>
+                    <?php } ?>
+                </a>
+            <?php } ?>
 
                 <div class="float-right">
                     <!-- accedi -->
