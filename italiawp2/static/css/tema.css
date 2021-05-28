@@ -165,8 +165,8 @@ body.ridotto {
 }
 
 #mainheader .preheader {
-    height: 40px;
-    padding: 0;
+    height: 50px;
+    padding: 5px 0;
     margin: 0;
     font-weight: bold;
     line-height: 40px;
@@ -2185,6 +2185,10 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
         line-height: 1;
         display: inline-block;
         vertical-align: middle;
+    }
+    
+    #mainheader .entesup a.image {
+        display: inline;
     }
 
     .sub_nav {
