@@ -49,12 +49,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			}
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
-                        
-                        if( isset( $args->has_children ) && 0 === $depth ) {
-                            $classes = array( 'dropdown-menu' );
-                        }else $classes = [];
-                        
-			
+
+			$classes = isset( $args->has_children ) && 0 === $depth ? array( 'dropdown-menu' ) : array();
+
+
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -188,7 +186,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && 0 === $depth && $args->depth > 1 ) { /* 1 livello */
                         //if ( isset( $args->has_children ) && $args->has_children && $args->depth > 1 ) {
-                            
+
                             if ( isset( $args->has_children ) && $args->has_children && $args->depth > 1 ) {
                                 $atts['href']          = '#';
                                 $atts['data-toggle']   = 'dropdown';
@@ -200,12 +198,12 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
                                 $atts['href']          = $item->url;
                                 $atts['class']         = 'nav-link';
                             }
-				
+
                         } else if ( isset( $args->has_children ) && 1 === $depth && $args->depth > 1 ) { /* 2 livello */
-                            
+
                             $atts['href'] = ! empty( $item->url ) ? $item->url : '';
                             $atts['class'] = 'dropdown-item custom_megamenu_intestazione';
-                            
+
                         } else {  /* no figli */
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '';
 				// Items in dropdowns use .dropdown-item instead of .nav-link.
@@ -383,7 +381,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 				if ( $menu_class ) {
 					$fallback_output .= ' class="' . esc_attr( $menu_class ) . '"'; }
 				$fallback_output .= '>';
-				$fallback_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', '' ) . '</a></li>';
+				$fallback_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '" title="">' . esc_attr( 'Add a menu', '' ) . '</a></li>';
 				$fallback_output .= '</ul>';
 				if ( $container ) {
 					$fallback_output .= '</' . esc_attr( $container ) . '>';
