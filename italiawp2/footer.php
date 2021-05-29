@@ -13,7 +13,7 @@
                 <div class="row clearfix">
                     <div class="col-sm-12 intestazione">
                         <div class="logoimg">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo bloginfo('name'); ?>">
+                            <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
                                 <?php
                                 $custom_logo_id = get_theme_mod('custom_logo');
                                 $custom_logo = wp_get_attachment_image_src($custom_logo_id, 'full');
@@ -22,13 +22,13 @@
                                 } else {
                                     $custom_logo = get_stylesheet_directory_uri() . '/images/stemma-default.png';
                                 } ?>
-                                <img class="custom-logo" alt="<?php echo bloginfo('name'); ?>" src="<?php echo $custom_logo; ?>">
+                                <img class="custom-logo" alt="<?php bloginfo('name'); ?>" src="<?php echo $custom_logo; ?>">
                             </a>
                         </div>
                         <div class="logotxt">
                             <h3>
-                                <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo bloginfo('name'); ?>">
-                                    <?php echo bloginfo('name'); ?>
+                                <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
+                                    <?php bloginfo('name'); ?>
                                 </a>
                             </h3>
                         </div>
