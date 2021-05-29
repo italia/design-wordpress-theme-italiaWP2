@@ -42,7 +42,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
             }else if(get_theme_mod('active_immagine_evidenza_default')) {	
                 $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
                 if($img_url=="") {
-                    $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+                    $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
                 }
             }
 
@@ -79,7 +79,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
                             <div class="flag-icon"></div>
                         <?php } ?>
 
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                         </div>
 
@@ -122,7 +122,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
                             <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                                 <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>
@@ -159,7 +159,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         }else if(get_theme_mod('active_immagine_evidenza_default')) {	
             $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
             if($img_url=="") {
-                $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+                $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
             }
         }
 
@@ -196,7 +196,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <div class="flag-icon"></div>
                         <?php } ?>
                             
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                         </div>
 
@@ -239,7 +239,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                                 <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>

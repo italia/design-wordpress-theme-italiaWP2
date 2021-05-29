@@ -34,7 +34,7 @@ if (is_plugin_active('attachments/index.php')) { ?>
                         <div class="scheda-allegato">
                             <svg class="icon">
                             <use
-                                xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-attach_file"
+                                xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-attach_file"
                                 ></use>
                             </svg>
                             <h4>

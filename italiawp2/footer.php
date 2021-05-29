@@ -47,14 +47,14 @@
                         <h4>Recapiti</h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-pa"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-pa"></use></svg>
                                 <?php esc_html_e('Address','italiawp2'); ?>
                                 <br>
                                 <span><?php echo get_option('dettagli-indirizzo'); ?><br>
                                 <?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>
                             </li>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-telephone"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-telephone"></use></svg>
                                 <?php esc_html_e('Phone','italiawp2'); ?><br>
                                 <a href="tel:+39<?php echo esc_attr(get_option('dettagli-telefono')); ?>" title="<?php esc_attr_e('Phone','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-telefono'); ?>
@@ -62,7 +62,7 @@
                             </li>
                             <?php if(get_option('dettagli-fax')!=""): ?>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-print"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-print"></use></svg>
                                 <?php esc_html_e('Fax','italiawp2'); ?><br>
                                 <a href="tel:+39<?php echo esc_attr(get_option('dettagli-fax')); ?>" title="<?php esc_attr_e('Fax','italiawp2'); ?>">
                                     (+39) <?php echo get_option('dettagli-fax'); ?>
@@ -76,20 +76,20 @@
                         <h4><?php esc_html_e('Information','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-check-circle"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-check-circle"></use></svg>
                                 <?php esc_html_e('Tax code / VAT number','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-cfpiva'); ?></span>
                             </li>
                             <?php if(get_option('dettagli-codunivoco')!=""): ?>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-exchange-circle"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-exchange-circle"></use></svg>
                                 <?php esc_html_e('Unique Code','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-codunivoco'); ?></span>
                             </li>
                             <?php endif; ?>
                             <?php if(get_option('dettagli-iban')!=""): ?>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-card"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-card"></use></svg>
                                 <?php esc_html_e('IBAN','italiawp2'); ?><br>
                                 <span><?php echo get_option('dettagli-iban'); ?></span>
                             </li>
@@ -101,7 +101,7 @@
                         <h4><?php esc_html_e('Email contacts','italiawp2'); ?></h4>
                         <ul class="footer-list clearfix">
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php esc_html_e('PEC','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-pec'); ?>" title="<?php esc_attr_e('Certified mail','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-pec'); ?>
@@ -109,7 +109,7 @@
                             </li>
                             <?php if(get_option('dettagli-email')!=""): ?>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php esc_html_e('Email','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-email'); ?>" title="<?php esc_attr_e('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email'); ?>
@@ -118,7 +118,7 @@
                             <?php endif; ?>
                             <?php if(get_option('dettagli-email2')!=""): ?>
                             <li>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-mail"></use></svg>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-mail"></use></svg>
                                 <?php esc_html_e('Email','italiawp2'); ?><br>
                                 <a href="mailto:<?php echo get_option('dettagli-email2'); ?>" title="<?php esc_attr_e('Email','italiawp2'); ?>">
                                     <?php echo get_option('dettagli-email2'); ?>
@@ -139,7 +139,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Facebook"
                                     href="<?php echo get_option('dettagli-facebook'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Facebook</span>
                                 </a>
@@ -151,7 +151,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Twitter"
                                     href="<?php echo get_option('dettagli-twitter'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Twitter</span>
                                 </a>
@@ -163,7 +163,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - YouTube"
                                     href="<?php echo get_option('dettagli-youtube'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> YouTube</span>
                                 </a>
@@ -175,7 +175,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Instagram"
                                     href="<?php echo get_option('dettagli-instagram'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Instagram</span>
                                 </a>
@@ -187,7 +187,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Telegram"
                                     href="https://telegram.me/<?php echo get_option('dettagli-telegram'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Telegram</span>
                                 </a>
@@ -199,7 +199,7 @@
                                     aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Whatsapp"
                                     href="tel:+39<?php echo get_option('dettagli-whatsapp'); ?>">
                                     <svg class="icon">
-                                        <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                                     </svg>
                                     <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Whatsapp</span>
                                 </a>
@@ -248,7 +248,7 @@
 
 <div id="topcontrol" class="topcontrol u-background-80" title="<?php esc_attr_e('Go up','italiawp2'); ?>">
   <svg class="icon">
-    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/bootstrap-italia.svg#it-collapse"></use>
+    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-collapse"></use>
   </svg>
 </div>
 
@@ -260,14 +260,14 @@ if ( is_plugin_active( 'albo-pretorio-on-line/AlboPretorio.php' ) ) { ?>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <?php } ?>
     
-    <script src="<?php bloginfo('template_url'); ?>/static/js/popper.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/bootstrap-italia.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/tema.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/jquery-ui.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/i18n/datepicker-it.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/owl.carousel.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/inc/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/inc/scripts.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/popper.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/bootstrap-italia.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/tema.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/jquery-ui.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/i18n/datepicker-it.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/owl.carousel.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/scripts.js"></script>
 
 </body>
 </html>

@@ -40,7 +40,7 @@ $i = 0; if (have_posts()) :
     }else if(get_theme_mod('active_immagine_evidenza_default')) {
         $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
         if($img_url=="") {
-            $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+            $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
         }
     }
     
@@ -61,7 +61,7 @@ $i = 0; if (have_posts()) :
                     <?php } ?>
                     
                     <div class="scheda-icona-small">
-                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-camera"></use></svg>
+                        <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-camera"></use></svg>
                         <?php echo $datapost; ?>
                     </div>
                     
@@ -78,7 +78,7 @@ $i = 0; if (have_posts()) :
                         <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                             <?php esc_html_e('Browse gallery','italiawp2'); ?>
                             <svg class="icon">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                             </svg>
                         </a>
                     </div>

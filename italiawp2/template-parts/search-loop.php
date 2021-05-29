@@ -68,7 +68,7 @@
                                    href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="tutte">
                                     <?php esc_html_e('Read more','italiawp2'); ?>
                                     <svg class="icon">
-                                        <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                        <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                     </svg>
                                 </a>
                             </div>

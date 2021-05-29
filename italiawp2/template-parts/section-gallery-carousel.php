@@ -44,7 +44,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         } else {
             $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
             if($img_url=="") {
-                $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+                $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
             }
         }
 
@@ -62,7 +62,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                     <figcaption>
                         <small>
                             <p>
-                                <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-camera"></use></svg> <?php echo $datapost; ?>
+                                <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-camera"></use></svg> <?php echo $datapost; ?>
                             </p>
                         </small>
                         <p id="desc-<?php echo $i; ?>">

@@ -16,7 +16,7 @@
     <?php endif; ?>
     
     <script>
-        window.__PUBLIC_PATH__ = "<?php bloginfo('template_url'); ?>/static/fonts";
+        window.__PUBLIC_PATH__ = "<?php echo esc_url( get_template_directory_uri() ); ?>/static/fonts";
         theme_directory = "<?php echo get_template_directory_uri() ?>";
     </script>
 
@@ -49,9 +49,9 @@
     <?php wp_head(); ?>
 
     <!-- HTML5shim per Explorer 8 -->
-    <script src="<?php bloginfo('template_url'); ?>/static/js/modernizr.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/static/js/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_url'); ?>/inc/pre-scripts.js"></script>    
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/modernizr.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/jquery.min.js"></script>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/pre-scripts.js"></script>
 </head>
 
 <body class="t-Pac">

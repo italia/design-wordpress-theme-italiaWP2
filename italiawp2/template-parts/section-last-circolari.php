@@ -44,7 +44,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <div class="flag-icon"></div>
                         <?php } ?>
                             
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                             <?php echo '- '.__('No.','italiawp2').' '.$circolare_num.__(' of ','italiawp2').$circolare_anno; ?>
                         </div>
@@ -61,7 +61,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </div>
                         
                         <div class="scheda-argomenti scheda-icona-small">
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
                             <span class="badge badge-pill badge-argomenti"><?php echo get_the_author(); ?></span>
                         </div>
                         
@@ -82,7 +82,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
                                 <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>

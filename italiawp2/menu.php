@@ -28,7 +28,7 @@
                     <div class="accedi float-left text-right">
                         <a class="btn btn-default btn-accedi" href="<?php echo get_option('dettagli-url-accedi'); ?>">
                             <svg class="icon">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_circle"></use>
+                                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-account_circle"></use>
                             </svg>
                             <span><?php esc_html_e('Login','italiawp2'); ?></span>
                         </a>
@@ -88,7 +88,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Facebook"
                                 href="<?php echo get_option('dettagli-facebook'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Facebook</span>
                             </a>
@@ -100,7 +100,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Twitter"
                                 href="<?php echo get_option('dettagli-twitter'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Twitter</span>
                             </a>
@@ -112,7 +112,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - YouTube"
                                 href="<?php echo get_option('dettagli-youtube'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> YouTube</span>
                             </a>
@@ -124,7 +124,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Instagram"
                                 href="<?php echo get_option('dettagli-instagram'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Instagram</span>
                             </a>
@@ -136,7 +136,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Telegram"
                                 href="https://telegram.me/<?php echo get_option('dettagli-telegram'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Telegram</span>
                             </a>
@@ -148,7 +148,7 @@
                                 aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Whatsapp"
                                 href="tel:+39<?php echo get_option('dettagli-whatsapp'); ?>">
                                 <svg class="icon">
-                                    <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                                 </svg>
                                 <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Whatsapp</span>
                             </a>
@@ -212,7 +212,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Facebook"
                             href="<?php echo get_option('dettagli-facebook'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-facebook"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Facebook</span>
                         </a>
@@ -224,7 +224,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Twitter"
                             href="<?php echo get_option('dettagli-twitter'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-twitter"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Twitter</span>
                         </a>
@@ -236,7 +236,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - YouTube"
                             href="<?php echo get_option('dettagli-youtube'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-youtube"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> YouTube</span>
                         </a>
@@ -248,7 +248,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Instagram"
                             href="<?php echo get_option('dettagli-instagram'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-instagram"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Instagram</span>
                         </a>
@@ -260,7 +260,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Telegram"
                             href="https://telegram.me/<?php echo get_option('dettagli-telegram'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-telegram"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Telegram</span>
                         </a>
@@ -272,7 +272,7 @@
                             aria-label="<?php esc_attr_e('Link to external site','italiawp2'); ?> - Whatsapp"
                             href="tel:+39<?php echo get_option('dettagli-whatsapp'); ?>">
                             <svg class="icon">
-                                <use  xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                             </svg>
                             <span class="hidden"><?php esc_html_e('Follow us on','italiawp2'); ?> Whatsapp</span>
                         </a>
@@ -304,7 +304,7 @@
                         <div class="close-div sr-only">
                             <button class="btn close-menu" type="button">
                                 <svg class="icon icon-sm icon-light">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/svg/sprite.svg#it-close"></use>
+                                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-close"></use>
                                 </svg><?php esc_html_e('close','italiawp2'); ?>
                             </button>
                         </div>
