@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="it">
+<!doctype html>
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; <?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <?php if(get_option('custom-meta-keywords')!=""): ?>
@@ -14,11 +13,6 @@
     <?php else: ?>
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
     <?php endif; ?>
-    
-    <script>
-        window.__PUBLIC_PATH__ = "<?php echo esc_url( get_template_directory_uri() ); ?>/static/fonts";
-        theme_directory = "<?php echo get_template_directory_uri() ?>";
-    </script>
 
     <?php if (is_front_page()) { ?>
         <title><?php bloginfo('name'); ?></title>
@@ -26,32 +20,7 @@
         <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
     <?php } ?>
 
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-
-    <?php
-        $custom_logo_uri = get_theme_mod('custom_logo') ?
-                esc_url(wp_get_attachment_image_src(get_theme_mod('custom_logo'), 'full')) :
-                get_template_directory_uri() . '/italiawp2/images/stemma-default.png'; ?>
-
-    <link rel="icon" type="image/png" href="<?php echo $custom_logo_uri; ?>">
-    
-    <link href="<?php bloginfo('template_url'); ?>/static/css/bootstrap-italia.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/home.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/sezioni.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/interne.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/jquery-ui.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/static/css/tema.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/inc/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/inc/gutenberg.css" rel="stylesheet" type="text/css">
-
     <?php wp_head(); ?>
-
-    <!-- HTML5shim per Explorer 8 -->
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/modernizr.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/jquery.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/pre-scripts.js"></script>
 </head>
 
 <body class="t-Pac">

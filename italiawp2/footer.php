@@ -233,10 +233,10 @@
                 
                 <!-- Per favore, non rimuoverlo! -->
                 <?php $main_theme = wp_get_theme(get_template()); ?>
-                <?php esc_html_e('Graphic theme','italiawp2'); ?> <a target="_blank" href="<?php $main_theme->get('ThemeURI'); ?>"><?php $main_theme->get('Name'); ?></a> |
+                <?php esc_html_e('Graphic theme','italiawp2'); ?> <a target="_blank" href="<?php echo $main_theme->get('ThemeURI'); ?>"><?php echo $main_theme->get('Name'); ?></a> |
                 <?php esc_html_e('Based on the','italiawp2'); ?> <a target="_blank" href="https://italia.github.io/design-comuni-prototipi/"><?php esc_html_e('AgID Prototype for PA sites','italiawp2'); ?></a>
-                <!-- Grazie :) -->               
-                
+                <!-- Grazie :) -->
+
                 <br>
                 <?php if(is_active_sidebar('credits')) dynamic_sidebar('credits'); ?>
 
@@ -253,21 +253,6 @@
 </div>
 
 <?php wp_footer(); ?>
-
-<?php
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if ( is_plugin_active( 'albo-pretorio-on-line/AlboPretorio.php' ) ) { ?>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<?php } ?>
-    
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/popper.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/bootstrap-italia.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/tema.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/jquery-ui.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/i18n/datepicker-it.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/static/js/owl.carousel.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/inc/scripts.js"></script>
 
 </body>
 </html>
