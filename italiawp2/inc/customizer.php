@@ -1,5 +1,15 @@
 <?php
 
+// Set the default favicon if none set into customizer
+if( get_option( 'site_icon', false ) === false ) {
+	add_action( 'wp_head', 'italiawp2_default_favicon' );
+	add_action( 'admin_head', 'italiawp2_default_favicon' );
+}
+function italiawp2_default_favicon() {
+	//code of the favicon logic
+	printf('<link rel="icon" href="%s" type="image/png">', get_template_directory_uri() . '/favicon.png');
+}
+
 function italiawp2_customize_register($wp_customize) {
     
 /* Sezione "Sezioni Homepage" nel customizer */
