@@ -17,9 +17,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titolosezione">
-                    <h3><?php echo __('Last news','italiawp2'); ?>
+                    <h3><?php esc_html_e('Last news','italiawp2'); ?>
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php esc_html_e('Page','italiawp2'); ?> <?php echo $paged; ?> <?php esc_html_e('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h3>
                 </div>
@@ -93,7 +93,7 @@ $i = 0; if (have_posts()) :
                     
                     <?php if (!empty($category)) { ?>
                     <div class="scheda-argomenti">
-                        <h4><?php echo __('Categories','italiawp2'); ?></h4>
+                        <h4><?php esc_html_e('Categories','italiawp2'); ?></h4>
                         <?php
                             foreach ($category as $cat) {
                                 echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
@@ -104,7 +104,7 @@ $i = 0; if (have_posts()) :
                     
                     <?php if (!empty($posttags)) { ?>
                     <div class="scheda-argomenti">
-                        <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                        <h4><?php esc_html_e('Topics','italiawp2'); ?></h4>
                         <div class="argomenti-sezione-elenco">
                         <?php
                             foreach ($posttags as $tag) {
@@ -116,8 +116,8 @@ $i = 0; if (have_posts()) :
                     <?php } ?>
                     
                     <div class="scheda-footer">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
-                            <?php echo __('Read more','italiawp2'); ?>
+                        <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                            <?php esc_html_e('Read more','italiawp2'); ?>
                             <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                             </svg>

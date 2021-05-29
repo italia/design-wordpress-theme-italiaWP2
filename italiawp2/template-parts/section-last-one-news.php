@@ -58,7 +58,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         
                         <?php if (!empty($category)) { ?>
                         <div class="argomenti">
-                            <h4><?php echo __('Categories','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Categories','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                                 <?php
                                     foreach ($category as $cat) {
@@ -71,7 +71,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         
                         <?php if (!empty($posttags)) { ?>
                         <div class="argomenti">
-                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Topics','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                                 <?php
                                     foreach ($posttags as $tag) {
@@ -83,8 +83,8 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         <?php } ?>
                         
                         <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"
-                           title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('All the news','italiawp2'); ?>" class="tutte">
-                            <?php echo __('All the news','italiawp2'); ?>
+                           title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php esc_html_e('All the news','italiawp2'); ?>" class="tutte">
+                            <?php esc_html_e('All the news','italiawp2'); ?>
                             <svg class="icon">
                                 <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                             </svg>

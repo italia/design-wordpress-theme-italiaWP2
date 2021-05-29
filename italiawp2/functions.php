@@ -209,13 +209,13 @@ function italiawp2_create_breadcrumbs() {
             $userdata = get_userdata($author);
             echo $before . $userdata->display_name . $after;
         } elseif (is_404()) {
-            echo $before . __('Error 404','italiawp2') . $after;
+            echo $before . esc_html__('Error 404','italiawp2') . $after;
         }
 
         if (get_query_var('paged')) {
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '<li class="breadcrumb-item">&nbsp;(';
-            echo ' '.__('Page','italiawp2').' ' . get_query_var('paged');
+            echo ' '.esc_html__('Page','italiawp2').' ' . get_query_var('paged');
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '&nbsp;) </li>';
         }
@@ -384,7 +384,7 @@ function italiawp2_metabox_menu_pt_archive() {
 
         echo '<p class="button-controls">';
         echo '<span class="add-to-menu">';
-        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . __('Add to Menu','italiawp2') . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
+        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . esc_html__('Add to Menu','italiawp2') . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
         echo '<span class="spinner"></span>';
         echo '</span>';
         echo '</p>';
@@ -397,7 +397,7 @@ function my_date_search() {
     if (is_search()) {
         $original_query = get_search_query();
         
-        $months = array(1 => __('January','italiawp2'), 2 => __('February','italiawp2'), 3 => __('March','italiawp2'), 4 => __('April','italiawp2'), 5 => __('May','italiawp2'), 6 => __('June','italiawp2'), 7 => __('July','italiawp2'), 8 => __('August','italiawp2'), 9 => __('September','italiawp2'), 10 => __('October','italiawp2'), 11 => __('November','italiawp2'), 12 => __('December','italiawp2'));
+        $months = array(1 => esc_html__('January','italiawp2'), 2 => esc_html__('February','italiawp2'), 3 => esc_html__('March','italiawp2'), 4 => esc_html__('April','italiawp2'), 5 => esc_html__('May','italiawp2'), 6 => esc_html__('June','italiawp2'), 7 => esc_html__('July','italiawp2'), 8 => esc_html__('August','italiawp2'), 9 => esc_html__('September','italiawp2'), 10 => esc_html__('October','italiawp2'), 11 => esc_html__('November','italiawp2'), 12 => esc_html__('December','italiawp2'));
 
         foreach ($months as $month => $month_name) {
             if (stristr($original_query, $month_name)) {

@@ -13,22 +13,22 @@ function italiawp2_add_gutenberg_support(){
     add_theme_support('editor-color-palette',
         array(
             array(
-                'name'  => 'Colore Primario',
+                'name'  => __('Colore Primario','italiawp2'),
                 'slug'  => 'colore-primario',
                 'color' => get_option('italiawp2_colore_primario'),
             ),
             array(
-                'name'  => 'Colore Primario Chiaro',
+                'name'  => __('Colore Primario Chiaro','italiawp2'),
                 'slug'  => 'colore-primario-chiaro',
                 'color' => get_option('italiawp2_colore_primario_chiaro'),
             ),
             array(
-                'name'  => 'Colore Primario Scuro',
+                'name'  => __('Colore Primario Scuro','italiawp2'),
                 'slug'  => 'colore-primario-scuro',
                 'color' => get_option('italiawp2_colore_primario_scuro'),
             ),
             array(
-                'name'  => 'Colore Complementare',
+                'name'  => __('Colore Complementare','italiawp2'),
                 'slug'  => 'colore-complementare',
                 'color' => get_option('italiawp2_colore_complementare'),
             )

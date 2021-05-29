@@ -7,7 +7,7 @@
 
 <div class="row mt64">
     <div class="col-12">
-        <h4><?php echo __('Comments','italiawp2'); ?></h4>
+        <h4><?php esc_html_e('Comments','italiawp2'); ?></h4>
 
         <?php
         $args = array(
@@ -34,7 +34,7 @@
         } else { ?>
         
                 <div class="callout callout-highlight pt16 pb16">
-                    <p><?php echo __('No comment','italiawp2'); ?></p>
+                    <p><?php esc_html_e('No comment','italiawp2'); ?></p>
                 </div>
         
     <?php } ?>
@@ -53,7 +53,7 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" ' . $aria_req . ($req ? ' size="30" required' : '') . '>' .
-                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="author">' . __('Name','italiawp2') . ($req ? '*' : '') . '</label>' .
+                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="author">' . esc_html__('Name','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 
@@ -61,7 +61,7 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<input class="form-control" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" ' . $aria_req . ($req ? ' size="30" required' : '') . '>' .
-                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="email">' . __('Email','italiawp2') . ($req ? '*' : '') . '</label>' .
+                        '<label ' . ( $req ? 'is-required' : '' ) . '" for="email">' . esc_html__('Email','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 
@@ -80,7 +80,7 @@
                 '<div class="form-row">' .
                     '<div class="form-check">' .
                         '<input class="form-check-input" type="checkbox" value="yes" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" ' . $aria_req . $consent . ' required>' .
-                        '<label class="form-check-label" for="wp-comment-cookies-consent">' . ($req ? '*' : '') . __('I give my consent','italiawp2') .'</label>' .
+                        '<label class="form-check-label" for="wp-comment-cookies-consent">' . ($req ? '*' : '') . esc_html__('I give my consent','italiawp2') .'</label>' .
                     '</div>' .
                 '</div>'
             );
@@ -92,7 +92,7 @@
                 '<div class="form-row">' .
                     '<div class="form-group col-12">' .
                         '<textarea id="comment" name="comment" maxlength="65525" ' . $aria_req . ($req ? ' required' : '') . ' rows="3"></textarea>' .
-                        '<label for="comment">' . __('Comment','italiawp2') . ($req ? '*' : '') . '</label>' .
+                        '<label for="comment">' . esc_html__('Comment','italiawp2') . ($req ? '*' : '') . '</label>' .
                     '</div>' .
                 '</div>',
                 

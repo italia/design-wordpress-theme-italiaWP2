@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-12">
 
-    <nav class="pagination-wrapper justify-content-center" aria-label="<?php echo __('Browsing the news','italiawp2'); ?>">
+    <nav class="pagination-wrapper justify-content-center" aria-label="<?php esc_attr_e('Browsing the news','italiawp2'); ?>">
         <ul class="pagination">
             <li class="page-item">
                 <?php echo get_previous_posts_link('<svg class="icon">

@@ -51,7 +51,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                             <div class="offset-md-1 col-md-11">
                                 <div class="row">
                                     <div class="col-md-12 mt16">
-                                        <p><?php echo __('Last update','italiawp2'); ?></p>
+                                        <p><?php esc_html_e('Last update','italiawp2'); ?></p>
                                     <?php
                                         $updated_date = get_the_modified_time('j F Y');
                                         $updated_time = get_the_modified_time('H:i'); 
