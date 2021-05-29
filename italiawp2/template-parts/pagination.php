@@ -43,9 +43,9 @@
             } ?>
             <li class="page-item">
                 <?php echo get_next_posts_link('<svg class="icon">
-                                                    <use xlink:href="'. esc_url( get_template_directory_uri() ).'/static/img/bootstrap-italia.svg#it-chevron-right"></use>
-                                                </svg>
-                                                <span class="sr-only">'.__('Next page','italiawp2').'</span>'); ?>
+                  <use xlink:href="'. esc_url( get_template_directory_uri() ).'/static/img/bootstrap-italia.svg#it-chevron-right"></use>
+                  </svg>
+                  <span class="sr-only">'.__('Next page','italiawp2').'</span>'); ?>
             </li>
         </ul>
     </nav>
