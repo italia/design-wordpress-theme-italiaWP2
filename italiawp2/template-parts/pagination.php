@@ -10,11 +10,11 @@
 <div class="row">
     <div class="col-12">
 
-    <nav class="pagination-wrapper justify-content-center" aria-label="<?php echo __('Browsing the news','italiawp2'); ?>">
+    <nav class="pagination-wrapper justify-content-center" aria-label="<?php esc_attr_e('Browsing the news','italiawp2'); ?>">
         <ul class="pagination">
             <li class="page-item">
                 <?php echo get_previous_posts_link('<svg class="icon">
-                                                        <use xlink:href="'.get_bloginfo('template_url').'/static/img/bootstrap-italia.svg#it-chevron-left"></use>
+                                                        <use xlink:href="'. esc_url( get_template_directory_uri() ).'/static/img/bootstrap-italia.svg#it-chevron-left"></use>
                                                     </svg>
                                                     <span class="sr-only">'.__('Previous page','italiawp2').'</span>'); ?>
             </li>
@@ -43,9 +43,9 @@
             } ?>
             <li class="page-item">
                 <?php echo get_next_posts_link('<svg class="icon">
-                                                    <use xlink:href="'.get_bloginfo('template_url').'/static/img/bootstrap-italia.svg#it-chevron-right"></use>
-                                                </svg>
-                                                <span class="sr-only">'.__('Next page','italiawp2').'</span>'); ?>
+                  <use xlink:href="'. esc_url( get_template_directory_uri() ).'/static/img/bootstrap-italia.svg#it-chevron-right"></use>
+                  </svg>
+                  <span class="sr-only">'.__('Next page','italiawp2').'</span>'); ?>
             </li>
         </ul>
     </nav>

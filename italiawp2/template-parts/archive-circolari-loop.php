@@ -17,9 +17,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="titolosezione">
-                    <h3><?php echo __('Circulars','italiawp2'); ?>
+                    <h3><?php esc_html_e('Circulars','italiawp2'); ?>
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php esc_html_e('Page','italiawp2'); ?> <?php echo $paged; ?> <?php esc_html_e('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h3>
                 </div>
@@ -50,7 +50,7 @@ $i = 0; if (have_posts()) :
                         <div class="flag-icon"></div>
                     <?php } ?>
 
-                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                        <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                         <?php echo $datapost; ?>
                         <?php echo '- '.__('No.','italiawp2').' '.$circolare_num.__(' of ','italiawp2').$circolare_anno; ?>
                     </div>
@@ -66,13 +66,13 @@ $i = 0; if (have_posts()) :
                     </div>
                     
                     <div class="scheda-argomenti scheda-icona-small">
-                        <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                        <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
                         <span class="badge badge-pill badge-argomenti"><?php echo get_the_author(); ?></span>
                     </div>
                     
                     <?php if (!empty($circolare_gruppi)) { ?>
                     <div class="scheda-argomenti">
-                        <h4><?php echo __('Groups','italiawp2'); ?></h4>
+                        <h4><?php esc_html_e('Groups','italiawp2'); ?></h4>
                         <div class="argomenti-sezione-elenco">
                             <?php
                                 foreach ($circolare_gruppi as $gruppo) {
@@ -84,10 +84,10 @@ $i = 0; if (have_posts()) :
                     <?php } ?>
                     
                     <div class="scheda-footer">
-                        <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
-                            <?php echo __('Read more','italiawp2'); ?>
+                        <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                            <?php esc_html_e('Read more','italiawp2'); ?>
                             <svg class="icon">
-                                <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                             </svg>
                         </a>
                     </div>

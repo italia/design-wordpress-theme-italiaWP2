@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="titolosezione">
-                        <h3><?php echo __('Latest circulars','italiawp2'); ?></h3>
+                        <h3><?php esc_html_e('Latest circulars','italiawp2'); ?></h3>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <div class="flag-icon"></div>
                         <?php } ?>
                             
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                             <?php echo '- '.__('No.','italiawp2').' '.$circolare_num.__(' of ','italiawp2').$circolare_anno; ?>
                         </div>
@@ -61,13 +61,13 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </div>
                         
                         <div class="scheda-argomenti scheda-icona-small">
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-account_circle"></use></svg>
                             <span class="badge badge-pill badge-argomenti"><?php echo get_the_author(); ?></span>
                         </div>
                         
                         <?php if (!empty($circolare_gruppi)) { ?>
                         <div class="scheda-argomenti">
-                            <h4><?php echo __('Groups','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Groups','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                                 <?php
                                     foreach ($circolare_gruppi as $gruppo) {
@@ -79,10 +79,10 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         <?php } ?>
                         
                         <div class="scheda-footer">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
-                                <?php echo __('Read more','italiawp2'); ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                                <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>
@@ -99,8 +99,8 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
             
             <div class="row mt32">
                 <div class="col-md-12 veditutti">
-                    <a href="<?php echo get_post_type_archive_link('circolari'); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('Circulars','italiawp2'); ?>" class="btn btn-default btn-verde">
-                        <?php echo __('See all','italiawp2'); ?>
+                    <a href="<?php echo get_post_type_archive_link('circolari'); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php esc_html_e('Circulars','italiawp2'); ?>" class="btn btn-default btn-verde">
+                        <?php esc_html_e('See all','italiawp2'); ?>
                     </a>
                 </div>
             </div>

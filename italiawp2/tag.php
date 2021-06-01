@@ -13,7 +13,7 @@ get_template_part( 'template-parts/archive-loop' );
                 <div class="row">
                     <div class="col-md-12">
                         <div class="titolosezione">
-                            <h3><?php echo __('Other topics','italiawp2'); ?></h3>
+                            <h3><?php esc_html_e('Other topics','italiawp2'); ?></h3>
                         </div>
                     </div>
                 </div>

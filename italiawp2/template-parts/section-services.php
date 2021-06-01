@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titolosezione">
-                        <h3><?php echo __('Services','italiawp2'); ?></h3>
+                        <h3><?php esc_html_e('Services','italiawp2'); ?></h3>
                     </div>
                 </div>
             </div>

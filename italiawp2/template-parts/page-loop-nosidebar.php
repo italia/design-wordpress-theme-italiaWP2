@@ -30,7 +30,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                     <aside id="argomenti-sezione">
                         <?php if (!empty($posttags)) { ?>
                         <div class="argomenti">
-                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Topics','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                                 <?php
                                     foreach ($posttags as $tag) {

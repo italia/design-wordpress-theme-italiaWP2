@@ -15,14 +15,14 @@
         <div class="list-group lista-paragrafi">
             <a class="list-group-item list-group-item-action Linklist-link Linklist-link--lev3" href="<?php echo get_permalink($parent); ?>">
                 <svg class="icon">
-                    <use xlink:href="<?php echo get_bloginfo('template_url'); ?>/static/img/bootstrap-italia.svg#it-chevron-left"></use>
-                </svg> <?php echo __('Back','italiawp2'); ?>
+                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-chevron-left"></use>
+                </svg> <?php esc_html_e('Back','italiawp2'); ?>
             </a>
         </div>
         <?php } ?>
 
         <h4 class="dropdown">
-            <?php echo __('Linked pages','italiawp2'); ?>
+            <?php esc_html_e('Linked pages','italiawp2'); ?>
         </h4>
         <div class="menu-separatore"><div class="bg-oro"></div></div>
 
@@ -50,7 +50,7 @@
 
                         <a class="list-group-item list-group-item-action Linklist-link Linklist-link--lev2 is-expanded" href="<?php the_permalink(); ?>"><?php the_title(); ?>
                             <svg class="icon">
-                                <use xlink:href="<?php echo get_bloginfo('template_url'); ?>/static/svg/sprite.svg#it-arrow-down-triangle"></use>
+                                <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-arrow-down-triangle"></use>
                             </svg>
                         </a>
 

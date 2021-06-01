@@ -42,7 +42,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
             }else if(get_theme_mod('active_immagine_evidenza_default')) {	
                 $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
                 if($img_url=="") {
-                    $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+                    $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
                 }
             }
 
@@ -79,7 +79,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
                             <div class="flag-icon"></div>
                         <?php } ?>
 
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                         </div>
 
@@ -96,7 +96,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
 
                         <?php if (!empty($category)) { ?>
                         <div class="scheda-argomenti">
-                            <h4><?php echo __('Categories','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Categories','italiawp2'); ?></h4>
                             <?php
                                 foreach ($category as $cat) {
                                     echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
@@ -107,7 +107,7 @@ if (!get_theme_mod('active_section_last_one_news')) {
 
                         <?php if (!empty($posttags)) { ?>
                         <div class="scheda-argomenti">
-                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Topics','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                             <?php
                                 foreach ($posttags as $tag) {
@@ -119,10 +119,10 @@ if (!get_theme_mod('active_section_last_one_news')) {
                         <?php } ?>
 
                         <div class="scheda-footer">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
-                                <?php echo __('Read more','italiawp2'); ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                                <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>
@@ -159,7 +159,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         }else if(get_theme_mod('active_immagine_evidenza_default')) {	
             $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
             if($img_url=="") {
-                $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+                $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
             }
         }
 
@@ -196,7 +196,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                             <div class="flag-icon"></div>
                         <?php } ?>
                             
-                            <svg class="icon"><use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
+                            <svg class="icon"><use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-today"></use></svg>
                             <?php echo $datapost; ?>
                         </div>
 
@@ -213,7 +213,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         
                         <?php if (!empty($category)) { ?>
                         <div class="scheda-argomenti">
-                            <h4><?php echo __('Categories','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Categories','italiawp2'); ?></h4>
                             <?php
                                 foreach ($category as $cat) {
                                     echo '<a href="' . esc_url(get_category_link($cat->term_id)) . '" title="' . esc_html($cat->name) . '" class="badge badge-pill badge-argomenti">' . esc_html($cat->name) . '</a>';
@@ -224,7 +224,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
 
                         <?php if (!empty($posttags)) { ?>
                         <div class="scheda-argomenti">
-                            <h4><?php echo __('Topics','italiawp2'); ?></h4>
+                            <h4><?php esc_html_e('Topics','italiawp2'); ?></h4>
                             <div class="argomenti-sezione-elenco">
                             <?php
                                 foreach ($posttags as $tag) {
@@ -236,10 +236,10 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         <?php } ?>
                         
                         <div class="scheda-footer">
-                            <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
-                                <?php echo __('Read more','italiawp2'); ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>" class="tutte">
+                                <?php esc_html_e('Read more','italiawp2'); ?>
                                 <svg class="icon">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
+                                    <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                 </svg>
                             </a>
                         </div>
@@ -259,7 +259,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="row">
                         <div class="col-lg-3">
-                            <h6 class="text-uppercase text-center"><?php echo __('Other categories','italiawp2'); ?></h6>
+                            <h6 class="text-uppercase text-center"><?php esc_html_e('Other categories','italiawp2'); ?></h6>
                         </div>
                         <div class="col-lg-9 text-center text-lg-left">
                             
@@ -280,7 +280,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="row">
                         <div class="col-lg-3">
-                            <h6 class="text-uppercase text-center"><?php echo __('Other topics','italiawp2'); ?></h6>
+                            <h6 class="text-uppercase text-center"><?php esc_html_e('Other topics','italiawp2'); ?></h6>
                         </div>
                         <div class="col-lg-9 text-center text-lg-left">
                             
@@ -298,8 +298,8 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
             
             <div class="row mt32">
                 <div class="col-md-12 veditutti">
-                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('News','italiawp2'); ?>" class="btn btn-default btn-verde">
-                        <?php echo __('See all','italiawp2'); ?>
+                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php esc_html_e('News','italiawp2'); ?>" class="btn btn-default btn-verde">
+                        <?php esc_html_e('See all','italiawp2'); ?>
                     </a>
                 </div>
             </div>

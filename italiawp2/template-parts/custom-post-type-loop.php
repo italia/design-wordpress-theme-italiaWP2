@@ -15,7 +15,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     }else if(get_theme_mod('active_immagine_evidenza_default')) {	
         $img_url = esc_url(get_theme_mod('immagine_evidenza_default'));
         if($img_url=="") {
-            $img_url = get_bloginfo('template_url') . "/images/400x220.png";
+            $img_url = esc_url( get_template_directory_uri() ) . "/images/400x220.png";
         }
     }
     
@@ -55,7 +55,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                             <div class="offset-md-1 col-md-11">
                                 <div class="row mt16">
                                     <div class="col-md-12">
-                                        <p><?php echo __('Last update','italiawp2'); ?></p>
+                                        <p><?php esc_html_e('Last update','italiawp2'); ?></p>
                                     <?php
                                         $updated_date = get_the_modified_time('j F Y');
                                         $updated_time = get_the_modified_time('H:i'); 
