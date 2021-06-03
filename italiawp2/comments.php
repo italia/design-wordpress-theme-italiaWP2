@@ -7,7 +7,7 @@
 
 <div class="row mt64">
     <div class="col-12">
-        <h4><?php esc_html_e('Comments','italiawp2'); ?></h4>
+        <h4><?php echo __('Comments','italiawp2'); ?></h4>
 
         <?php
         $args = array(
@@ -34,7 +34,7 @@
         } else { ?>
         
                 <div class="callout callout-highlight pt16 pb16">
-                    <p><?php esc_html_e('No comment','italiawp2'); ?></p>
+                    <p><?php echo __('No comment','italiawp2'); ?></p>
                 </div>
         
     <?php } ?>

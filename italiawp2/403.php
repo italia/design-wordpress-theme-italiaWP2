@@ -6,7 +6,7 @@
             <div class="offset-lg-1 col-lg-6 col-md-8">
                 <div class="titolo-sezione">
                     <h1 class="ErrorPage-title">403</h1>
-                    <h2 class="ErrorPage-subtitle"><?php esc_html_e('Forbidden','italiawp2'); ?></h2>
+                    <h2 class="ErrorPage-subtitle"><?php echo __('Forbidden','italiawp2'); ?></h2>
                 </div>
             </div>
         </div>
@@ -20,13 +20,13 @@
                 <div class="articolo-paragrafi">
                     <div class="row">
                         <div class="col-12 testolungo">
-                            <p><?php esc_html_e('You don\'t have permission to access this page','italiawp2'); ?>, <a href="javascript:history.back();" title="<?php esc_attr_e('come back','italiawp2'); ?>"><?php esc_html__('come back','italiawp2'); ?></a> <?php esc_html_e('or use the menu to continue browsing','italiawp2'); ?>.</p>
+                            <p><?php echo __('You don\'t have permission to access this page','italiawp2'); ?>, <a href="javascript:history.back();" title="<?php echo __('come back','italiawp2'); ?>"><?php echo __('come back','italiawp2'); ?></a> <?php echo __('or use the menu to continue browsing','italiawp2'); ?>.</p>
                         </div>
                     </div>
                     
                     <div class="row mt32">
                         <div class="col-md-12 veditutti">
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-default btn-verde"><?php esc_html_e('Back to Home','italiawp2'); ?></a>
+                            <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn-default btn-verde"><?php echo __('Back to Home','italiawp2'); ?></a>
                         </div>
                     </div>
                 </div>

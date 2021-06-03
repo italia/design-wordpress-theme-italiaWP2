@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="titolosezione">
-                    <h3><?php esc_html_e('Photo galleries','italiawp2'); ?> <small>(<?php esc_html_e('scroll','italiawp2'); ?>)</small></h3>
+                    <h3><?php echo __('Photo galleries','italiawp2'); ?> <small>(<?php echo __('scroll','italiawp2'); ?>)</small></h3>
                 </div>
             </div>
         </div>
@@ -90,8 +90,8 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
         
         <div class="row">
             <div class="col-md-12 veditutti">
-                <a href="<?php echo get_post_type_archive_link('gallerie'); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php esc_html_e('Galleries','italiawp2'); ?>" class="btn btn-default btn-verde">
-                    <?php esc_html_e('All galleries','italiawp2'); ?>
+                <a href="<?php echo get_post_type_archive_link('gallerie'); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php echo __('Galleries','italiawp2'); ?>" class="btn btn-default btn-verde">
+                    <?php echo __('All galleries','italiawp2'); ?>
                 </a>
             </div>
         </div>

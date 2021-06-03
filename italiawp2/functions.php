@@ -1,238 +1,244 @@
 <?php
 
-if ( ! function_exists('italiawp2_theme_setup') ) :
-	function italiawp2_theme_setup() {
-		/*
-		* Make theme available for translation.
-		* Translations can be filed in the /languages/ directory.
-		*/
-		load_theme_textdomain( 'italiawp2', get_template_directory() . '/languages' );
+if (!function_exists('italiawp2_theme_setup')) :
 
-		/*
-		* WordPress define content width
-		* https://codex.wordpress.org/Content_Width
-		*/
-		if ( ! isset( $content_width ) ) $content_width = 1200;
+    function italiawp2_theme_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         */
+        load_theme_textdomain('italiawp2', get_template_directory() . '/languages');
 
-		/*
-		* Enable support for Post Thumbnails on posts and pages.
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-		add_theme_support('post-thumbnails');
+        /*
+         * WordPress define content width
+         * https://codex.wordpress.org/Content_Width
+         */
+        if (!isset($content_width))
+            $content_width = 1200;
 
-		add_image_size('post-thumbnails',512,512,array('center','center'));
-		add_image_size('news-image',400,220,array('center','center'));
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support('post-thumbnails');
 
-		// This theme uses wp_nav_menu() in Primary Navigation.
-		register_nav_menus( array(
-			'menu-principale' => 'Menu Principale',
-			'box-servizi-1' => esc_html__('Box Servizi 1', 'italiawp2'),
-			'box-servizi-2' => esc_html__('Box Servizi 2', 'italiawp2'),
-			'box-servizi-3' => esc_html__('Box Servizi 3', 'italiawp2'),
-			'box-servizi-4' => esc_html__('Box Servizi 4', 'italiawp2'),
-			'box-servizi-5' => esc_html__('Box Servizi 5', 'italiawp2'),
-			'box-servizi-6' => esc_html__('Box Servizi 6', 'italiawp2'),
-			'box-servizi-7' => esc_html__('Box Servizi 7', 'italiawp2'),
-			'box-servizi-8' => esc_html__('Box Servizi 8', 'italiawp2'),
-			'box-servizi-9' => esc_html__('Box Servizi 9', 'italiawp2')
-		) );
+        add_image_size('post-thumbnails', 512, 512, array('center', 'center'));
+        add_image_size('news-image', 400, 220, array('center', 'center'));
 
-		/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'gallery',
-				'caption',
-			)
-		);
+        // This theme uses wp_nav_menu() in Primary Navigation.
+        register_nav_menus(array(
+            'menu-principale' => 'Menu Principale',
+            'box-servizi-1' => esc_html__('Box Servizi 1', 'italiawp2'),
+            'box-servizi-2' => esc_html__('Box Servizi 2', 'italiawp2'),
+            'box-servizi-3' => esc_html__('Box Servizi 3', 'italiawp2'),
+            'box-servizi-4' => esc_html__('Box Servizi 4', 'italiawp2'),
+            'box-servizi-5' => esc_html__('Box Servizi 5', 'italiawp2'),
+            'box-servizi-6' => esc_html__('Box Servizi 6', 'italiawp2'),
+            'box-servizi-7' => esc_html__('Box Servizi 7', 'italiawp2'),
+            'box-servizi-8' => esc_html__('Box Servizi 8', 'italiawp2'),
+            'box-servizi-9' => esc_html__('Box Servizi 9', 'italiawp2')
+        ));
 
-		// Add support for core custom logo, header text color, website background.
-		add_theme_support( 'custom-logo' , array(
-			'height'      => 512,
-			'width'       => 512,
-			'flex-height' => true,
-			'flex-width'  => true,
-			'header-text' => array( 'site-title', 'site-description' ),
-		));
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support(
+                'html5',
+                array(
+                    'search-form',
+                    'comment-form',
+                    'gallery',
+                    'caption',
+                )
+        );
 
-		add_theme_support('custom-header', apply_filters('italiawp2_custom_header_args', array(
-			'default-image'          => get_template_directory_uri() . '/images/2000x500.png',
-			'default-text-color'     => '000000',
-			'header-text'            => false,
-			'width'                  => 2000,
-			'height'                 => 500,
-			'flex-height'            => true,
-			'uploads'                => true
-		)));
+        // Add support for core custom logo, header text color, website background.
+        add_theme_support('custom-logo', array(
+            'height' => 512,
+            'width' => 512,
+            'flex-height' => true,
+            'flex-width' => true,
+            'header-text' => array('site-title', 'site-description'),
+        ));
 
-		add_theme_support( 'custom-background', array(
-			'default-color'          => "#ffffff",
-			'default-image'          => '',
-			'default-preset'         => 'default', // 'default', 'fill', 'fit', 'repeat', 'custom'
-			'default-position-x'     => 'left',    // 'left', 'center', 'right'
-			'default-position-y'     => 'top',     // 'top', 'center', 'bottom'
-			'default-size'           => 'auto',    // 'auto', 'contain', 'cover'
-			'default-repeat'         => 'repeat',  // 'repeat-x', 'repeat-y', 'repeat', 'no-repeat'
-			'default-attachment'     => 'scroll',  // 'scroll', 'fixed'
-			'admin-head-callback'    => '',
-			'admin-preview-callback' => '',
-		) );
+        add_theme_support('custom-header', apply_filters('italiawp2_custom_header_args', array(
+            'default-image' => get_template_directory_uri() . '/images/2000x500.png',
+            'default-text-color' => '000000',
+            'header-text' => false,
+            'width' => 2000,
+            'height' => 500,
+            'flex-height' => true,
+            'uploads' => true
+        )));
 
-		/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
-		add_theme_support( 'title-tag' );
+        add_theme_support('custom-background', array(
+            'default-color' => "#ffffff",
+            'default-image' => '',
+            'default-preset' => 'default', // 'default', 'fill', 'fit', 'repeat', 'custom'
+            'default-position-x' => 'left', // 'left', 'center', 'right'
+            'default-position-y' => 'top', // 'top', 'center', 'bottom'
+            'default-size' => 'auto', // 'auto', 'contain', 'cover'
+            'default-repeat' => 'repeat', // 'repeat-x', 'repeat-y', 'repeat', 'no-repeat'
+            'default-attachment' => 'scroll', // 'scroll', 'fixed'
+            'admin-head-callback' => '',
+            'admin-preview-callback' => '',
+        ));
 
-		// Add excerpt support to pages
-		add_post_type_support('page','excerpt');
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support('title-tag');
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+        // Add excerpt support to pages
+        add_post_type_support('page', 'excerpt');
 
-		// Add support for Block Styles.
-		add_theme_support( 'wp-block-styles' );
+        // Add theme support for selective refresh for widgets.
+        add_theme_support('customize-selective-refresh-widgets');
 
-		// Add support for full and wide align images.
-		add_theme_support( 'align-wide' );
+        // Add support for Block Styles.
+        add_theme_support('wp-block-styles');
 
-		// Add support for editor styles.
-		add_theme_support( 'editor-styles' );
+        // Add support for full and wide align images.
+        add_theme_support('align-wide');
 
-		// Enqueue editor styles and fonts.
-		add_editor_style( 'assets/dist/css/editor.css' );
-		add_editor_style( 'https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@300,400,600,700&display=swap' ); // todo: make this dynamic
+        // Add support for editor styles.
+        add_theme_support('editor-styles');
 
-		// Add support for responsive embedded content.
-		add_theme_support( 'responsive-embeds' );
+        // Enqueue editor styles and fonts.
+        add_editor_style('assets/dist/css/editor.css');
+        add_editor_style('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@300,400,600,700&display=swap'); // todo: make this dynamic
+        // Add support for responsive embedded content.
+        add_theme_support('responsive-embeds');
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support('automatic-feed-links');
 
-		// Aggiungo dei colori da utilizzare con l'editor
-		add_theme_support('editor-color-palette',
-			array(
-				array(
-					'name'  => __('Primary Color','italiawp2'),
-					'slug'  => 'colore-primario',
-					'color' => get_option('italiawp2_colore_primario'),
-				),
-				array(
-					'name'  => __('Light Primary Color','italiawp2'),
-					'slug'  => 'colore-primario-chiaro',
-					'color' => get_option('italiawp2_colore_primario_chiaro'),
-				),
-				array(
-					'name'  => __('Dark Primary Color','italiawp2'),
-					'slug'  => 'colore-primario-scuro',
-					'color' => get_option('italiawp2_colore_primario_scuro'),
-				),
-				array(
-					'name'  => __('Complementary Color','italiawp2'),
-					'slug'  => 'colore-complementare',
-					'color' => get_option('italiawp2_colore_complementare'),
-				)
-			)
-		);
-	}
+        // Aggiungo dei colori da utilizzare con l'editor
+        add_theme_support('editor-color-palette',
+                array(
+                    array(
+                        'name' => __('Primary Color', 'italiawp2'),
+                        'slug' => 'colore-primario',
+                        'color' => get_option('italiawp2_colore_primario'),
+                    ),
+                    array(
+                        'name' => __('Light Primary Color', 'italiawp2'),
+                        'slug' => 'colore-primario-chiaro',
+                        'color' => get_option('italiawp2_colore_primario_chiaro'),
+                    ),
+                    array(
+                        'name' => __('Dark Primary Color', 'italiawp2'),
+                        'slug' => 'colore-primario-scuro',
+                        'color' => get_option('italiawp2_colore_primario_scuro'),
+                    ),
+                    array(
+                        'name' => __('Complementary Color', 'italiawp2'),
+                        'slug' => 'colore-complementare',
+                        'color' => get_option('italiawp2_colore_complementare'),
+                    )
+                )
+        );
+    }
+
 endif;
-add_action( 'after_setup_theme', 'italiawp2_theme_setup' );
-
+add_action('after_setup_theme', 'italiawp2_theme_setup');
 
 // Widgets
 function italiawp2_widgets_init() {
-	register_sidebar( array(
-		'name'          => 'Footer Colonne',
-		'id'            => 'footer-colonne',
-		'description'   => 'Colonne del Footer',
-		'before_widget' => '<div id="%1$s" class="footer-colonne col-12 col-md-6 col-lg-3 %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	));
-	register_sidebar( array(
-		'name'          => 'Sidebar Pagine',
-		'id'            => 'sidebar-pagine',
-		'description'   => 'Sidebar nelle Pagine',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<h4 class="dropdown">',
-		'after_title'   => '</h4><div class="menu-separatore"><div class="bg-oro"></div></div>',
-		'class'         => ''
-	));
-	register_sidebar( array(
-		'name'          => 'Sidebar Articoli',
-		'id'            => 'sidebar-articoli',
-		'description'   => 'Sidebar negli Articoli',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<h4 class="dropdown">',
-		'after_title'   => '</h4><div class="menu-separatore"><div class="bg-oro"></div></div>',
-		'class'         => ''
-	));
-	register_sidebar( array(
-		'name'          => 'Sezione Notifica',
-		'id'            => 'notification',
-		'description'   => 'Sezione della notifica',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
-		'class'         => ''
-	));
-	register_sidebar( array(
-		'name'          => 'Sezione Credits',
-		'id'            => 'credits',
-		'description'   => 'Sezione dei credits',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => '',
-		'class'         => ''
-	));
+    register_sidebar(array(
+        'name' => 'Footer Colonne',
+        'id' => 'footer-colonne',
+        'description' => 'Colonne del Footer',
+        'before_widget' => '<div id="%1$s" class="footer-colonne col-12 col-md-6 col-lg-3 %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ));
+    register_sidebar(array(
+        'name' => 'Sidebar Pagine',
+        'id' => 'sidebar-pagine',
+        'description' => 'Sidebar nelle Pagine',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h4 class="dropdown">',
+        'after_title' => '</h4><div class="menu-separatore"><div class="bg-oro"></div></div>',
+        'class' => ''
+    ));
+    register_sidebar(array(
+        'name' => 'Sidebar Articoli',
+        'id' => 'sidebar-articoli',
+        'description' => 'Sidebar negli Articoli',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h4 class="dropdown">',
+        'after_title' => '</h4><div class="menu-separatore"><div class="bg-oro"></div></div>',
+        'class' => ''
+    ));
+    register_sidebar(array(
+        'name' => 'Sezione Notifica',
+        'id' => 'notification',
+        'description' => 'Sezione della notifica',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+        'class' => ''
+    ));
+    register_sidebar(array(
+        'name' => 'Sezione Credits',
+        'id' => 'credits',
+        'description' => 'Sezione dei credits',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '',
+        'after_title' => '',
+        'class' => ''
+    ));
 }
-add_action( 'widgets_init', 'italiawp2_widgets_init' );
+
+add_action('widgets_init', 'italiawp2_widgets_init');
 
 // Taxonomies
 add_action('init', 'italiawp2_register_post_tag_page');
+
 function italiawp2_register_post_tag_page() {
-	register_taxonomy_for_object_type( 'post_tag', 'page' );
+    register_taxonomy_for_object_type('post_tag', 'page');
 }
 
 // Theme customizations
-
 // Customized excerpt length
-add_filter( 'excerpt_length', function ( $length ) { return 300; }, 999 );
+add_filter('excerpt_length', function ($length) {
+    return 300;
+}, 999);
 
 // Set a default header
 register_default_headers(array(
-	'2000x500' => array(
-		'url' => get_template_directory_uri() . '/images/2000x500.png',
-		'thumbnail_url' => get_template_directory_uri() . '/images/2000x500.png',
-		'description' => 'Default header'
-	)
+    '2000x500' => array(
+        'url' => get_template_directory_uri() . '/images/2000x500.png',
+        'thumbnail_url' => get_template_directory_uri() . '/images/2000x500.png',
+        'description' => 'Default header'
+    )
 ));
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 
 // adds the archive metabox
 add_action('admin_head-nav-menus.php', 'italiawp2_menu_pt_archive');
+
 function italiawp2_menu_pt_archive() {
-	add_meta_box('minimac-metabox-nav-menu-pt', 'Custom Posts Type', 'italiawp2_metabox_menu_pt_archive', 'nav-menus', 'side', 'default');
+    add_meta_box('minimac-metabox-nav-menu-pt', 'Custom Posts Type', 'italiawp2_metabox_menu_pt_archive', 'nav-menus', 'side', 'default');
 }
 
 // Inserimento dei tags nelle queries
 add_action('pre_get_posts', 'tags_support_query');
+
 function tags_support_query($wp_query) {
-	if ($wp_query->get('tag')) {
-		$wp_query->set('post_type', 'any');
-	}
+    if ($wp_query->get('tag')) {
+        $wp_query->set('post_type', 'any');
+    }
 }
 
 // Require
@@ -243,31 +249,26 @@ require get_template_directory() . '/inc/style.php';
 require get_template_directory() . '/inc/gallery.php';
 require get_template_directory() . '/inc/details.php';
 
-
-
-
-
 // Custom Functions
 function italiawp2_custom_login_logo() {
     echo '<style type="text/css">';
-    echo '.login h1 a { background-image:url('.esc_url(get_site_icon_url()).') !important; }';
+    echo '.login h1 a { background-image:url(' . esc_url(get_site_icon_url()) . ') !important; }';
     echo '</style>';
 }
-add_action('login_head', 'italiawp2_custom_login_logo');
 
+add_action('login_head', 'italiawp2_custom_login_logo');
 
 function italiawp2_custom_login_url() {
     return get_site_url();
 }
+
 add_filter('login_headerurl', 'italiawp2_custom_login_url');
 
-
-
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
 function posts_link_attributes() {
     return 'class="u-color-50"';
 }
-
 
 function italiawp2_create_breadcrumbs() {
 
@@ -347,13 +348,13 @@ function italiawp2_create_breadcrumbs() {
             $userdata = get_userdata($author);
             echo $before . $userdata->display_name . $after;
         } elseif (is_404()) {
-            echo $before . esc_html__('Error 404','italiawp2') . $after;
+            echo $before . esc_html__('Error 404', 'italiawp2') . $after;
         }
 
         if (get_query_var('paged')) {
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '<li class="breadcrumb-item">&nbsp;(';
-            echo ' '.esc_html__('Page','italiawp2').' ' . get_query_var('paged');
+            echo ' ' . esc_html__('Page', 'italiawp2') . ' ' . get_query_var('paged');
             if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author())
                 echo '&nbsp;) </li>';
         }
@@ -363,30 +364,30 @@ function italiawp2_create_breadcrumbs() {
     }
 }
 
-
-
-function my_excerpt($excerpt='') {
+function my_excerpt($excerpt = '') {
     $excerpt = strip_shortcodes($excerpt);
-    if ( has_excerpt() ) {
+    if (has_excerpt()) {
         return $excerpt;
-    }else{
+    } else {
         $pos1 = strpos($excerpt, '.');
-        if($pos1) {
+        if ($pos1) {
             $pos2 = strpos($excerpt, '.', $pos1 + 1);
-            if($pos1 < 50 && $pos2) return substr($excerpt, 0, $pos2 + 1);
-            else return substr($excerpt, 0, $pos1 + 1);
+            if ($pos1 < 50 && $pos2)
+                return substr($excerpt, 0, $pos2 + 1);
+            else
+                return substr($excerpt, 0, $pos1 + 1);
         }
         return $excerpt;
     }
 }
-add_filter('get_the_excerpt', 'my_excerpt');
 
+add_filter('get_the_excerpt', 'my_excerpt');
 
 /* UPDATER THEME VERSION */
 require 'inc/theme-update-checker.php';
 $update_checker = new ThemeUpdateChecker(
-    'italiawp2',
-    'https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2.json'
+        'italiawp2',
+        'https://raw.githubusercontent.com/italia/design-wordpress-theme-italiaWP2/master/italiawp2.json'
 );
 
 /* Per la ricerca manuale degli aggiornamenti, altrimenti avviene automaticamente ogni 12 ore */
@@ -426,15 +427,15 @@ function italiawp2_register_required_plugins() {
             'installing' => __('Installing Plugin: %s', 'italiawp2'),
             'updating' => __('Updating Plugin: %s', 'italiawp2'),
             'oops' => __('Something went wrong with the plugin API.', 'italiawp2'),
-            'notice_can_install_required' => __('"ItaliaWP" theme requires plugins %1$s.','italiawp2'),
-            'notice_can_install_recommended' => __('"ItaliaWP" recommends plugins: %1$s.','italiawp2'),
-            'notice_ask_to_update' => __('The following plugins must be updated to the latest version to have maximum compatibility with this theme: %1$s.','italiawp2'),
-            'notice_ask_to_update_maybe' => __('There are updates available for: %1$s.','italiawp2'),
-            'notice_can_activate_required' => __('Required plugins are not active: %1$s.','italiawp2'),
-            'notice_can_activate_recommended' => __('Recommended plugins are not active: %1$s.','italiawp2'),
+            'notice_can_install_required' => __('"ItaliaWP" theme requires plugins %1$s.', 'italiawp2'),
+            'notice_can_install_recommended' => __('"ItaliaWP" recommends plugins: %1$s.', 'italiawp2'),
+            'notice_ask_to_update' => __('The following plugins must be updated to the latest version to have maximum compatibility with this theme: %1$s.', 'italiawp2'),
+            'notice_ask_to_update_maybe' => __('There are updates available for: %1$s.', 'italiawp2'),
+            'notice_can_activate_required' => __('Required plugins are not active: %1$s.', 'italiawp2'),
+            'notice_can_activate_recommended' => __('Recommended plugins are not active: %1$s.', 'italiawp2'),
             'install_link' => __('Install Plugins', 'italiawp2'),
             'update_link' => __('Update Plugins', 'italiawp2'),
-            'activate_link' => __('Activate plugins','italiawp2'),
+            'activate_link' => __('Activate plugins', 'italiawp2'),
             'return' => __('Return to Required Plugins Installer', 'italiawp2'),
             'plugin_activated' => __('Plugin activated successfully.', 'italiawp2'),
             'activated_successfully' => __('The following plugin was activated successfully:', 'italiawp2'),
@@ -472,7 +473,6 @@ function is_custom_post_type($post = NULL) {
 
     return in_array($current_post_type, $custom_types);
 }
-
 
 function italiawp2_metabox_menu_pt_archive() {
 
@@ -516,7 +516,7 @@ function italiawp2_metabox_menu_pt_archive() {
 
         echo '<p class="button-controls">';
         echo '<span class="add-to-menu">';
-        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . esc_html__('Add to Menu','italiawp2') . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
+        echo '<input type="submit"' . disabled(1, 0) . ' class="button-secondary submit-add-to-menu right" value="' . esc_html__('Add to Menu', 'italiawp2') . '" name="add-posttype-archive-menu-item" id="submit-posttype-archive" />';
         echo '<span class="spinner"></span>';
         echo '</span>';
         echo '</p>';
@@ -524,12 +524,13 @@ function italiawp2_metabox_menu_pt_archive() {
     endif;
 }
 
-add_action('pre_get_posts','my_date_search');
+add_action('pre_get_posts', 'my_date_search');
+
 function my_date_search() {
     if (is_search()) {
         $original_query = get_search_query();
 
-        $months = array(1 => esc_html__('January','italiawp2'), 2 => esc_html__('February','italiawp2'), 3 => esc_html__('March','italiawp2'), 4 => esc_html__('April','italiawp2'), 5 => esc_html__('May','italiawp2'), 6 => esc_html__('June','italiawp2'), 7 => esc_html__('July','italiawp2'), 8 => esc_html__('August','italiawp2'), 9 => esc_html__('September','italiawp2'), 10 => esc_html__('October','italiawp2'), 11 => esc_html__('November','italiawp2'), 12 => esc_html__('December','italiawp2'));
+        $months = array(1 => esc_html__('January', 'italiawp2'), 2 => esc_html__('February', 'italiawp2'), 3 => esc_html__('March', 'italiawp2'), 4 => esc_html__('April', 'italiawp2'), 5 => esc_html__('May', 'italiawp2'), 6 => esc_html__('June', 'italiawp2'), 7 => esc_html__('July', 'italiawp2'), 8 => esc_html__('August', 'italiawp2'), 9 => esc_html__('September', 'italiawp2'), 10 => esc_html__('October', 'italiawp2'), 11 => esc_html__('November', 'italiawp2'), 12 => esc_html__('December', 'italiawp2'));
 
         foreach ($months as $month => $month_name) {
             if (stristr($original_query, $month_name)) {
@@ -544,11 +545,11 @@ function my_date_search() {
         }
 
         if (isset($m) && isset($y)) {
-            $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-            if(!isset($d)) $d = "";
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            if (!isset($d))
+                $d = "";
             $new_query = 'year=' . $y . '&monthnum=' . $m . '&day=' . $d . '&paged=' . $paged;
             query_posts($new_query);
         }
     }
 }
-

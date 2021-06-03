@@ -16,13 +16,13 @@
             <a class="list-group-item list-group-item-action Linklist-link Linklist-link--lev3" href="<?php echo get_permalink($parent); ?>">
                 <svg class="icon">
                     <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-chevron-left"></use>
-                </svg> <?php esc_html_e('Back','italiawp2'); ?>
+                </svg> <?php echo __('Back','italiawp2'); ?>
             </a>
         </div>
         <?php } ?>
 
         <h4 class="dropdown">
-            <?php esc_html_e('Linked pages','italiawp2'); ?>
+            <?php echo __('Linked pages','italiawp2'); ?>
         </h4>
         <div class="menu-separatore"><div class="bg-oro"></div></div>
 

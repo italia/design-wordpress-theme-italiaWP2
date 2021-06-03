@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-06-01 10:22+0200\n"
-"PO-Revision-Date: 2021-06-01 10:22+0200\n"
+"POT-Creation-Date: 2021-06-03 16:25+0200\n"
+"PO-Revision-Date: 2021-06-03 16:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -14,6 +14,70 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 403.php:9
+msgid "Forbidden"
+msgstr "Accesso negato"
+
+#: 403.php:23
+msgid "You don't have permission to access this page"
+msgstr "Non disponi delle autorizzazioni per accedere a questa pagina"
+
+#: 403.php:23 404.php:23 template-parts/error.php:13
+msgid "come back"
+msgstr "torna indietro"
+
+#: 403.php:23 404.php:23 template-parts/error.php:13
+msgid "or use the menu to continue browsing"
+msgstr "o utilizza il menu per continuare la navigazione"
+
+#: 403.php:29 404.php:29 template-parts/error.php:19
+msgid "Back to Home"
+msgstr "Torna alla Home"
+
+#: 404.php:9
+msgid "Not found"
+msgstr "Pagina non trovata"
+
+#: 404.php:23
+msgid "The page you are looking for was not found"
+msgstr "La pagina che cerchi non è stata trovata"
+
+#: _header_originale.php:35 header.php:46
+msgid "This site uses technical, analytics and third-party cookies"
+msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
+
+#: _header_originale.php:36 header.php:47
+msgid "By continuing to browse, you accept the use of cookies"
+msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
+
+#: _header_originale.php:38 header.php:49
+msgid "I accept"
+msgstr "Accetto"
+
+#: _header_originale.php:40 footer.php:221 header.php:51
+msgid "Cookie policy"
+msgstr "Cookie policy"
+
+#: _header_originale.php:48 header.php:59
+msgid "Go to content"
+msgstr "Vai ai contenuti"
+
+#: _header_originale.php:51 header.php:62
+msgid "Go to the navigation menu"
+msgstr "Vai al menu di navigazione"
+
+#: _header_originale.php:53 header.php:64
+msgid "Go to the footer"
+msgstr "Vai al footer"
+
+#: comments.php:10
+msgid "Comments"
+msgstr "Commenti"
+
+#: comments.php:37
+msgid "No comment"
+msgstr "Nessun commento"
 
 #: comments.php:72
 msgid "Site"
@@ -30,58 +94,161 @@ msgstr ""
 msgid "Leave a comment"
 msgstr "Lascia un commento"
 
-#: functions.php:123
+#: footer.php:51
+msgid "Address"
+msgstr "Indirizzo"
+
+#: footer.php:58 footer.php:59
+msgid "Phone"
+msgstr "Telefono"
+
+#: footer.php:66 footer.php:67
+msgid "Fax"
+msgstr "Fax"
+
+#: footer.php:76
+msgid "Information"
+msgstr "Informazioni"
+
+#: footer.php:80
+msgid "Tax code / VAT number"
+msgstr "C.F. / P.IVA"
+
+#: footer.php:86
+msgid "Unique Code"
+msgstr "Cod. Univoco"
+
+#: footer.php:93
+msgid "IBAN"
+msgstr "IBAN"
+
+#: footer.php:101
+msgid "Email contacts"
+msgstr "Posta Elettronica"
+
+#: footer.php:105
+msgid "PEC"
+msgstr "PEC"
+
+#: footer.php:106
+msgid "Certified mail"
+msgstr "Posta Elettronica Certificata"
+
+#: footer.php:113 footer.php:114 footer.php:122 footer.php:123
+msgid "Email"
+msgstr "Email"
+
+#: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
+#: footer.php:192 footer.php:204 menu.php:84 menu.php:93 menu.php:105
+#: menu.php:117 menu.php:129 menu.php:141 menu.php:153 menu.php:207
+#: menu.php:217 menu.php:229 menu.php:241 menu.php:253 menu.php:265
+#: menu.php:277
+msgid "Follow us on"
+msgstr "Seguici su"
+
+#: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
+#: footer.php:199 menu.php:8 menu.php:88 menu.php:100 menu.php:112 menu.php:124
+#: menu.php:136 menu.php:148 menu.php:212 menu.php:224 menu.php:236
+#: menu.php:248 menu.php:260 menu.php:272
+msgid "Link to external site"
+msgstr "Collegamento a sito esterno"
+
+#: footer.php:215
+msgid "Useful Links Section"
+msgstr "Sezione Link Utili"
+
+#: footer.php:218
+msgid "Privacy policy"
+msgstr "Privacy policy"
+
+#: footer.php:218
+msgid "Privacy"
+msgstr "Privacy"
+
+#: footer.php:224
+msgid "Legal notices"
+msgstr "Note legali"
+
+#: footer.php:227
+msgid "Contacts"
+msgstr "Contatti"
+
+#: footer.php:230
+msgid "Accessibility"
+msgstr "Accessibilità"
+
+#: footer.php:232
+msgid "Made with"
+msgstr "Realizzato con"
+
+#: footer.php:236
+msgid "Graphic theme"
+msgstr "Tema grafico"
+
+#: footer.php:237
+msgid "Based on the"
+msgstr "Basato sul"
+
+#: footer.php:237
+msgid "AgID Prototype for PA sites"
+msgstr "Prototipo per siti PA di AgID"
+
+#: footer.php:249
+msgid "Go up"
+msgstr "Torna su"
+
+#: functions.php:124
 msgid "Primary Color"
 msgstr "Colore Primario"
 
-#: functions.php:128
+#: functions.php:129
 msgid "Light Primary Color"
 msgstr "Colore Primario Chiaro"
 
-#: functions.php:133
+#: functions.php:134
 msgid "Dark Primary Color"
 msgstr "Colore Primario Scuro"
 
-#: functions.php:138
+#: functions.php:139
 msgid "Complementary Color"
 msgstr "Colore Complementare"
 
-#: functions.php:424
+#: functions.php:425
 msgid "Plugins required by the theme \"ItaliaWP\""
 msgstr "Plugin richiesti dal tema “ItaliaWP”"
 
-#: functions.php:425
+#: functions.php:426
 msgid "Plugins required"
 msgstr "Plugin richiesti"
 
-#: functions.php:426
+#: functions.php:427
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:427
+#: functions.php:428
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:428
+#: functions.php:429
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:429
+#: functions.php:430
 #, php-format
 msgid "\"ItaliaWP\" theme requires plugins %1$s."
 msgstr "“ItaliaWP” richiede i plugin: %1$s."
 
-#: functions.php:430
+#: functions.php:431
 #, php-format
 msgid "\"ItaliaWP\" recommends plugins: %1$s."
 msgstr "“ItaliaWP” raccomanda i plugin: %1$s."
 
-#: functions.php:431
+#: functions.php:432
 #, php-format
 msgid ""
 "The following plugins must be updated to the latest version to have maximum "
@@ -90,57 +257,57 @@ msgstr ""
 "I seguenti plugin devono essere aggiornati all\\’ultima versione per avere "
 "massima compatibilità con questo tema: %1$s."
 
-#: functions.php:432
+#: functions.php:433
 #, php-format
 msgid "There are updates available for: %1$s."
 msgstr "Ci sono aggiornamenti disponibili per: %1$s."
 
-#: functions.php:433
+#: functions.php:434
 #, php-format
 msgid "Required plugins are not active: %1$s."
 msgstr "I plugin richiesti non sono attivi: %1$s."
 
-#: functions.php:434
+#: functions.php:435
 #, php-format
 msgid "Recommended plugins are not active: %1$s."
 msgstr "I plugin raccomandati non sono attivi: %1$s."
 
-#: functions.php:435
+#: functions.php:436
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:436
+#: functions.php:437
 msgid "Update Plugins"
 msgstr "Aggiorna plugin"
 
-#: functions.php:437
+#: functions.php:438
 msgid "Activate plugins"
 msgstr "Attiva i plugin"
 
-#: functions.php:438
+#: functions.php:439
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:439
+#: functions.php:440
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:440
+#: functions.php:441
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:441
+#: functions.php:442
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:442
+#: functions.php:443
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -150,18 +317,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:443
+#: functions.php:444
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:444
+#: functions.php:445
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:445
+#: functions.php:446
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -170,7 +337,7 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:446
+#: functions.php:447
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
@@ -179,7 +346,7 @@ msgstr "Si prega di contattare l’amministratore di questo sito per assistenza.
 msgid "Photo gallery"
 msgstr "Galleria fotografica"
 
-#: inc/gallery.php:21
+#: inc/gallery.php:21 template-parts/section-gallery-carousel.php:14
 msgid "scroll"
 msgstr "scorri"
 
@@ -424,19 +591,59 @@ msgstr "Tutte le installazioni sono state completate."
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Installazione del plugin %1$s (%2$d/%3$d)"
 
-#: static/js/bootstrap-italia.bundle.min.js:7
-msgid "show"
-msgstr "mostra"
+#: menu.php:8
+msgid "new window"
+msgstr "nuova finestra"
 
-#: static/js/bootstrap-italia.bundle.min.js:7
-msgid "hide"
-msgstr "nascondi"
+#: menu.php:33
+msgid "Login"
+msgstr "Accedi"
 
-#: static/js/bootstrap-italia.bundle.min.js:7
-msgid "toggle"
-msgstr "Mostra / Nascondi"
+#: menu.php:47
+msgid "Toggle navigation"
+msgstr "Attiva / disattiva la navigazione"
+
+#: menu.php:63
+msgid "Main menu"
+msgstr "Menu principale"
+
+#: menu.php:308
+msgid "close"
+msgstr "chiusi"
+
+#: searchform.php:3 searchform.php:4
+msgid "Search"
+msgstr "Cerca"
+
+#: searchform_sidebar.php:2
+msgid "Search for Topics"
+msgstr "Cerca Argomenti"
+
+#: tag.php:16 template-parts/section-last-news.php:283
+msgid "Other topics"
+msgstr "Altri argomenti"
+
+#: template-parts/archive-circolari-loop.php:20
+#: template-parts/section-last-circolari.php:102
+msgid "Circulars"
+msgstr "Circolari"
+
+#: template-parts/archive-circolari-loop.php:22
+#: template-parts/archive-gallerie-loop.php:22
+#: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
+#: template-parts/main-loop.php:22 template-parts/search-loop.php:18
+msgid "Page"
+msgstr "Pagina"
+
+#: template-parts/archive-circolari-loop.php:22
+#: template-parts/archive-gallerie-loop.php:22
+#: template-parts/archive-loop.php:22 template-parts/main-loop.php:22
+#: template-parts/search-loop.php:18
+msgid "of"
+msgstr "di"
 
 #: template-parts/archive-circolari-loop.php:55
+#: template-parts/circolare-loop.php:50
 #: template-parts/section-last-circolari.php:49
 msgid "No."
 msgstr "N°"
@@ -446,6 +653,102 @@ msgstr "N°"
 #: template-parts/section-last-circolari.php:49
 msgid " of "
 msgstr " del "
+
+#: template-parts/archive-circolari-loop.php:75
+#: template-parts/circolare-loop.php:32
+#: template-parts/section-last-circolari.php:70
+msgid "Groups"
+msgstr "Gruppi"
+
+#: template-parts/archive-circolari-loop.php:87
+#: template-parts/archive-gallerie-loop.php:78
+#: template-parts/archive-loop.php:131 template-parts/main-loop.php:119
+#: template-parts/search-loop.php:61 template-parts/search-loop.php:67
+#: template-parts/section-gallery-carousel.php:93
+#: template-parts/section-last-circolari.php:82
+#: template-parts/section-last-circolari.php:102
+#: template-parts/section-last-news.php:122
+#: template-parts/section-last-news.php:239
+#: template-parts/section-last-news.php:301
+#: template-parts/section-last-one-news.php:86
+msgid "Go to the page"
+msgstr "Vai alla pagina"
+
+#: template-parts/archive-circolari-loop.php:88
+#: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
+#: template-parts/search-loop.php:67 template-parts/search-loop.php:69
+#: template-parts/section-last-circolari.php:83
+#: template-parts/section-last-news.php:123
+#: template-parts/section-last-news.php:240
+msgid "Read more"
+msgstr "Leggi di più"
+
+#: template-parts/archive-gallerie-loop.php:79
+msgid "Browse gallery"
+msgstr "Sfoglia galleria"
+
+#: template-parts/archive-loop.php:108 template-parts/main-loop.php:96
+#: template-parts/section-last-news.php:99
+#: template-parts/section-last-news.php:216
+#: template-parts/section-last-one-news.php:61
+#: template-parts/single-loop.php:40
+msgid "Categories"
+msgstr "Categorie"
+
+#: template-parts/archive-loop.php:119 template-parts/main-loop.php:107
+#: template-parts/page-loop-nosidebar.php:33 template-parts/page-loop.php:34
+#: template-parts/section-last-news.php:110
+#: template-parts/section-last-news.php:227
+#: template-parts/section-last-one-news.php:74
+#: template-parts/single-loop.php:53
+msgid "Topics"
+msgstr "Argomenti"
+
+#: template-parts/attachment-loop.php:54 template-parts/circolare-loop.php:98
+#: template-parts/custom-post-type-loop.php:58 template-parts/page-loop.php:88
+#: template-parts/single-loop.php:113
+msgid "Last update"
+msgstr "Ultimo aggiornamento"
+
+#: template-parts/attachments-sidebar.php:20 template-parts/attachments.php:23
+msgid "Attachments"
+msgstr "Allegati"
+
+#: template-parts/children-list.php:19
+msgid "Back"
+msgstr "Indietro"
+
+#: template-parts/children-list.php:25
+msgid "Linked pages"
+msgstr "Pagine collegate"
+
+#: template-parts/circolare-loop.php:49
+msgid "Circular"
+msgstr "Circolare"
+
+#: template-parts/circolare-loop.php:56 template-parts/single-loop.php:70
+msgid "Date"
+msgstr "Data"
+
+#: template-parts/circolare-loop.php:62
+msgid "Author"
+msgstr "Autore"
+
+#: template-parts/error.php:12
+msgid "Error"
+msgstr "Errore"
+
+#: template-parts/error.php:13
+msgid "There is no content"
+msgstr "Nessun contenuto presente"
+
+#: template-parts/main-loop.php:20
+msgid "Last news"
+msgstr "Ultime notizie"
+
+#: template-parts/navigation.php:12 template-parts/pagination.php:13
+msgid "Browsing the news"
+msgstr "Navigazione tra le notizie"
 
 #: template-parts/navigation.php:20 template-parts/navigation.php:27
 #: template-parts/pagination.php:19
@@ -457,80 +760,71 @@ msgstr "Pagina precedente"
 msgid "Next page"
 msgstr "Pagina successiva"
 
-#~ msgid "Forbidden"
-#~ msgstr "Accesso negato"
+#: template-parts/search-loop.php:16
+msgid "Results for"
+msgstr "Risultati per"
 
-#~ msgid "You don't have permission to access this page"
-#~ msgstr "Non disponi delle autorizzazioni per accedere a questa pagina"
+#: template-parts/search-loop.php:34
+msgid "results found"
+msgstr "risultati trovati"
 
-#~ msgid "come back"
-#~ msgstr "torna indietro"
+#: template-parts/section-gallery-carousel.php:14
+msgid "Photo galleries"
+msgstr "Gallerie fotografiche"
 
-#~ msgid "or use the menu to continue browsing"
-#~ msgstr "o utilizza il menu per continuare la navigazione"
+#: template-parts/section-gallery-carousel.php:93
+msgid "Galleries"
+msgstr "Gallerie"
 
-#~ msgid "Back to Home"
-#~ msgstr "Torna alla Home"
+#: template-parts/section-gallery-carousel.php:94
+msgid "All galleries"
+msgstr "Tutte le gallerie"
 
-#~ msgid "Not found"
-#~ msgstr "Pagina non trovata"
+#: template-parts/section-last-circolari.php:15
+msgid "Latest circulars"
+msgstr "Ultime circolari"
 
-#~ msgid "The page you are looking for was not found"
-#~ msgstr "La pagina che cerchi non è stata trovata"
+#: template-parts/section-last-circolari.php:103
+#: template-parts/section-last-news.php:302
+msgid "See all"
+msgstr "Vedi tutte"
 
-#~ msgid "This site uses technical, analytics and third-party cookies"
-#~ msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
+#: template-parts/section-last-news.php:262
+msgid "Other categories"
+msgstr "Altre categorie"
 
-#~ msgid "By continuing to browse, you accept the use of cookies"
-#~ msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
+#: template-parts/section-last-news.php:301
+msgid "News"
+msgstr "Notizie"
 
-#~ msgid "I accept"
-#~ msgstr "Accetto"
+#: template-parts/section-last-one-news.php:86
+#: template-parts/section-last-one-news.php:87
+msgid "All the news"
+msgstr "Tutte le novità"
 
-#~ msgid "Cookie policy"
-#~ msgstr "Cookie policy"
+#: template-parts/section-map.php:13
+msgid "Interactive Map"
+msgstr "Mappa Interattiva"
 
-#~ msgid "Go to content"
-#~ msgstr "Vai ai contenuti"
+#: template-parts/section-map.php:14
+msgid "Click on to activate"
+msgstr "Clicca su per attivare"
 
-#~ msgid "Go to the navigation menu"
-#~ msgstr "Vai al menu di navigazione"
+#: template-parts/section-services.php:16
+msgid "Services"
+msgstr "Servizi"
 
-#~ msgid "Go to the footer"
-#~ msgstr "Vai al footer"
+#~ msgid "show"
+#~ msgstr "mostra"
 
-#~ msgid "Link to external site"
-#~ msgstr "Collegamento a sito esterno"
+#~ msgid "hide"
+#~ msgstr "nascondi"
 
-#~ msgid "new window"
-#~ msgstr "nuova finestra"
-
-#~ msgid "Login"
-#~ msgstr "Accedi"
-
-#~ msgid "Toggle navigation"
-#~ msgstr "Attiva / disattiva la navigazione"
-
-#~ msgid "Main menu"
-#~ msgstr "Menu principale"
-
-#~ msgid "Follow us on"
-#~ msgstr "Seguici su"
-
-#~ msgid "close"
-#~ msgstr "chiusi"
-
-#~ msgid "Comments"
-#~ msgstr "Commenti"
-
-#~ msgid "No comment"
-#~ msgstr "Nessun commento"
+#~ msgid "toggle"
+#~ msgstr "Mostra / Nascondi"
 
 #~ msgid "Name"
 #~ msgstr "Nome"
-
-#~ msgid "Email"
-#~ msgstr "Email"
 
 #~ msgid "I give my consent"
 #~ msgstr "Do il mio consenso"
@@ -538,74 +832,8 @@ msgstr "Pagina successiva"
 #~ msgid "Comment"
 #~ msgstr "Commento"
 
-#~ msgid "Address"
-#~ msgstr "Indirizzo"
-
-#~ msgid "Phone"
-#~ msgstr "Telefono"
-
-#~ msgid "Fax"
-#~ msgstr "Fax"
-
-#~ msgid "Information"
-#~ msgstr "Informazioni"
-
-#~ msgid "Tax code / VAT number"
-#~ msgstr "C.F. / P.IVA"
-
-#~ msgid "Unique Code"
-#~ msgstr "Cod. Univoco"
-
-#~ msgid "IBAN"
-#~ msgstr "IBAN"
-
-#~ msgid "Email contacts"
-#~ msgstr "Posta Elettronica"
-
-#~ msgid "PEC"
-#~ msgstr "PEC"
-
-#~ msgid "Certified mail"
-#~ msgstr "Posta Elettronica Certificata"
-
-#~ msgid "Useful Links Section"
-#~ msgstr "Sezione Link Utili"
-
-#~ msgid "Privacy policy"
-#~ msgstr "Privacy policy"
-
-#~ msgid "Privacy"
-#~ msgstr "Privacy"
-
-#~ msgid "Legal notices"
-#~ msgstr "Note legali"
-
-#~ msgid "Contacts"
-#~ msgstr "Contatti"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accessibilità"
-
-#~ msgid "Made with"
-#~ msgstr "Realizzato con"
-
-#~ msgid "Graphic theme"
-#~ msgstr "Tema grafico"
-
-#~ msgid "Based on the"
-#~ msgstr "Basato sul"
-
-#~ msgid "AgID Prototype for PA sites"
-#~ msgstr "Prototipo per siti PA di AgID"
-
-#~ msgid "Go up"
-#~ msgstr "Torna su"
-
 #~ msgid "Error 404"
 #~ msgstr "Errore 404"
-
-#~ msgid "Page"
-#~ msgstr "Pagina"
 
 #~ msgid "Add to Menu"
 #~ msgstr "Aggiungi al menu"
@@ -645,111 +873,6 @@ msgstr "Pagina successiva"
 
 #~ msgid "December"
 #~ msgstr "Dicembre"
-
-#~ msgid "Search"
-#~ msgstr "Cerca"
-
-#~ msgid "Search for Topics"
-#~ msgstr "Cerca Argomenti"
-
-#~ msgid "Other topics"
-#~ msgstr "Altri argomenti"
-
-#~ msgid "Circulars"
-#~ msgstr "Circolari"
-
-#~ msgid "of"
-#~ msgstr "di"
-
-#~ msgid "Groups"
-#~ msgstr "Gruppi"
-
-#~ msgid "Go to the page"
-#~ msgstr "Vai alla pagina"
-
-#~ msgid "Read more"
-#~ msgstr "Leggi di più"
-
-#~ msgid "Browse gallery"
-#~ msgstr "Sfoglia galleria"
-
-#~ msgid "Categories"
-#~ msgstr "Categorie"
-
-#~ msgid "Topics"
-#~ msgstr "Argomenti"
-
-#~ msgid "Last update"
-#~ msgstr "Ultimo aggiornamento"
-
-#~ msgid "Attachments"
-#~ msgstr "Allegati"
-
-#~ msgid "Back"
-#~ msgstr "Indietro"
-
-#~ msgid "Linked pages"
-#~ msgstr "Pagine collegate"
-
-#~ msgid "Circular"
-#~ msgstr "Circolare"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Author"
-#~ msgstr "Autore"
-
-#~ msgid "Error"
-#~ msgstr "Errore"
-
-#~ msgid "There is no content"
-#~ msgstr "Nessun contenuto presente"
-
-#~ msgid "Last news"
-#~ msgstr "Ultime notizie"
-
-#~ msgid "Browsing the news"
-#~ msgstr "Navigazione tra le notizie"
-
-#~ msgid "Results for"
-#~ msgstr "Risultati per"
-
-#~ msgid "results found"
-#~ msgstr "risultati trovati"
-
-#~ msgid "Photo galleries"
-#~ msgstr "Gallerie fotografiche"
-
-#~ msgid "Galleries"
-#~ msgstr "Gallerie"
-
-#~ msgid "All galleries"
-#~ msgstr "Tutte le gallerie"
-
-#~ msgid "Latest circulars"
-#~ msgstr "Ultime circolari"
-
-#~ msgid "See all"
-#~ msgstr "Vedi tutte"
-
-#~ msgid "Other categories"
-#~ msgstr "Altre categorie"
-
-#~ msgid "News"
-#~ msgstr "Notizie"
-
-#~ msgid "All the news"
-#~ msgstr "Tutte le novità"
-
-#~ msgid "Interactive Map"
-#~ msgstr "Mappa Interattiva"
-
-#~ msgid "Click on to activate"
-#~ msgstr "Clicca su per attivare"
-
-#~ msgid "Services"
-#~ msgstr "Servizi"
 
 #~ msgid "Start the search"
 #~ msgstr "Avvia la ricerca"

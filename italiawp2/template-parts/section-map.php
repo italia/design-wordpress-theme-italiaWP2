@@ -10,8 +10,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3><?php esc_html_e('Interactive Map','italiawp2'); ?></h3>
-                <h5><?php esc_html_e('Click on to activate','italiawp2'); ?></h5>
+                <h3><?php echo __('Interactive Map','italiawp2'); ?></h3>
+                <h5><?php echo __('Click on to activate','italiawp2'); ?></h5>
             </div>
         </div>
     </div>

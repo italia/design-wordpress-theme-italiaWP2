@@ -32,12 +32,12 @@ if (!$page_id_cookie_banner) $page_id_cookie_banner = get_option('dettagli-id-pr
     
 <div class="cookiebar hide u-background-80" aria-hidden="true">
     <p class="text-white">
-        <?php esc_html_e('This site uses technical, analytics and third-party cookies','italiawp2'); ?>.
-        <?php esc_html_e('By continuing to browse, you accept the use of cookies','italiawp2'); ?>.<br />
+        <?php echo __('This site uses technical, analytics and third-party cookies','italiawp2'); ?>.
+        <?php echo __('By continuing to browse, you accept the use of cookies','italiawp2'); ?>.<br />
         <button data-accept="cookiebar" class="btn btn-info mr-2 btn-verde">
-            <?php esc_html_e('I accept','italiawp2'); ?>
+            <?php echo __('I accept','italiawp2'); ?>
         </button>
-        <a href="<?php echo get_permalink($page_id_cookie_banner); ?>" class="btn btn-outline-info btn-trasp"><?php esc_html_e('Cookie policy','italiawp2'); ?></a>
+        <a href="<?php echo get_permalink($page_id_cookie_banner); ?>" class="btn btn-outline-info btn-trasp"><?php echo __('Cookie policy','italiawp2'); ?></a>
     </p>
 </div>
     
@@ -45,12 +45,12 @@ if (!$page_id_cookie_banner) $page_id_cookie_banner = get_option('dettagli-id-pr
     <div class="skiplink sr-only">
         <ul>
             <li>
-                <a accesskey="2" href="#main_container"><?php esc_html_e('Go to content','italiawp2'); ?></a>
+                <a accesskey="2" href="#main_container"><?php echo __('Go to content','italiawp2'); ?></a>
             </li>
             <li>
-                <a accesskey="3" href="#menup"><?php esc_html_e('Go to the navigation menu','italiawp2'); ?></a>
+                <a accesskey="3" href="#menup"><?php echo __('Go to the navigation menu','italiawp2'); ?></a>
             </li>
-            <li><a accesskey="4" href="#footer"><?php esc_html_e('Go to the footer','italiawp2'); ?></a></li>
+            <li><a accesskey="4" href="#footer"><?php echo __('Go to the footer','italiawp2'); ?></a></li>
         </ul>
     </div>
         

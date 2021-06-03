@@ -13,9 +13,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="titolo-sezione">
-                    <h2><?php esc_html_e('Results for','italiawp2'); ?>: "<?php echo get_search_query(); ?>"
+                    <h2><?php echo __('Results for','italiawp2'); ?>: "<?php echo get_search_query(); ?>"
                         <?php if($wp_query->max_num_pages != 0) { ?>
-                        <br><small><?php esc_html_e('Page','italiawp2'); ?> <?php echo $paged; ?> <?php esc_html_e('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
+                        <br><small><?php echo __('Page','italiawp2'); ?> <?php echo $paged; ?> <?php echo __('of','italiawp2'); ?> <?php echo $wp_query->max_num_pages; ?></small>
                         <?php } ?>
                     </h2>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="articolo-paragrafi">
                     <div class="row">
                         <div class="col-md-12 cerca-risultati d-md-block d-none">
-                            <?php echo $wp_query->found_posts; ?> <?php esc_html_e('results found','italiawp2'); ?>
+                            <?php echo $wp_query->found_posts; ?> <?php echo __('results found','italiawp2'); ?>
                         </div>
                     </div>
                     <div class="row">
@@ -58,15 +58,15 @@
                                 ?>
                                 </div>
                                 <h4>
-                                    <a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>">
+                                    <a href="<?php the_permalink(); ?>" title="<?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>">
                                         <?php the_title(); ?>
                                     </a>
                                 </h4>
                                 <small><p><?php echo $datapost; ?></p></small>
                                 <p><?php echo get_the_excerpt(); ?></p>
-                                <a aria-label="<?php esc_attr_e('Read more','italiawp2'); ?> - <?php esc_attr_e('Go to the page','italiawp2'); ?>: <?php the_title(); ?>"
+                                <a aria-label="<?php echo __('Read more','italiawp2'); ?> - <?php echo __('Go to the page','italiawp2'); ?>: <?php the_title(); ?>"
                                    href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="tutte">
-                                    <?php esc_html_e('Read more','italiawp2'); ?>
+                                    <?php echo __('Read more','italiawp2'); ?>
                                     <svg class="icon">
                                         <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-arrow_forward"></use>
                                     </svg>

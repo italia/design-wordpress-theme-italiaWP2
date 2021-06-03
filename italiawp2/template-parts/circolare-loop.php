@@ -29,7 +29,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                             
                             <?php if (!empty($circolare_gruppi)) { ?>
                             <div class="argomenti">
-                                <h4><?php esc_html_e('Groups','italiawp2'); ?></h4>
+                                <h4><?php echo __('Groups','italiawp2'); ?></h4>
                                 <div class="argomenti-sezione-elenco">
                                     <?php
                                         foreach ($circolare_gruppi as $gruppo) {
@@ -46,20 +46,20 @@ if (have_posts()) : while (have_posts()) : the_post();
                 <div class="row mt40">
                     <div class="offset-xl-1 col-xl-3 offset-lg-1 col-lg-3 col-md-4 mb-3 mb-md-0">
                         <p class="data-articolo">
-                            <span><?php esc_html_e('Circular','italiawp2'); ?>:</span><br />
-                            <strong><?php esc_html_e('No.','italiawp2').' '.$circolare_num.__(' of ','italiawp2').$circolare_anno; ?></strong>
+                            <span><?php echo __('Circular','italiawp2'); ?>:</span><br />
+                            <strong><?php echo __('No.','italiawp2').' '.$circolare_num.__(' of ','italiawp2').$circolare_anno; ?></strong>
                         </p>
                     </div>
                     
                     <div class="offset-xl-1 col-xl-3 offset-lg-1 col-lg-3 col-md-4 mb-3 mb-md-0">
                         <p class="data-articolo">
-                            <span><?php esc_html_e('Date','italiawp2'); ?>:</span><br /><strong><?php echo $datapost; ?></strong>
+                            <span><?php echo __('Date','italiawp2'); ?>:</span><br /><strong><?php echo $datapost; ?></strong>
                         </p>
                     </div>
                     
                     <div class="offset-xl-1 col-xl-3 offset-lg-1 col-lg-3 col-md-4 mb-3 mb-md-0">
                         <p class="data-articolo">
-                            <span><?php esc_html_e('Author','italiawp2'); ?>:</span><br /><strong><?php echo get_the_author(); ?></strong>
+                            <span><?php echo __('Author','italiawp2'); ?>:</span><br /><strong><?php echo get_the_author(); ?></strong>
                         </p>
                     </div>
                     
@@ -95,7 +95,7 @@ if (have_posts()) : while (have_posts()) : the_post();
                             <div class="offset-md-1 col-md-11">
                                 <div class="row mt16">
                                     <div class="col-md-12">
-                                        <p><?php esc_html_e('Last update','italiawp2'); ?></p>
+                                        <p><?php echo __('Last update','italiawp2'); ?></p>
                                     <?php
                                         $updated_date = get_the_modified_time('j F Y');
                                         $updated_time = get_the_modified_time('H:i'); 
