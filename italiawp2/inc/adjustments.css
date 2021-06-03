@@ -626,7 +626,7 @@ table td:last-child, table th:last-child {
     display: none;
 }
 
-#langMenuLi {
+.langMenuLi {
     width: 100%
 }
 

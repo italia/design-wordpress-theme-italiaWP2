@@ -100,19 +100,10 @@ jQuery(function ($) {
 
         /* Fix Menu Principale, sottomenu sulla destra */
         fixMainMenu();
-
-        /* Fix Menu Lingue Polylang */
-        let langMenu = $("#menu-principale .pll-parent-menu-item > ul");
-        let langMenuLi = $('<li id="langMenuLi" class="menu-item menu-item-has-children dropdown nav-item"></li>');
-        langMenu.append(langMenuLi);
-        langMenuLi.append("<ul></ul>");
-        $("#menu-principale .pll-parent-menu-item > ul li:not(#langMenuLi)").each(function () {
-            langMenuLiElem = $(this).find("h5 > a");
-            thisElem = $('<li class="menu-item nav-item"></li>');
-            $("#langMenuLi ul").append(thisElem);
-            thisElem.append(langMenuLiElem);
-            $(this).remove();
-        });
+        
+        /* Fix Menu Lingue Polylang e WPML */
+        fixLangMenu("pll-parent-menu-item");
+        fixLangMenu("menu-item-language");
     });
 
     $(window).resize(function () {
@@ -140,6 +131,35 @@ jQuery(function ($) {
                 $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
             }
         });
+        return;
+    }
+    
+    function fixLangMenu(pluginClass) {
+        if ($("."+pluginClass)[0]){
+            let numElement = 7;
+            let langMenu = $("#menu-principale ."+pluginClass+" > ul");
+            let langMenuLi = $('<li class="langMenuLi menu-item menu-item-has-children dropdown nav-item"></li>');
+
+            $("#menu-principale ."+pluginClass+" > ul li:not(.langMenuLi)").each(function (i) {
+                if( (i==0) || ( inseriti == numElement ) ) {
+                    inseriti = 0;
+                    delete nuovoLi;
+                    nuovoLi = langMenuLi.clone();
+                    nuovoLi.append("<ul></ul>");
+                    langMenu.append(nuovoLi);
+                }
+                langMenuLiElem = $(this).find("h5 > a");
+
+                thisElem = $('<li class="menu-item nav-item"></li>'); 
+                thisElem.append(langMenuLiElem);
+                nuovoLi.find("ul").append(thisElem);
+                delete thisElem;
+                
+                inseriti++;
+                $(this).remove();
+            });
+            delete numElement, langMenu, langMenuLi;
+        }
         return;
     }
 });

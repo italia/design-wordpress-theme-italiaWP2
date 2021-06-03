@@ -14,12 +14,6 @@
     <meta name="description" content="<?php echo get_bloginfo('description'); ?>">
     <?php endif; ?>
 
-    <?php if (is_front_page()) { ?>
-        <title><?php bloginfo('name'); ?></title>
-    <?php } else { ?>
-        <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
-    <?php } ?>
-
     <?php wp_head(); ?>
 </head>
 
