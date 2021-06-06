@@ -14,9 +14,8 @@ if (get_theme_mod('active_section_last_news')):
     get_template_part('template-parts/section-last-news');
 endif;
 
-/* Inizio Sezione Ultime circolari (se è installato il plugin "Gestione Circolari") */
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if ( is_plugin_active('gestione-circolari/GestioneCircolari.php') && get_theme_mod('active_section_circolari') ):
+/* Inizio Sezione Ultime circolari (se è installato il plugin "Gestione Circolari" e di conseguenza esiste su widget CircolariWidget) */
+if ( class_exists('CircolariWidget') && get_theme_mod('active_section_circolari') ):
     get_template_part('template-parts/section-last-circolari');
 endif;
 /* Fine Sezione Ultime circolari */

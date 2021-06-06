@@ -10,9 +10,8 @@
 ?>
 
 <?php
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-if (is_plugin_active('attachments/index.php')) { ?>
+  if ( in_array( 'attachments/wp-attachments.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+  ?>
                 
 <?php $attachments = new Attachments('attachments'); ?>
 <?php if ($attachments->exist()) : ?>
@@ -36,4 +35,5 @@ if (is_plugin_active('attachments/index.php')) { ?>
 
 <?php endif; ?>
 
-<?php }
+<?php
+  }
