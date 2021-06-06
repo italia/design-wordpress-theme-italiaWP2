@@ -19,5 +19,5 @@
 
 <section class="map-full-content">
     <div class="map-wrap"></div>
-    <iframe src="<?php echo get_option('dettagli-map'); ?>" frameborder="0" allowfullscreen></iframe>
+    <iframe src="<?php echo sanitize_text_field(get_option('dettagli-map')); ?>" frameborder="0" allowfullscreen></iframe>
 </section>
