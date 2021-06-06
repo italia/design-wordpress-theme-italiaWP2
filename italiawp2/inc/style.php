@@ -1,6 +1,5 @@
 <?php
-
-include_once('colors.php');
+get_template_part('inc/colors');
 
 function italiawp2_css_strip_whitespace($css){
 	  $replace = array(
@@ -97,36 +96,27 @@ function italiawp2_dymanic_styles() {
     
     //$color_compl_link_footer = colorSetSL($main_color, 100, 80);
     $color_compl_link_footer = hsl2hex(array($color_compl_HSL[0], (100/100), (80/100) ));
-    
-    if (get_option('italiawp2_colore_primario'))
-        update_option('italiawp2_colore_primario', $color_50);
-    else
-        add_option('italiawp2_colore_primario', $color_50);
 
-    if (get_option('italiawp2_colore_primario_chiaro'))
-        update_option('italiawp2_colore_primario_chiaro', $color_30);
-    else
-        add_option('italiawp2_colore_primario_chiaro', $color_30);
-
-    if (get_option('italiawp2_colore_primario_scuro'))
-        update_option('italiawp2_colore_primario_scuro', $color_95);
-    else
-        add_option('italiawp2_colore_primario_scuro', $color_95);
-
-    if (get_option('italiawp2_colore_complementare'))
-        update_option('italiawp2_colore_complementare', $color_compl);
-    else
-        add_option('italiawp2_colore_complementare', $color_compl);
+	get_option( 'italiawp2_colore_primario' ) ? update_option( 'italiawp2_colore_primario', $color_50 ) : add_option( 'italiawp2_colore_primario', $color_50 );
+	get_option( 'italiawp2_colore_primario_chiaro' ) ? update_option( 'italiawp2_colore_primario_chiaro', $color_30 ) : add_option( 'italiawp2_colore_primario_chiaro', $color_30 );
+	get_option( 'italiawp2_colore_primario_scuro' ) ? update_option( 'italiawp2_colore_primario_scuro', $color_95 ) : add_option( 'italiawp2_colore_primario_scuro', $color_95 );
+	get_option( 'italiawp2_colore_complementare' ) ? update_option( 'italiawp2_colore_complementare', $color_compl ) : add_option( 'italiawp2_colore_complementare', $color_compl );
+	get_option( 'italiawp2_colore_nero' ) ? update_option( 'italiawp2_colore_nero', $color_black ) : add_option( 'italiawp2_colore_nero', $color_black );
+	get_option( 'italiawp2_colore_bianco' ) ? update_option( 'italiawp2_colore_bianco', $color_white ) : add_option( 'italiawp2_colore_bianco', $color_white );
 
     $custom_css = "
+    
+.has-colore-nero-color,
 .u-color-black {
   color: {$color_black} !important;
 }
 
+.has-colore-nero-background-color,
 .u-background-black {
   background-color: {$color_black} !important;
 }
 
+.has-colore-bianco-color,
 .u-color-white,
 .Bullets>li:before, .Footer, .Footer-blockTitle, .Footer-subTitle, .Form-input.Form-input:focus+[role=tooltip],
 .Linklist-link.Linklist-link--lev1, .Linklist-link.Linklist-link--lev1:hover, .Megamenu--default .Megamenu-item>a,
@@ -135,6 +125,7 @@ function italiawp2_dymanic_styles() {
   color: {$color_white} !important;
 }
 
+.has-colore-bianco-background-color,
 .u-background-white,
 .Megamenu--default .Megamenu-subnav, .Skiplinks>li>a, .Spid-menu {
   background-color: {$color_white} !important;

@@ -120,6 +120,16 @@ if (!function_exists('italiawp2_theme_setup')) :
         // Aggiungo dei colori da utilizzare con l'editor
         add_theme_support('editor-color-palette',
                 array(
+	                array(
+		                'name' => __('black', 'italiawp2'),
+		                'slug' => 'colore-nero',
+		                'color' => get_option('italiawp2_colore_nero'),
+	                ),
+	                array(
+		                'name' => __('white', 'italiawp2'),
+		                'slug' => 'colore-bianco',
+		                'color' => get_option('italiawp2_colore_bianco'),
+	                ),
                     array(
                         'name' => __('Primary Color', 'italiawp2'),
                         'slug' => 'colore-primario',
@@ -256,16 +266,14 @@ function italiawp2_custom_login_logo() {
     echo '</style>';
 }
 
-add_action('login_head', 'italiawp2_custom_login_logo');
 
+add_action('login_head', 'italiawp2_custom_login_logo');
+add_filter('login_headerurl', 'italiawp2_custom_login_url');
 function italiawp2_custom_login_url() {
-    return get_site_url();
+    return home_url();
 }
 
-add_filter('login_headerurl', 'italiawp2_custom_login_url');
-
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
-
 function posts_link_attributes() {
     return 'class="u-color-50"';
 }
