@@ -86,11 +86,11 @@ $i = 0; if (have_posts()) :
             </div>
 
 <?php endwhile;
-      else : include('error.php');
+      else : get_template_part('template-parts','error');
       endif; ?>
 
         </div>
     </div>
 </section>
 
-<?php include_once('pagination.php');
+<?php get_template_part('template-parts','pagination');

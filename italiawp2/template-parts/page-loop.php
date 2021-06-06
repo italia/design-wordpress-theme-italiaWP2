@@ -60,12 +60,12 @@ if (have_posts()) : while (have_posts()) : the_post();
                 <div class="row">
                     <div class="col-lg-3 col-md-4 lineright">
                         <aside id="menu-sinistro">
-                            <?php include_once('children-list.php'); ?>
+                            <?php get_template_part('template-parts','children-list'); ?>
             
                             <?php if (!get_theme_mod('active_allegati_contenuto'))
-                                    get_template_part('template-parts/attachments-sidebar'); ?>
+                                    get_template_part('template-parts','attachments-sidebar'); ?>
                             
-                            <?php get_template_part('template-parts/sidebar-page'); ?>
+                            <?php get_template_part('template-parts','sidebar-page'); ?>
                         </aside>
                     </div>
                     <div class="col-lg-9 col-md-8 linetop pt8">
@@ -105,5 +105,5 @@ if (have_posts()) : while (have_posts()) : the_post();
         </section>
 
 <?php endwhile;
-      else : include('error.php');
+      else : get_template_part('template-parts','error');
       endif; ?>
