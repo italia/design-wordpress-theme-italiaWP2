@@ -323,7 +323,7 @@ function italiawp2_create_breadcrumbs() {
                 echo '<li class="breadcrumb-item"><a href="' . get_term_link($cat->cat_ID, false) . '">' . $cat->cat_name . '</a><span class="separator">/</span></li>';
                 echo $before . get_the_title() . $after;
             }
-        } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
+        } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404() && !is_search()) {
             $post_type = get_post_type_object(get_post_type());
             echo $before . $post_type->labels->singular_name . $after;
         } elseif (is_attachment()) {
