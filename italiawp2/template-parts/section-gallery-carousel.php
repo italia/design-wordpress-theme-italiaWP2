@@ -48,7 +48,7 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
             }
         }
 
-        $category = get_the_category(); $first_category = $category[0];
+        $category = get_the_category();
         $datapost = get_the_date('j F Y', '', ''); ?>
                 
                 <figure>

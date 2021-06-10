@@ -55,8 +55,10 @@
 </section>
 
 <script>
+jQuery(function ($) {
     $(document).ready(function () {
         $(".pagination li a,.pagination li span").addClass("page-link");
-        $(".pagination li .current").attr("aria-current", "page").parent().addClass("active");
+        $(".pagination li .current").attr("aria-current","page").parent().addClass("active");
     });
+});
 </script>

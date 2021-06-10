@@ -98,25 +98,12 @@ function italiawp2_dymanic_styles() {
     //$color_compl_link_footer = colorSetSL($main_color, 100, 80);
     $color_compl_link_footer = hsl2hex(array($color_compl_HSL[0], (100/100), (80/100) ));
     
-    if (get_option('italiawp2_colore_primario'))
-        update_option('italiawp2_colore_primario', $color_50);
-    else
-        add_option('italiawp2_colore_primario', $color_50);
-
-    if (get_option('italiawp2_colore_primario_chiaro'))
-        update_option('italiawp2_colore_primario_chiaro', $color_30);
-    else
-        add_option('italiawp2_colore_primario_chiaro', $color_30);
-
-    if (get_option('italiawp2_colore_primario_scuro'))
-        update_option('italiawp2_colore_primario_scuro', $color_95);
-    else
-        add_option('italiawp2_colore_primario_scuro', $color_95);
-
-    if (get_option('italiawp2_colore_complementare'))
-        update_option('italiawp2_colore_complementare', $color_compl);
-    else
-        add_option('italiawp2_colore_complementare', $color_compl);
+    get_option('italiawp2_colore_primario') ? update_option('italiawp2_colore_primario', $color_50) : add_option('italiawp2_colore_primario', $color_50);
+    get_option('italiawp2_colore_primario_chiaro') ? update_option('italiawp2_colore_primario_chiaro', $color_30) : add_option('italiawp2_colore_primario_chiaro', $color_30);
+    get_option('italiawp2_colore_primario_scuro') ? update_option('italiawp2_colore_primario_scuro', $color_95) : add_option('italiawp2_colore_primario_scuro', $color_95);
+    get_option('italiawp2_colore_complementare') ? update_option('italiawp2_colore_complementare', $color_compl) : add_option('italiawp2_colore_complementare', $color_compl);
+    get_option('italiawp2_colore_nero') ? update_option('italiawp2_colore_nero', $color_black) : add_option('italiawp2_colore_nero', $color_black);
+    get_option('italiawp2_colore_bianco') ? update_option('italiawp2_colore_bianco', $color_white) : add_option('italiawp2_colore_bianco', $color_white);
 
     $custom_css = "
 .u-color-black {
@@ -458,7 +445,8 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
 
 .italiawp2-sidebar .cerca input,
 
-section .pagination .page-item .page-link, section .pagination .page-item .page-numbers {
+section .pagination .page-item .page-link, section .pagination .page-item .page-numbers,
+section .pagination .page-item .page-link, section .pagination .page-item .page-links {
     color: {$color_95};
 }
 

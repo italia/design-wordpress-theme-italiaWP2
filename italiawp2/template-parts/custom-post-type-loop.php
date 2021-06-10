@@ -19,7 +19,7 @@ if (have_posts()) : while (have_posts()) : the_post();
         }
     }
     
-    $category = get_the_category(); $first_category = $category[0];
+    $category = get_the_category();
     $datapost = get_the_date('j F Y', '', ''); ?>
 
         <section id="intro">
@@ -84,5 +84,5 @@ if (have_posts()) : while (have_posts()) : the_post();
         <?php get_template_part('template-parts/navigation'); ?>
 
 <?php endwhile;
-      else : include('error.php');
+      else : get_template_part('template-parts/error');
       endif; ?>

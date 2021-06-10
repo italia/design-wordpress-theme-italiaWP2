@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-06-03 20:32+0200\n"
-"PO-Revision-Date: 2021-06-03 20:33+0200\n"
+"POT-Creation-Date: 2021-06-10 16:09+0200\n"
+"PO-Revision-Date: 2021-06-10 16:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -198,57 +198,65 @@ msgid "Go up"
 msgstr "Torna su"
 
 #: functions.php:124
+msgid "Black"
+msgstr "Nero"
+
+#: functions.php:129
+msgid "White"
+msgstr "Bianco"
+
+#: functions.php:134
 msgid "Primary Color"
 msgstr "Colore Primario"
 
-#: functions.php:129
+#: functions.php:139
 msgid "Light Primary Color"
 msgstr "Colore Primario Chiaro"
 
-#: functions.php:134
+#: functions.php:144
 msgid "Dark Primary Color"
 msgstr "Colore Primario Scuro"
 
-#: functions.php:139
+#: functions.php:149
 msgid "Complementary Color"
 msgstr "Colore Complementare"
 
-#: functions.php:425
+#: functions.php:435
 msgid "Plugins required by the theme \"ItaliaWP\""
 msgstr "Plugin richiesti dal tema “ItaliaWP”"
 
-#: functions.php:426
+#: functions.php:436
 msgid "Plugins required"
 msgstr "Plugin richiesti"
 
-#: functions.php:427
+#: functions.php:437
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:428
+#: functions.php:438
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:429
+#: functions.php:439
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:430
+#: functions.php:440
 #, php-format
 msgid "\"ItaliaWP\" theme requires plugins %1$s."
 msgstr "“ItaliaWP” richiede i plugin: %1$s."
 
-#: functions.php:431
+#: functions.php:441
 #, php-format
 msgid "\"ItaliaWP\" recommends plugins: %1$s."
 msgstr "“ItaliaWP” raccomanda i plugin: %1$s."
 
-#: functions.php:432
+#: functions.php:442
 #, php-format
 msgid ""
 "The following plugins must be updated to the latest version to have maximum "
@@ -257,57 +265,57 @@ msgstr ""
 "I seguenti plugin devono essere aggiornati all\\’ultima versione per avere "
 "massima compatibilità con questo tema: %1$s."
 
-#: functions.php:433
+#: functions.php:443
 #, php-format
 msgid "There are updates available for: %1$s."
 msgstr "Ci sono aggiornamenti disponibili per: %1$s."
 
-#: functions.php:434
+#: functions.php:444
 #, php-format
 msgid "Required plugins are not active: %1$s."
 msgstr "I plugin richiesti non sono attivi: %1$s."
 
-#: functions.php:435
+#: functions.php:445
 #, php-format
 msgid "Recommended plugins are not active: %1$s."
 msgstr "I plugin raccomandati non sono attivi: %1$s."
 
-#: functions.php:436
+#: functions.php:446
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:437
+#: functions.php:447
 msgid "Update Plugins"
 msgstr "Aggiorna plugin"
 
-#: functions.php:438
+#: functions.php:448
 msgid "Activate plugins"
 msgstr "Attiva i plugin"
 
-#: functions.php:439
+#: functions.php:449
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:440
+#: functions.php:450
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:441
+#: functions.php:451
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:442
+#: functions.php:452
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:443
+#: functions.php:453
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -317,18 +325,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:444
+#: functions.php:454
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:445
+#: functions.php:455
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:446
+#: functions.php:456
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -337,7 +345,7 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:447
+#: functions.php:457
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
@@ -663,7 +671,7 @@ msgstr "Gruppi"
 #: template-parts/archive-circolari-loop.php:87
 #: template-parts/archive-gallerie-loop.php:78
 #: template-parts/archive-loop.php:131 template-parts/main-loop.php:119
-#: template-parts/search-loop.php:61 template-parts/search-loop.php:67
+#: template-parts/search-loop.php:62 template-parts/search-loop.php:68
 #: template-parts/section-gallery-carousel.php:93
 #: template-parts/section-last-circolari.php:82
 #: template-parts/section-last-circolari.php:102
@@ -676,7 +684,7 @@ msgstr "Vai alla pagina"
 
 #: template-parts/archive-circolari-loop.php:88
 #: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
-#: template-parts/search-loop.php:67 template-parts/search-loop.php:69
+#: template-parts/search-loop.php:68 template-parts/search-loop.php:70
 #: template-parts/section-last-circolari.php:83
 #: template-parts/section-last-news.php:123
 #: template-parts/section-last-news.php:240

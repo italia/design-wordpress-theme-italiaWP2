@@ -121,6 +121,16 @@ if (!function_exists('italiawp2_theme_setup')) :
         add_theme_support('editor-color-palette',
                 array(
                     array(
+                        'name' => __('Black', 'italiawp2'),
+                        'slug' => 'colore-nero',
+                        'color' => get_option('italiawp2_colore_nero'),
+                    ),
+                    array(
+                        'name' => __('White', 'italiawp2'),
+                        'slug' => 'colore-bianco',
+                        'color' => get_option('italiawp2_colore_bianco'),
+                    ),
+                    array(
                         'name' => __('Primary Color', 'italiawp2'),
                         'slug' => 'colore-primario',
                         'color' => get_option('italiawp2_colore_primario'),
@@ -259,7 +269,7 @@ function italiawp2_custom_login_logo() {
 add_action('login_head', 'italiawp2_custom_login_logo');
 
 function italiawp2_custom_login_url() {
-    return get_site_url();
+    return home_url();
 }
 
 add_filter('login_headerurl', 'italiawp2_custom_login_url');
@@ -315,7 +325,7 @@ function italiawp2_create_breadcrumbs() {
                 echo '<li class="breadcrumb-item"><a href="' . get_term_link($cat->cat_ID, false) . '">' . $cat->cat_name . '</a><span class="separator">/</span></li>';
                 echo $before . get_the_title() . $after;
             }
-        } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) {
+        } elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404() && !is_search()) {
             $post_type = get_post_type_object(get_post_type());
             echo $before . $post_type->labels->singular_name . $after;
         } elseif (is_attachment()) {

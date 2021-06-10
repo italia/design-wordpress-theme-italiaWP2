@@ -73,5 +73,5 @@ if (have_posts()) : while (have_posts()) : the_post();
         </section>
 
 <?php endwhile;
-      else : include('error.php');
+      else : get_template_part('template-parts/error');
       endif; ?>
