@@ -410,7 +410,7 @@ function italiawp2_register_required_plugins() {
     $plugins = array();
 
     include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    if (is_plugin_active('attachments/index.php')) {
+    if (!is_plugin_active('attachments/index.php')) {
         $plugins += array(
             array(
                 'name' => 'Attachments',

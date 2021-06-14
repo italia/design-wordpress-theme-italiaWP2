@@ -320,7 +320,8 @@ label {
 .scheda-argomento-lista-testo a,
 .articolo-paragrafi a,
 #articolo-dettaglio-testo .scheda-allegato h4 a,
-#articolo-dettaglio-testo .scheda-ufficio-contatti h4 a {
+#articolo-dettaglio-testo .scheda-ufficio-contatti h4 a,
+.card .card-body a h5.card-title {
     color: {$color_50};
 }
 
@@ -329,7 +330,7 @@ label {
     border-color: {$color_50};
 }
 
-.btn-primary {
+.btn-primary, .btn-outline-primary {
     border-color: {$color_50} !important;
 }
 
@@ -403,7 +404,7 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
     background-color: {$color_90} !important;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-outline-primary:hover {
     border-color: {$color_90} !important;
 }
 
