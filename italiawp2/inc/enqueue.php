@@ -24,8 +24,8 @@ add_action( 'admin_init', 'brb_add_editor_styles' );
 if ( ! function_exists( 'italiawp2_theme_fonts' ) ) :
 	function italiawp2_theme_fonts() {
 		if (defined('ITWP2_USE_WEBFONTS')) {
-			wp_enqueue_style( 'italiawp2-font-Titillium-Web', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300,400,600,700&display=swap', array(), null );
-			wp_enqueue_style( 'italiawp2-font-Lora', 'https://fonts.googleapis.com/css2?family=Lora:wght@400,700&display=swap', array(), null );
+			wp_enqueue_style( 'italiawp2-font-Titillium-Web', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap', array(), null );
+			wp_enqueue_style( 'italiawp2-font-Lora', 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap', array(), null );
 			wp_enqueue_style( 'italiawp2-font-Roboto_mono', 'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap', array(), null );
 		} else {
 			wp_enqueue_style( 'italiawp2_fonts', get_template_directory_uri() . '/inc/fonts.css', array() );
