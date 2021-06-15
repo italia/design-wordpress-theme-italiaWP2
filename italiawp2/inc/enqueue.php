@@ -69,31 +69,29 @@ add_action( 'wp_enqueue_scripts', 'italiawp2_theme_style', 11 );
 if ( ! function_exists( 'italiawp2_theme_scripts' ) ) :
 	function italiawp2_theme_scripts() {
 
-		// Register and Enqueue
 		// Vendors scripts
-		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'jquery-ui' );
-		wp_enqueue_script( 'modernizr', get_template_directory_uri() . "/static/js/modernizr.js", array( ) );
-
-		// Italia WP2 theme scripts
-		wp_enqueue_script( 'italiawp2-pre-scripts', get_template_directory_uri() . "/inc/pre-scripts.js", array( ) );
+		wp_enqueue_script( 'modernizr', get_template_directory_uri() . "/static/js/modernizr.js" );
+		wp_deregister_script( 'jquery' );
+		wp_enqueue_script( 'jquery', get_template_directory_uri() . "/static/js/jquery.min.js" );
+		wp_enqueue_script( 'italiawp2-pre-scripts', get_template_directory_uri() . "/inc/pre-scripts.js" );
 
 		// Italia WP2 footer theme scripts
-		wp_enqueue_script( 'italiawp2-popper', get_template_directory_uri() . "/static/js/popper.min.js", array('jquery'), false, true );
-		wp_enqueue_script( 'italiawp2-jquery.magnific-popup', get_template_directory_uri() . "/inc/magnific-popup/jquery.magnific-popup.min.js", array('jquery'), false, true );
-		wp_enqueue_script( 'italiawp2-datepicker-it', get_template_directory_uri() . "/static/js/i18n/datepicker-it.js", array('jquery', 'jquery-ui'), false, true );
-		wp_enqueue_script( 'italiawp2-owl.carousel', get_template_directory_uri() . "/static/js/owl.carousel.min.js", array('jquery'), false, true );
-		wp_enqueue_script( 'italiawp2-bootstrap-italia', get_template_directory_uri() . "/static/js/bootstrap-italia.min.js", array('jquery'), false, true );
-		wp_enqueue_script( 'italiawp2-scripts', get_template_directory_uri() . "/inc/scripts.js", array('italiawp2-bootstrap-italia'), false, true );
-		wp_enqueue_script( 'italiawp2-tema', get_template_directory_uri() . "/static/js/tema.js", array('italiawp2-bootstrap-italia'), false, true );
-
+		wp_enqueue_script( 'popper', get_template_directory_uri() . "/static/js/popper.min.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . "/static/js/jquery-ui.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'italiawp2-datepicker-it', get_template_directory_uri() . "/static/js/i18n/datepicker-it.js", array( 'jquery', 'jquery-ui' ), null, true );
+		wp_enqueue_script( 'italiawp2-owl.carousel', get_template_directory_uri() . "/static/js/owl.carousel.min.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'italiawp2-jquery.magnific-popup', get_template_directory_uri() . "/inc/magnific-popup/jquery.magnific-popup.min.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'italiawp2-bootstrap-italia', get_template_directory_uri() . "/static/js/bootstrap-italia.min.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'italiawp2-scripts', get_template_directory_uri() . "/inc/scripts.js", array( 'jquery' ), null, true );
+		wp_enqueue_script( 'italiawp2-tema', get_template_directory_uri() . "/static/js/tema.js", array( 'jquery' ), null, true );
 		wp_localize_script( 'italiawp2-tema', 'itwp2', array(
 				'siteurl' => get_template_directory_uri()
-			)
-		);
+			) );
 
-		if ( class_exists('AlboPretorio') ) {
-			wp_enqueue_script( 'italiawp2-jquery-ui-1-9-2', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js', array(), false, true );
+
+		if ( class_exists( 'AlboPretorio' ) ) {
+			wp_deregister_script( 'jquery-ui' );
+			wp_enqueue_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js', array(), false, true );
 		}
 	}
 endif;
