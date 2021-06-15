@@ -432,30 +432,77 @@ function italiawp2_register_required_plugins() {
         'is_automatic' => false,
         'message' => '',
         'strings' => array(
-            'page_title' => __('Plugins required by the theme "ItaliaWP"', 'italiawp2'),
-            'menu_title' => __('Plugins required', 'italiawp2'),
-            'installing' => __('Installing Plugin: %s', 'italiawp2'),
-            'updating' => __('Updating Plugin: %s', 'italiawp2'),
-            'oops' => __('Something went wrong with the plugin API.', 'italiawp2'),
-            'notice_can_install_required' => __('"ItaliaWP" theme requires plugins %1$s.', 'italiawp2'),
-            'notice_can_install_recommended' => __('"ItaliaWP" recommends plugins: %1$s.', 'italiawp2'),
-            'notice_ask_to_update' => __('The following plugins must be updated to the latest version to have maximum compatibility with this theme: %1$s.', 'italiawp2'),
-            'notice_ask_to_update_maybe' => __('There are updates available for: %1$s.', 'italiawp2'),
-            'notice_can_activate_required' => __('Required plugins are not active: %1$s.', 'italiawp2'),
-            'notice_can_activate_recommended' => __('Recommended plugins are not active: %1$s.', 'italiawp2'),
-            'install_link' => __('Install Plugins', 'italiawp2'),
-            'update_link' => __('Update Plugins', 'italiawp2'),
-            'activate_link' => __('Activate plugins', 'italiawp2'),
-            'return' => __('Return to Required Plugins Installer', 'italiawp2'),
-            'plugin_activated' => __('Plugin activated successfully.', 'italiawp2'),
-            'activated_successfully' => __('The following plugin was activated successfully:', 'italiawp2'),
-            'plugin_already_active' => __('No action taken. Plugin %1$s was already active.', 'italiawp2'),
-            'plugin_needs_higher_version' => __('Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'italiawp2'),
-            'complete' => __('All plugins installed and activated successfully. %1$s', 'italiawp2'),
-            'dismiss' => __('Dismiss this notice', 'italiawp2'),
-            'notice_cannot_install_activate' => __('There are one or more required or recommended plugins to install, update or activate.', 'italiawp2'),
-            'contact_admin' => __('Please contact the administrator of this site for help.', 'italiawp2'),
-            'nag_type' => '',
+	        'page_title'                      => __( 'Install Required Plugins', 'tgmpa' ),
+	        'menu_title'                      => __( 'Install Plugins', 'tgmpa' ),
+	        /* translators: %s: plugin name. */
+	        'installing'                      => __( 'Installing Plugin: %s', 'tgmpa' ),
+	        /* translators: %s: plugin name. */
+	        'updating'                        => __( 'Updating Plugin: %s', 'tgmpa' ),
+	        'oops'                            => __( 'Something went wrong with the plugin API.', 'tgmpa' ),
+	        'notice_can_install_required'     => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'This theme requires the following plugin: %1$s.',
+		        'This theme requires the following plugins: %1$s.',
+		        'tgmpa'
+	        ),
+	        'notice_can_install_recommended'  => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'This theme recommends the following plugin: %1$s.',
+		        'This theme recommends the following plugins: %1$s.',
+		        'tgmpa'
+	        ),
+	        'notice_ask_to_update'            => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+		        'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+		        'tgmpa'
+	        ),
+	        'notice_ask_to_update_maybe'      => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'There is an update available for: %1$s.',
+		        'There are updates available for the following plugins: %1$s.',
+		        'tgmpa'
+	        ),
+	        'notice_can_activate_required'    => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'The following required plugin is currently inactive: %1$s.',
+		        'The following required plugins are currently inactive: %1$s.',
+		        'tgmpa'
+	        ),
+	        'notice_can_activate_recommended' => _n_noop(
+	        /* translators: 1: plugin name(s). */
+		        'The following recommended plugin is currently inactive: %1$s.',
+		        'The following recommended plugins are currently inactive: %1$s.',
+		        'tgmpa'
+	        ),
+	        'install_link'                    => _n_noop(
+		        'Begin installing plugin',
+		        'Begin installing plugins',
+		        'tgmpa'
+	        ),
+	        'update_link'                     => _n_noop(
+		        'Begin updating plugin',
+		        'Begin updating plugins',
+		        'tgmpa'
+	        ),
+	        'activate_link'                   => _n_noop(
+		        'Begin activating plugin',
+		        'Begin activating plugins',
+		        'tgmpa'
+	        ),
+	        'return'                          => __( 'Return to Required Plugins Installer', 'tgmpa' ),
+	        'dashboard'                       => __( 'Return to the Dashboard', 'tgmpa' ),
+	        'plugin_activated'                => __( 'Plugin activated successfully.', 'tgmpa' ),
+	        'activated_successfully'          => __( 'The following plugin was activated successfully:', 'tgmpa' ),
+	        /* translators: 1: plugin name. */
+	        'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'tgmpa' ),
+	        /* translators: 1: plugin name. */
+	        'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'tgmpa' ),
+	        /* translators: 1: dashboard link. */
+	        'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'tgmpa' ),
+	        'dismiss'                         => __( 'Dismiss this notice', 'tgmpa' ),
+	        'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'tgmpa' ),
+	        'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'tgmpa' ),
         ),
     );
     tgmpa($plugins, $config);

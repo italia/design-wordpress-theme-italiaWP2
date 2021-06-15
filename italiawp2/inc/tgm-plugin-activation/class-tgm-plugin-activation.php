@@ -470,7 +470,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				return;
 			}
 
-			if ( false !== strpos( __FILE__, WP_PLUGIN_DIR ) || false !== strpos( __FILE__, WPMU_PLUGIN_DIR ) ) {
+			if ( false !== strpos( __FILE__, WP_PLUGIN_DIR ) || false !== strpos( __FILE__, WPMU_PLUGIN_DIR ) || false !== strpos( __FILE__, get_template_directory() ) ) {
 				// Plugin, we'll need to adjust the file name.
 				add_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10, 2 );
 				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
@@ -496,6 +496,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function correct_plugin_mofile( $mofile, $domain ) {
 			// Exit early if not our domain (just in case).
+        error_log(print_r("yomama", true));
+        error_log(print_r($mofile, true));
 			if ( 'tgmpa' !== $domain ) {
 				return $mofile;
 			}
