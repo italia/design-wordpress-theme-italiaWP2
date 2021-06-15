@@ -496,8 +496,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 */
 		public function correct_plugin_mofile( $mofile, $domain ) {
 			// Exit early if not our domain (just in case).
-        error_log(print_r("yomama", true));
-        error_log(print_r($mofile, true));
 			if ( 'tgmpa' !== $domain ) {
 				return $mofile;
 			}
