@@ -334,6 +334,11 @@ label {
     border-color: {$color_50} !important;
 }
 
+.btn-outline-primary {
+    -webkit-box-shadow: inset 0 0 0 1px {$color_50};
+    box-shadow: inset 0 0 0 1px {$color_50};
+}
+
 .chip.chip-primary:hover {
     background-color: {$color_50};
 }
@@ -406,6 +411,11 @@ input[type=\"tel\"], input[type=\"text\"], input[type=\"time\"], input[type=\"ur
 
 .btn-primary:hover, .btn-outline-primary:hover {
     border-color: {$color_90} !important;
+}
+
+.btn-outline-primary:hover {
+    -webkit-box-shadow: inset 0 0 0 1px {$color_90};
+    box-shadow: inset 0 0 0 1px {$color_90};
 }
 
 .u-color-95,
@@ -679,10 +689,9 @@ figure figcaption > p:first-of-type {
     color: #fff !important;
 }";
     }
-    echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';
     
     if( getContrastRatio($color_80) >= 0.90 && getContrastRatio($color_80) < 2.50 && getContrastRatio($color_98) <= 4.00 ) {
-        $custom_css = "
+        $custom_css .= "
 #footer, #footer .postFooter, #footer label, #footer caption,
 #footer a,
 .scheda-sito.u-background-80 {

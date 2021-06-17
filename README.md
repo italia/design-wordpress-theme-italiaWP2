@@ -98,7 +98,9 @@ I seguenti plugins WordPress, già compresi o consigliati, sono già gestiti gra
 
 ## Licenza:
 
-Copyright (c) 2018-2020 & moral rights [**Boris Amico**](http://borisamico.it).
+Copyright (c) 2018-2021 & moral rights [**Boris Amico**](http://borisamico.it).
+
+Special thanks to **Erik Golinelli**.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as
