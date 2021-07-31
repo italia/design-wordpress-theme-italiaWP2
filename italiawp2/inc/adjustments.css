@@ -642,6 +642,10 @@ table td:last-child, table th:last-child {
     right: 24px;
 }
 
+.navbar-toggle {
+    z-index: 999999 !important;
+}
+
 /* Logo Amministrazione Afferente */
 
 #mainheader .entesup a > img {
