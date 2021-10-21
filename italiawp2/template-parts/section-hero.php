@@ -4,11 +4,13 @@
  * Solo immagine
  *
  */
+$headerImage = get_header_image();
 ?>
 
+<?php if ($headerImage): ?>
 <style>
     #hero .hero-foto {
-        background-image: url('<?php echo esc_url( get_header_image() ); ?>') !important;
+        background-image: url('<?php echo esc_url( $headerImage ); ?>') !important;
     }
 </style>
 
@@ -17,3 +19,4 @@
         <div class="hero-foto"></div>
     </div>
 </section>
+<?php endif; ?>
