@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-06-16 09:58+0200\n"
-"PO-Revision-Date: 2021-06-16 09:58+0200\n"
+"POT-Creation-Date: 2021-11-03 13:06+0100\n"
+"PO-Revision-Date: 2021-11-03 13:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop\n"
@@ -660,7 +660,7 @@ msgstr "Sfoglia galleria"
 #: template-parts/section-last-news.php:99
 #: template-parts/section-last-news.php:216
 #: template-parts/section-last-one-news.php:61
-#: template-parts/single-loop.php:40
+#: template-parts/single-loop.php:42
 msgid "Categories"
 msgstr "Categorie"
 
@@ -669,13 +669,13 @@ msgstr "Categorie"
 #: template-parts/section-last-news.php:110
 #: template-parts/section-last-news.php:227
 #: template-parts/section-last-one-news.php:74
-#: template-parts/single-loop.php:53
+#: template-parts/single-loop.php:55
 msgid "Topics"
 msgstr "Argomenti"
 
 #: template-parts/attachment-loop.php:54 template-parts/circolare-loop.php:98
 #: template-parts/custom-post-type-loop.php:58 template-parts/page-loop.php:88
-#: template-parts/single-loop.php:113
+#: template-parts/single-loop.php:115
 msgid "Last update"
 msgstr "Ultimo aggiornamento"
 
@@ -695,7 +695,7 @@ msgstr "Pagine collegate"
 msgid "Circular"
 msgstr "Circolare"
 
-#: template-parts/circolare-loop.php:56 template-parts/single-loop.php:70
+#: template-parts/circolare-loop.php:56 template-parts/single-loop.php:72
 msgid "Date"
 msgstr "Data"
 
