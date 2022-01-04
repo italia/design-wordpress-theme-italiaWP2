@@ -253,6 +253,7 @@
 </div>
 
 <?php wp_footer(); ?>
+<script>window.__PUBLIC_PATH__ = '/wp-content/themes/italiawp2/static/fonts';</script>
 
 </body>
 </html>
