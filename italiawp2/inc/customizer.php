@@ -2,12 +2,12 @@
 
 // Set the default favicon if none set into customizer
 if( get_option( 'site_icon', false ) == false ) {
-	add_action( 'wp_head', 'italiawp2_default_favicon' );
-	add_action( 'admin_head', 'italiawp2_default_favicon' );
+    add_action( 'wp_head', 'italiawp2_default_favicon' );
+    add_action( 'admin_head', 'italiawp2_default_favicon' );
 }
 function italiawp2_default_favicon() {
-	//code of the favicon logic
-	printf('<link rel="icon" href="%s" type="image/png" sizes="32x32" />', get_template_directory_uri() . '/favicon.png');
+    //code of the favicon logic
+    printf('<link rel="icon" href="%s" type="image/png" sizes="32x32" />', get_template_directory_uri() . '/favicon.png');
 }
 
 function italiawp2_customize_register($wp_customize) {
@@ -91,6 +91,15 @@ function italiawp2_customize_register($wp_customize) {
         'label' => 'Mappa',
         'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'active_section_map'
     ));
+    
+	/* Cookies & Privacy */
+    $wp_customize->add_setting('disactive_section_cookies', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('disactive_section_cookies', array(
+        'label' => 'Disattiva barra Cookies & Privacy di default (preattivata)',
+        'type' => 'checkbox', 'section' => 'site_settings', 'settings' => 'disactive_section_cookies'
+    ));
 
 	/* Sezione "Preferenze Pagine" nel customizer */
     $wp_customize->add_section('pages_settings', array(
@@ -171,23 +180,23 @@ function italiawp2_customize_register($wp_customize) {
             )
     ));
 
-	// Sanitize function for file input
-	function italiawp2_sanitize_file( $file, $setting ) {
+    // Sanitize function for file input
+    function italiawp2_sanitize_file( $file, $setting ) {
 
-		//allowed file types
-		$mimes = array(
-			'jpg|jpeg|jpe' => 'image/jpeg',
-			'gif'          => 'image/gif',
-			'png'          => 'image/png',
-			'svg'          => 'image/svg'
-		);
+        //allowed file types
+        $mimes = array(
+                'jpg|jpeg|jpe' => 'image/jpeg',
+                'gif'          => 'image/gif',
+                'png'          => 'image/png',
+                'svg'          => 'image/svg'
+        );
 
-		//check file type from file name
-		$file_ext = wp_check_filetype( $file, $mimes );
+        //check file type from file name
+        $file_ext = wp_check_filetype( $file, $mimes );
 
-		//if file has a valid mime type return it, otherwise return default
-		return ( $file_ext['ext'] ? $file : $setting->default );
-	}
+        //if file has a valid mime type return it, otherwise return default
+        return ( $file_ext['ext'] ? $file : $setting->default );
+    }
 }
 add_action('customize_register', 'italiawp2_customize_register');
 
