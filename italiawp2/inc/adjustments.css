@@ -653,3 +653,12 @@ table td:last-child, table th:last-child {
     width: auto;
     position: absolute;
 }
+
+/* Leaflet Map */
+
+#map-container {
+    height: 40vh !important;
+}
+#map, .map {
+    height: 90%;
+}

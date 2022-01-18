@@ -89,7 +89,7 @@ function italiawp2_edit_custom_settings() { ?>
                 <input type="text" name="dettagli-codunivoco" size="100" value="<?php echo get_option('dettagli-codunivoco'); ?>" /></p>
             
             <p><strong>IBAN:</strong><br />
-                <input type="text" name="dettagli-iban" size="27" value="<?php echo get_option('dettagli-iban'); ?>" /></p>
+                <input type="text" name="dettagli-iban" size="100" value="<?php echo get_option('dettagli-iban'); ?>" /></p>
 
             <h3>Link Social</h3>
             
@@ -111,8 +111,27 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>Whatsapp (senza prefisso nazionale [+39] e punteggiatura):</strong><br />
                 <input type="text" name="dettagli-whatsapp" size="100" value="<?php echo get_option('dettagli-whatsapp'); ?>" /></p>
             
-            <p><strong>Google Maps iframe SRC (URL intero con HTTP o HTTPS):</strong><br />
-                <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" /></p>
+            <h3>Maps settings</h3>
+            
+            <p>
+                <strong>Google Maps iframe SRC (URL intero con HTTP o HTTPS):</strong><br />
+                <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" />
+            </p>
+
+            <p>
+                <strong>Latitudine:</strong><br />
+                <input type="text" name="dettagli-map-latitude" size="40" value="<?php echo get_option('dettagli-map-latitude'); ?>" />
+            </p>
+
+            <p>
+                <strong>Longitudine:</strong><br />
+                <input type="text" name="dettagli-map-longitude" size="40" value="<?php echo get_option('dettagli-map-longitude'); ?>" />
+            </p>
+
+            <p>
+                <strong>Testo nel popup del marker (<i>é possibile usare HTML</i>):</strong><br />
+                <input type="text" name="dettagli-map-longitude" size="40" value="<?php echo get_option('dettagli-map-popup'); ?>" />
+            </p>
 
             <p><input type="submit" class="button button-primary" name="Submit" value="SALVA" /></p>
 
@@ -126,6 +145,7 @@ function italiawp2_edit_custom_settings() { ?>
                                                             dettagli-email,dettagli-pec,dettagli-cfpiva,dettagli-facebook,
                                                             dettagli-twitter,dettagli-youtube,dettagli-instagram,
                                                             dettagli-telegram,dettagli-whatsapp,dettagli-map,
+                                                            dettagli-map-latitude,dettagli-map-longitude,dettagli-map-popup,
                                                             dettagli-email2,dettagli-url-accedi,dettagli-codunivoco,
                                                             dettagli-iban" />
 

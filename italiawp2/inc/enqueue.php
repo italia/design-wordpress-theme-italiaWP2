@@ -62,6 +62,7 @@ if (!function_exists('italiawp2_theme_style')) :
         // vandors style
         wp_enqueue_style('italiawp2-magnific-popup/magnific-popup', get_template_directory_uri() . '/inc/magnific-popup/magnific-popup.css', array());
         wp_enqueue_style('italiawp2-gutenberg', get_template_directory_uri() . '/inc/gutenberg.css', array());
+        wp_enqueue_style('italiawp2-leaflet', get_template_directory_uri() . '/static/css/leaflet.css', array());
         wp_enqueue_style('italiawp2_adjustments_css', get_template_directory_uri() . '/inc/adjustments.css', array());
     }
 
@@ -79,6 +80,7 @@ if (!function_exists('italiawp2_theme_scripts')) :
         wp_enqueue_script('modernizr', get_template_directory_uri() . "/static/js/modernizr.js");
         wp_deregister_script('jquery');
         wp_enqueue_script('jquery', get_template_directory_uri() . "/static/js/jquery.min.js");
+        wp_enqueue_script('leaflet', get_template_directory_uri() . "/static/js/leaflet.js");
         wp_enqueue_script('italiawp2-pre-scripts', get_template_directory_uri() . "/inc/pre-scripts.js");
 
         // Italia WP2 footer theme scripts
