@@ -7,7 +7,7 @@
 ?>
 
 
-<?php if (get_option('dettagli-map') != "" ): ?>
+<?php if (get_option('dettagli-map') !== "" ): ?>
     <section id="mappa" class="section">
         <div class="container">
             <div class="row">
@@ -25,7 +25,7 @@
     </section>
 <?php endif; ?>
 
-<?php if (get_option('dettagli-map-latitude')  != "" and get_option('dettagli-map-latitude')  != ""): ?>
+<?php if ((get_option('dettagli-map-latitude') !== "") && (get_option('dettagli-map-longitude')  !== "")): ?>
     <section id="mappa" class="section">
         <div class="container">
             <div class="row">
@@ -38,7 +38,10 @@
         <div id="map-container" class="container-fluid container-sm">
             <div id="map" class="map map-color mt-3"></div>
             <script>
-                const c = [<?php echo get_option('dettagli-map-latitude') ?>, <?php echo get_option('dettagli-map-longitude') ?>];
+                const c = [
+                    <?php echo get_option('dettagli-map-latitude') ?>, 
+                    <?php echo get_option('dettagli-map-longitude') ?>
+                ];
                 
                 let map = new L.map('map');
                 map.setView(c,100);
