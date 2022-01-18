@@ -130,7 +130,7 @@ function italiawp2_edit_custom_settings() { ?>
 
             <p>
                 <strong>Testo nel popup del marker (<i>é possibile usare HTML</i>):</strong><br />
-                <input type="text" name="dettagli-map-longitude" size="40" value="<?php echo get_option('dettagli-map-popup'); ?>" />
+                <input type="text" name="dettagli-map-popup" size="40" value="<?php echo get_option('dettagli-map-popup'); ?>" />
             </p>
 
             <p><input type="submit" class="button button-primary" name="Submit" value="SALVA" /></p>

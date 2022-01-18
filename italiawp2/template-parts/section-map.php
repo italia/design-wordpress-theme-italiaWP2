@@ -52,7 +52,7 @@
                 
                 let marker = L.marker(c).addTo(map);
                 <?php if (get_option('dettagli-map-popup')!=''): ?>
-                    marker.bindPopup(<?php echo sanitize_text_field(get_option('dettagli-map')); ?>).openPopup();
+                    marker.bindPopup("<?php echo get_option('dettagli-map-popup'); ?>").openPopup();
                     <?php else :
                         echo "marker.bindPopup(\"<span>";
                         echo get_option('blogname');
