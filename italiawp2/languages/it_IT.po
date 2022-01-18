@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-01-05 10:03+0100\n"
-"PO-Revision-Date: 2022-01-05 10:03+0100\n"
+"POT-Creation-Date: 2022-01-18 17:59+0100\n"
+"PO-Revision-Date: 2022-01-18 17:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -141,16 +141,16 @@ msgstr "Email"
 
 #: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
 #: footer.php:192 footer.php:204 menu.php:84 menu.php:93 menu.php:105
-#: menu.php:117 menu.php:129 menu.php:141 menu.php:153 menu.php:207
-#: menu.php:217 menu.php:229 menu.php:241 menu.php:253 menu.php:265
-#: menu.php:277
+#: menu.php:117 menu.php:129 menu.php:141 menu.php:153 menu.php:212
+#: menu.php:222 menu.php:234 menu.php:246 menu.php:258 menu.php:270
+#: menu.php:282
 msgid "Follow us on"
 msgstr "Seguici su"
 
 #: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
 #: footer.php:199 menu.php:8 menu.php:88 menu.php:100 menu.php:112 menu.php:124
-#: menu.php:136 menu.php:148 menu.php:212 menu.php:224 menu.php:236
-#: menu.php:248 menu.php:260 menu.php:272
+#: menu.php:136 menu.php:148 menu.php:217 menu.php:229 menu.php:241
+#: menu.php:253 menu.php:265 menu.php:277
 msgid "Link to external site"
 msgstr "Collegamento a sito esterno"
 
@@ -577,7 +577,7 @@ msgstr "Attiva / disattiva la navigazione"
 msgid "Main menu"
 msgstr "Menu principale"
 
-#: menu.php:308
+#: menu.php:313
 msgid "close"
 msgstr "chiusi"
 
@@ -772,11 +772,11 @@ msgstr "Notizie"
 msgid "All the news"
 msgstr "Tutte le novità"
 
-#: template-parts/section-map.php:13
+#: template-parts/section-map.php:15 template-parts/section-map.php:34
 msgid "Interactive Map"
 msgstr "Mappa Interattiva"
 
-#: template-parts/section-map.php:14
+#: template-parts/section-map.php:16
 msgid "Click on to activate"
 msgstr "Clicca su per attivare"
 

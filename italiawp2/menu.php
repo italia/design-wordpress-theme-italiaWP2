@@ -194,7 +194,12 @@
             <div class="logotxt">
                 <h1>
                     <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-                        <?php bloginfo('name'); ?>
+                        <?php $blog_name = get_bloginfo('name'); ?>
+                        <?php if(strlen($blog_name)<=25) : ?>
+                            <?php echo $blog_name; ?>
+                        <?php else : ?>
+                            <small><?php echo $blog_name; ?></small>
+                        <?php endif; ?>
                     </a>
                 </h1>
             </div>

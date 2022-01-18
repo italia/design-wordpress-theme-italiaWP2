@@ -125,11 +125,18 @@ jQuery(function ($) {
 
         $('#menu-principale > li').each(function (i) {
             $(this).find("ul.dropdown-menu").removeClass("drodownmenu-on-right");
+            
             let posiLi = $(this).position().left;
-
-            if (((i + 1) > (numLi / 2)) && (posiLi > largWi)) {
-                $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
+            let ul = $($(this).find("ul")[0]);
+            
+            if(ul.children().length < 4) {
+                if (((i + 1) > (numLi / 2)) && (posiLi > largWi)) {
+                    $(this).find("ul.dropdown-menu").addClass("drodownmenu-on-right");
+                }
+            }else{
+                $(this).addClass('megamenu');
             }
+            
         });
         return;
     }

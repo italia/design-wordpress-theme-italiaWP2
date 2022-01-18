@@ -4,6 +4,9 @@
 add_action('admin_menu', 'italiawp2_add_custom_interface');
 function italiawp2_add_custom_interface() {
     add_menu_page('Dettagli', 'Dettagli', 'manage_options', 'functions', 'italiawp2_edit_custom_settings');
+    
+    /* Per inserire la voce "Dettagli" nel menu Aspetto */
+    //add_theme_page('ItaliaWP2 - Dettagli', 'ItaliaWP2 - Dettagli', 'edit_theme_options', 'functions', 'italiawp2_edit_custom_settings');
 }
 
 function italiawp2_edit_custom_settings() { ?>
@@ -12,7 +15,7 @@ function italiawp2_edit_custom_settings() { ?>
         <form method="post" action="options.php">
             <?php wp_nonce_field('update-options') ?>
             
-            <h3>Altro</h3>
+            <br><h3>Altro</h3><hr>
             
             <p><strong>Link alla "Dichiarazione di accessibilità AGID" (URL intero con HTTP o HTTPS):</strong><br />
                 <input type="text" name="dettagli-link-accessibilita" size="100" value="<?php echo get_option('dettagli-link-accessibilita'); ?>" /></p>
@@ -26,7 +29,7 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>Numero ultimi articoli in Home (consigliati multipli di 3):</strong><br />
                 <input type="text" name="dettagli-num-articoli" size="10" value="<?php echo get_option('dettagli-num-articoli'); ?>" /></p>
             
-            <h3>Informazioni</h3>
+            <br><h3>Informazioni</h3><hr>
             
             <p><strong>Nome amministrazione afferente (compare in caso di assenza del campo successivo):</strong><br />
                 <input type="text" name="dettagli-nome-ammin-afferente" size="100" value="<?php echo get_option('dettagli-nome-ammin-afferente'); ?>" /></p>
@@ -37,7 +40,7 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>URL amministrazione afferente (con HTTP o HTTPS):</strong><br />
                 <input type="text" name="dettagli-url-ammin-afferente" size="100" value="<?php echo get_option('dettagli-url-ammin-afferente'); ?>" /></p>
             
-            <h3>ID pagine</h3>
+            <br><h3>ID pagine</h3><hr>
             
             <p><strong>ID pagina Privacy:</strong><br />
                 <input type="text" name="dettagli-id-privacy" size="10" value="<?php echo get_option('dettagli-id-privacy'); ?>" /></p>
@@ -51,12 +54,12 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>ID pagina Contatti:</strong><br />
                 <input type="text" name="dettagli-id-contatti" size="10" value="<?php echo get_option('dettagli-id-contatti'); ?>" /></p>
             
-            <h3>Link "Accedi" in Header</h3>
+            <br><h3>Link "Accedi" in Header</h3><hr>
             
             <p><strong>URL per il bottone "Accedi": (con HTTP o HTTPS)</strong><br />
                 <input type="text" name="dettagli-url-accedi" size="100" value="<?php echo get_option('dettagli-url-accedi'); ?>" /></p>
             
-            <h3>Contatti</h3>
+            <br><h3>Contatti</h3><hr>
 
             <p><strong>Indirizzo:</strong><br />
                 <input type="text" name="dettagli-indirizzo" size="100" value="<?php echo get_option('dettagli-indirizzo'); ?>" /></p>
@@ -89,9 +92,9 @@ function italiawp2_edit_custom_settings() { ?>
                 <input type="text" name="dettagli-codunivoco" size="100" value="<?php echo get_option('dettagli-codunivoco'); ?>" /></p>
             
             <p><strong>IBAN:</strong><br />
-                <input type="text" name="dettagli-iban" size="27" value="<?php echo get_option('dettagli-iban'); ?>" /></p>
+                <input type="text" name="dettagli-iban" size="100" value="<?php echo get_option('dettagli-iban'); ?>" /></p>
 
-            <h3>Link Social</h3>
+            <br><h3>Link Social</h3><hr>
             
             <p><strong>Facebook (URL intero con HTTP o HTTPS):</strong><br />
                 <input type="text" name="dettagli-facebook" size="100" value="<?php echo get_option('dettagli-facebook'); ?>" /></p>
@@ -111,8 +114,32 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>Whatsapp (senza prefisso nazionale [+39] e punteggiatura):</strong><br />
                 <input type="text" name="dettagli-whatsapp" size="100" value="<?php echo get_option('dettagli-whatsapp'); ?>" /></p>
             
+            <?php /*<p><strong>Google Maps iframe SRC (URL intero con HTTP o HTTPS):</strong><br />
+                <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" /></p>*/ ?>
+            
+            <br><h3>Configurazione Mappa</h3><hr>
+            <ul>
+                <li>Per utilizzare la mappa di <strong>Google</strong> riempire il 1° campo.</li>
+                <li>Per utilizzare la mappa di <strong>OpenStreet</strong> riempire i campi relativi a <strong>Latitudine e Longitudine</strong> lasciando vuoto il 1° campo.</li>
+            </ul>
+            <br>
+
             <p><strong>Google Maps iframe SRC (URL intero con HTTP o HTTPS):</strong><br />
-                <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" /></p>
+                <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" />
+            </p>
+
+            <p><strong>Latitudine:</strong><br />
+                <input type="text" name="dettagli-map-latitude" size="40" value="<?php echo get_option('dettagli-map-latitude'); ?>" />
+            </p>
+
+            <p><strong>Longitudine:</strong><br />
+                <input type="text" name="dettagli-map-longitude" size="40" value="<?php echo get_option('dettagli-map-longitude'); ?>" />
+            </p>
+
+            <p><strong>[Facoltativo] Testo nel popup del marker (<i>é possibile usare HTML</i>):</strong><br />
+                <input type="text" name="dettagli-map-popup" size="40" value="<?php echo get_option('dettagli-map-popup'); ?>" />
+            </p>
+            <br>
 
             <p><input type="submit" class="button button-primary" name="Submit" value="SALVA" /></p>
 
@@ -126,6 +153,7 @@ function italiawp2_edit_custom_settings() { ?>
                                                             dettagli-email,dettagli-pec,dettagli-cfpiva,dettagli-facebook,
                                                             dettagli-twitter,dettagli-youtube,dettagli-instagram,
                                                             dettagli-telegram,dettagli-whatsapp,dettagli-map,
+                                                            dettagli-map-latitude,dettagli-map-longitude,dettagli-map-popup,
                                                             dettagli-email2,dettagli-url-accedi,dettagli-codunivoco,
                                                             dettagli-iban" />
 

@@ -136,7 +136,8 @@ table#wp-calendar tfoot td {
     margin: 0 auto -7px !important;
 }
 
-.map-full-content > iframe {
+.map-full-content > iframe,
+.map-container {
     width: 100%;
     height: 500px;
     margin: 0;
@@ -615,6 +616,12 @@ table td:last-child, table th:last-child {
     margin: 0;
 }
 
+.logotxt h1 small {
+    font-size: .9rem;
+    vertical-align: super;
+    font-weight: 600;
+}
+
 /* Fix Menu Lingue Polylang */
 
 .cbp-spmenu .pll-parent-menu-item img + span {
@@ -644,6 +651,10 @@ table td:last-child, table th:last-child {
 
 .navbar-toggle {
     z-index: 999999 !important;
+}
+
+.navbar .navbar-collapsable .menu-wrapper .nav-item.megamenu .dropdown-menu {
+    padding: 0.5rem 0 !important;
 }
 
 /* Logo Amministrazione Afferente */
