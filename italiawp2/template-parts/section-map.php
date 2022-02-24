@@ -41,6 +41,8 @@
         <div id="map" class="map-container"><!--class="container-fluid container-sm"-->
             <!--<div id="map" class="map map-color mt-3"></div>-->
             <script>
+            $(document).ready(function () {
+    
                 const c = [
                     <?php echo get_option('dettagli-map-latitude') ?>, 
                     <?php echo get_option('dettagli-map-longitude') ?>
@@ -59,6 +61,8 @@
                 <?php else : ?>
                     marker.bindPopup("<span><strong><?php echo get_option('blogname'); ?></strong><br><?php echo get_option('dettagli-indirizzo'); ?><br><?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>").openPopup();
                 <?php endif; ?>
+    
+            });
             </script>
         </div>
     </section>

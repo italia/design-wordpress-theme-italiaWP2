@@ -220,7 +220,7 @@ body.ridotto {
 }
 
 #mainheader .preheader .accedi {
-    margin: 0 0 0 24px;
+    margin: 0 0 0 15px;
     border:0;
     text-align: center;
     height: 40px;
@@ -2312,7 +2312,7 @@ button.btn.btn-default.btn-trasparente.active:focus {border: 2px solid #FF8C00 !
     #mainheader .preheader .accedi {
         border-left: 2px solid #003882;
         margin: 0;
-        padding: 0 0 0 16px;
+        padding: 0;
     }
 
     #mainheader .preheader .accedi .btn-accedi {

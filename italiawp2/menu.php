@@ -23,6 +23,22 @@
             <?php } ?>
 
                 <div class="float-right">
+                    
+                    
+                    <?php if (has_nav_menu('menu-alto')) { ?>
+                    <div class="float-left text-right">
+                    <?php
+                        $menu = array(
+                            'theme_location' => 'menu-alto',
+                            'menu_id' => 'menu-alto',
+                            'menu_class' => ''
+                        );
+                        echo strip_tags(wp_nav_menu($menu)); ?>
+                    </div>
+                    <?php } ?>
+                    
+                    
+                    
                     <!-- accedi -->
                     <?php if (get_option('dettagli-url-accedi') != "") { ?>
                     <div class="accedi float-left text-right">
@@ -163,7 +179,7 @@
 <!-- Inizio Intestazione -->
 <div class="container header">
     <div class="row clearfix header-tablet">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-7 comune">
+        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-7 comune">
             <div class="logoprint">
                 <h1>
                     <?php
@@ -205,11 +221,11 @@
             </div>
         </div>
 
-        <div class="header-social col-xl-4 col-lg-4 d-none d-lg-block d-md-none pull-right text-right">
+        <div class="header-social col-xl-3 col-lg-3 d-none d-lg-block d-md-none pull-right text-right">
             <!-- Inizio Social-->
             <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" )): ?>
             <ul class="list-inline text-right social">
-                <li class="small list-inline-item"><?php echo __('Follow us on','italiawp2'); ?></li>
+                <?php/*<li class="small list-inline-item"><?php echo __('Follow us on','italiawp2'); ?></li>*/?>
                 
                 <?php if (get_option('dettagli-facebook') != ""): ?>
                     <li class="list-inline-item">

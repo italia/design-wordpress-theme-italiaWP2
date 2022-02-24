@@ -54,6 +54,14 @@ a:hover {
     margin-left: 5px;
 }
 
+.icon-external-link-img {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    margin: -10px 0 0 !important;
+    filter: drop-shadow(1px 1px 2px rgb(0 0 0 / .7));
+}
+
 .scheda-news .flag-icon {
     position: absolute;
     margin-top: -24px;
@@ -334,6 +342,7 @@ img.size-thumbnail {
 .box-servizi img {
     height: auto !important;
     width: calc(100% + 32px) !important;
+    max-width: calc(100% + 32px) !important;
     margin: -16px -16px 14px !important;
     border-radius: 4px 4px 0 0 !important;
 }
@@ -663,4 +672,26 @@ table td:last-child, table th:last-child {
     height: 100%;
     width: auto;
     position: absolute;
+}
+
+/* Menu in alto */
+
+#menu-alto {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-alto li {
+    display: none;
+    margin: 0 3px;
+    font-weight: normal;
+}
+
+#menu-alto li:nth-of-type(-n+3) {
+    display: inline-block;
+}
+
+#menu-alto li > ul {
+    display: none;
 }

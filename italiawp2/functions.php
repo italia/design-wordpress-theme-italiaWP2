@@ -28,6 +28,7 @@ if (!function_exists('italiawp2_theme_setup')) :
         // This theme uses wp_nav_menu() in Primary Navigation.
         register_nav_menus(array(
             'menu-principale' => 'Menu Principale',
+            'menu-alto' => 'Menu in alto',
             'box-servizi-1' => esc_html__('Box Servizi 1', 'italiawp2'),
             'box-servizi-2' => esc_html__('Box Servizi 2', 'italiawp2'),
             'box-servizi-3' => esc_html__('Box Servizi 3', 'italiawp2'),

@@ -66,9 +66,14 @@ jQuery(function ($) {
             if ($(this).size() && $("img", this).size()) {
                 if ($(this).html().replace(/<img[^>]*>/g, "") == 0) $(this).addClass("no-padding");
             }
-
+            
             if ($(this).parent().find('.icon-external-link').length) {
                 let link = $(this).parent().find('.icon-external-link');
+                
+                if ( (link.parent().not('.no-padding').find('img').not('.icona').length) && ($(this).not('.no-padding').length == 0) ) {
+                    link[0].classList.add("icon-external-link-img");
+                }
+                
                 $(this).append(link);
             }
         });
