@@ -225,7 +225,6 @@
             <!-- Inizio Social-->
             <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" )): ?>
             <ul class="list-inline text-right social">
-                <?php/*<li class="small list-inline-item"><?php echo __('Follow us on','italiawp2'); ?></li>*/?>
                 
                 <?php if (get_option('dettagli-facebook') != ""): ?>
                     <li class="list-inline-item">

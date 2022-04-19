@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-02-24 11:00+0100\n"
-"PO-Revision-Date: 2022-02-24 11:00+0100\n"
+"POT-Creation-Date: 2022-04-19 12:15+0200\n"
+"PO-Revision-Date: 2022-04-19 12:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -141,15 +141,15 @@ msgstr "Email"
 
 #: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
 #: footer.php:192 footer.php:204 menu.php:100 menu.php:109 menu.php:121
-#: menu.php:133 menu.php:145 menu.php:157 menu.php:169 menu.php:238
-#: menu.php:250 menu.php:262 menu.php:274 menu.php:286 menu.php:298
+#: menu.php:133 menu.php:145 menu.php:157 menu.php:169 menu.php:237
+#: menu.php:249 menu.php:261 menu.php:273 menu.php:285 menu.php:297
 msgid "Follow us on"
 msgstr "Seguici su"
 
 #: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
 #: footer.php:199 menu.php:8 menu.php:104 menu.php:116 menu.php:128
-#: menu.php:140 menu.php:152 menu.php:164 menu.php:233 menu.php:245
-#: menu.php:257 menu.php:269 menu.php:281 menu.php:293
+#: menu.php:140 menu.php:152 menu.php:164 menu.php:232 menu.php:244
+#: menu.php:256 menu.php:268 menu.php:280 menu.php:292
 msgid "Link to external site"
 msgstr "Collegamento a sito esterno"
 
@@ -576,7 +576,7 @@ msgstr "Attiva / disattiva la navigazione"
 msgid "Main menu"
 msgstr "Menu principale"
 
-#: menu.php:329
+#: menu.php:328
 msgid "close"
 msgstr "chiusi"
 
@@ -587,6 +587,14 @@ msgstr "Cerca"
 #: searchform_sidebar.php:2
 msgid "Search for Topics"
 msgstr "Cerca Argomenti"
+
+#: static/js/bootstrap-italia.bundle.min.js:7
+msgid "up"
+msgstr ""
+
+#: static/js/bootstrap-italia.bundle.min.js:7
+msgid "down"
+msgstr ""
 
 #: tag.php:16 template-parts/section-last-news.php:283
 msgid "Other topics"

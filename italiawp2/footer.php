@@ -252,7 +252,7 @@
   </svg>
 </div>
 
-<script>window.__PUBLIC_PATH__ = '/wp-content/themes/italiawp2/static/fonts';</script>
+<script>window.__PUBLIC_PATH__ = '<?php echo bloginfo('template_directory'); ?>/static/fonts';</script>
 <?php wp_footer(); ?>
 
 </body>
