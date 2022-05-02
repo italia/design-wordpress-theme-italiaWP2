@@ -78,8 +78,19 @@ if (!function_exists('italiawp2_theme_scripts')) :
 
         // Vendors scripts
         wp_enqueue_script('modernizr', get_template_directory_uri() . "/static/js/modernizr.js");
+        
         //wp_deregister_script('jquery');
         //wp_enqueue_script('jquery', get_template_directory_uri() . "/static/js/jquery.min.js");
+        
+        //function load_jquery() {
+        if (!wp_script_is('jquery', 'enqueued')) {
+            //wp_enqueue_script('jquery');
+            wp_enqueue_script('jquery', get_template_directory_uri() . "/static/js/jquery.min.js");
+        }
+        //}
+
+        add_action('wp_enqueue_scripts', 'load_jquery');
+
         wp_enqueue_script('leaflet', get_template_directory_uri() . "/static/js/leaflet.js");
         wp_enqueue_script('italiawp2-pre-scripts', get_template_directory_uri() . "/inc/pre-scripts.js");
 
