@@ -109,12 +109,32 @@ nav.u-layout-prose {
     overflow: hidden;
 }
 
-table#wp-calendar * {
+table#wp-calendar *,
+.wp-block-calendar * {
     text-align: center !important;
 }
 
-table#wp-calendar td, table#wp-calendar th {
+table#wp-calendar td, table#wp-calendar th,
+.wp-block-calendar td, .wp-block-calendar th {
     padding: 0.3em !important;
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+}
+
+table#wp-calendar th,
+.wp-block-calendar th {
+    font-weight: bold !important;
+}
+
+table#wp-calendar a,
+.wp-block-calendar a {
+    text-decoration: none !important;
+}
+
+table#wp-calendar a:hover,
+.wp-block-calendar a:hover {
+    text-decoration: underline !important;
 }
 
 .Footer-block .calendar_wrap {
@@ -201,6 +221,11 @@ button.mfp-close {
 
 .Forward {
     cursor: pointer;
+}
+
+.italiawp2-sidebar .wp-block-latest-posts__post-author,
+.italiawp2-sidebar .wp-block-latest-posts__post-date {
+    padding: 0 24px;
 }
 
 .italiawp2-sidebar .italiawp2-search .Linklist-link.Linklist-link--lev2 {

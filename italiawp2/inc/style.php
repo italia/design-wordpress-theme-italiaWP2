@@ -118,7 +118,9 @@ function italiawp2_dymanic_styles() {
 .Bullets>li:before, .Footer, .Footer-blockTitle, .Footer-subTitle, .Form-input.Form-input:focus+[role=tooltip],
 .Linklist-link.Linklist-link--lev1, .Linklist-link.Linklist-link--lev1:hover, .Megamenu--default .Megamenu-item>a,
 .ScrollTop, .ScrollTop-icon, .Share-reveal>a>span, .Share-revealIcon, .Share>ul>li, .Share>ul>li>a, .Spid-button,
-.Footer-block li, .Footer-subBlock {
+.Footer-block li, .Footer-subBlock,
+#footer .wp-calendar-table,
+#footer .wp-block-calendar table tbody {
   color: {$color_white} !important;
 }
 
@@ -260,7 +262,11 @@ label {
 }
 
 .u-color-10,
-#footer, #footer .postFooter, #footer label, #footer caption {
+#footer, #footer .postFooter, #footer label, #footer caption,
+#footer .wp-calendar-table th,
+#footer .wp-block-calendar th,
+table#wp-calendar a,
+.wp-block-calendar a {
   color: {$color_10} !important;
 }
 
@@ -504,6 +510,7 @@ section .pagination .page-item .page-numbers svg.icon {
 
 .argomenti a.badge-argomenti:hover,
 .italiawp2-sidebar .btn-cerca,
+.italiawp2-sidebar .wp-block-search__button,
 .scheda-news .scheda-argomenti a.badge-argomenti:hover {
     background-color: {$color_95};
 }

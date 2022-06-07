@@ -7,7 +7,7 @@ jQuery(function ($) {
         $(".form-submit > input").addClass("btn btn-default");
 
         /* Metto la data dei post nel titolo (nella sidebar) */
-        $(".italiawp2-sidebar > ul > li").each(function () {
+        $(".italiawp2-sidebar > ul > li, .italiawp2-sidebar > .wp-widget-group__inner-blocks > ul > li").each(function () {
             if ($('> span', this).length === 1 && $('> a', this).length === 1) {
                 let span = $(this).find('span');
                 let a = $(this).find('a');
@@ -25,9 +25,11 @@ jQuery(function ($) {
         $("blockquote").addClass("callout important callout-punti");
 
         /* Sistemo gli elenchi nella sidebar */
-        $(".italiawp2-sidebar > ul li a").addClass("list-group-item list-group-item-action");
-        $(".italiawp2-sidebar > ul li").changeElementType('span');
-        $(".italiawp2-sidebar > ul").addClass("list-group lista-paragrafi").changeElementType('div');
+        $(".italiawp2-sidebar > ul li a, .italiawp2-sidebar > .wp-widget-group__inner-blocks > ul li a").addClass("list-group-item list-group-item-action");
+        $(".italiawp2-sidebar > ul li, .italiawp2-sidebar > .wp-widget-group__inner-blocks > ul li").changeElementType('span');
+        $(".italiawp2-sidebar > ul, .italiawp2-sidebar > .wp-widget-group__inner-blocks > ul").addClass("list-group lista-paragrafi").changeElementType('div');
+        
+        $(".italiawp2-sidebar .wp-block-search").parent().addClass("cerca");
 
         /* Sistemo la mappa in home */
         mapWrap();

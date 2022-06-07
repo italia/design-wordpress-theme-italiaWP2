@@ -474,7 +474,8 @@ body.ridotto {
 }
 
 #mainheader .btn-cerca,
-.italiawp2-sidebar .btn-cerca {
+.italiawp2-sidebar .btn-cerca,
+.italiawp2-sidebar .wp-block-search__button {
     height: 44px;
     width: 44px;
     border: 0;
@@ -484,11 +485,13 @@ body.ridotto {
     background: #fff;
 }
 
-.italiawp2-sidebar .btn-cerca {
+.italiawp2-sidebar .btn-cerca,
+.italiawp2-sidebar .wp-block-search__button {
     color: #fff;
 }
 
-.italiawp2-sidebar .btn-cerca .icon {
+.italiawp2-sidebar .btn-cerca .icon,
+.italiawp2-sidebar .wp-block-search__button .icon {
     fill: #fff !important;
 }
 
