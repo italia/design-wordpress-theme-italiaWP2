@@ -296,8 +296,9 @@ function italiawp2_create_breadcrumbs() {
         $homeLink = get_bloginfo('url');
         echo '<li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a><span class="separator">/</span></li>';
 
-        if (is_category()) {
-            global $wp_query;
+        if ($customBreadcrumb = apply_filters('italiawp2_custom_breadbrumbs', false)) {
+            echo $customBreadcrumb;
+        } else if (is_category()) {            global $wp_query;
             $cat_obj = $wp_query->get_queried_object();
             $thisCat = $cat_obj->term_id;
             $thisCat = get_category($thisCat);
