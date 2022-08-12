@@ -110,8 +110,9 @@ if (!function_exists('italiawp2_theme_setup')) :
         add_theme_support('editor-styles');
 
         // Enqueue editor styles and fonts.
-        add_editor_style('assets/dist/css/editor.css');
-        add_editor_style('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@300,400,600,700&display=swap'); // todo: make this dynamic
+        add_editor_style(get_template_directory_uri().'/inc/editor.css');
+        add_editor_style(get_template_directory_uri().'/inc/fonts.css');
+        
         // Add support for responsive embedded content.
         add_theme_support('responsive-embeds');
 
