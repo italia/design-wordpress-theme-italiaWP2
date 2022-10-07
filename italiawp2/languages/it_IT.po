@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-06-07 16:39+0200\n"
-"PO-Revision-Date: 2022-06-07 16:39+0200\n"
+"POT-Creation-Date: 2022-10-07 16:46+0200\n"
+"PO-Revision-Date: 2022-10-07 16:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -197,70 +197,70 @@ msgstr "Prototipo per siti PA di AgID"
 msgid "Go up"
 msgstr "Torna su"
 
-#: functions.php:125
+#: functions.php:126
 msgid "Black"
 msgstr "Nero"
 
-#: functions.php:130
+#: functions.php:131
 msgid "White"
 msgstr "Bianco"
 
-#: functions.php:135
+#: functions.php:136
 msgid "Primary Color"
 msgstr "Colore Primario"
 
-#: functions.php:140
+#: functions.php:141
 msgid "Light Primary Color"
 msgstr "Colore Primario Chiaro"
 
-#: functions.php:145
+#: functions.php:146
 msgid "Dark Primary Color"
 msgstr "Colore Primario Scuro"
 
-#: functions.php:150
+#: functions.php:151
 msgid "Complementary Color"
 msgstr "Colore Complementare"
 
-#: functions.php:436
+#: functions.php:519
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
 msgstr "Installa plugin richiesti"
 
-#: functions.php:437
+#: functions.php:520
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:439
+#: functions.php:522
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:441
+#: functions.php:524
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:442
+#: functions.php:525
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:445
+#: functions.php:528
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgstr "Questo tema richiede il seguente plugin: %1$s."
 
-#: functions.php:451
+#: functions.php:534
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:349
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgstr "Questo tema consiglia il seguente plugin: %1$s."
 
-#: functions.php:457
+#: functions.php:540
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:355
 #, php-format
 msgid ""
@@ -270,67 +270,67 @@ msgstr ""
 "Il seguente plugin deve essere aggiornato all’ultima versione per garantire "
 "la massima compatibilità con questo tema: %1$s."
 
-#: functions.php:463
+#: functions.php:546
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:361
 #, php-format
 msgid "There is an update available for: %1$s."
 msgstr "È disponibile un aggiornamento per: %1$s."
 
-#: functions.php:469
+#: functions.php:552
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:367
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin richiesto è attualmente inattivo: %1$s."
 
-#: functions.php:475
+#: functions.php:558
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin consigliato è attualmente inattivo: %1$s."
 
-#: functions.php:480
+#: functions.php:563
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:378
 msgid "Begin installing plugin"
 msgstr "Inizia installazione del plugin"
 
-#: functions.php:485
+#: functions.php:568
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:383
 msgid "Begin updating plugin"
 msgstr "Inizia aggiornamento del plugin"
 
-#: functions.php:490
+#: functions.php:573
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
 msgid "Begin activating plugin"
 msgstr "Inizia attivazione del plugin"
 
-#: functions.php:494
+#: functions.php:577
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:495
+#: functions.php:578
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:393
 msgid "Return to the Dashboard"
 msgstr "Ritorna alla Dashboard"
 
-#: functions.php:496
+#: functions.php:579
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:497
+#: functions.php:580
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:499
+#: functions.php:582
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:501
+#: functions.php:584
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -340,18 +340,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:503
+#: functions.php:586
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:504
+#: functions.php:587
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:505
+#: functions.php:588
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -360,7 +360,7 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:506
+#: functions.php:589
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
@@ -596,7 +596,7 @@ msgstr ""
 msgid "down"
 msgstr ""
 
-#: tag.php:16 template-parts/section-last-news.php:283
+#: tag.php:16 template-parts/section-last-news.php:305
 msgid "Other topics"
 msgstr "Altri argomenti"
 
@@ -644,9 +644,9 @@ msgstr "Gruppi"
 #: template-parts/section-gallery-carousel.php:93
 #: template-parts/section-last-circolari.php:82
 #: template-parts/section-last-circolari.php:102
-#: template-parts/section-last-news.php:122
-#: template-parts/section-last-news.php:239
-#: template-parts/section-last-news.php:301
+#: template-parts/section-last-news.php:137
+#: template-parts/section-last-news.php:263
+#: template-parts/section-last-news.php:323
 #: template-parts/section-last-one-news.php:86
 msgid "Go to the page"
 msgstr "Vai alla pagina"
@@ -655,8 +655,8 @@ msgstr "Vai alla pagina"
 #: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
 #: template-parts/search-loop.php:68 template-parts/search-loop.php:70
 #: template-parts/section-last-circolari.php:83
-#: template-parts/section-last-news.php:123
-#: template-parts/section-last-news.php:240
+#: template-parts/section-last-news.php:138
+#: template-parts/section-last-news.php:264
 msgid "Read more"
 msgstr "Leggi di più"
 
@@ -665,8 +665,8 @@ msgid "Browse gallery"
 msgstr "Sfoglia galleria"
 
 #: template-parts/archive-loop.php:108 template-parts/main-loop.php:96
-#: template-parts/section-last-news.php:99
-#: template-parts/section-last-news.php:216
+#: template-parts/section-last-news.php:114
+#: template-parts/section-last-news.php:240
 #: template-parts/section-last-one-news.php:61
 #: template-parts/single-loop.php:42
 msgid "Categories"
@@ -674,8 +674,8 @@ msgstr "Categorie"
 
 #: template-parts/archive-loop.php:119 template-parts/main-loop.php:107
 #: template-parts/page-loop-nosidebar.php:33 template-parts/page-loop.php:34
-#: template-parts/section-last-news.php:110
-#: template-parts/section-last-news.php:227
+#: template-parts/section-last-news.php:125
+#: template-parts/section-last-news.php:251
 #: template-parts/section-last-one-news.php:74
 #: template-parts/single-loop.php:55
 msgid "Topics"
@@ -762,15 +762,15 @@ msgid "Latest circulars"
 msgstr "Ultime circolari"
 
 #: template-parts/section-last-circolari.php:103
-#: template-parts/section-last-news.php:302
+#: template-parts/section-last-news.php:324
 msgid "See all"
 msgstr "Vedi tutte"
 
-#: template-parts/section-last-news.php:262
+#: template-parts/section-last-news.php:284
 msgid "Other categories"
 msgstr "Altre categorie"
 
-#: template-parts/section-last-news.php:301
+#: template-parts/section-last-news.php:323
 msgid "News"
 msgstr "Notizie"
 

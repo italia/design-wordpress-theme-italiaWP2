@@ -159,6 +159,45 @@ if (!function_exists('italiawp2_theme_setup')) :
 endif;
 add_action('after_setup_theme', 'italiawp2_theme_setup');
 
+add_action( 'pre_get_posts', function( $q ) {
+  if (array_key_exists('force_no_results', $q->query) && $q->query['force_no_results']) {
+    $q->query = $q->query_vars = array();
+    $added = array();
+    $filters = array(
+      'where', 'where_paged', 'join', 'join_paged', 'groupby', 'orderby', 'distinct',
+      'limits', 'fields', 'request', 'clauses', 'where_request', 'groupby_request',
+      'join_request', 'orderby_request', 'distinct_request','fields_request',
+      'limits_request', 'clauses_request'
+    );
+    // remove all possible interfering filter and save for later restore
+    foreach ( $filters as $f ) {
+      if ( isset($GLOBALS['wp_filter']["posts_{$f}"]) ) {
+        $added["posts_{$f}"] = $GLOBALS['wp_filter']["posts_{$f}"];
+        unset($GLOBALS['wp_filter']["posts_{$f}"]);
+      }
+    }
+    // be sure filters are not suppressed
+    $q->set( 'suppress_filters', FALSE );
+    $done = 0;
+    // use a filter to return a non-sense request
+    add_filter('posts_request', function( $r ) use( &$done ) {
+      if ( $done === 0 ) { $done = 1;
+        $r = "SELECT ID FROM {$GLOBALS['wpdb']->posts} WHERE 0 = 1";
+      }
+      return $r;
+    });
+    // restore any filter that was added and we removed
+    add_filter('posts_results', function( $posts ) use( &$done, $added ) {
+      if ( $done === 1 ) { $done = 2;
+        foreach ( $added as $hook => $filters ) {
+          $GLOBALS['wp_filter'][$hook] = $filters;
+        }
+      }
+      return $posts;
+    });
+  }
+}, PHP_INT_MAX );
+
 // Widgets
 function italiawp2_widgets_init() {
     register_sidebar(array(

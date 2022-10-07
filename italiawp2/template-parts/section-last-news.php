@@ -20,21 +20,36 @@ if(get_option('dettagli-num-articoli')) {
     $num_articoli = 3;
 }
 
-if (!get_theme_mod('active_section_last_one_news')) {
+if(get_theme_mod('active_section_last_one_news')) {
+    $last_one_news = true;
+}else{
+    $last_one_news = false;
+}
+
+$hide_first = true;
+
+if(!$last_one_news) {
     
-    $sticky = count(get_option('sticky_posts'));
-    if ($sticky > 0) {
+    $sticky_posts_tot = get_option('sticky_posts',array());
+    $sticky_posts = array_slice($sticky_posts_tot,0,$num_articoli);
+    $sticky = count($sticky_posts);
+    
+    $numposts = $num_articoli - count($sticky_posts);
+    
+    if (count($sticky_posts)) {
         
         // Primo loop con sticky posts
         $args = array (
-            'posts_per_page' => $sticky,
-            'post__in' => get_option('sticky_posts'),
+            'posts_per_page' => count($sticky_posts),
+            'orderby' => 'date',
+            'post__in' => $sticky_posts,
+            'ignore_sticky_posts' => true,
+            'post_type' => 'post'
         );
 
-        $do_not_duplicate = array();
         $query = new WP_Query( $args );
         
-        while ( $query->have_posts() ) : $query->the_post(); $do_not_duplicate[] = $post->ID;
+        while ( $query->have_posts() ) : $query->the_post();
 
             $img_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'news-image');
             if ($img_url != "") {
@@ -131,27 +146,36 @@ if (!get_theme_mod('active_section_last_one_news')) {
 
         <?php endwhile;
         wp_reset_postdata();
-        // Fine primo loop con sticky posts
     }
     
-    if ($sticky < $num_articoli) {
-        $allstickys = $num_articoli - $sticky;
-        
-        // Inizializzo il secondo loop senza sticky
+    if($numposts>0) {
         $args = array (
-            'posts_per_page'         => $allstickys,
-            'post__not_in'           => $do_not_duplicate
-        ); 
+            'posts_per_page' => $numposts,
+            'orderby' => 'date',
+            'post_type' => 'post',
+            'post__not_in' => $sticky_posts_tot,
+            'ignore_sticky_posts' => true
+        );
+    }else{
+        $args = array (
+            's' => 'foo',
+            'force_no_results' => true
+        );
     }
+    
 }else{
     $args = array(
-        'posts_per_page' => $num_articoli,
-        'post__not_in' => get_option( 'sticky_posts' )
+        'posts_per_page' => ($num_articoli+1),
+        'orderby' => 'date',
+        'order' => 'DESC'
     );
 }
 
+$i=0;
 $the_query = new WP_Query($args);
 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+
+    if( !($i==0 && $last_one_news) ) {
 
         $img_url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'news-image');
         if ($img_url != "") {
@@ -245,12 +269,10 @@ if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->t
                         </div>
                     </article>
                 </div>
-                
 <?php
-    
+    } $i++;
     endwhile;  endif;
     wp_reset_postdata();
-    
     ?>
             </div>
             
