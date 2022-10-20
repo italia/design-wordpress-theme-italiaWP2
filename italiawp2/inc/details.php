@@ -114,6 +114,9 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>Whatsapp (senza prefisso nazionale [+39] e punteggiatura):</strong><br />
                 <input type="text" name="dettagli-whatsapp" size="100" value="<?php echo get_option('dettagli-whatsapp'); ?>" /></p>
             
+            <p><strong>Linkedin (URL intero con HTTP o HTTPS):</strong><br />
+                <input type="text" name="dettagli-linkedin" size="100" value="<?php echo get_option('dettagli-linkedin'); ?>" /></p>
+
             <?php /*<p><strong>Google Maps iframe SRC (URL intero con HTTP o HTTPS):</strong><br />
                 <input type="text" name="dettagli-map" size="100" value="<?php echo get_option('dettagli-map'); ?>" /></p>*/ ?>
             
@@ -152,7 +155,7 @@ function italiawp2_edit_custom_settings() { ?>
                                                             dettagli-indirizzo,dettagli-cap,dettagli-citta,dettagli-telefono,dettagli-fax,
                                                             dettagli-email,dettagli-pec,dettagli-cfpiva,dettagli-facebook,
                                                             dettagli-twitter,dettagli-youtube,dettagli-instagram,
-                                                            dettagli-telegram,dettagli-whatsapp,dettagli-map,
+                                                            dettagli-telegram,dettagli-whatsapp,dettagli-linkedin,dettagli-map,
                                                             dettagli-map-latitude,dettagli-map-longitude,dettagli-map-popup,
                                                             dettagli-email2,dettagli-url-accedi,dettagli-codunivoco,
                                                             dettagli-iban" />

@@ -131,7 +131,7 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <h4><?php echo __('Follow us on','italiawp2'); ?></h4>
                         
-                    <?php if( !( get_option('dettagli-facebook')=="" && get_option('dettagli-twitter')=="" && get_option('dettagli-youtube')=="" && get_option('dettagli-instagram')=="" ) ): ?>
+                    <?php if( !( get_option('dettagli-facebook')=="" && get_option('dettagli-twitter')=="" && get_option('dettagli-youtube')=="" && get_option('dettagli-instagram')=="" && get_option('dettagli-linkedin')=="" ) ): ?>
                         <ul class="list-inline text-left social">
                         <?php if (get_option('dettagli-facebook') != ""): ?>
                             <li class="list-inline-item">
@@ -202,6 +202,18 @@
                                         <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                                     </svg>
                                     <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Whatsapp</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        <?php if (get_option('dettagli-linkedin') != ""): ?>
+                            <li class="list-inline-item">
+                                <a  target="_blank" class="social-icon"
+                                    aria-label="<?php echo __('Link to external site','italiawp2'); ?> - Linkedin"
+                                    href="<?php echo get_option('dettagli-linkedin'); ?>">
+                                    <svg class="icon">
+                                        <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-linkedin-square"></use>
+                                    </svg>
+                                    <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Linkedin</span>
                                 </a>
                             </li>
                         <?php endif; ?>
