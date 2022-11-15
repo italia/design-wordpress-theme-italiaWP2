@@ -210,12 +210,18 @@
             <div class="logotxt">
                 <h1>
                     <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-                        <?php $blog_name = get_bloginfo('name'); ?>
+                        <?php
+                            $blog_name = get_bloginfo('name');
+                            $blog_tagline = get_bloginfo('description');
+                        ?>
                         <?php if(strlen($blog_name)<=25) : ?>
                             <?php echo $blog_name; ?>
                         <?php else : ?>
                             <small><?php echo $blog_name; ?></small>
                         <?php endif; ?>
+						<?php if($blog_tagline!='') {
+						    echo '<br><small>'.$blog_tagline.'</small>';
+                        }?>
                     </a>
                 </h1>
             </div>
