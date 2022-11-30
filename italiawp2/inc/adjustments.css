@@ -650,10 +650,25 @@ table td:last-child, table th:last-child {
     margin: 0;
 }
 
-.logotxt h1 small {
+.logotxt h1 small,
+.logotxt h1 span.tagline {
     font-size: .9rem;
     vertical-align: super;
     font-weight: 600;
+}
+
+.logotxt h1 span.tagline {
+    display: block;
+    margin-top: 10px;
+}
+
+.logotxt h1 small span.tagline {
+    font-size: .7rem;
+    margin-top: 0;
+}
+
+.logotxt h1 {
+    line-height: 0.7;
 }
 
 /* Fix Menu Lingue Polylang */

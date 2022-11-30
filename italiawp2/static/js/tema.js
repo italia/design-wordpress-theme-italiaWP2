@@ -65,7 +65,27 @@ jQuery(function ($) {
                 if ($(this).hasClass('preventclick')) {
                     return;
                 }
-                jPushMenu.close(o);
+
+                // @modifica : === FIX MENU MOBILE LINK ===
+                var node = $(this).is('a') ? $(this) : $(this).closest('a');
+
+                /* Clear all open and not nested element  */
+                if (!$(this).closest('li.open').length) {
+                    $('.navmenu ul').slideUp(300);
+                    $('.navmenu li').removeClass('open');
+                }
+
+                if (node.siblings('ul').is(':visible')) {
+                    node.siblings('ul').slideUp(300);
+                    node.parent().removeClass('open');
+                } else {
+                    node.siblings('ul').slideDown(300);
+                    node.parent().addClass('open');
+                }
+                // @modifica : === FINE FIX MENU MOBILE LINK ===
+
+                // @modifica fix voce menu con sottovoci figli che non si apre su mobile !
+                // jPushMenu.close(o);
             });
         }
 

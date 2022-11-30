@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-10-07 16:46+0200\n"
-"PO-Revision-Date: 2022-10-07 16:46+0200\n"
+"POT-Creation-Date: 2022-11-30 18:04+0100\n"
+"PO-Revision-Date: 2022-11-30 18:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -55,7 +55,7 @@ msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
 msgid "I accept"
 msgstr "Accetto"
 
-#: _header_originale.php:34 footer.php:221
+#: _header_originale.php:34 footer.php:233
 #: template-parts/section-cookies.php:22
 msgid "Cookie policy"
 msgstr "Cookie policy"
@@ -140,60 +140,62 @@ msgid "Email"
 msgstr "Email"
 
 #: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
-#: footer.php:192 footer.php:204 menu.php:100 menu.php:109 menu.php:121
-#: menu.php:133 menu.php:145 menu.php:157 menu.php:169 menu.php:237
-#: menu.php:249 menu.php:261 menu.php:273 menu.php:285 menu.php:297
+#: footer.php:192 footer.php:204 footer.php:216 menu.php:100 menu.php:109
+#: menu.php:121 menu.php:133 menu.php:145 menu.php:157 menu.php:169
+#: menu.php:181 menu.php:261 menu.php:273 menu.php:285 menu.php:297
+#: menu.php:309 menu.php:321 menu.php:333
 msgid "Follow us on"
 msgstr "Seguici su"
 
 #: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
-#: footer.php:199 menu.php:8 menu.php:104 menu.php:116 menu.php:128
-#: menu.php:140 menu.php:152 menu.php:164 menu.php:232 menu.php:244
-#: menu.php:256 menu.php:268 menu.php:280 menu.php:292
+#: footer.php:199 footer.php:211 menu.php:8 menu.php:104 menu.php:116
+#: menu.php:128 menu.php:140 menu.php:152 menu.php:164 menu.php:176
+#: menu.php:256 menu.php:268 menu.php:280 menu.php:292 menu.php:304
+#: menu.php:316 menu.php:328
 msgid "Link to external site"
 msgstr "Collegamento a sito esterno"
 
-#: footer.php:215
+#: footer.php:227
 msgid "Useful Links Section"
 msgstr "Sezione Link Utili"
 
-#: footer.php:218
+#: footer.php:230
 msgid "Privacy policy"
 msgstr "Privacy policy"
 
-#: footer.php:218
+#: footer.php:230
 msgid "Privacy"
 msgstr "Privacy"
 
-#: footer.php:224
+#: footer.php:236
 msgid "Legal notices"
 msgstr "Note legali"
 
-#: footer.php:227
+#: footer.php:239
 msgid "Contacts"
 msgstr "Contatti"
 
-#: footer.php:230
+#: footer.php:242
 msgid "Accessibility"
 msgstr "Accessibilità"
 
-#: footer.php:232
+#: footer.php:244
 msgid "Made with"
 msgstr "Realizzato con"
 
-#: footer.php:236
+#: footer.php:248
 msgid "Graphic theme"
 msgstr "Tema grafico"
 
-#: footer.php:237
+#: footer.php:249
 msgid "Based on the"
 msgstr "Basato sul"
 
-#: footer.php:237
+#: footer.php:249
 msgid "AgID Prototype for PA sites"
 msgstr "Prototipo per siti PA di AgID"
 
-#: footer.php:249
+#: footer.php:261
 msgid "Go up"
 msgstr "Torna su"
 
@@ -221,46 +223,46 @@ msgstr "Colore Primario Scuro"
 msgid "Complementary Color"
 msgstr "Colore Complementare"
 
-#: functions.php:519
+#: functions.php:476
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
 msgstr "Installa plugin richiesti"
 
-#: functions.php:520
+#: functions.php:477
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:522
+#: functions.php:479
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:524
+#: functions.php:481
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:525
+#: functions.php:482
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:528
+#: functions.php:485
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgstr "Questo tema richiede il seguente plugin: %1$s."
 
-#: functions.php:534
+#: functions.php:491
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:349
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgstr "Questo tema consiglia il seguente plugin: %1$s."
 
-#: functions.php:540
+#: functions.php:497
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:355
 #, php-format
 msgid ""
@@ -270,67 +272,67 @@ msgstr ""
 "Il seguente plugin deve essere aggiornato all’ultima versione per garantire "
 "la massima compatibilità con questo tema: %1$s."
 
-#: functions.php:546
+#: functions.php:503
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:361
 #, php-format
 msgid "There is an update available for: %1$s."
 msgstr "È disponibile un aggiornamento per: %1$s."
 
-#: functions.php:552
+#: functions.php:509
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:367
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin richiesto è attualmente inattivo: %1$s."
 
-#: functions.php:558
+#: functions.php:515
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin consigliato è attualmente inattivo: %1$s."
 
-#: functions.php:563
+#: functions.php:520
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:378
 msgid "Begin installing plugin"
 msgstr "Inizia installazione del plugin"
 
-#: functions.php:568
+#: functions.php:525
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:383
 msgid "Begin updating plugin"
 msgstr "Inizia aggiornamento del plugin"
 
-#: functions.php:573
+#: functions.php:530
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
 msgid "Begin activating plugin"
 msgstr "Inizia attivazione del plugin"
 
-#: functions.php:577
+#: functions.php:534
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:578
+#: functions.php:535
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:393
 msgid "Return to the Dashboard"
 msgstr "Ritorna alla Dashboard"
 
-#: functions.php:579
+#: functions.php:536
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:580
+#: functions.php:537
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:582
+#: functions.php:539
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:584
+#: functions.php:541
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -340,18 +342,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:586
+#: functions.php:543
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:587
+#: functions.php:544
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:588
+#: functions.php:545
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -360,7 +362,7 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:589
+#: functions.php:546
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
@@ -576,7 +578,7 @@ msgstr "Attiva / disattiva la navigazione"
 msgid "Main menu"
 msgstr "Menu principale"
 
-#: menu.php:328
+#: menu.php:364
 msgid "close"
 msgstr "chiusi"
 

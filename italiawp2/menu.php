@@ -95,7 +95,7 @@
         <!-- pulsante ricerca mobile -->
 
         <ul class="list-inline socialmobile">
-            <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" )): ?>
+            <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" && get_option('dettagli-linkedin') == "" )): ?>
 
                 <li class="small"><?php echo __('Follow us on','italiawp2'); ?></li>
                     <?php if (get_option('dettagli-facebook') != ""): ?>
@@ -170,6 +170,18 @@
                             </a>
                         </li>
                     <?php endif; ?>
+                    <?php if (get_option('dettagli-linkedin') != ""): ?>
+                        <li>
+                            <a  target="_blank" class="social-icon"
+                                aria-label="<?php echo __('Link to external site','italiawp2'); ?> - LinkedIn"
+                                href="<?php echo get_option('dettagli-linkedin'); ?>">
+                                <svg class="icon">
+                                    <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-linkedin-square"></use>
+                                </svg>
+                                <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> LinkedIn</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
             <?php endif; ?>
         </ul>
     </div>
@@ -210,11 +222,23 @@
             <div class="logotxt">
                 <h1>
                     <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-                        <?php $blog_name = get_bloginfo('name'); ?>
+                        <?php //$blog_name = get_bloginfo('name'); ?>
+                        <?php
+                            $blog_name = get_bloginfo('name');
+                            $blog_tagline = get_bloginfo('description');
+                        ?>
                         <?php if(strlen($blog_name)<=25) : ?>
                             <?php echo $blog_name; ?>
+                            <?php if($blog_tagline!='') {
+                                echo '<span class="tagline">'.$blog_tagline.'</span>';
+                            }?>
                         <?php else : ?>
-                            <small><?php echo $blog_name; ?></small>
+                            <small>
+                                <?php echo $blog_name; ?>
+                                <?php if($blog_tagline!='') {
+                                    echo '<span class="tagline">'.$blog_tagline.'</span>';
+                                }?>
+                            </small>
                         <?php endif; ?>
                     </a>
                 </h1>
@@ -223,7 +247,7 @@
 
         <div class="header-social col-xl-3 col-lg-3 d-none d-lg-block d-md-none pull-right text-right">
             <!-- Inizio Social-->
-            <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" )): ?>
+            <?php if (!( get_option('dettagli-facebook') == "" && get_option('dettagli-twitter') == "" && get_option('dettagli-youtube') == "" && get_option('dettagli-instagram') == "" && get_option('dettagli-linkedin') == "" )): ?>
             <ul class="list-inline text-right social">
                 
                 <?php if (get_option('dettagli-facebook') != ""): ?>
@@ -295,6 +319,18 @@
                                 <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/ponmetroca.svg#ca-whatsapp"></use>
                             </svg>
                             <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> Whatsapp</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if (get_option('dettagli-linkedin') != ""): ?>
+                    <li class="list-inline-item">
+                        <a  target="_blank" class="social-icon"
+                            aria-label="<?php echo __('Link to external site','italiawp2'); ?> - LinkedIn"
+                            href="<?php echo get_option('dettagli-linkedin'); ?>">
+                            <svg class="icon">
+                                <use  xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-linkedin-square"></use>
+                            </svg>
+                            <span class="hidden"><?php echo __('Follow us on','italiawp2'); ?> LinkedIn</span>
                         </a>
                     </li>
                 <?php endif; ?>
