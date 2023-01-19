@@ -227,7 +227,7 @@
                 <h3 class="sr-only"><?php echo __('Useful Links Section','italiawp2'); ?></h3>
                 
                 <?php if(get_option('dettagli-id-privacy')!=""): ?>
-                    <a href="<?php echo esc_url(get_permalink(get_option('dettagli-id-privacy'))); ?>" title="<?php echo __('Privacy policy','italiawp2'); ?>"><?php echo __('Privacy','italiawp2'); ?></a> |
+                    <a href="<?php echo esc_url(get_permalink(get_option('dettagli-id-privacy'))); ?>" data-element="privacy-policy-link" title="<?php echo __('Privacy policy','italiawp2'); ?>"><?php echo __('Privacy','italiawp2'); ?></a> |
                 <?php endif; ?>
                 <?php if(get_option('dettagli-id-cookie')!=""): ?>
                     <a href="<?php echo esc_url(get_permalink(get_option('dettagli-id-cookie'))); ?>" title="<?php echo __('Cookie policy','italiawp2'); ?>"><?php echo __('Cookie policy','italiawp2'); ?></a> |
@@ -239,7 +239,7 @@
                     <a href="<?php echo esc_url(get_permalink(get_option('dettagli-id-contatti'))); ?>" title="<?php echo __('Contacts','italiawp2'); ?>"><?php echo __('Contacts','italiawp2'); ?></a> |
                 <?php endif; ?>
                 <?php if(get_option('dettagli-link-accessibilita')!=""): ?>
-                    <a target="_blank" href="<?php echo esc_url(get_option('dettagli-link-accessibilita') ); ?>" title="<?php echo __('Accessibility','italiawp2'); ?>"><?php echo __('Accessibility','italiawp2'); ?></a> |
+                    <a target="_blank" href="<?php echo esc_url(get_option('dettagli-link-accessibilita') ); ?>" data-element="accessibility-link" title="<?php echo __('Accessibility','italiawp2'); ?>"><?php echo __('Accessibility','italiawp2'); ?></a> |
                 <?php endif; ?>
                 <?php echo __('Made with','italiawp2'); ?> <a target="_blank" href="https://it.wordpress.org">WordPress</a> |
                 

@@ -24,7 +24,6 @@
 
                 <div class="float-right">
                     
-                    
                     <?php if (has_nav_menu('menu-alto')) { ?>
                     <div class="float-left text-right">
                     <?php
@@ -36,8 +35,6 @@
                         echo strip_tags(wp_nav_menu($menu)); ?>
                     </div>
                     <?php } ?>
-                    
-                    
                     
                     <!-- accedi -->
                     <?php if (get_option('dettagli-url-accedi') != "") { ?>
@@ -82,7 +79,8 @@
                         $menu = array(
                             'theme_location' => 'menu-principale',
                             'menu_id' => 'site-navigation',
-                            'menu_class' => 'nav navmenu'
+                            'menu_class' => 'nav navmenu',
+                            'items_wrap' => '<ul id="%1$s" class="%2$s" data-element="menu">%3$s</ul>',
                         );
                         echo strip_tags(wp_nav_menu($menu));
                     }
@@ -375,6 +373,7 @@
                                 'container_class' => '',
                                 'menu_class' => 'nav navbar-nav',
                                 'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s" data-element="menu">%3$s</ul>',
                                 'walker' => new wp_bootstrap_navwalker()
                             ));
                          ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-11-30 18:04+0100\n"
-"PO-Revision-Date: 2022-11-30 18:04+0100\n"
+"POT-Creation-Date: 2023-01-19 11:24+0100\n"
+"PO-Revision-Date: 2023-01-19 11:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -140,18 +140,18 @@ msgid "Email"
 msgstr "Email"
 
 #: footer.php:132 footer.php:144 footer.php:156 footer.php:168 footer.php:180
-#: footer.php:192 footer.php:204 footer.php:216 menu.php:100 menu.php:109
-#: menu.php:121 menu.php:133 menu.php:145 menu.php:157 menu.php:169
-#: menu.php:181 menu.php:261 menu.php:273 menu.php:285 menu.php:297
-#: menu.php:309 menu.php:321 menu.php:333
+#: footer.php:192 footer.php:204 footer.php:216 menu.php:98 menu.php:107
+#: menu.php:119 menu.php:131 menu.php:143 menu.php:155 menu.php:167
+#: menu.php:179 menu.php:259 menu.php:271 menu.php:283 menu.php:295
+#: menu.php:307 menu.php:319 menu.php:331
 msgid "Follow us on"
 msgstr "Seguici su"
 
 #: footer.php:139 footer.php:151 footer.php:163 footer.php:175 footer.php:187
-#: footer.php:199 footer.php:211 menu.php:8 menu.php:104 menu.php:116
-#: menu.php:128 menu.php:140 menu.php:152 menu.php:164 menu.php:176
-#: menu.php:256 menu.php:268 menu.php:280 menu.php:292 menu.php:304
-#: menu.php:316 menu.php:328
+#: footer.php:199 footer.php:211 menu.php:8 menu.php:102 menu.php:114
+#: menu.php:126 menu.php:138 menu.php:150 menu.php:162 menu.php:174
+#: menu.php:254 menu.php:266 menu.php:278 menu.php:290 menu.php:302
+#: menu.php:314 menu.php:326
 msgid "Link to external site"
 msgstr "Collegamento a sito esterno"
 
@@ -566,19 +566,19 @@ msgstr "Installazione del plugin %1$s (%2$d/%3$d)"
 msgid "new window"
 msgstr "nuova finestra"
 
-#: menu.php:49
+#: menu.php:46
 msgid "Login"
 msgstr "Accedi"
 
-#: menu.php:63
+#: menu.php:60
 msgid "Toggle navigation"
 msgstr "Attiva / disattiva la navigazione"
 
-#: menu.php:79
+#: menu.php:76
 msgid "Main menu"
 msgstr "Menu principale"
 
-#: menu.php:364
+#: menu.php:362
 msgid "close"
 msgstr "chiusi"
 

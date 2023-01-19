@@ -1,4 +1,6 @@
-@charset "UTF-8";/*!
+@charset "UTF-8";
+:root{--bootstrap-italia-version: "1.6.2"}
+/*!
  * Bootstrap Italia è un tema Bootstrap 4 per la creazione di applicazioni web nel pieno rispetto delle Linee guida di design per i servizi web della PA
  * @version v1.6.2
  * @link https://italia.github.io/bootstrap-italia/
