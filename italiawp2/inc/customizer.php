@@ -164,6 +164,15 @@ function italiawp2_customize_register($wp_customize) {
         'type' => 'checkbox', 'section' => 'pages_settings', 'settings' => 'disactive_sunto_articoli'
     ));
     
+        /* Sunto automatico sotto al titolo per i Custon Type Post */
+    $wp_customize->add_setting('disactive_sunto_ctp', array(
+        'default' => false, 'capability' => 'edit_theme_options', 'sanitize_callback' => 'italiawp2_sanitize_checkbox'
+    ));
+    $wp_customize->add_control('disactive_sunto_ctp', array(
+        'label' => 'Disattiva la visualizzazione del sunto automatico (sotto al titolo) nei Custom Type Post',
+        'type' => 'checkbox', 'section' => 'pages_settings', 'settings' => 'disactive_sunto_ctp'
+    ));
+    
 	/* Colore Principale */
     $wp_customize->add_setting('italiawp2_main_color', array(
         'default' => '#003882',
