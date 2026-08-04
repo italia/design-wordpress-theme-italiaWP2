@@ -131,7 +131,7 @@ jQuery(function ($) {
                 'title': title,
             });
 
-            $(listItem).find('[href^=' * ']')
+            $(listItem).find('[href^="#"]')
                     .add(trigger)
                     .on('click', function (ev) {
                         var node = $(this).is('a') ? $(this) : $(this).closest('a');
@@ -175,6 +175,7 @@ jQuery(function ($) {
         $('.megamenu .dropdown-menu').click(function (e) {
             e.stopPropagation();
         });
+        
     });
 
     $(window).on("scroll touchmove", function () {

@@ -26,9 +26,13 @@ function italiawp2_edit_custom_settings() { ?>
             <p><strong>Meta "description" (personalizzato):</strong><br />
                 <input type="text" name="custom-meta-description" size="100" value="<?php echo get_option('custom-meta-description'); ?>" /></p>
             
+            <p><strong>Google Analytics &mdash; Measurement ID GA4 (es. G-XXXXXXXXXX):</strong><br />
+                <input type="text" name="dettagli-ga-id" size="30" value="<?php echo esc_attr(get_option('dettagli-ga-id')); ?>" />
+                <br /><em>Se lasciato vuoto non viene caricato alcuno script di tracciamento.</em></p>
+
             <p><strong>Numero ultimi articoli in Home (consigliati multipli di 3):</strong><br />
                 <input type="text" name="dettagli-num-articoli" size="10" value="<?php echo get_option('dettagli-num-articoli'); ?>" /></p>
-            
+
             <br><h3>Informazioni</h3><hr>
             
             <p><strong>Nome amministrazione afferente (compare in caso di assenza del campo successivo):</strong><br />
@@ -145,6 +149,7 @@ function italiawp2_edit_custom_settings() { ?>
 
             <input type="hidden" name="action" value="update" />
             <input type="hidden" name="page_options" value="dettagli-num-articoli,
+                                                            dettagli-ga-id,
                                                             custom-meta-keywords,custom-meta-description,
                                                             dettagli-link-accessibilita,
                                                             dettagli-nome-ammin-afferente,dettagli-logo-ammin-afferente,dettagli-url-ammin-afferente,

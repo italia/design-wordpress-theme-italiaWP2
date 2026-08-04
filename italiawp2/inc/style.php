@@ -28,6 +28,25 @@ function italiawp2_css_strip_whitespace($css){
 	  return trim($css);
 }
 
+/**
+ * Salva la palette derivata dal colore primario, usata dalla editor-color-palette.
+ *
+ * Scrive solo le option effettivamente cambiate, cosi' a regime il costo e' zero
+ * scritture. La versione precedente usava il pattern
+ * `get_option(x) ? update_option(x, v) : add_option(x, v)`: quando una option valeva
+ * "0" o "" il ternario prendeva il ramo add_option(), che falliva in silenzio perche'
+ * la option esisteva gia', e ritentava a ogni singolo pageload.
+ *
+ * @param array $options coppie nome_option => valore.
+ */
+function italiawp2_store_palette_options($options) {
+    foreach ($options as $name => $value) {
+        if (get_option($name) !== $value) {
+            update_option($name, $value);
+        }
+    }
+}
+
 function italiawp2_dymanic_styles() {
     $color_black = "#000";
     $color_white = "#fff";
@@ -98,12 +117,18 @@ function italiawp2_dymanic_styles() {
     //$color_compl_link_footer = colorSetSL($main_color, 100, 80);
     $color_compl_link_footer = hsl2hex(array($color_compl_HSL[0], (100/100), (80/100) ));
     
-    get_option('italiawp2_colore_primario') ? update_option('italiawp2_colore_primario', $color_50) : add_option('italiawp2_colore_primario', $color_50);
-    get_option('italiawp2_colore_primario_chiaro') ? update_option('italiawp2_colore_primario_chiaro', $color_30) : add_option('italiawp2_colore_primario_chiaro', $color_30);
-    get_option('italiawp2_colore_primario_scuro') ? update_option('italiawp2_colore_primario_scuro', $color_95) : add_option('italiawp2_colore_primario_scuro', $color_95);
-    get_option('italiawp2_colore_complementare') ? update_option('italiawp2_colore_complementare', $color_compl) : add_option('italiawp2_colore_complementare', $color_compl);
-    get_option('italiawp2_colore_nero') ? update_option('italiawp2_colore_nero', $color_black) : add_option('italiawp2_colore_nero', $color_black);
-    get_option('italiawp2_colore_bianco') ? update_option('italiawp2_colore_bianco', $color_white) : add_option('italiawp2_colore_bianco', $color_white);
+    // Queste option servono solo alla editor-color-palette (functions.php).
+    // Vengono riscritte solo se il colore primario e' cambiato: prima erano 6
+    // update_option/add_option incondizionate dentro wp_head, cioe' scritture sul DB
+    // durante una richiesta di sola lettura.
+    italiawp2_store_palette_options(array(
+        'italiawp2_colore_primario'        => $color_50,
+        'italiawp2_colore_primario_chiaro' => $color_30,
+        'italiawp2_colore_primario_scuro'  => $color_95,
+        'italiawp2_colore_complementare'   => $color_compl,
+        'italiawp2_colore_nero'            => $color_black,
+        'italiawp2_colore_bianco'          => $color_white,
+    ));
 
     $custom_css = "
 .u-color-black {
@@ -604,6 +629,7 @@ section .pagination .page-item .page-numbers svg.icon {
     
     /* Colori testo menu sidebar */
     /* - Menu Level 3 - */
+    $custom_css = "";
     if( getContrastRatio($color_10) < 0.70 || getContrastRatio($color_10) >= 2.60 ) {
         $custom_css = "
 .Linklist-link.Linklist-link--lev3,
@@ -617,6 +643,7 @@ section .pagination .page-item .page-numbers svg.icon {
     echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';
     
     /* - Menu Level 2 - */
+    $custom_css = "";
     if( getContrastRatio($color_20) < 0.80 || getContrastRatio($color_20) >= 3.50 ) {
         $custom_css = "
 .Linklist-link.Linklist-link--lev2,
@@ -633,6 +660,7 @@ section .pagination .page-item .page-numbers svg.icon {
     else $scuro = $color_98;
     
     /* - Main - */
+    $custom_css = "";
     if( getContrastRatio($main_color) >= 0.90 && getContrastRatio($main_color) < 2.70 ) {
         $custom_css = "
 #mainheader,
@@ -664,6 +692,7 @@ section .pagination .page-item .page-numbers svg.icon {
     echo '<style>'.italiawp2_css_strip_whitespace($custom_css).'</style>';
     
     /* - Footer - */
+    $custom_css = "";
     if( getContrastRatio($color_80) >= 0.90 && getContrastRatio($color_80) < 2.50 ) {
         $custom_css = "
 #footer .footer-list li a,

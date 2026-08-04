@@ -3,16 +3,18 @@ Theme Name: ItaliaWP2
 Theme URI: http://bit.ly/ItaliaWP
 Author: Boris Amico
 Author URI: http://bit.ly/ItaliaWP
-Description: Tema utilizzabile per i siti della Pubblica Amministrazione, utilizza i componenti del web toolkit delle linee guida di design dell'Agenzia per l'Italia digitale rilasciare dal Team per la trasformazione digitale e le caratteristiche per i servizi web della Pubblica Amministrazione contenute nel Piano triennale per l'informatica nella Pubblica Amministrazione 2017/2019.
-Version: 1.5.5
-License: GNU GENERAL PUBLIC LICENSE v3 or later
+Description: Tema utilizzabile per i siti della Pubblica Amministrazione, utilizza i componenti del web toolkit delle linee guida di design dell'Agenzia per l'Italia digitale rilasciare dal Team per la trasformazione digitale e le caratteristiche per i servizi web della Pubblica Amministrazione contenute nel Piano triennale per l'informatica nella Pubblica Amministrazione.
+Version: 1.5.6
+License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: italiawp2
-Tested up to: 5.7.2
-Requires PHP: 5.6
-Tags: agid, one-column, two-columns, grid-layout, custom-colors, custom-header, custom-logo, custom-menu, featured-images, featured-image-header, flexible-header, accessibility-ready, footer-widgets, sticky-post, theme-options
+Domain Path: /languages
+Requires at least: 6.0
+Tested up to: 7.0
+Requires PHP: 7.4
+Tags: agid, one-column, two-columns, grid-layout, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, flexible-header, accessibility-ready, footer-widgets, full-width-template, sticky-post, theme-options, editor-style, block-styles, wide-blocks, translation-ready
 
-ItaliaWP2 WordPress Theme Copyright (c) © 2018-2020 Boris Amico.
+ItaliaWP2 WordPress Theme Copyright (c) © 2018-2026 Boris Amico.
 ItaliaWP2 is distributed under the terms of the GPL-3.
 Use it to make something cool, have fun, and share what you've learned with others.
 

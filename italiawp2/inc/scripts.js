@@ -39,20 +39,26 @@ jQuery(function ($) {
         });
         /* Fine sistemazione mappa */
 
-        $('.image-content a').filter(function () {
-            return $(this).attr('href').match(/\.(jpeg|jpg|png|gif)/i);
-        }).magnificPopup({
-            type: 'image'
-        });
+        // magnific-popup e' caricato solo nelle pagine che mostrano immagini o gallerie
+        // (vedi italiawp2_enqueue_gallery_assets), quindi va verificato prima dell'uso.
+        if ($.fn.magnificPopup) {
+            // L'href puo' mancare (ancore, link generati da plugin): senza il fallback
+            // .match() su undefined lancia e interrompe tutto il resto del ready.
+            $('.image-content a').filter(function () {
+                return ($(this).attr('href') || '').match(/\.(jpeg|jpg|png|gif|webp)/i);
+            }).magnificPopup({
+                type: 'image'
+            });
 
-        $('.magnific-popup-gallery').filter(function () {
-            return $(this).attr('href').match(/\.(jpeg|jpg|png|gif)/i);
-        }).magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
+            $('.magnific-popup-gallery').filter(function () {
+                return ($(this).attr('href') || '').match(/\.(jpeg|jpg|png|gif|webp)/i);
+            }).magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        }
 
         /* Aggiungo l'icona di Link Esterno */
         $('a').each(function () {
@@ -65,7 +71,7 @@ jQuery(function ($) {
         });
 
         $(".box-servizi .scheda-sito").each(function () {
-            if ($(this).size() && $("img", this).size()) {
+            if ($("img", this).length) {
                 if ($(this).html().replace(/<img[^>]*>/g, "") == 0) $(this).addClass("no-padding");
             }
             
@@ -81,22 +87,25 @@ jQuery(function ($) {
         });
 
         /* Slide Gallerie Home */
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            navContainer: ".owl-nav",
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                992: {
-                    items: 3
+        // owl.carousel e' caricato solo dove c'e' davvero un carosello.
+        if ($.fn.owlCarousel) {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                navContainer: ".owl-nav",
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
                 }
-            }
-        });
+            });
+        }
 
         /* NUOVI */
         $('.footer-colonne ul').addClass('footer-list clearfix');
@@ -125,7 +134,7 @@ jQuery(function ($) {
     }
 
     function fixMainMenu() {
-        if ($('#mainheader .entesup a').has('img')) $('#mainheader .entesup a').addClass('image');
+        $('#mainheader .entesup a').has('img').addClass('image');
 
         let numLi = $('#menu-principale > li').length;
         let largWi = (parseInt($(window).innerWidth(), 10) / 2) - 25;

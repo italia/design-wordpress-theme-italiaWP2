@@ -23,14 +23,16 @@
 4. Scegliere il file .zip scaricato in precedenza, senza decomprimerlo e cliccare _"Installa ora"_
 5. Selezionare _"Attiva"_ per poter utilizzare il tema
 
-_[ Testato su **WordPress 5.4** (**COMPATIBILE** con il nuovo editor **Gutenberg** [in test]) | **PHP 7.3.14** ]_
+### Requisiti
 
-## --IMPORTANTE!-- Dopo l'aggiornamento a _WordPress 5_:
+| | |
+|---|---|
+| **WordPress** | 6.0 o superiore |
+| **PHP** | 8.0 o superiore (testato su 8.3) |
+| **Bootstrap Italia** | 1.6.4, incluso nel tema |
 
-1. Arrivati nella landing page successiva all'aggiornamento cliccare su _"Scopri come continuare ad utilizzare il vecchio editor."_
-2. Selezionare _"Installa il plugin Classic Editor"_
-3. Scegliere _"Installa ora"_
-4. Attivare il plugin
+Il tema è compatibile con l'editor a blocchi **Gutenberg**. Chi preferisce l'editor
+classico può installare il plugin [**Classic Editor**](https://it.wordpress.org/plugins/classic-editor/).
 
 ## In caso di utilizzo del _Tema Child_:
 
@@ -44,7 +46,7 @@ del _Tema Child_, successivamente configurare il _Tema Child_ lasciando _ItaliaW
 1. Creare 2 pagine per "Home" e "Articoli"
 2. In _"Impostazioni" > "Lettura"_ selezionare _"Una pagina statica"_
 3. Assegnare le pagine appena create rispettivamente ad "Homepage" e "Pagina articoli"
-4. Impostare i dati di contatto e i dettagli nella sezione _"Dettagli"_
+4. Impostare i dati di contatto e i dettagli nella sezione _"Dettagli"_ (qui si imposta anche, facoltativamente, il _Measurement ID_ di Google Analytics 4)
 5. Attivare le sezioni della "Home" in _"Aspetto" > "Personalizza"_ > _"Sito & Homepage"_
 6. In _"Aspetto" > "Menu"_ Creare un nuovo Menu ed inserirlo nella posizione "Menu Principale"
 7. [Facoltativo] Installare (e poi attivare) i Plugins consigliati in _"Aspetto" > "Plugin richiesti"_
@@ -55,10 +57,11 @@ del _Tema Child_, successivamente configurare il _Tema Child_ lasciando _ItaliaW
 
 * **WordPress**: è realizzato per l'ultima versione di _WordPress_ disponibile in Italiano
 * **Responsive**: si adatta ad _ogni tipo di dispositivo_ (desktop, tablet e mobile) mantenendo le funzionalità
-* Pagina **"DETTAGLI"** nel backend: è possibile inserire e modificare facilmente le _informazioni di contatto_, i _link dei profili social_, il numero di _ultimi articoli_ in homepage e gli _ID delle pagine_ Privacy, Note legali e Contatti
-* **10 posizioni del menu**: _menu principale_, 9 per i _box servizi_ (divisi in 3 tipologie)
+* Pagina **"DETTAGLI"** nel backend: è possibile inserire e modificare facilmente le _informazioni di contatto_, i _link dei profili social_, il numero di _ultimi articoli_ in homepage, gli _ID delle pagine_ Privacy, Note legali e Contatti, e il _Measurement ID_ di **Google Analytics 4**
+    * Il campo Analytics è **facoltativo**: se lasciato vuoto non viene caricato alcuno script di tracciamento e non parte alcuna richiesta verso terze parti
+* **11 posizioni del menu**: _menu principale_, _menu in alto_ e 9 per i _box servizi_ (divisi in 3 tipologie)
     * Nei menu **Box Servizi** è possibile inserire delle immagini utilizzando i _Link personalizzati_ e inserendo direttamente il tag html **< img src="URL" >** nel _Testo del link_
-* **3 aree widget**: per le colonne previste nel _footer_, _sidebar_ per le _pagine_ (disattivabile scegliendo l'appostito _Template_) e per gli _articoli_
+* **5 aree widget**: _Footer Colonne_, _Sidebar Pagine_ (disattivabile scegliendo l'apposito _Template_), _Sidebar Articoli_, _Sezione Notifica_ e _Sezione Credits_
 * **Logo, titolo e descrizione**: personalizzazione del _logo_, del _titolo_, della _denominazione_ e dell'_icona_ del sito direttamente dalla personalizzazione del tema
 * **Immagini** e **Gallerie Fotografiche**: ritaglio e sistemazione automatica delle _immagini principali_ degli articoli, gestione grafica secondo le linee guida delle _singole immagini_ (disattivabile) e _gallerie_ caricate negli articoli o nella pagine. Gestione di Gallerie Fotografiche esterne tramite _Custom Post Type_
 * **Liste Allegati**: gestione degli allegati (e relative liste) tramite _Plugin esterno_ di cui si richiede l'installazione al momento dell'attivazione del tema
@@ -75,6 +78,39 @@ del _Tema Child_, successivamente configurare il _Tema Child_ lasciando _ItaliaW
 ## Aggiornamenti:
 
 Gli aggiornamenti sono notificati in _"Aspetto" > "Temi"_ oppure nella _pagina degli aggiornamenti_ del backend di WordPress.
+
+---
+
+## Sviluppo:
+
+Il tema **non richiede alcun passaggio di build**: niente SCSS, niente bundler. Gli asset di
+_Bootstrap Italia_ sono file già compilati, inclusi in `static/`, e la personalizzazione
+grafica avviene tramite i fogli di stile del tema caricati _dopo_ di essi.
+
+L'unica dipendenza npm serve a tracciare e rigenerare quegli asset:
+
+```bash
+npm install                 # scarica bootstrap-italia
+npm run vendor:bi           # copia gli asset in static/ e verifica le versioni
+npm run vendor:bi:check     # verifica soltanto
+```
+
+Per passare a una versione diversa di Bootstrap Italia:
+
+```bash
+npm install bootstrap-italia@X.Y.Z && npm run vendor:bi
+```
+
+ricordandosi di aggiornare la costante `ITALIAWP2_BOOTSTRAP_ITALIA_VERSION` in
+`inc/enqueue.php`, che funge da _cache buster_ (lo script di verifica segnala se le
+versioni divergono).
+
+> **Nota:** la linea 1.x di Bootstrap Italia si è conclusa con la **1.6.4**, la versione
+> attualmente inclusa: è quindi l'ultima a cui il tema può essere aggiornato senza
+> modifiche. Il passaggio alla 2.x non è un aggiornamento ma un cambio di framework
+> — Bootstrap 5 al posto di Bootstrap 4, nessuna dipendenza da jQuery, componenti
+> distribuiti come moduli ESM e attributi `data-bs-*` — e richiede la revisione del markup
+> e del JavaScript del tema.
 
 ---
 
@@ -102,6 +138,8 @@ Copyright (c) 2018-2021 & moral rights [**Boris Amico**](http://borisamico.it).
 
 Special thanks to **Erik Golinelli**.
 
+Il testo integrale della licenza è nel file [`LICENSE.md`](LICENSE.md).
+
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as
 published by the Free Software Foundation, either version 3 of the
@@ -120,7 +158,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ## Altre licenze:
 
 * **Bootstrap Italia** [clicca qui](https://github.com/italia/bootstrap-italia/blob/master/LICENSE)
-* **jQuery** [clicca qui](https://jquery.org/license/)
+* **jQuery** [clicca qui](https://jquery.org/license/) — il tema utilizza la copia inclusa in WordPress, non ne distribuisce una propria
 * Plugin jQuery **Magnific Popup** [clicca qui](https://github.com/dimsemenov/Magnific-Popup)
-* Plugin WordPress **Theme Update Checker** [clicca qui](http://tgmpluginactivation.com)
+* Plugin jQuery **Owl Carousel 2** [clicca qui](https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE)
+* **Leaflet** [clicca qui](https://github.com/Leaflet/Leaflet/blob/main/LICENSE)
+* **Theme Update Checker** [clicca qui](https://github.com/YahnisElsts/wp-update-server)
+* **TGM Plugin Activation** [clicca qui](http://tgmpluginactivation.com)
 * Plugin WordPress **Attachments** [clicca qui](https://github.com/jchristopher/attachments)

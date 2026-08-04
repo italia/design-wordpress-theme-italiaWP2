@@ -1,14 +1,15 @@
 (function($) {
 $.fn.changeElementType = function(newType) {
-    var attrs = {};
-    if (!(this[0] && this[0].attributes))
-        return;
+    return this.each(function () {
+        var el = this;
+        if (!el.attributes) return;
 
-    $.each(this[0].attributes, function (idx, attr) {
+        var attrs = {};
+        $.each(el.attributes, function (idx, attr) {
             attrs[attr.nodeName] = attr.nodeValue;
         });
-        this.replaceWith(function () {
-            return $("<" + newType + "/>", attrs).append($(this).contents());
-        });
+
+        $(el).replaceWith($("<" + newType + "/>", attrs).append($(el).contents()));
+    });
     }
 })(jQuery);

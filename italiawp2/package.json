@@ -1,0 +1,15 @@
+{
+  "name": "italiawp",
+  "version": "1.5.6",
+  "private": true,
+  "description": "Tema WordPress Italia WP2. Nessun build step: gli asset di bootstrap-italia sono vendorizzati in static/ e si rigenerano con `npm run vendor:bi`.",
+  "license": "GPL-2.0-or-later",
+  "dependencies": {
+    "bootstrap-italia": "1.6.4"
+  },
+  "scripts": {
+    "vendor:bi": "npm run vendor:bi:copy && npm run vendor:bi:check",
+    "vendor:bi:copy": "cp node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css static/css/ && cp node_modules/bootstrap-italia/dist/js/bootstrap-italia.min.js static/js/ && cp node_modules/bootstrap-italia/dist/svg/sprite.svg static/svg/ && chmod 644 static/css/bootstrap-italia.min.css static/js/bootstrap-italia.min.js static/svg/sprite.svg",
+    "vendor:bi:check": "node bin/check-bi-version.js"
+  }
+}

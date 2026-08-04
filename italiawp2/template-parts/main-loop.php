@@ -9,10 +9,7 @@
     <div class="container">
 
 <?php
-    $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-    $total_post = wp_count_posts();
-    $published_post = $total_post->publish;
-    $total_pages = ceil( $published_post / $posts_per_page ); ?>
+    $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1; ?>
         
         <div class="row">
             <div class="col-md-12">

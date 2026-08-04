@@ -27,6 +27,7 @@
 <?php else: ?>
 
     <?php if ((get_option('dettagli-map-latitude') != "") && (get_option('dettagli-map-longitude')  != "")): ?>
+    <?php italiawp2_enqueue_map_assets(); ?>
     <section id="mappa" class="section">
         <div class="container">
             <div class="row">
@@ -38,14 +39,14 @@
     </section>
 
     <section class="map-full-content">
-        <div id="map" class="map-container"><!--class="container-fluid container-sm"-->
-            <!--<div id="map" class="map map-color mt-3"></div>-->
+        <div id="map" class="map-container">
             <script>
-            $(document).ready(function () {
-    
+            // Leaflet e' in footer
+            window.addEventListener('load', function () {
+
                 const c = [
-                    <?php echo get_option('dettagli-map-latitude') ?>, 
-                    <?php echo get_option('dettagli-map-longitude') ?>
+                    <?php echo floatval(get_option('dettagli-map-latitude')); ?>,
+                    <?php echo floatval(get_option('dettagli-map-longitude')); ?>
                 ];
 
                 let map = new L.map('map');
@@ -57,9 +58,9 @@
 
                 let marker = L.marker(c).addTo(map);
                 <?php if (get_option('dettagli-map-popup')!=""): ?>
-                    marker.bindPopup("<?php echo get_option('dettagli-map-popup'); ?>").openPopup();
+                    marker.bindPopup("<?php echo esc_js(get_option('dettagli-map-popup')); ?>").openPopup();
                 <?php else : ?>
-                    marker.bindPopup("<span><strong><?php echo get_option('blogname'); ?></strong><br><?php echo get_option('dettagli-indirizzo'); ?><br><?php echo get_option('dettagli-cap'); ?>, <?php echo get_option('dettagli-citta'); ?></span>").openPopup();
+                    marker.bindPopup("<span><strong><?php echo esc_js(get_option('blogname')); ?></strong><br><?php echo esc_js(get_option('dettagli-indirizzo')); ?><br><?php echo esc_js(get_option('dettagli-cap')); ?>, <?php echo esc_js(get_option('dettagli-citta')); ?></span>").openPopup();
                 <?php endif; ?>
     
             });

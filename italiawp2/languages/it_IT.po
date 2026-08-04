@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-01-19 11:24+0100\n"
-"PO-Revision-Date: 2023-01-19 11:25+0100\n"
+"POT-Creation-Date: 2026-08-04 11:25+0200\n"
+"PO-Revision-Date: 2026-08-04 11:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n_noop\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -42,35 +42,6 @@ msgstr "Pagina non trovata"
 #: 404.php:23
 msgid "The page you are looking for was not found"
 msgstr "La pagina che cerchi non è stata trovata"
-
-#: _header_originale.php:29 template-parts/section-cookies.php:17
-msgid "This site uses technical, analytics and third-party cookies"
-msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
-
-#: _header_originale.php:30 template-parts/section-cookies.php:18
-msgid "By continuing to browse, you accept the use of cookies"
-msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
-
-#: _header_originale.php:32 template-parts/section-cookies.php:20
-msgid "I accept"
-msgstr "Accetto"
-
-#: _header_originale.php:34 footer.php:233
-#: template-parts/section-cookies.php:22
-msgid "Cookie policy"
-msgstr "Cookie policy"
-
-#: _header_originale.php:42 header.php:39
-msgid "Go to content"
-msgstr "Vai ai contenuti"
-
-#: _header_originale.php:45 header.php:42
-msgid "Go to the navigation menu"
-msgstr "Vai al menu di navigazione"
-
-#: _header_originale.php:47 header.php:44
-msgid "Go to the footer"
-msgstr "Vai al footer"
 
 #: comments.php:10
 msgid "Comments"
@@ -167,6 +138,10 @@ msgstr "Privacy policy"
 msgid "Privacy"
 msgstr "Privacy"
 
+#: footer.php:233 template-parts/section-cookies.php:22
+msgid "Cookie policy"
+msgstr "Cookie policy"
+
 #: footer.php:236
 msgid "Legal notices"
 msgstr "Note legali"
@@ -223,46 +198,46 @@ msgstr "Colore Primario Scuro"
 msgid "Complementary Color"
 msgstr "Colore Complementare"
 
-#: functions.php:476
+#: functions.php:495
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Required Plugins"
 msgstr "Installa plugin richiesti"
 
-#: functions.php:477
+#: functions.php:496
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Install Plugins"
 msgstr "Installa plugin"
 
-#: functions.php:479
+#: functions.php:498
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Installazione del plugin: %s"
 
-#: functions.php:481
+#: functions.php:500
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:339
 #, php-format
 msgid "Updating Plugin: %s"
 msgstr "Aggiornamento del plugin: %s"
 
-#: functions.php:482
+#: functions.php:501
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:340
 msgid "Something went wrong with the plugin API."
 msgstr "Qualcosa è andato storto con l’API del plugin."
 
-#: functions.php:485
+#: functions.php:504
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:343
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgstr "Questo tema richiede il seguente plugin: %1$s."
 
-#: functions.php:491
+#: functions.php:510
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:349
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgstr "Questo tema consiglia il seguente plugin: %1$s."
 
-#: functions.php:497
+#: functions.php:516
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:355
 #, php-format
 msgid ""
@@ -272,67 +247,67 @@ msgstr ""
 "Il seguente plugin deve essere aggiornato all’ultima versione per garantire "
 "la massima compatibilità con questo tema: %1$s."
 
-#: functions.php:503
+#: functions.php:522
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:361
 #, php-format
 msgid "There is an update available for: %1$s."
 msgstr "È disponibile un aggiornamento per: %1$s."
 
-#: functions.php:509
+#: functions.php:528
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:367
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin richiesto è attualmente inattivo: %1$s."
 
-#: functions.php:515
+#: functions.php:534
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:373
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgstr "Il seguente plugin consigliato è attualmente inattivo: %1$s."
 
-#: functions.php:520
+#: functions.php:539
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:378
 msgid "Begin installing plugin"
 msgstr "Inizia installazione del plugin"
 
-#: functions.php:525
+#: functions.php:544
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:383
 msgid "Begin updating plugin"
 msgstr "Inizia aggiornamento del plugin"
 
-#: functions.php:530
+#: functions.php:549
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:388
 msgid "Begin activating plugin"
 msgstr "Inizia attivazione del plugin"
 
-#: functions.php:534
+#: functions.php:553
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Return to Required Plugins Installer"
 msgstr "Torna ai plugin richiesti"
 
-#: functions.php:535
+#: functions.php:554
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:393
 msgid "Return to the Dashboard"
 msgstr "Ritorna alla Dashboard"
 
-#: functions.php:536
+#: functions.php:555
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:394
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
 msgid "Plugin activated successfully."
 msgstr "Plugin attivato correttamente."
 
-#: functions.php:537
+#: functions.php:556
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:395
 msgid "The following plugin was activated successfully:"
 msgstr "Il seguente plugin è stato attivato correttamente:"
 
-#: functions.php:539
+#: functions.php:558
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
 msgstr "Nessuna azione intrapresa. Il plugin %1$s era già attivo."
 
-#: functions.php:541
+#: functions.php:560
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
 #, php-format
 msgid ""
@@ -342,18 +317,18 @@ msgstr ""
 "Plugin non attivato. Per questo tema è necessaria una versione superiore di "
 "%s. Si prega di aggiornare il plugin."
 
-#: functions.php:543
+#: functions.php:562
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Tutti i plugin installati e attivati correttamente. %1$s"
 
-#: functions.php:544
+#: functions.php:563
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
 msgid "Dismiss this notice"
 msgstr "Rimuovi questa notifica"
 
-#: functions.php:545
+#: functions.php:564
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
 msgid ""
 "There are one or more required or recommended plugins to install, update or "
@@ -362,18 +337,34 @@ msgstr ""
 "Esistono uno o più plugin richiesti o consigliati da installare, aggiornare "
 "o attivare."
 
-#: functions.php:546
+#: functions.php:565
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:404
 msgid "Please contact the administrator of this site for help."
 msgstr "Si prega di contattare l’amministratore di questo sito per assistenza."
 
-#: inc/gallery.php:21
+#: header.php:46
+msgid "Go to content"
+msgstr "Vai ai contenuti"
+
+#: header.php:49
+msgid "Go to the navigation menu"
+msgstr "Vai al menu di navigazione"
+
+#: header.php:51
+msgid "Go to the footer"
+msgstr "Vai al footer"
+
+#: inc/gallery.php:24
 msgid "Photo gallery"
 msgstr "Galleria fotografica"
 
-#: inc/gallery.php:21 template-parts/section-gallery-carousel.php:14
+#: inc/gallery.php:24 template-parts/section-gallery-carousel.php:14
 msgid "scroll"
 msgstr "scorri"
+
+#: inc/menu-item-custom-fields/doc/menu-item-custom-fields-example.php:51
+msgid "Attributo \"data-element\" per validazione"
+msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2075
 #, php-format
@@ -590,60 +581,52 @@ msgstr "Cerca"
 msgid "Search for Topics"
 msgstr "Cerca Argomenti"
 
-#: static/js/bootstrap-italia.bundle.min.js:7
-msgid "up"
-msgstr ""
-
-#: static/js/bootstrap-italia.bundle.min.js:7
-msgid "down"
-msgstr ""
-
 #: tag.php:16 template-parts/section-last-news.php:305
 msgid "Other topics"
 msgstr "Altri argomenti"
 
-#: template-parts/archive-circolari-loop.php:20
+#: template-parts/archive-circolari-loop.php:17
 #: template-parts/section-last-circolari.php:102
 msgid "Circulars"
 msgstr "Circolari"
 
-#: template-parts/archive-circolari-loop.php:22
-#: template-parts/archive-gallerie-loop.php:22
-#: template-parts/archive-loop.php:22 template-parts/archive-loop.php:87
-#: template-parts/main-loop.php:22 template-parts/search-loop.php:18
+#: template-parts/archive-circolari-loop.php:19
+#: template-parts/archive-gallerie-loop.php:19
+#: template-parts/archive-loop.php:19 template-parts/archive-loop.php:84
+#: template-parts/main-loop.php:19 template-parts/search-loop.php:18
 msgid "Page"
 msgstr "Pagina"
 
-#: template-parts/archive-circolari-loop.php:22
-#: template-parts/archive-gallerie-loop.php:22
-#: template-parts/archive-loop.php:22 template-parts/main-loop.php:22
+#: template-parts/archive-circolari-loop.php:19
+#: template-parts/archive-gallerie-loop.php:19
+#: template-parts/archive-loop.php:19 template-parts/main-loop.php:19
 #: template-parts/search-loop.php:18
 msgid "of"
 msgstr "di"
 
-#: template-parts/archive-circolari-loop.php:55
+#: template-parts/archive-circolari-loop.php:52
 #: template-parts/circolare-loop.php:50
 #: template-parts/section-last-circolari.php:49
 msgid "No."
 msgstr "N°"
 
-#: template-parts/archive-circolari-loop.php:55
+#: template-parts/archive-circolari-loop.php:52
 #: template-parts/circolare-loop.php:50
 #: template-parts/section-last-circolari.php:49
 msgid " of "
 msgstr " del "
 
-#: template-parts/archive-circolari-loop.php:75
+#: template-parts/archive-circolari-loop.php:72
 #: template-parts/circolare-loop.php:32
 #: template-parts/section-last-circolari.php:70
 msgid "Groups"
 msgstr "Gruppi"
 
-#: template-parts/archive-circolari-loop.php:87
-#: template-parts/archive-gallerie-loop.php:78
-#: template-parts/archive-loop.php:131 template-parts/main-loop.php:119
+#: template-parts/archive-circolari-loop.php:84
+#: template-parts/archive-gallerie-loop.php:75
+#: template-parts/archive-loop.php:128 template-parts/main-loop.php:116
 #: template-parts/search-loop.php:62 template-parts/search-loop.php:68
-#: template-parts/section-gallery-carousel.php:93
+#: template-parts/section-gallery-carousel.php:94
 #: template-parts/section-last-circolari.php:82
 #: template-parts/section-last-circolari.php:102
 #: template-parts/section-last-news.php:137
@@ -653,8 +636,8 @@ msgstr "Gruppi"
 msgid "Go to the page"
 msgstr "Vai alla pagina"
 
-#: template-parts/archive-circolari-loop.php:88
-#: template-parts/archive-loop.php:132 template-parts/main-loop.php:120
+#: template-parts/archive-circolari-loop.php:85
+#: template-parts/archive-loop.php:129 template-parts/main-loop.php:117
 #: template-parts/search-loop.php:68 template-parts/search-loop.php:70
 #: template-parts/section-last-circolari.php:83
 #: template-parts/section-last-news.php:138
@@ -662,11 +645,11 @@ msgstr "Vai alla pagina"
 msgid "Read more"
 msgstr "Leggi di più"
 
-#: template-parts/archive-gallerie-loop.php:79
+#: template-parts/archive-gallerie-loop.php:76
 msgid "Browse gallery"
 msgstr "Sfoglia galleria"
 
-#: template-parts/archive-loop.php:108 template-parts/main-loop.php:96
+#: template-parts/archive-loop.php:105 template-parts/main-loop.php:93
 #: template-parts/section-last-news.php:114
 #: template-parts/section-last-news.php:240
 #: template-parts/section-last-one-news.php:61
@@ -674,7 +657,7 @@ msgstr "Sfoglia galleria"
 msgid "Categories"
 msgstr "Categorie"
 
-#: template-parts/archive-loop.php:119 template-parts/main-loop.php:107
+#: template-parts/archive-loop.php:116 template-parts/main-loop.php:104
 #: template-parts/page-loop-nosidebar.php:33 template-parts/page-loop.php:34
 #: template-parts/section-last-news.php:125
 #: template-parts/section-last-news.php:251
@@ -684,7 +667,7 @@ msgid "Topics"
 msgstr "Argomenti"
 
 #: template-parts/attachment-loop.php:54 template-parts/circolare-loop.php:98
-#: template-parts/custom-post-type-loop.php:58 template-parts/page-loop.php:88
+#: template-parts/custom-post-type-loop.php:60 template-parts/page-loop.php:88
 #: template-parts/single-loop.php:115
 msgid "Last update"
 msgstr "Ultimo aggiornamento"
@@ -721,7 +704,7 @@ msgstr "Errore"
 msgid "There is no content"
 msgstr "Nessun contenuto presente"
 
-#: template-parts/main-loop.php:20
+#: template-parts/main-loop.php:17
 msgid "Last news"
 msgstr "Ultime notizie"
 
@@ -735,7 +718,7 @@ msgid "Previous page"
 msgstr "Pagina precedente"
 
 #: template-parts/navigation.php:38 template-parts/navigation.php:45
-#: template-parts/pagination.php:48
+#: template-parts/pagination.php:43
 msgid "Next page"
 msgstr "Pagina successiva"
 
@@ -747,15 +730,27 @@ msgstr "Risultati per"
 msgid "results found"
 msgstr "risultati trovati"
 
+#: template-parts/section-cookies.php:17
+msgid "This site uses technical, analytics and third-party cookies"
+msgstr "Questo sito utilizza cookie tecnici, analytics e di terze parti"
+
+#: template-parts/section-cookies.php:18
+msgid "By continuing to browse, you accept the use of cookies"
+msgstr "Proseguendo nella navigazione accetti l’utilizzo dei cookie"
+
+#: template-parts/section-cookies.php:20
+msgid "I accept"
+msgstr "Accetto"
+
 #: template-parts/section-gallery-carousel.php:14
 msgid "Photo galleries"
 msgstr "Gallerie fotografiche"
 
-#: template-parts/section-gallery-carousel.php:93
+#: template-parts/section-gallery-carousel.php:94
 msgid "Galleries"
 msgstr "Gallerie"
 
-#: template-parts/section-gallery-carousel.php:94
+#: template-parts/section-gallery-carousel.php:95
 msgid "All galleries"
 msgstr "Tutte le gallerie"
 
@@ -781,7 +776,7 @@ msgstr "Notizie"
 msgid "All the news"
 msgstr "Tutte le novità"
 
-#: template-parts/section-map.php:15 template-parts/section-map.php:34
+#: template-parts/section-map.php:15 template-parts/section-map.php:35
 msgid "Interactive Map"
 msgstr "Mappa Interattiva"
 

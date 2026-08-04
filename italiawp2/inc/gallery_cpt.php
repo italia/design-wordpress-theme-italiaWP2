@@ -1,8 +1,10 @@
 <?php
 
-if (function_exists('add_theme_support')) {
-    add_theme_support('post-thumbnails');
-}
+add_action('init', 'italiawp2_register_gallery_cpt', 0);
+
+function italiawp2_register_gallery_cpt() {
+
+add_theme_support('post-thumbnails');
 add_image_size('gallery-preview', 80, 80, true);
 
 $gallery_labels = array(
@@ -31,11 +33,12 @@ $gallery_args = array(
     'menu_position' => null,
     'capability_type' => 'post',
     'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
-    'menu_icon' => 'dashicons-format-gallery'
+    'menu_icon' => 'dashicons-format-gallery',
+    'show_in_rest' => true
 );
 register_post_type('gallerie', $gallery_args);
 
-flush_rewrite_rules();
+} // fine italiawp2_register_gallery_cpt
 
 add_action('init', 'italiawp2_create_gallery_taxonomies', 0);
 

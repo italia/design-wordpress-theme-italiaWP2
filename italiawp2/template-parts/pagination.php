@@ -18,27 +18,22 @@
                                                     </svg>
                                                     <span class="sr-only">'.__('Previous page','italiawp2').'</span>'); ?>
             </li>
-        <?php 
-            if($paged) {
-                $pages = paginate_links(array(
-                    'total' => $wp_query->max_num_pages,
-                    'current' => max(1, get_query_var('paged')),
-                    'show_all' => false,
-                    'end_size' => 1,
-                    'mid_size' => 1,
-                    'prev_next' => false,
-                    'before_page_number' => '',
-                    'after_page_number' => '',
-                    'type' => 'array'
-                ));
+        <?php
+            $pages = paginate_links(array(
+                'total' => $wp_query->max_num_pages,
+                'current' => max(1, get_query_var('paged')),
+                'show_all' => false,
+                'end_size' => 1,
+                'mid_size' => 1,
+                'prev_next' => false,
+                'before_page_number' => '',
+                'after_page_number' => '',
+                'type' => 'array'
+            ));
 
-                if(is_array($pages)) {
-                    $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-                    foreach ($pages as $page) {
-                        if(get_query_var('paged') != 1) {
-                            echo '<li class="page-item">'.$page.'</li>';
-                        }
-                    }
+            if(is_array($pages)) {
+                foreach ($pages as $page) {
+                    echo '<li class="page-item">'.$page.'</li>';
                 }
             } ?>
             <li class="page-item">

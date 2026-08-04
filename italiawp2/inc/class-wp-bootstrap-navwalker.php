@@ -107,6 +107,8 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			$indent = ( $depth ) ? str_repeat( $t, $depth ) : '';
 
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+                        
+      $item->dataelement = get_post_meta( $item->ID, 'menu-item-data-element', true);
 
 			// Initialize some holder variables to store specially handled item
 			// wrappers and icons.
@@ -183,9 +185,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+                        
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && 0 === $depth && $args->depth > 1 ) { /* 1 livello */
-                        //if ( isset( $args->has_children ) && $args->has_children && $args->depth > 1 ) {
 
                             if ( isset( $args->has_children ) && $args->has_children && $args->depth > 1 ) {
                                 $atts['href']          = '#';

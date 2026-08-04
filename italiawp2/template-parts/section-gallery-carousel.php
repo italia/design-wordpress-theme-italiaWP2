@@ -19,6 +19,7 @@
             <div class="col-12">
                 <div class="articolo-paragrafi">
 
+<?php italiawp2_enqueue_gallery_assets(); ?>
 <div class="row">
     <div class="col-12 paragrafo">
         <a id="articolo-par-3"> </a>

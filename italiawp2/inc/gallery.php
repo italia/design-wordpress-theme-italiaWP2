@@ -2,12 +2,15 @@
 
 /* Galleria */
 
-function italiawp2_custom_gallery( $output = '', $atts, $instance ) {
-    $atts = array_merge(array('columns' => 3), $atts);
+function italiawp2_custom_gallery( $output, $atts, $instance ) {
+    $atts = array_merge(array('columns' => 3, 'link' => '', 'size' => '', 'ids' => ''), $atts);
     $columns = $atts['columns'];
     $link = $atts['link'];
     $size = $atts['size'];
-    
+
+    // La galleria viene renderizzata: servono carosello e lightbox.
+    italiawp2_enqueue_gallery_assets();
+
     if(is_array($atts['ids'])) $images = $atts['ids'];
     else $images = explode(',', $atts['ids']);
 
@@ -131,10 +134,12 @@ if (!get_theme_mod('disactive_cornici_immagini')) {
             $xpath = new DOMXPath($doc);
             $class = $xpath->evaluate("string(//img/@class)");
 
-            if ( strpos($class, 'in-gallery') == false ) {
+            if ( strpos($class, 'in-gallery') === false ) {
                 $src = $xpath->evaluate("string(//img/@src)");
                 $attachment_id = get_attachment_id($src);
                 $content = str_replace($image, italiawp2_custom_image_tag($src, $attachment_id, $class), $content);
+                // Le immagini cosi' generate sono aperte in lightbox da inc/scripts.js.
+                italiawp2_enqueue_gallery_assets();
             }
         }
 
@@ -150,8 +155,8 @@ if (!get_theme_mod('disactive_cornici_immagini')) {
         $imgDate = $attachment_meta['date'];
         $imgAlt = $attachment_meta['alt'];
 
-        $fullImage = wp_get_attachment_image_src($attachment_id, 'full');
-        $fullImage = $fullImage[0];
+        /*$fullImage = wp_get_attachment_image_src($attachment_id, 'full');
+        $fullImage = $fullImage[0];*/
         
         $class_align = "";
         if (strpos($class, 'alignleft') !== false) {

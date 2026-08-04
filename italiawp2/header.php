@@ -15,6 +15,24 @@
     <?php endif; ?>
 
     <?php wp_head(); ?>
+
+    <?php
+    /*
+     * Google Analytics. L'ID va impostato in Dettagli > Measurement ID GA4; se il campo
+     * e' vuoto non viene caricato alcuno script e non parte alcuna richiesta esterna.
+     */
+    $italiawp2_ga_id = trim((string) get_option('dettagli-ga-id'));
+    if ($italiawp2_ga_id !== ''):
+    ?>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr(rawurlencode($italiawp2_ga_id)); ?>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '<?php echo esc_js($italiawp2_ga_id); ?>', {'anonymize_ip': true});
+    </script>
+    <?php endif; ?>
+
 </head>
 
 <body class="t-Pac">

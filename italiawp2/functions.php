@@ -287,13 +287,32 @@ function italiawp2_menu_pt_archive() {
 add_action('pre_get_posts', 'tags_support_query');
 
 function tags_support_query($wp_query) {
+    if (is_admin() || !$wp_query->is_main_query()) {
+        return;
+    }
     if ($wp_query->get('tag')) {
         $wp_query->set('post_type', 'any');
     }
 }
 
+// Disattiva il floating degli articoli in evidenza nella lista articoli
+add_action('pre_get_posts', 'italiawp2_blog_ignore_sticky');
+
+function italiawp2_blog_ignore_sticky($wp_query) {
+    if (is_admin() || !$wp_query->is_main_query()) {
+        return;
+    }
+    if ($wp_query->is_home()) {
+        $wp_query->set('ignore_sticky_posts', true);
+    }
+}
+
 // Require
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+require get_template_directory() . '/inc/menu-item-custom-fields/menu-item-custom-fields.php';
+require get_template_directory() . '/inc/menu-item-custom-fields/doc/menu-item-custom-fields-example.php';
+
 require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/style.php';
