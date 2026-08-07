@@ -1,3 +1,7 @@
+**NOTA IMPORTANTE: Questo tema è deprecato, si consiglia l'utilizzo della nuova versione [ItaliaWP3](https://github.com/borisamico/design-wordpress-theme-italiaWP3), sviluppata e mantenuta dall'autore originale, basata sull'ultima versione di [Bootstrap Italia 2](https://italia.github.io/bootstrap-italia/) e rivista per l'accessibilità (aderenza alle WCAG 2.1 AA e alle Linee guida AgID, con controlli di accessibilità integrati) secondo le più recenti Linee guida di design.**
+
+---
+
 # ![developers.italia](https://docs.italia.it/media/docsitalia/icons/favicon-32x32.png "developers.italia")  ItaliaWP2
 ## Tema WordPress per la Pubblica Amministrazione
 
