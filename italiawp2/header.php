@@ -37,25 +37,35 @@
 
 <body class="t-Pac">
 
+<?php
+/*
+ * Gli skiplink devono essere il primo elemento focusabile della pagina:
+ * se li precedesse la cookie bar, il primo Tab finirebbe sul suo pulsante
+ * e il meccanismo per saltare i blocchi ripetuti perderebbe senso.
+ * Il contenitore e' fuori flusso (inc/accessibility.css), quindi anteporlo
+ * non sposta nulla nel rendering.
+ */
+?>
+<div class="skiplink">
+    <ul>
+        <li>
+            <a href="#main_container"><?php echo __('Go to content','italiawp2'); ?></a>
+        </li>
+        <li>
+            <a href="#menup"><?php echo __('Go to the navigation menu','italiawp2'); ?></a>
+        </li>
+        <li><a href="#footer"><?php echo __('Go to the footer','italiawp2'); ?></a></li>
+    </ul>
+</div>
+
 <?php get_template_part('template-parts/section-cookies'); ?>
-    
+
 <div class="body_wrapper push_container clearfix" id="page_top">
-    <div class="skiplink sr-only">
-        <ul>
-            <li>
-                <a accesskey="2" href="#main_container"><?php echo __('Go to content','italiawp2'); ?></a>
-            </li>
-            <li>
-                <a accesskey="3" href="#menup"><?php echo __('Go to the navigation menu','italiawp2'); ?></a>
-            </li>
-            <li><a accesskey="4" href="#footer"><?php echo __('Go to the footer','italiawp2'); ?></a></li>
-        </ul>
-    </div>
-        
+
     <header id="mainheader" class="u-background-50">
     <?php get_template_part('menu'); ?>
     </header>
 
-    <main id="main_container">
+    <main id="main_container" tabindex="-1">
         
     <?php if(!is_attachment()) italiawp2_create_breadcrumbs(); ?>

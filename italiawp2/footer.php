@@ -7,7 +7,7 @@
 
     </main>
     
-    <footer id="footer" class="u-background-80">
+    <footer id="footer" class="u-background-80" tabindex="-1">
         <div class="container">
             <section>
                 <div class="row clearfix">
@@ -258,11 +258,12 @@
     
 </div>
 
-<div id="topcontrol" class="topcontrol u-background-80" title="<?php echo __('Go up','italiawp2'); ?>">
-  <svg class="icon">
+<button type="button" id="topcontrol" class="topcontrol u-background-80" title="<?php echo esc_attr__('Go up','italiawp2'); ?>">
+  <svg class="icon" aria-hidden="true" focusable="false">
     <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/img/bootstrap-italia.svg#it-collapse"></use>
   </svg>
-</div>
+  <span class="sr-only"><?php echo __('Go up','italiawp2'); ?></span>
+</button>
 
 <script>window.__PUBLIC_PATH__ = '<?php echo bloginfo('template_directory'); ?>/static/fonts';</script>
 <?php wp_footer(); ?>

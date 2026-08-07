@@ -1,9 +1,13 @@
 <?php
 
 /**
- * Versione di bootstrap-italia vendorizzata in static/ (css, js, js bundle, svg/sprite.svg).
- * Usata come cache buster negli enqueue: va aggiornata insieme ai file.
- * Vedi lo script `vendor:bi` in package.json.
+ * Versione di bootstrap-italia inclusa in static/ (css, js, svg/sprite.svg).
+ * Usata come cache buster negli enqueue.
+ *
+ * Il tema non ha alcun passaggio di build: gli asset sono file gia' compilati,
+ * sostituiti a mano quando si aggiorna bootstrap-italia. Questa costante va
+ * aggiornata a mano insieme ai file, ed e' l'unico punto in cui la versione e'
+ * dichiarata: non viene mai ricavata dinamicamente.
  */
 if (!defined('ITALIAWP2_BOOTSTRAP_ITALIA_VERSION')) {
     define('ITALIAWP2_BOOTSTRAP_ITALIA_VERSION', '1.6.4');
@@ -66,6 +70,10 @@ if (!function_exists('italiawp2_theme_style')) :
         wp_enqueue_style('italiawp2-gutenberg', get_template_directory_uri() . '/inc/gutenberg.css', array());
         wp_enqueue_style('italiawp2_adjustments_css', get_template_directory_uri() . '/inc/adjustments.css', array());
 
+        // Ultimo foglio del tema: integra le regole di focus esistenti, quindi
+        // deve restare in coda a tutti gli altri.
+        wp_enqueue_style('italiawp2-accessibility', get_template_directory_uri() . '/inc/accessibility.css', array());
+
         // Il CSS della mappa e' autoconsistente e non viene sovrascritto dal tema,
         // quindi puo' essere accodato a richiesta senza alterare la cascata.
         wp_register_style('italiawp2-leaflet', get_template_directory_uri() . '/static/css/leaflet.css', array());
@@ -100,7 +108,10 @@ if (!function_exists('italiawp2_theme_scripts')) :
         wp_enqueue_script('italiawp2-scripts', get_template_directory_uri() . "/inc/scripts.js", array('jquery'), null, true);
         wp_enqueue_script('italiawp2-tema', get_template_directory_uri() . "/static/js/tema.js", array('jquery'), null, true);
         wp_localize_script('italiawp2-tema', 'itwp2', array(
-            'siteurl' => get_template_directory_uri()
+            'siteurl' => get_template_directory_uri(),
+            // Etichetta dei trigger di sottomenu iniettati da tema.js, a cui viene
+            // accodato il testo della voce ("Espandi il menu Amministrazione").
+            'espandiMenu' => __('Expand the menu', 'italiawp2')
         ));
 
         // Risposte annidate ai commenti. Va valutato qui dentro.

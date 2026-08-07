@@ -56,7 +56,7 @@
 <!-- Fine Fascia Appartenenza -->
 
 <!-- Button Menu -->
-<button class="navbar-toggle menu-btn pull-left menu-left push-body jPushMenuBtn">
+<button type="button" class="navbar-toggle menu-btn pull-left menu-left push-body jPushMenuBtn" aria-controls="menup" aria-expanded="false">
     <span class="sr-only"><?php echo __('Toggle navigation','italiawp2'); ?></span>
     <span class="icon-bar icon-bar1"></span>
     <span class="icon-bar icon-bar2"></span>
@@ -65,7 +65,7 @@
 <!-- Fine Button Menu -->
 
 <!-- Inizio Menu Mobile -->
-<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="menup">
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="menup" tabindex="-1" aria-label="<?php echo esc_attr__('Main menu','italiawp2'); ?>">
     <div class="cbp-menu-wrapper clearfix">
         <div class="logo-burger">
             <div class="logotxt-burger">
@@ -355,7 +355,7 @@
             
                 <nav class="navbar navbar-expand-sm has-megamenu">
                     <div class="navbar-collapsable">
-                        <div class="close-div sr-only">
+                        <div class="close-div sr-only sr-only-focusable">
                             <button class="btn close-menu" type="button">
                                 <svg class="icon icon-sm icon-light">
                                 <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/static/svg/sprite.svg#it-close"></use>

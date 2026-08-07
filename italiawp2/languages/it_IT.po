@@ -788,6 +788,10 @@ msgstr "Clicca su per attivare"
 msgid "Services"
 msgstr "Servizi"
 
+#: inc/enqueue.php:110
+msgid "Expand the menu"
+msgstr "Espandi il menu"
+
 #~ msgid "Plugins required by the theme \"ItaliaWP\""
 #~ msgstr "Plugin richiesti dal tema “ItaliaWP”"
 

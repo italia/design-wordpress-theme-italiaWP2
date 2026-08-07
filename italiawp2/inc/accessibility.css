@@ -1,0 +1,138 @@
+/*
+ * Accessibilita' — navigazione da tastiera.
+ *
+ * Ultimo foglio accodato dal tema (vedi italiawp2_theme_style() in inc/enqueue.php):
+ * integra le regole di focus esistenti, non le sostituisce. Le ~380 dichiarazioni
+ * !important sparse negli altri fogli dipendono dalla cascata attuale, quindi qui
+ * si aggiunge soltanto cio' che manca.
+ */
+
+/* ------------------------------------------------------------------ *
+ * Skiplink
+ *
+ * I link "vai ai contenuti / al menu / al footer" esistono in header.php
+ * da sempre, ma nessuna regola li definiva: erano invisibili anche quando
+ * ricevevano il focus, e quindi inutilizzabili. Restano fuori schermo
+ * finche' non vengono raggiunti col Tab.
+ * ------------------------------------------------------------------ */
+
+/*
+ * Il contenitore e' fuori flusso: qualunque cosa accada ai link al suo
+ * interno, non puo' spostare di un pixel il resto della pagina.
+ */
+.skiplink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+}
+
+.skiplink ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skiplink a {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skiplink a:focus {
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    color: #06c;
+    font-weight: 600;
+    text-decoration: underline;
+    white-space: nowrap;
+    outline: 3px solid #FF8C00;
+    outline-offset: -3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/*
+ * I bersagli degli skiplink hanno tabindex="-1" per ricevere davvero il
+ * focus: senza questa regola i browser vi disegnerebbero attorno un anello
+ * grande quanto l'intera pagina.
+ */
+#main_container:focus,
+#menup:focus,
+#footer:focus {
+    outline: none;
+}
+
+/* ------------------------------------------------------------------ *
+ * Anello di focus di base
+ *
+ * :focus-visible non compariva da nessuna parte nel tema, cosi' come
+ * outline-offset. Questa regola copre tutto cio' che le regole :focus
+ * specifiche degli altri fogli non raggiungono.
+ * ------------------------------------------------------------------ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid #FF8C00;
+    outline-offset: 2px;
+}
+
+/* Il logo dell'header e i link del calendario avevano l'outline soppresso. */
+#mainheader .comune .logoimg a:focus-visible,
+#wp-calendar a:focus-visible {
+    outline: 2px solid #FF8C00;
+    outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Torna su
+ *
+ * Era un <div> con un handler di click, irraggiungibile da tastiera; ora
+ * e' un <button>. Qui si neutralizza il chrome nativo del pulsante per
+ * conservare l'aspetto precedente (posizione e visibilita' restano in
+ * static/css/tema.css, che lo nasconde con visibility: hidden e lo toglie
+ * quindi anche dall'ordine di tabulazione).
+ * ------------------------------------------------------------------ */
+button#topcontrol {
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 0;
+}
+
+/* ------------------------------------------------------------------ *
+ * Trigger dei sottomenu del menu off-canvas
+ *
+ * Sono <span role="button" tabindex="0"> iniettati da static/js/tema.js:
+ * senza un anello visibile chi naviga da tastiera non sa dove si trova.
+ * ------------------------------------------------------------------ */
+.navmenu a [role="button"]:focus-visible {
+    outline: 2px solid #FF8C00;
+    outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Chi ha chiesto meno animazioni non deve subire gli slide dei menu.
+ * ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

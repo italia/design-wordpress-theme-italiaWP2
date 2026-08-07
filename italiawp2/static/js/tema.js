@@ -116,30 +116,45 @@ jQuery(function ($) {
             $('body,html').animate({scrollTop: 0}, 500);
         });
 
-        $("#searchclear").click(function () {
-            $("#cerca-txt").val('');
-        });
+        /*
+         * Allinea aria-expanded dei trigger di un <li> allo stato aperto/chiuso
+         * del suo sottomenu. Il trigger e' lo <span role="button"> iniettato qui
+         * sotto, piu' l'eventuale ancora segnaposto href="#".
+         */
+        function italiawp2AggiornaEspanso(listItem) {
+            var espanso = listItem.hasClass('open') ? 'true' : 'false';
+            listItem.find('> a [role="button"], > a[href^="#"]').attr('aria-expanded', espanso);
+        }
 
         /* Menu navigazione */
         $('.navmenu ul').each(function () {
             var listItem = $(this).closest('li');
             var itemLink = listItem.find('> a');
-            var title = 'Espandi il menu ' + $.trim(itemLink.text());
+            var etichetta = (typeof itwp2 !== 'undefined' && itwp2.espandiMenu)
+                    ? itwp2.espandiMenu
+                    : 'Espandi il menu';
+            var title = etichetta + ' ' + $.trim(itemLink.text());
             var trigger = $('<span></span>').attr({
                 tabindex: 0,
+                role: 'button',
+                'aria-expanded': 'false',
                 'aria-label': title,
                 'title': title,
             });
 
             $(listItem).find('[href^="#"]')
                     .add(trigger)
+                    .attr('aria-expanded', 'false')
                     .on('click', function (ev) {
                         var node = $(this).is('a') ? $(this) : $(this).closest('a');
 
                         /* Clear all open and not nested element  */
                         if (!$(this).closest('li.open').length) {
                             $('.navmenu ul').slideUp(300);
-                            $('.navmenu li').removeClass('open');
+                            $('.navmenu li.open').each(function () {
+                                $(this).removeClass('open');
+                                italiawp2AggiornaEspanso($(this));
+                            });
                         }
 
                         if (node.siblings('ul').is(':visible')) {
@@ -149,6 +164,7 @@ jQuery(function ($) {
                             node.siblings('ul').slideDown(300);
                             node.parent().addClass('open');
                         }
+                        italiawp2AggiornaEspanso(node.parent());
                         return false;
                     })
                     .on('keydown', function (e) {
@@ -163,12 +179,36 @@ jQuery(function ($) {
 
         $('.navmenu .current').parents().filter(function (index) {
             return (this.nodeName === 'LI');
-        }).addClass('active open');
+        }).addClass('active open').each(function () {
+            italiawp2AggiornaEspanso($(this));
+        });
 
         /* jPush Menu */
         $('.navbar-toggle').jPushMenu();
         $(".navbar-toggle").click(function (event) {
             event.preventDefault();
+            /*
+             * jPushMenu ha gia' aggiornato le classi (il suo handler e' stato
+             * registrato prima di questo): qui si allinea solo lo stato ARIA.
+             */
+            $(this).attr('aria-expanded', $(this).hasClass('menu-active') ? 'true' : 'false');
+        });
+
+        /*
+         * Esc chiude il menu off-canvas e riporta il focus sul pulsante che
+         * l'ha aperto: senza, chi naviga da tastiera resta intrappolato nel
+         * pannello e deve tabulare fino in fondo per uscirne.
+         */
+        $(document).on('keydown', function (e) {
+            if (e.which !== 27) {
+                return;
+            }
+            var toggle = $('.navbar-toggle.menu-active').first();
+            if (!toggle.length) {
+                return;
+            }
+            toggle.trigger('click');
+            toggle.trigger('focus');
         });
         /* End jPush Menu */
 

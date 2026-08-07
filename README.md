@@ -83,27 +83,23 @@ Gli aggiornamenti sono notificati in _"Aspetto" > "Temi"_ oppure nella _pagina d
 
 ## Sviluppo:
 
-Il tema **non richiede alcun passaggio di build**: niente SCSS, niente bundler. Gli asset di
-_Bootstrap Italia_ sono file già compilati, inclusi in `static/`, e la personalizzazione
-grafica avviene tramite i fogli di stile del tema caricati _dopo_ di essi.
+Il tema **non richiede alcun passaggio di build** e non ha alcuna dipendenza esterna:
+niente SCSS, niente bundler, niente gestori di pacchetti. Si scarica, si attiva e funziona.
+Gli asset di _Bootstrap Italia_ sono file già compilati, inclusi in `static/`, e la
+personalizzazione grafica avviene tramite i fogli di stile del tema caricati _dopo_ di essi.
 
-L'unica dipendenza npm serve a tracciare e rigenerare quegli asset:
+Per passare a una versione diversa di Bootstrap Italia si sostituiscono i file a mano,
+prendendoli dalla cartella `dist/` della release desiderata:
 
-```bash
-npm install                 # scarica bootstrap-italia
-npm run vendor:bi           # copia gli asset in static/ e verifica le versioni
-npm run vendor:bi:check     # verifica soltanto
-```
+| Da `dist/` | A |
+|---|---|
+| `css/bootstrap-italia.min.css` | `static/css/` |
+| `js/bootstrap-italia.min.js` | `static/js/` |
+| `svg/sprite.svg` | `static/svg/` |
 
-Per passare a una versione diversa di Bootstrap Italia:
-
-```bash
-npm install bootstrap-italia@X.Y.Z && npm run vendor:bi
-```
-
-ricordandosi di aggiornare la costante `ITALIAWP2_BOOTSTRAP_ITALIA_VERSION` in
-`inc/enqueue.php`, che funge da _cache buster_ (lo script di verifica segnala se le
-versioni divergono).
+e si aggiorna di conseguenza la costante `ITALIAWP2_BOOTSTRAP_ITALIA_VERSION` in
+`inc/enqueue.php`, che funge da _cache buster_. È l'unico punto in cui la versione è
+dichiarata: non viene mai ricavata dinamicamente, la decide lo sviluppatore.
 
 > **Nota:** la linea 1.x di Bootstrap Italia si è conclusa con la **1.6.4**, la versione
 > attualmente inclusa: è quindi l'ultima a cui il tema può essere aggiornato senza
